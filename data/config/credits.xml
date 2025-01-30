@@ -1,0 +1,53 @@
+<!DOCTYPE codename-mod-credits>
+<menu name="Vs Br Credits" desc="Oh boy. &#xA;">
+
+<credit
+	name="charlesisfeline" 
+icon="charles"
+	desc="Director, Composer, Coder, Animator" 
+	url="https://www.youtube.com/@charlesisfeline"
+	/>
+
+<credit
+	name="BreadBoyoo" 
+icon="breadboyoo"
+	desc="Director, Artist" 
+	url="https://www.youtube.com/@breadwithouttheead"
+	/>
+
+	<credit
+	name="Isaiah Mods" 
+icon="isaiah"
+	desc="Artist, Composer" 
+	url="https://www.youtube.com/@isaiahmodsofficial"
+	/>
+
+<credit
+	name="TheAnimateMan" 
+icon="animate"
+	desc="Composer, Artist, Animator" 
+	url="https://www.youtube.com/@TheAnimateMan0"
+	/>
+
+<credit
+	name="Brumbo" 
+icon="brumbo"
+	desc="Composer" 
+	url="https://example.com"
+	/>
+</menu>
+
+<menu name="Contributors" desc="Whoever contributed to the mod, they go here.">
+	<credit
+	name="lunarcleint" 
+icon="lunar"
+	desc="some of these uhhhhhh scripts???????" 
+	url="https://github.com/lunarcleint"
+	/>
+
+<credit name="fllics" desc="Camera Events" icon="missing_icon" url="https://github.com/APurples"/>
+<credit name="Mlaofmd" desc="Health Tween Event" icon="missing_icon" url="https://github.com/APurples"/>
+<credit name="Rodney" desc="Change Character Event" icon="rodney" url="https://github.com/APurples"/>
+<credit name="_chronicsilly" desc="Subtitles & 4:3 res script" icon="missing_icon" url="https://x.com/_chronicsilly"/>
+<credit name="syrup" desc="Smooth Bar, Notetypes, and other stuff/events" icon="syrup" url="https://github.com/APurples"/>
+</menu>

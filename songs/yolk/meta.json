@@ -1,0 +1,8 @@
+{
+	"displayName": "Yolk",
+	"bpm": 160.0,
+	"icon": "eg",
+	"color": "#A0D1FF",
+	"coopAllowed": true,
+	"opponentModeAllowed": true
+}

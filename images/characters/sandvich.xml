@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="sandvich.png" width="266" height="211">
+	<SubTexture name="sandvich0000" x="8" y="8" width="250" height="195" frameX="-0" frameY="-0" frameWidth="250" frameHeight="195"/>
+</TextureAtlas>

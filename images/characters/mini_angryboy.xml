@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="mini_angryboy.png" width="562" height="91">
+	<SubTexture name="mike down0000" x="214" y="15" width="31" height="52" frameX="-18" frameY="-11" frameWidth="59" frameHeight="81"/>
+	<SubTexture name="mike down0001" x="214" y="15" width="31" height="52" frameX="-18" frameY="-11" frameWidth="59" frameHeight="81"/>
+	<SubTexture name="mike down0002" x="65" y="15" width="31" height="50" frameX="-18" frameY="-13" frameWidth="59" frameHeight="81"/>
+	<SubTexture name="mike down0003" x="65" y="15" width="31" height="50" frameX="-18" frameY="-13" frameWidth="59" frameHeight="81"/>
+	<SubTexture name="mike idle0000" x="516" y="15" width="31" height="61" frameX="-14" frameY="-8" frameWidth="59" frameHeight="81"/>
+	<SubTexture name="mike idle0001" x="516" y="15" width="31" height="61" frameX="-14" frameY="-8" frameWidth="59" frameHeight="81"/>
+	<SubTexture name="mike idle0002" x="470" y="15" width="31" height="60" frameX="-16" frameY="-9" frameWidth="59" frameHeight="81"/>
+	<SubTexture name="mike idle0003" x="470" y="15" width="31" height="60" frameX="-16" frameY="-9" frameWidth="59" frameHeight="81"/>
+	<SubTexture name="mike idle0004" x="424" y="15" width="31" height="59" frameX="-19" frameY="-11" frameWidth="59" frameHeight="81"/>
+	<SubTexture name="mike idle0005" x="424" y="15" width="31" height="59" frameX="-19" frameY="-11" frameWidth="59" frameHeight="81"/>
+	<SubTexture name="mike left0000" x="111" y="15" width="32" height="50" frameX="-10" frameY="-13" frameWidth="59" frameHeight="81"/>
+	<SubTexture name="mike left0001" x="111" y="15" width="32" height="50" frameX="-10" frameY="-13" frameWidth="59" frameHeight="81"/>
+	<SubTexture name="mike left0002" x="15" y="15" width="35" height="49" frameX="-8" frameY="-14" frameWidth="59" frameHeight="81"/>
+	<SubTexture name="mike left0003" x="15" y="15" width="35" height="49" frameX="-8" frameY="-14" frameWidth="59" frameHeight="81"/>
+	<SubTexture name="mike right0000" x="260" y="15" width="40" height="52" frameX="-14" frameY="-17" frameWidth="59" frameHeight="81"/>
+	<SubTexture name="mike right0002" x="158" y="15" width="41" height="50" frameX="-15" frameY="-17" frameWidth="59" frameHeight="81"/>
+	<SubTexture name="mike up0000" x="370" y="15" width="39" height="57" frameX="-13" frameY="-11" frameWidth="59" frameHeight="81"/>
+	<SubTexture name="mike up0001" x="370" y="15" width="39" height="57" frameX="-13" frameY="-11" frameWidth="59" frameHeight="81"/>
+	<SubTexture name="mike up0002" x="315" y="15" width="40" height="52" frameX="-13" frameY="-11" frameWidth="59" frameHeight="81"/>
+	<SubTexture name="mike up0003" x="315" y="15" width="40" height="52" frameX="-13" frameY="-11" frameWidth="59" frameHeight="81"/>
+</TextureAtlas>

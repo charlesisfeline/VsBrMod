@@ -1,0 +1,8 @@
+{
+	"displayName": "Depart",
+	"bpm": 149.0,
+	"icon": "mini-mike",
+	"color": "#A0D1FF",
+	"coopAllowed": true,
+	"opponentModeAllowed": true
+}

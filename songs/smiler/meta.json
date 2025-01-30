@@ -1,0 +1,8 @@
+{
+	"displayName": "Smiler",
+	"bpm": 160.0,
+	"icon": "fred",
+	"color": "#A0D1FF",
+	"coopAllowed": true,
+	"opponentModeAllowed": true
+}
