@@ -1,3 +1,4 @@
+import funkin.backend.system.framerate.Framerate;
 import funkin.backend.utils.ShaderResizeFix;
 import funkin.backend.utils.WindowUtils;
 import openfl.system.Capabilities;
@@ -30,9 +31,6 @@ window.title = "Friday Night Funkin': YouTube Animation Peril - v1.0 DEMO";
 function destroy() WindowUtils.winTitle = "fnf vs br";
 
 function preStateSwitch() FlxG.camera.bgColor = 0xFF000000;
-
-import funkin.backend.utils.ShaderResizeFix;
-import openfl.system.Capabilities;
  
 // hi usb_port2 !!!!!!!!!!!!!!!!!!
 var winWidth:Int;
