@@ -5,6 +5,8 @@ import openfl.system.Capabilities;
 
 var windowName = 'fnf vs br';
 
+trace("oh cool reloaded global wowzers!1!! . " + Math.random());
+
 WindowUtils.winTitle = windowName;
 
 function new() 
@@ -24,7 +26,7 @@ Framerate.debugMode = 1;
 
     if(Std.isOfType(FlxG.state, PlayState)) window.title += ' - ' + PlayState.SONG.meta.displayName;
 else
-window.title = "Friday Night Funkin': YouTube Animation Peril - v1.0 DEMO";
+window.title = "fnf vs br";
 	window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
 }
 
