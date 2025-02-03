@@ -1,7 +1,7 @@
 {
 	"displayName": "Overcooked",
 	"bpm": 190.0,
-	"icon": "br",
+	"icon": "br-glitch",
 	"color": "#A0D1FF",
 	"coopAllowed": true,
 	"opponentModeAllowed": true
