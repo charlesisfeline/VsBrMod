@@ -2,7 +2,7 @@
 <character x="-100" y="250" sprite="br" scale="0.85" icon="br" color="#BD6030">
 	<anim name="idle" anim="br idle dance" x="0" y="0" fps="12" loop="false"/>
 	<anim name="singUP" anim="br sing up" x="0" y="0" fps="24" loop="false"/>
-	<anim name="singLEFT" anim="br sing right" x="0" y="0" fps="24" loop="false"/>
-	<anim name="singRIGHT" anim="br sing left" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="br sing left" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="br sing right" x="0" y="0" fps="24" loop="false"/>
 	<anim name="singDOWN" anim="br sing down" x="0" y="0" fps="24" loop="false"/>
 </character>

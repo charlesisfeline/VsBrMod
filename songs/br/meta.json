@@ -1,8 +1,17 @@
 {
-	"displayName": "br",
-	"bpm": 210.0,
-	"icon": "br",
-	"color": "#A0D1FF",
+	"beatsPerMeasure": 4,
+	"opponentModeAllowed": true,
 	"coopAllowed": true,
-	"opponentModeAllowed": true
+	"stepsPerBeat": 4,
+	"bpm": 210,
+	"difficulties": [
+		"HARD"
+	],
+	"needsVoices": true,
+	"parsedColor": -2458044,
+	"displayName": "br",
+	"icon": "br",
+	"name": "br",
+	"color": "#DA7E44",
+	"customValues": {}
 }
