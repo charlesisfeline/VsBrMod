@@ -1,7 +1,7 @@
 {
 	"displayName": "Sandvich",
 	"bpm": 160.0,
-	"icon": "face",
+	"icon": "sandvich",
 	"color": "#A0D1FF",
 	"coopAllowed": true,
 	"opponentModeAllowed": true
