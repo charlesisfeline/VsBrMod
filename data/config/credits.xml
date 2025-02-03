@@ -6,6 +6,7 @@
 icon="charles"
 	desc="Director, Composer, Coder, Animator" 
 	url="https://www.youtube.com/@charlescatyt"
+	color="#ff0000"
 	/>
 
 <credit
@@ -13,6 +14,7 @@ icon="charles"
 icon="breadboyoo"
 	desc="Director, Artist" 
 	url="https://www.youtube.com/@breadwithouttheead"
+	color="#63402b"
 	/>
 
 	<credit
