@@ -1,0 +1,1 @@
+function update() if (controls.BACK) PlayState.deathCounter = 0;
