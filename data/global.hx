@@ -22,6 +22,9 @@ function new()
 {
 	window.title = "Made with Codename Engine!";
 
+	FlxG.mouse.useSystemCursor = false;
+	FlxG.mouse.load(Paths.image("ui/cursor"));
+
 	// makes all of these options automatically set to their default values
 	var optiony = FlxG.save.data;
 	if (optiony.hitsoundStyle == null)
@@ -51,16 +54,19 @@ function postStateSwitch()
 }
 
 function destroy()
-	WindowUtils.winTitle = "fnf vs br";
+{
+	FlxG.mouse.useSystemCursor = true;
+	FlxG.mouse.unload();
+
+	WindowUtils.winTitle = "br is dead";
+}
 
 function preStateSwitch()
 {
 	FlxG.camera.bgColor = 0xFF000000;
 
 	if (!initialized)
-	{
 		initialized = true;
-	}
 	else
 	{
 		for (redirectState in redirectStates.keys())
