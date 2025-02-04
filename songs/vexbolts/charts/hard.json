@@ -2418,7 +2418,7 @@
 		}
 	],
 	"codenameChart": true,
-	"stage": "bop city",
+	"stage": "stage",
 	"scrollSpeed": 2.9,
 	"noteTypes": []
 }
