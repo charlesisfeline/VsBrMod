@@ -5,14 +5,16 @@ import funkin.backend.utils.WindowUtils;
 import lime.graphics.Image;
 import openfl.system.Capabilities;
 
+importScript("modules/PreprocessorUtil");
 #if linux
-@:cppInclude('./external/gamemode_client.h')
-@:cppFileCode('
-	#define GAMEMODE_AUTO
-')
+// @:cppInclude('./external/gamemode_client.h')
+// @:cppFileCode('
+// 	#define GAMEMODE_AUTO
+// ')
 #end
 static var FlxColorHelper = new FlxColorHelper();
-
+static var initialized:Bool = false;
+static var fromGame:Bool = false; // for things you can go to through the pause screen and whatever
 static var redirectStates:Map<FlxState, String> = [MainMenuState => 'br/BrMainMenuState',];
 var windowName = 'fnf vs br';
 
@@ -20,6 +22,9 @@ trace("oh cool reloaded global wowzers!1!! . " + Math.random());
 WindowUtils.winTitle = windowName;
 function new()
 {
+	if (!PreprocessorUtil.processorsSetup)
+		PreprocessorUtil.setCustomPreprocessors("data/preprocessors.json");
+
 	window.title = "Made with Codename Engine!";
 
 	FlxG.mouse.useSystemCursor = false;
@@ -53,6 +58,25 @@ function postStateSwitch()
 	window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
 }
 
+static function getInnerData(xml:Xml) {
+	var it = xml.iterator();
+	if (!it.hasNext())
+		return null;
+	var v = it.next();
+	if (it.hasNext()) {
+		var n = it.next();
+		if (v.nodeType == Xml.PCData && n.nodeType == Xml.CData && StringTools.trim(v.nodeValue) == "") {
+			if (!it.hasNext())
+				return n.nodeValue;
+			var n2 = it.next();
+			if (n2.nodeType == Xml.PCData && StringTools.trim(n2.nodeValue) == "" && !it.hasNext()) return n.nodeValue;
+		}
+		return null;
+	}
+	if (v.nodeType != Xml.PCData && v.nodeType != Xml.CData) return null;
+	return v.nodeValue;
+}
+
 function destroy()
 {
 	FlxG.mouse.useSystemCursor = true;
@@ -73,6 +97,12 @@ function preStateSwitch()
 			if (FlxG.game._requestedState is redirectState)
 				FlxG.game._requestedState = new ModState(redirectStates.get(redirectState));
 	}
+}
+
+function onScriptCreated(script:HScript, ext:String)
+{
+	if (PreprocessorUtil.processorsSetup && ext == "hscript")
+		PreprocessorUtil.castProcessorsToScript(script);
 }
 
 static function convertTime(steps:Float, beats:Float, sections:Float):Float
