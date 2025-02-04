@@ -95,7 +95,10 @@ function preStateSwitch()
 	{
 		for (redirectState in redirectStates.keys())
 			if (FlxG.game._requestedState is redirectState)
+				trace('got it');
 				FlxG.game._requestedState = new ModState(redirectStates.get(redirectState));
+		    else
+				trace('nvm');
 	}
 }
 

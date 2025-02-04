@@ -1,4 +1,3 @@
-//
 import funkin.options.OptionsMenu;
 import flixel.text.FlxTextBorderStyle;
 import funkin.menus.ModSwitchMenu;
@@ -34,7 +33,7 @@ function create()
 	var clouds:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menus/mainmenu/clouds'));
 	insert(2, clouds);
 	var yard:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menus/mainmenu/menuHouse'));
-	insert(3, yardd);
+	insert(3, yard);
 	var brGuy:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menus/mainmenu/br_sign'));
 	insert(4, brGuy);
 	var border:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menus/mainmenu/boreder'));
@@ -119,7 +118,7 @@ function goToItem()
 {
 	selectedSomthin = true;
 
-	CoolUtil.playMenuSFX(CONFIRM);
+	// CoolUtil.playMenuSFX(CONFIRM);
 
 	switch (options[curSelected])
 	{
