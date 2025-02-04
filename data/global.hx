@@ -13,6 +13,7 @@ import openfl.system.Capabilities;
 #end
 static var FlxColorHelper = new FlxColorHelper();
 
+static var redirectStates:Map<FlxState, String> = [MainMenuState => 'br/BrMainMenuState',];
 var windowName = 'fnf vs br';
 
 trace("oh cool reloaded global wowzers!1!! . " + Math.random());
@@ -30,10 +31,10 @@ function new()
 function update(elapsed:Float)
 {
 	// here for debugging purposes i think
-	#if windows 
-    if (FlxG.keys.justPressed.F6)
+	#if windows
+	if (FlxG.keys.justPressed.F6)
 		NativeAPI.allocConsole(); // SHOW CONSOLE
-    #end
+	#end
 	if (FlxG.keys.justPressed.F5)
 		FlxG.resetState(); // RESETTING STATES
 }
@@ -53,7 +54,20 @@ function destroy()
 	WindowUtils.winTitle = "fnf vs br";
 
 function preStateSwitch()
+{
 	FlxG.camera.bgColor = 0xFF000000;
+
+	if (!initialized)
+	{
+		initialized = true;
+	}
+	else
+	{
+		for (redirectState in redirectStates.keys())
+			if (FlxG.game._requestedState is redirectState)
+				FlxG.game._requestedState = new ModState(redirectStates.get(redirectState));
+	}
+}
 
 static function convertTime(steps:Float, beats:Float, sections:Float):Float
 	return ((Conductor.stepCrochet * steps) / 1000
