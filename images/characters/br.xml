@@ -1,45 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="br.png">
-	<SubTexture name="br idle dance0000" x="800" y="802" width="426" height="330" frameX="-131" frameY="-183" frameWidth="640" frameHeight="640"/>
-	<SubTexture name="br idle dance0001" x="1448" y="0" width="412" height="328" frameX="-141" frameY="-185" frameWidth="640" frameHeight="640"/>
-	<SubTexture name="br idle dance0002" x="1448" y="328" width="388" height="345" frameX="-128" frameY="-168" frameWidth="640" frameHeight="640"/>
-	<SubTexture name="br idle dance0003" x="403" y="802" width="397" height="358" frameX="-121" frameY="-155" frameWidth="640" frameHeight="640"/>
-	<SubTexture name="br idle dance0004" x="0" y="802" width="403" height="365" frameX="-118" frameY="-148" frameWidth="640" frameHeight="640"/>
-	<SubTexture name="br idle dance0005" x="0" y="802" width="403" height="365" frameX="-118" frameY="-148" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br idle dance0006" x="0" y="802" width="403" height="365" frameX="-118" frameY="-148" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br idle dance0007" x="0" y="802" width="403" height="365" frameX="-118" frameY="-148" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing down0000" x="0" y="1167" width="395" height="317" frameX="-141" frameY="-198" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing down0001" x="1448" y="673" width="388" height="330" frameX="-134" frameY="-183" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing down0002" x="1448" y="673" width="388" height="330" frameX="-134" frameY="-183" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing down0003" x="1448" y="673" width="388" height="330" frameX="-134" frameY="-183" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing down0004" x="1448" y="673" width="388" height="330" frameX="-134" frameY="-183" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing down0005" x="1448" y="673" width="388" height="330" frameX="-134" frameY="-183" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing down0006" x="1448" y="673" width="388" height="330" frameX="-134" frameY="-183" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing down0007" x="1448" y="673" width="388" height="330" frameX="-134" frameY="-183" frameWidth="640" frameHeight="640"/>
-	<SubTexture name="br sing left0000" x="0" y="427" width="495" height="375" frameX="-55" frameY="-142" frameWidth="640" frameHeight="640"/>
-	<SubTexture name="br sing left0001" x="959" y="0" width="489" height="377" frameX="-74" frameY="-139" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing left0002" x="959" y="0" width="489" height="377" frameX="-74" frameY="-139" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing left0001" x="959" y="0" width="489" height="377" frameX="-74" frameY="-139" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing left0002" x="959" y="0" width="489" height="377" frameX="-74" frameY="-139" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing left0003" x="959" y="0" width="489" height="377" frameX="-74" frameY="-139" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing left0004" x="959" y="0" width="489" height="377" frameX="-74" frameY="-139" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing left0005" x="959" y="0" width="489" height="377" frameX="-74" frameY="-139" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing left0006" x="959" y="0" width="489" height="377" frameX="-74" frameY="-139" frameWidth="640" frameHeight="640"/>
-	<SubTexture name="br sing left0007" x="959" y="0" width="489" height="377" frameX="-74" frameY="-139" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing right0000" x="495" y="427" width="449" height="367" frameX="-150" frameY="-140" frameWidth="640" frameHeight="640"/>
-	<SubTexture name="br sing right0001" x="959" y="377" width="470" height="353" frameX="-138" frameY="-155" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing right0002" x="959" y="377" width="470" height="353" frameX="-138" frameY="-155" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing right0003" x="959" y="377" width="470" height="353" frameX="-138" frameY="-155" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing right0004" x="959" y="377" width="470" height="353" frameX="-138" frameY="-155" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing right0005" x="959" y="377" width="470" height="353" frameX="-138" frameY="-155" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing right0006" x="959" y="377" width="470" height="353" frameX="-138" frameY="-155" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing right0007" x="959" y="377" width="470" height="353" frameX="-138" frameY="-155" frameWidth="640" frameHeight="640"/>
-	<SubTexture name="br sing up0000" x="0" y="0" width="490" height="427" frameX="-100" frameY="-92" frameWidth="640" frameHeight="640"/>
-	<SubTexture name="br sing up0001" x="490" y="0" width="469" height="401" frameX="-108" frameY="-115" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing up0002" x="490" y="0" width="469" height="401" frameX="-108" frameY="-115" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing up0003" x="490" y="0" width="469" height="401" frameX="-108" frameY="-115" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing up0004" x="490" y="0" width="469" height="401" frameX="-108" frameY="-115" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing up0005" x="490" y="0" width="469" height="401" frameX="-108" frameY="-115" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing up0006" x="490" y="0" width="469" height="401" frameX="-108" frameY="-115" frameWidth="640" frameHeight="640"/>
-<SubTexture name="br sing up0007" x="490" y="0" width="469" height="401" frameX="-108" frameY="-115" frameWidth="640" frameHeight="640"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="br.png" width="3419" height="1052">
+	<SubTexture name="br idle dance0000" x="485" y="423" width="406" height="310" frameX="-141" frameY="-193" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br idle dance0001" x="8" y="736" width="392" height="308" frameX="-151" frameY="-195" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br idle dance0002" x="3043" y="8" width="368" height="325" frameX="-138" frameY="-178" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br idle dance0003" x="2275" y="8" width="377" height="338" frameX="-131" frameY="-165" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br idle dance0004" x="1884" y="8" width="383" height="345" frameX="-128" frameY="-158" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br idle dance0005" x="1884" y="8" width="383" height="345" frameX="-128" frameY="-158" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br idle dance0006" x="1884" y="8" width="383" height="345" frameX="-128" frameY="-158" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br idle dance0007" x="1884" y="8" width="383" height="345" frameX="-128" frameY="-158" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing down0000" x="2660" y="8" width="375" height="297" frameX="-151" frameY="-208" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing down0001" x="2660" y="313" width="368" height="310" frameX="-144" frameY="-193" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing down0002" x="2660" y="313" width="368" height="310" frameX="-144" frameY="-193" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing down0003" x="2660" y="313" width="368" height="310" frameX="-144" frameY="-193" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing down0004" x="2660" y="313" width="368" height="310" frameX="-144" frameY="-193" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing down0005" x="2660" y="313" width="368" height="310" frameX="-144" frameY="-193" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing down0006" x="2660" y="313" width="368" height="310" frameX="-144" frameY="-193" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing down0007" x="2660" y="313" width="368" height="310" frameX="-144" frameY="-193" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing left0000" x="8" y="8" width="475" height="355" frameX="-65" frameY="-152" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing left0001" x="8" y="371" width="469" height="357" frameX="-84" frameY="-149" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing left0002" x="8" y="371" width="469" height="357" frameX="-84" frameY="-149" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing left0001" x="8" y="371" width="469" height="357" frameX="-84" frameY="-149" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing left0002" x="8" y="371" width="469" height="357" frameX="-84" frameY="-149" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing left0003" x="8" y="371" width="469" height="357" frameX="-84" frameY="-149" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing left0004" x="8" y="371" width="469" height="357" frameX="-84" frameY="-149" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing left0005" x="8" y="371" width="469" height="357" frameX="-84" frameY="-149" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing left0006" x="8" y="371" width="469" height="357" frameX="-84" frameY="-149" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing left0007" x="8" y="371" width="469" height="357" frameX="-84" frameY="-149" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing right0000" x="969" y="349" width="429" height="347" frameX="-160" frameY="-150" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing right0001" x="969" y="8" width="450" height="333" frameX="-148" frameY="-165" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing right0002" x="969" y="8" width="450" height="333" frameX="-148" frameY="-165" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing right0003" x="969" y="8" width="450" height="333" frameX="-148" frameY="-165" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing right0004" x="969" y="8" width="450" height="333" frameX="-148" frameY="-165" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing right0005" x="969" y="8" width="450" height="333" frameX="-148" frameY="-165" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing right0006" x="969" y="8" width="450" height="333" frameX="-148" frameY="-165" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing right0007" x="969" y="8" width="450" height="333" frameX="-148" frameY="-165" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing up0000" x="491" y="8" width="470" height="407" frameX="-110" frameY="-102" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing up0001" x="1427" y="8" width="449" height="381" frameX="-118" frameY="-125" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing up0002" x="1427" y="8" width="449" height="381" frameX="-118" frameY="-125" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing up0003" x="1427" y="8" width="449" height="381" frameX="-118" frameY="-125" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing up0004" x="1427" y="8" width="449" height="381" frameX="-118" frameY="-125" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing up0005" x="1427" y="8" width="449" height="381" frameX="-118" frameY="-125" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing up0006" x="1427" y="8" width="449" height="381" frameX="-118" frameY="-125" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="br sing up0007" x="1427" y="8" width="449" height="381" frameX="-118" frameY="-125" frameWidth="640" frameHeight="640"/>
 </TextureAtlas>
