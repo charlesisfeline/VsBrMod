@@ -1,11 +1,6 @@
 {
-	"scrollSpeed": 2.5,
-	"codenameChart": true,
-	"stage": "stage",
 	"strumLines": [
 		{
-			"strumScale": 1,
-			"position": "dad",
 			"notes": [
 				{
 					"id": 2,
@@ -465,7 +460,7 @@
 				},
 				{
 					"id": 2,
-					"sLen": 115.384615384624,
+					"sLen": 115.384615384628,
 					"time": 30230.7692307692,
 					"type": 0
 				},
@@ -519,7 +514,7 @@
 				},
 				{
 					"id": 0,
-					"sLen": 346.153846153848,
+					"sLen": 346.153846153855,
 					"time": 31384.6153846154,
 					"type": 0
 				},
@@ -1011,7 +1006,7 @@
 				},
 				{
 					"id": 3,
-					"sLen": 115.384615384617,
+					"sLen": 115.384615384632,
 					"time": 59769.2307692308,
 					"type": 0
 				},
@@ -1023,13 +1018,13 @@
 				},
 				{
 					"id": 1,
-					"sLen": 115.384615384617,
+					"sLen": 115.384615384632,
 					"time": 60230.7692307692,
 					"type": 0
 				},
 				{
 					"id": 0,
-					"sLen": 115.38461538461,
+					"sLen": 115.384615384603,
 					"time": 60461.5384615385,
 					"type": 0
 				},
@@ -1784,21 +1779,21 @@
 					"type": 0
 				}
 			],
+			"position": "dad",
+			"strumScale": 1,
+			"visible": true,
+			"type": 0,
 			"characters": [
 				"pico"
 			],
-			"type": 0,
-			"visible": true,
 			"strumPos": [
 				0,
 				50
 			],
-			"vocalsSuffix": "",
-			"strumLinePos": 0.25
+			"strumLinePos": 0.25,
+			"vocalsSuffix": ""
 		},
 		{
-			"strumScale": 1,
-			"position": "boyfriend",
 			"notes": [
 				{
 					"id": 2,
@@ -2774,13 +2769,13 @@
 				},
 				{
 					"id": 3,
-					"sLen": 115.38461538461,
+					"sLen": 115.384615384603,
 					"time": 63461.5384615385,
 					"type": 0
 				},
 				{
 					"id": 2,
-					"sLen": 115.38461538461,
+					"sLen": 115.384615384603,
 					"time": 63692.3076923077,
 					"type": 0
 				},
@@ -2792,7 +2787,7 @@
 				},
 				{
 					"id": 0,
-					"sLen": 115.384615384632,
+					"sLen": 115.384615384646,
 					"time": 64153.8461538462,
 					"type": 0
 				},
@@ -2816,7 +2811,7 @@
 				},
 				{
 					"id": 0,
-					"sLen": 115.38461538461,
+					"sLen": 115.384615384603,
 					"time": 65076.9230769231,
 					"type": 0
 				},
@@ -3553,18 +3548,23 @@
 					"type": 0
 				}
 			],
+			"position": "boyfriend",
+			"strumScale": 1,
+			"visible": true,
+			"type": 1,
 			"characters": [
 				"bf-br"
 			],
-			"type": 1,
-			"visible": true,
 			"strumPos": [
 				0,
 				50
 			],
-			"vocalsSuffix": "",
-			"strumLinePos": 0.75
+			"strumLinePos": 0.75,
+			"vocalsSuffix": ""
 		}
 	],
+	"stage": "stage",
+	"scrollSpeed": 2.5,
+	"codenameChart": true,
 	"noteTypes": []
 }

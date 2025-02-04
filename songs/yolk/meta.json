@@ -1,17 +1,17 @@
 {
 	"opponentModeAllowed": true,
-	"icon": "eg",
 	"difficulties": [
 		"HARD"
 	],
+	"icon": "eg",
 	"parsedColor": -4216,
-	"customValues": {},
-	"color": "#FFEF88",
-	"name": "yolk",
 	"coopAllowed": true,
+	"name": "yolk",
+	"color": "#FFEF88",
+	"customValues": {},
 	"stepsPerBeat": 4,
 	"displayName": "Yolk",
-	"beatsPerMeasure": 4,
 	"needsVoices": true,
+	"beatsPerMeasure": 4,
 	"bpm": 130
 }
