@@ -28,6 +28,8 @@ function postCreate()
 {
 	PlayState.deathCounter = 0;
 
+	FlxG.camera.bgColor = 0xFF000000;
+	
 	FlxG.camera.followLerp = 0;
 
 	curQuote = FlxG.random.getObject(randQuotes);
