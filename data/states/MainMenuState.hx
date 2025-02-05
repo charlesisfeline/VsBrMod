@@ -31,7 +31,7 @@ function postCreate()
 
 	bg.x += 350;
 
-	var moreVersionShit:FunkinText = new FunkinText(5, 634, 0, '');
+	var moreVersionShit:FunkinText = new FunkinText(5, 654, 0, '');
 	moreVersionShit.scrollFactor.set();
 	add(moreVersionShit);
 	moreVersionShit.text = "fr ni fu: vs br v1.0"; // i sadly cant extend the original versionShit text actually
