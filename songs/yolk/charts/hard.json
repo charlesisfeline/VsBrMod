@@ -1,6 +1,10 @@
 {
+	"codenameChart": true,
+	"scrollSpeed": 2.5,
 	"strumLines": [
 		{
+			"strumScale": 1,
+			"position": "dad",
 			"notes": [
 				{
 					"id": 2,
@@ -514,7 +518,7 @@
 				},
 				{
 					"id": 0,
-					"sLen": 346.153846153855,
+					"sLen": 346.153846153858,
 					"time": 31384.6153846154,
 					"type": 0
 				},
@@ -1006,7 +1010,7 @@
 				},
 				{
 					"id": 3,
-					"sLen": 115.384615384632,
+					"sLen": 115.384615384646,
 					"time": 59769.2307692308,
 					"type": 0
 				},
@@ -1018,7 +1022,7 @@
 				},
 				{
 					"id": 1,
-					"sLen": 115.384615384632,
+					"sLen": 115.384615384646,
 					"time": 60230.7692307692,
 					"type": 0
 				},
@@ -1779,21 +1783,21 @@
 					"type": 0
 				}
 			],
-			"position": "dad",
-			"strumScale": 1,
-			"visible": true,
-			"type": 0,
 			"characters": [
 				"eg"
 			],
+			"type": 0,
+			"visible": true,
 			"strumPos": [
 				0,
 				50
 			],
-			"strumLinePos": 0.25,
-			"vocalsSuffix": ""
+			"vocalsSuffix": "",
+			"strumLinePos": 0.25
 		},
 		{
+			"strumScale": 1,
+			"position": "boyfriend",
 			"notes": [
 				{
 					"id": 2,
@@ -2290,7 +2294,7 @@
 				{
 					"id": 1,
 					"sLen": 0,
-					"time": 34730.7692307692,
+					"time": 34673.0769230769,
 					"type": 0
 				},
 				{
@@ -2787,7 +2791,7 @@
 				},
 				{
 					"id": 0,
-					"sLen": 115.384615384646,
+					"sLen": 115.384615384653,
 					"time": 64153.8461538462,
 					"type": 0
 				},
@@ -3548,23 +3552,19 @@
 					"type": 0
 				}
 			],
-			"position": "boyfriend",
-			"strumScale": 1,
-			"visible": true,
-			"type": 1,
 			"characters": [
 				"bf-br"
 			],
+			"type": 1,
+			"visible": true,
 			"strumPos": [
 				0,
 				50
 			],
-			"strumLinePos": 0.75,
-			"vocalsSuffix": ""
+			"vocalsSuffix": "",
+			"strumLinePos": 0.75
 		}
 	],
-	"stage": "stage",
-	"scrollSpeed": 2.5,
-	"codenameChart": true,
+	"stage": "flipaclip",
 	"noteTypes": []
 }

@@ -1,0 +1,15 @@
+<!DOCTYPE codename-engine-stage>
+<stage folder="stages/house-shaded/" zoom="1.05">
+	<sprite x="14.5" sprite="skyblue" y="-166" scale="1.5" name="sky"/>
+	<sprite x="346.5" scrolly="1.4" sprite="sun" y="-173" scale="1.5" name="sun" scrollx="1.4"/>
+	<sprite x="207.5" scrolly="1.05" sprite="hill" y="21" scale="1.5" name="hill" scrollx="1.3"/>
+	<sprite x="70.5" sprite="tree" y="-134" scale="1.5" name="tree" scrollx="1.1"/>
+	<sprite x="40.8" sprite="fencey" y="-95.25" scrollx="1.15" name="fence"/>
+	<sprite x="179.775" sprite="housse" y="-86" scale="1.5" scrollx="1.1" name="house"/>
+	<sprite x="153.5" sprite="groundThing" y="-90" scale="1.5" name="ground" scrollx="1.02"/>
+	<sprite x="233.5" sprite="thingy" y="-107" name="flour" scrollx="1.02"/>
+	<gf x="511.5" y="-108"/>
+	<dad x="186.5" y="-119"/>
+	<bf x="781.5" y="-114"/>
+	<combo x="634" y="137"/>
+</stage>
