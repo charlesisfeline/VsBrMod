@@ -43,6 +43,6 @@ function postUpdate(elapsed)
 	FlxG.camera.scroll.x = FlxG.camera.scroll.y = 0;
 	FlxG.camera.scroll.set();
 
-    magenta.visible = false; // no
+	magenta.visible = false; // no
 	menuItems.forEach((a:FlxSprite) -> a.x += 350);
 }
