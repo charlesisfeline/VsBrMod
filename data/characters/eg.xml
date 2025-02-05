@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character x="-300" y="-150" sprite="eg" scale="0.65" icon="eg" color="#BD6030">
+<character x="-300" y="-150" sprite="eg" scale="0.65" icon="eg" color="#FFE162">
 	<anim name="idle" anim="eg idle dance" x="0" y="0" fps="24" loop="false"/>
 	<anim name="singUP" anim="eg sing up" x="0" y="0" fps="24" loop="false"/>
 	<anim name="singLEFT" anim="eg sing left" x="0" y="0" fps="24" loop="false"/>
