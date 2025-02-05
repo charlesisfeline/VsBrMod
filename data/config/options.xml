@@ -4,7 +4,9 @@
 		<number id="playbackRate" name="Playback Rate" desc="Change the playback rate! The higher, the faster the song will go by." min="0.25" max="3" change="0.25"/>
 		<checkbox id="midsongPlaybackRate" name="Change Midsong" desc="If checked, the playback rate will be changeable mid song by using the keys Q and E."/>
 	</menu>
-<choice id="hitsoundStyle" name="Hitsound Type">
+<checkbox id="botPlay" name="Bot Play" desc="If checked, the computer will play the song for you, no hands needed!."/>
+<checkbox id="eyesores" name="Eyesores" desc="If unchecked, your eyes won't get fucked by shaders, lol."/>
+<choice id="hitsoundStyle" name="Hitsound Type" desc="I love hitsounds."> 
 <!-- default -->
 		<value name="None" value="none"/>
 <!-- mods & games -->
