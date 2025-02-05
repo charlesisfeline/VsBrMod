@@ -1,0 +1,8 @@
+{
+	"displayName": "rB",
+	"bpm": 160.0,
+	"icon": "rb",
+	"color": "#FFEF88",
+	"coopAllowed": true,
+	"opponentModeAllowed": true
+}

@@ -10,7 +10,7 @@ var randQuotes:Array<String> = [
 	"im pee ur pant",
 	"i like starting a\nfire",
 	"always but egg yolk\nin your noodles guys",
-	"i found god himself help",
+	"i found god himself\nhelp",
 	"shush im garning\nmy 47",
 	"turkey sandwich",
 	"are you learning\nabout rocks"
