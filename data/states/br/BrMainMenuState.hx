@@ -16,6 +16,17 @@ var optionsTexts:Map<String, String> = [
 	'options' => "Adjust game settings and keybinds."
 ];
 
+var randQuotes:Array<String> = [
+	"insert quote here",
+	"500+ Nuke Cards!",
+    "coocking a glizzy",
+	"sausage in a bun",
+    "shush im garning\nmy 47",
+	"are you learning\nabout rocks"
+];
+
+var curQuote:String = "";
+
 var menuItems:FlxTypedGroup<FlxSprite>;
 var curMainMenuSelected:Int;
 var curSelected:Int = curMainMenuSelected;
@@ -27,6 +38,8 @@ function create()
 	PlayState.deathCounter = 0;
 	DiscordUtil.changePresence('In the Menus', "Main Menu");
 	CoolUtil.playMenuSong();
+
+	curQuote = FlxG.random.getObject(randQuotes);
 
 	var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menus/menuBG'));
 	insert(1, bg);

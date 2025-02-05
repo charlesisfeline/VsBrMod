@@ -8,7 +8,7 @@
 			<anim name="danceRight" anim="gfDance" indices="15,16,17,18,19,20,21,22,23,24,25,26,27,28,29" />
 		</sprite>-->
 
-		<titleEnter sprite="titleEnter" x="999999" y="-100" />
+		<titleEnter sprite="titleEnter" x="-150" y="-100" />
 	</sprites>
 
 	<intro length="16">

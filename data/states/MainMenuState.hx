@@ -1,5 +1,21 @@
 import flixel.text.FlxTextBorderStyle;
 
+var curQuote:String = "";
+
+var randQuotes:Array<String> = [
+	"insert quote here",
+	"500+ Nuke Cards!",
+	"coocking a glizzy",
+	"sausage in a bun",
+	"im pee ur pant",
+	"i like starting a\nfire",
+	"always but egg yolk\nin your noodles guys",
+	"i found god himself help",
+	"shush im garning\nmy 47",
+	"turkey sandwich",
+	"are you learning\nabout rocks"
+];
+
 function new()
 {
 	FlxG.mouse.visible = false;
@@ -14,6 +30,8 @@ function postCreate()
 
 	FlxG.camera.followLerp = 0;
 
+	curQuote = FlxG.random.getObject(randQuotes);
+
 	var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menus/menuBG'));
 	insert(1, bg);
 	var clouds:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menus/mainmenu/clouds'));
@@ -25,7 +43,7 @@ function postCreate()
 	var border:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menus/mainmenu/boreder'));
 	insert(5, border);
 
-	menuInfomation = new FlxText(-285, 540, FlxG.width, "insert quote here", 16);
+	menuInfomation = new FlxText(-285, 520, FlxG.width, curQuote, 16);
 	menuInfomation.setFormat("fonts/comic.ttf", 16, FlxColor.BLACK, "center");
 	insert(6, menuInfomation);
 
@@ -42,6 +60,13 @@ function postUpdate(elapsed)
 {
 	FlxG.camera.scroll.x = FlxG.camera.scroll.y = 0;
 	FlxG.camera.scroll.set();
+
+	if (FlxG.keys.justPressed.FIVE)
+	{
+		trace(curQuote);
+		curQuote = FlxG.random.getObject(randQuotes);
+		menuInfomation.text = curQuote;
+	}
 
 	magenta.visible = false; // no
 	menuItems.forEach((a:FlxSprite) -> a.x += 350);
