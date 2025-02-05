@@ -1,3 +1,4 @@
+import Date;
 import flixel.text.FlxTextBorderStyle;
 
 var curQuote:String = "";
@@ -50,6 +51,11 @@ function postCreate()
 	insert(6, menuInfomation);
 
 	bg.x += 350;
+
+	var dateCheck = Date.now();
+
+	if ((dateCheck.getMonth() == 3 && dateCheck.getDate() == 1) || FlxG.random.bool(6)) // april fool, 6% chance in any other day
+	bg.loadGraphic(Paths.image('menus/menuBGApril'));
 
 	var moreVersionShit:FunkinText = new FunkinText(5, 654, 0, '');
 	moreVersionShit.scrollFactor.set();
