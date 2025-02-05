@@ -39,10 +39,10 @@ function new()
 function update(elapsed:Float)
 {
 	// here for debugging purposes i think
-	#if windows
+	// #if windows
 	if (FlxG.keys.justPressed.F6)
 		NativeAPI.allocConsole(); // SHOW CONSOLE
-	#end
+	// #end
 	if (FlxG.keys.justPressed.F5)
 		FlxG.resetState(); // RESETTING STATES
 }
