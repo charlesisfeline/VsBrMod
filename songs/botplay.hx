@@ -5,8 +5,8 @@ function update()
 	if (startingSong || !canPause || paused || health <= 0)
 		return;
 
-	if (FlxG.keys.justPressed.SIX)
-		sexbot = !sexbot;
+	sexbot = FlxG.save.data.botplay;
+	
 	player.cpu = sexbot;
 
 	for (txt in [scoreTxt, missesTxt, accuracyTxt])
