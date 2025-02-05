@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-stage>
+<stage folder="stages/backrooms/" zoom="1.02">
+	<sprite scale="1.65" sprite="backrooms" name="space"/>
+	<gf x="347" y="53"/>
+	<dad x="-87" y="54"/>
+	<bf x="741" y="34"/>
+	<combo x="666.5" y="354"/>
+</stage>
