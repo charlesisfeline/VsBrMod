@@ -11,20 +11,16 @@ if (PlayState.SONG.meta.name != "depart")
 		FlxG.removeChild(video);
 	});
 	FlxG.addChildBelowMouse(video);
-	if (video.load(Paths.video("retry")))
+	if (video.load(Paths.video("retryNoSnd")))
 		new FlxTimer().start(0.000001, (_) -> video.play());
 	function update()
 	{
 		lossSFX.volume = 0;
-		if (FlxG.sound.music != null)
-		{
-			FlxG.sound.music.volume = 0;
-			FlxG.sound.music.stop();
-		}
 		if (controls.BACK || controls.ACCEPT)
 		{
 			FlxG.game.removeChild(video);
-			FlxG.sound.music.volume = 1;
+			video.dispose();
+			trace(video.time == -1);
 			FlxG.switchState(new PlayState());
 		}
 		if (video.time == -1)
@@ -35,8 +31,8 @@ if (PlayState.SONG.meta.name != "depart")
 				FlxG.removeChild(video);
 			});
 			FlxG.addChildBelowMouse(video);
-			if (video.load(Paths.video("retry")))
-				new FlxTimer().start(0.001, (_) -> video.play());
+			if (video.load(Paths.video("retryNoSnd")))
+				new FlxTimer().start(0.000001, (_) -> video.play());
 		}
 	}
 }
