@@ -32,6 +32,14 @@ function new()
 
 	// makes all of these options automatically set to their default values
 	var optiony = FlxG.save.data;
+	if (optiony.playbackRate == null)
+		optiony.playbackRate = 1;
+	if (optiony.midsongPlaybackRate == null)
+		optiony.midsongPlaybackRate = false;
+	if (optiony.botPlay == null)
+		optiony.botPlay = false;
+	if (optiony.eyesores == null)
+		optiony.eyesores = true;
 	if (optiony.hitsoundStyle == null)
 		optiony.hitsoundStyle = "none";
 }
