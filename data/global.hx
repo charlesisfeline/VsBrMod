@@ -1,4 +1,5 @@
 import FlxColorHelper;
+import Type;
 import funkin.backend.system.framerate.Framerate;
 import funkin.backend.utils.ShaderResizeFix;
 import funkin.backend.utils.WindowUtils;
@@ -15,7 +16,12 @@ importScript("modules/PreprocessorUtil");
 static var FlxColorHelper = new FlxColorHelper();
 static var initialized:Bool = false;
 static var fromGame:Bool = false; // for things you can go to through the pause screen and whatever
-static var redirectStates:Map<FlxState, String> = [MainMenuState => 'br/BrMainMenuState',];
+
+public var redirectStates:Map<String, String> = []; // base state -> mod state
+public var redirectStateData:Map<String, Dynamic> = []; // IM HUNGY FOR DATA
+
+public static var reqStateName:String;
+
 var windowName = 'fnf vs br';
 
 trace("oh cool reloaded global wowzers!1!! . " + Math.random());
@@ -97,17 +103,15 @@ function preStateSwitch()
 {
 	FlxG.camera.bgColor = 0xFF000000;
 
-	if (!initialized)
-		initialized = true;
-	else
-	{
-		for (redirectState in redirectStates.keys())
-			if (FlxG.game._requestedState is redirectState)
-				trace('got it');
-				FlxG.game._requestedState = new ModState(redirectStates.get(redirectState));
-		    else
-				trace('nvm');
-	}
+	var stateClassName = Type.getClassName(Type.getClass(FlxG.game._requestedState));
+	reqStateName = stateClassName.substr(stateClassName.lastIndexOf(".") + 1);
+
+	for (redirect in redirectStates.keys()) {
+        if (reqStateName == redirect) {
+			var daModState = redirectStates.get(redirect);
+            FlxG.game._requestedState = new ModState(daModState, redirectStateData.get(daModState)); 
+        }
+    }
 }
 
 function onScriptCreated(script:HScript, ext:String)

@@ -1,4 +1,11 @@
-function onSongEnd() {
-    if (PlayState.isStoryMode)
-        FlxG.switchState(new ModState("br/EndState"));
+function create()
+{
+	importScript("data/scripts/redirectUtil");
+}
+
+function onSongEnd()
+{
+	trace("pls work plsss work");
+	if (PlayState.isStoryMode)
+		setRedirectStates("StoryMenuState", "br/EndState", null);
 }
