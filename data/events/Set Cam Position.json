@@ -1,0 +1,14 @@
+{
+	"params": [
+        {
+            "name": "X-Pos:",
+            "type": "String",
+            "defaultValue": ""
+        },
+        {
+            "name": "Y-Pos:",
+            "type": "String",
+            "defaultValue": ""
+        }
+	]
+}
