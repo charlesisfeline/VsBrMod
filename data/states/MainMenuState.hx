@@ -14,7 +14,8 @@ var randQuotes:Array<String> = [
 	"i found god himself\nhelp",
 	"shush im garning\nmy 47",
 	"turkey sandwich",
-	"are you learning\nabout rocks"
+	"are you learning\nabout rocks",
+	"pickleball"
 ];
 
 function new()
@@ -76,6 +77,12 @@ function postUpdate(elapsed)
 		menuInfomation.text = curQuote;
 	}
 
+	
+	if (FlxG.keys.justPressed.EIGHT)
+		{
+			FlxG.switchState(new ModState("br/EndState"));
+		}
+		
 	magenta.visible = false; // no
 	menuItems.forEach((a:FlxSprite) -> a.x += 350);
 }
