@@ -4,7 +4,7 @@
 <credit
 	name="charlesisfeline" 
 icon="charles"
-	desc="Director, Composer, Coder, Animator" 
+	desc="Director, Composer, Coder, Animator, :3" 
 	url="https://www.youtube.com/@charlescatyt"
 	color="#ff0000"
 	/>
@@ -55,6 +55,18 @@ icon="missing_icon"
 icon="gold"
 	desc="Composer" 
 	url="https://www.youtube.com/@goldisflammable"
+	/>
+
+<credit
+	name="ShaggyNRogers" 
+icon="missing_icon"
+	desc="Charter" 
+	/>
+
+<credit
+	name="HollowSoulxs" 
+icon="missing_icon"
+	desc="Artist, Animator, Composer" 
 	/>
 
 <credit
