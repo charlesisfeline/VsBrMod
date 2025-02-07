@@ -1,0 +1,17 @@
+{
+	"beatsPerMeasure": 4,
+	"opponentModeAllowed": true,
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
+	"bpm": 130,
+	"difficulties": [
+		"HARD"
+	],
+	"needsVoices": true,
+	"parsedColor": -28157,
+	"displayName": "Dealer",
+	"icon": "sonic-nukecard",
+	"name": "dealer",
+	"color": "#FF9203",
+	"customValues": {}
+}

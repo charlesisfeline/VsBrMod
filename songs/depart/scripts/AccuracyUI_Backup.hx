@@ -99,6 +99,10 @@ function update(elapsed:Float)
 		//     hudTxt.text = "Score: " + songScore + " | Combo Breaks: " + misses +  " | Accuracy: " + rating + " (" + acc + "%)" + " | " + ratingFC;
 		//     backup code above
 	}
+        for (i in [missesTxt, accuracyTxt, scoreTxt])
+	{
+		i.visible = false;
+	}
 }
 
 function postCreate()
@@ -106,10 +110,9 @@ function postCreate()
 	for (i in [missesTxt, accuracyTxt, scoreTxt])
 	{
 		i.visible = false;
+                i.x = 9999999999999999999999;
+                trace("hihihi");
 	}
-	if (downscroll)
-	{
-		hudTxt.y = 605;
-	}
+	if (downscroll) hudTxt.y = 605;
 	add(hudTxt);
 }
