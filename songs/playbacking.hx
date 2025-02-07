@@ -26,9 +26,9 @@ function update(elapsed)
 
 	if (FlxG.save.data.midsongPlaybackRate)
 	{
-		if (FlxG.save.data.playbackRate < 3)
+		if (FlxG.save.data.playbackRate < 10)
 		{
-			if (FlxG.keys.justPressed.E)
+			if (FlxG.keys.pressed.E)
 			{
 				FlxG.save.data.playbackRate += 0.05;
 				inst.pitch = FlxG.save.data.playbackRate;
@@ -43,7 +43,7 @@ function update(elapsed)
 
 		if (FlxG.save.data.playbackRate > 0.25)
 		{
-			if (FlxG.keys.justPressed.Q)
+			if (FlxG.keys.pressed.Q)
 			{
 				FlxG.save.data.playbackRate -= 0.05;
 				inst.pitch = FlxG.save.data.playbackRate;

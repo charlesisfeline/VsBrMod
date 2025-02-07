@@ -2,8 +2,14 @@ import funkin.editors.charter.Charter;
 import funkin.game.PlayState;
 import flixel.text.FlxTextAlign;
 import flixel.text.FlxTextBorderStyle;
+import flixel.util.FlxTimer;
+import funkin.editors.charter.Charter;
+import funkin.game.PlayState;
+import hxvlc.openfl.Video;
+import hxvlc.flixel.FlxVideo;
 
 public var botplayTxt:FlxText;
+public var nukeVid:FlxVideo;
 
 function postCreate()
 {
@@ -17,26 +23,43 @@ function postCreate()
 	trace('bootplay ' + (PlayState.SONG.meta.name != "dealer" && PlayState.SONG.meta.name != "overcooked"));
 
 	player.cpu = FlxG.save.data.botplay;
-
 }
 
 function update(elapsed:Float)
 {
 	updateBotplay(elapsed);
 
-	if (PlayState.SONG.meta.name != "dealer" && PlayState.SONG.meta.name != "overcooked")
-	{
-		if (FlxG.keys.justPressed.SEVEN)
-			FlxG.switchState(new Charter(PlayState.SONG.meta.name, PlayState.difficulty, true));
-	}
-	else if (PlayState.SONG.meta.name == "overcooked")
-		PlayState.instance.health = 0; // :eviltroll:
+	if (FlxG.keys.justPressed.SEVEN)
+		dealerMechanic();
 
 	if (startingSong || !canPause || paused || health <= 0)
 		return;
 
 	if (FlxG.keys.justPressed.ONE && generatedMusic)
 		endSong();
+}
+
+function dealerMechanic()
+{
+	trace("help me pls " + (PlayState.SONG.meta.name == "dealer"));
+
+	if (PlayState.SONG.meta.name == "dealer")
+	{
+		nukeVid = new FlxVideo();
+
+		nukeVid.onEndReached.add(function():Void
+		{
+			nukeVid.dispose();
+			FlxG.removeChild(nukeVid);
+		});
+
+		FlxG.addChildBelowMouse(nukeVid);
+
+		if (nukeVid.load(Paths.video("nukecard")))
+			new FlxTimer().start(0.000001, (_) -> nukeVid.play());
+	}
+	else
+		FlxG.switchState(new Charter(PlayState.SONG.meta.name, PlayState.difficulty, true));
 }
 
 function updateBotplay(elapsed:Float)
