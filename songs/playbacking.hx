@@ -28,7 +28,7 @@ function update(elapsed)
 	{
 		if (FlxG.save.data.playbackRate < 10)
 		{
-			if (FlxG.keys.pressed.E)
+			if (FlxG.keys.justPressed.E)
 			{
 				FlxG.save.data.playbackRate += 0.05;
 				inst.pitch = FlxG.save.data.playbackRate;
@@ -43,7 +43,7 @@ function update(elapsed)
 
 		if (FlxG.save.data.playbackRate > 0.25)
 		{
-			if (FlxG.keys.pressed.Q)
+			if (FlxG.keys.justPressed.Q)
 			{
 				FlxG.save.data.playbackRate -= 0.05;
 				inst.pitch = FlxG.save.data.playbackRate;
@@ -55,6 +55,18 @@ function update(elapsed)
 				});
 			}
 		}
+
+		if (FlxG.keys.justPressed.FOUR)
+			{
+				FlxG.save.data.playbackRate = 1;
+				inst.pitch = FlxG.save.data.playbackRate;
+				vocals.pitch = FlxG.save.data.playbackRate;
+				playbackRateTxt.alpha = 1;
+				new FlxTimer().start(2.5, function(tmr:FlxTimer)
+				{
+					FlxTween.tween(playbackRateTxt, {alpha: 0}, 1);
+				});
+			}
 	}
 }
 
