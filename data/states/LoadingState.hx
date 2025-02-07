@@ -21,7 +21,7 @@ function create()
     black = new FlxSprite().makeSolid(FlxG.width, FlxG.height, 0xFF000000);
     add(black);
     
-    funkay = new FlxSprite(0, 0).loadGraphic(Paths.image('funkay'));
+    funkay = new FlxSprite(0, 0).loadGraphic(Paths.image('loading/funkay'));
     funkay.screenCenter();
     funkay.updateHitbox();
     funkay.antialiasing = Options.antialiasing;
