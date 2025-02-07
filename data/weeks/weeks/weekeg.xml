@@ -1,6 +1,6 @@
 <!DOCTYPE codename-engine-week>
 <week name="EG" chars="none" sprite="weekeg">
-    <difficulty name="hard"/>
+	<difficulty name="hard" />
 	<song>Yolk</song>
 	<song>Cracked</song>
 </week>

@@ -1,7 +1,7 @@
 <!DOCTYPE codename-engine-week>
 <week name="BRS HOUSE" chars="none" sprite="weekbr">
-    <difficulty name="hard"/>
-	<song>Baguette</song>
-	<song>Toast</song>
+    <difficulty name="hard" />
+    <song>Baguette</song>
+    <song>Toast</song>
     <song>Overcooked</song>
 </week>

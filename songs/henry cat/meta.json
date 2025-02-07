@@ -1,0 +1,8 @@
+{
+  "displayName": "Henry Cat",
+  "bpm": 120.0,
+  "icon": "henry-cat",
+  "color": "#FFFFFF",
+  "coopAllowed": true,
+  "opponentModeAllowed": true
+}

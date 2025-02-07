@@ -17,29 +17,28 @@ var __iconScale:Float = __baseIconScale;
 
 function postUpdate()
 {
-	__iconScale = lerp(__iconScale, __baseIconScale, 0.15);
-	iconP1.scale.set(__iconScale, __iconScale);
-	iconP2.scale.set(__iconScale, __iconScale);
+    __iconScale = lerp(__iconScale, __baseIconScale, 0.15);
+    iconP1.scale.set(__iconScale, __iconScale);
+    iconP2.scale.set(__iconScale, __iconScale);
 }
 
 function beatHit()
 {
-	__iconScale = __scale;
-
-	if (!__crochetBased)
-		return;
-
-	__lerpSpeed = Conductor.crochet * 0.005;
+    __iconScale = __scale;
+    
+    if (!__crochetBased) return;
+    
+    __lerpSpeed = Conductor.crochet * 0.005;
 }
 
 var baseLerp:Float = 1 / 60;
 
 function getLerp(ratio:Float):Float
 {
-	return FlxG.elapsed / baseLerp * ratio;
+    return FlxG.elapsed / baseLerp * ratio;
 }
 
 function lerp(a:Float, b:Float, ratio:Float):Float
 {
-	return FlxMath.lerp(a, b, getLerp(ratio));
+    return FlxMath.lerp(a, b, getLerp(ratio));
 }

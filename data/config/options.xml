@@ -1,27 +1,27 @@
 <!DOCTYPE codename-mod-options>
 <menu name="Vs Br" desc="holy fuck">
-    <menu name="Playback Rate" desc="Options for Playback Rate! The higher the number, the faster the song will go.">
-		<number id="playbackRate" name="Playback Rate" desc="Change the playback rate! The higher, the faster the song will go by." min="0.25" max="3" change="0.25"/>
-		<checkbox id="midsongPlaybackRate" name="Change Midsong" desc="If checked, the playback rate will be changeable mid song by using the keys Q and E."/>
+	<menu name="Playback Rate" desc="Options for Playback Rate! The higher the number, the faster the song will go.">
+		<number id="playbackRate" name="Playback Rate" desc="Change the playback rate! The higher, the faster the song will go by." min="0.25" max="3" change="0.25" />
+		<checkbox id="midsongPlaybackRate" name="Change Midsong" desc="If checked, the playback rate will be changeable mid song by using the keys Q and E." />
 	</menu>
-<checkbox id="botPlay" name="Bot Play" desc="If checked, the computer will play the song for you, no hands needed!."/>
-<checkbox id="eyesores" name="Eyesores" desc="If unchecked, your eyes won't get fucked by shaders, lol."/>
-<choice id="hitsoundStyle" name="Hitsound Type" desc="I love hitsounds."> 
-<!-- default -->
-		<value name="None" value="none"/>
-<!-- mods & games -->
-		<value name="Psych" value="psych"/>
-<value name="Bambi" value="bambi"/>
-<value name="Indie Cross" value="indieCross"/>
-<value name="ADOFAI" value="adofai"/> <!-- a dance of fire and ice -->
-<!-- memes -->
-<value name="Discord Ping" value="ping"/>
-<value name="I'm SpongeBob!" value="spongebob"/>
-<value name="FIRE IN THE HOLE" value="lobotomy"/>
-<value name="Vine Boom" value="vineBoom"/>
-<!-- irl -->
-<value name="Keyboard" value="keyboard"/>
-<value name="Finger Snap" value="snap"/>
-<value name="Hand Clap" value="clap"/>
+	<checkbox id="botPlay" name="Bot Play" desc="If checked, the computer will play the song for you, no hands needed!." />
+	<checkbox id="eyesores" name="Eyesores" desc="If unchecked, your eyes won't get fucked by shaders, lol." />
+	<choice id="hitsoundStyle" name="Hitsound Type" desc="I love hitsounds.">
+		<!-- default -->
+		<value name="None" value="none" />
+		<!-- mods & games -->
+		<value name="Psych" value="psych" />
+		<value name="Bambi" value="bambi" />
+		<value name="Indie Cross" value="indieCross" />
+		<value name="ADOFAI" value="adofai" /> <!-- a dance of fire and ice -->
+		<!-- memes -->
+		<value name="Discord Ping" value="ping" />
+		<value name="I'm SpongeBob!" value="spongebob" />
+		<value name="FIRE IN THE HOLE" value="lobotomy" />
+		<value name="Vine Boom" value="vineBoom" />
+		<!-- irl -->
+		<value name="Keyboard" value="keyboard" />
+		<value name="Finger Snap" value="snap" />
+		<value name="Hand Clap" value="clap" />
 	</choice>
 </menu>

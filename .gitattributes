@@ -1,11 +1,18 @@
 # Auto detect text files and perform LF normalization
-* text=auto
+* text=auto eol=lf
+
+# FOR BATCH FILES !!!!!!
+*.sh   eol=lf
+*.bat  eol=crlf
 
 # Don't count pages documentation as actual code
 pages/** linguist-vendored
 
 # Include HScript files as Haxe
+# None of these will be used since CNE uses `.hx` as the primary file extension
 *.hx linguist-language=Haxe
 *.hxs linguist-language=Haxe
+*.haxe linguist-language=Haxe
+*.hxc linguist-language=Haxe
 *.hsc linguist-language=Haxe
 *.hscript linguist-language=Haxe

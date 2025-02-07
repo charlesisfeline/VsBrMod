@@ -1,8 +1,8 @@
 <!DOCTYPE codename-engine-character>
 <character y="325" sprite="Mini_Mike_Assets" antialiasing="false" icon="mini-mike" color="#EDC3FF">
-	<anim name="idle" anim="mini mike idle" x="0" y="0" fps="12" loop="false"/>
-	<anim name="singLEFT" anim="mini mike left" x="4" y="0" fps="12" loop="false"/>
-	<anim name="singDOWN" anim="mini mike down" x="5" y="-8" fps="12" loop="false"/>
-	<anim name="singUP" anim="mini mike up" x="16" y="1" fps="12" loop="false"/>
-	<anim name="singRIGHT" anim="mini mike right" x="-5" y="0" fps="12" loop="false"/>
+	<anim name="idle" anim="mini mike idle" x="0" y="0" fps="12" loop="false" />
+	<anim name="singLEFT" anim="mini mike left" x="4" y="0" fps="12" loop="false" />
+	<anim name="singDOWN" anim="mini mike down" x="5" y="-8" fps="12" loop="false" />
+	<anim name="singUP" anim="mini mike up" x="16" y="1" fps="12" loop="false" />
+	<anim name="singRIGHT" anim="mini mike right" x="-5" y="0" fps="12" loop="false" />
 </character>

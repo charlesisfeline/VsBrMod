@@ -1,10 +1,13 @@
 import funkin.editors.charter.Charter;
 import funkin.game.PlayState;
+
 import flixel.text.FlxTextAlign;
 import flixel.text.FlxTextBorderStyle;
 import flixel.util.FlxTimer;
+
 import funkin.editors.charter.Charter;
 import funkin.game.PlayState;
+
 import hxvlc.openfl.Video;
 import hxvlc.flixel.FlxVideo;
 
@@ -13,62 +16,57 @@ public var nukeVid:FlxVideo;
 
 function postCreate()
 {
-	botplayTxt = new FlxText(400, 537, FlxG.width - 800, "BOTPLAY", 50);
-	botplayTxt.setFormat(Paths.font("vcr.ttf"), 40, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-	botplayTxt.borderSize = 3;
-	botplayTxt.camera = camHUD;
-	botplayTxt.alpha = 0.6;
-	add(botplayTxt);
-
-	trace('bootplay ' + (PlayState.SONG.meta.name != "dealer" && PlayState.SONG.meta.name != "overcooked"));
-
-	player.cpu = FlxG.save.data.botplay;
+    botplayTxt = new FlxText(400, 537, FlxG.width - 800, "BOTPLAY", 50);
+    botplayTxt.setFormat(Paths.font("vcr.ttf"), 40, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+    botplayTxt.borderSize = 3;
+    botplayTxt.camera = camHUD;
+    botplayTxt.alpha = 0.6;
+    add(botplayTxt);
+    
+    trace('bootplay ' + (PlayState.SONG.meta.name != "dealer" && PlayState.SONG.meta.name != "overcooked"));
+    
+    player.cpu = FlxG.save.data.botplay;
 }
 
 function update(elapsed:Float)
 {
-	updateBotplay(elapsed);
-
-	if (FlxG.keys.justPressed.SEVEN)
-		dealerMechanic();
-
-	if (startingSong || !canPause || paused || health <= 0)
-		return;
-
-	if (FlxG.keys.justPressed.ONE && generatedMusic)
-		endSong();
+    updateBotplay(elapsed);
+    
+    if (FlxG.keys.justPressed.SEVEN) dealerMechanic();
+    
+    if (startingSong || !canPause || paused || health <= 0) return;
+    
+    if (FlxG.keys.justPressed.ONE && generatedMusic) endSong();
 }
 
 function dealerMechanic()
 {
-	trace("help me pls " + (PlayState.SONG.meta.name == "dealer"));
-
-	if (PlayState.SONG.meta.name == "dealer")
-	{
-		nukeVid = new FlxVideo();
-
-		nukeVid.onEndReached.add(function():Void
-		{
-			nukeVid.dispose();
-			FlxG.removeChild(nukeVid);
-		});
-
-		FlxG.addChildBelowMouse(nukeVid);
-
-		if (nukeVid.load(Paths.video("nukecard")))
-			new FlxTimer().start(0.000001, (_) -> nukeVid.play());
-	}
-	else
-		FlxG.switchState(new Charter(PlayState.SONG.meta.name, PlayState.difficulty, true));
+    trace("help me pls " + (PlayState.SONG.meta.name == "dealer"));
+    
+    if (PlayState.SONG.meta.name == "dealer")
+    {
+        nukeVid = new FlxVideo();
+        
+        nukeVid.onEndReached.add(function():Void
+        {
+            nukeVid.dispose();
+            FlxG.removeChild(nukeVid);
+        });
+        
+        FlxG.addChildBelowMouse(nukeVid);
+        
+        if (nukeVid.load(Paths.video("nukecard"))) new FlxTimer().start(0.000001, (_) -> nukeVid.play());
+    }
+    else
+        FlxG.switchState(new Charter(PlayState.SONG.meta.name, PlayState.difficulty, true));
 }
 
 function updateBotplay(elapsed:Float)
 {
-	if (FlxG.keys.justPressed.SIX)
-		player.cpu = !player.cpu;
-
-	botplayTxt.visible = player.cpu;
-
-	for (txt in [scoreTxt, missesTxt, accuracyTxt])
-		txt.visible = !player.cpu;
+    if (FlxG.keys.justPressed.SIX) player.cpu = !player.cpu;
+    
+    botplayTxt.visible = player.cpu;
+    
+    for (txt in [scoreTxt, missesTxt, accuracyTxt])
+        txt.visible = !player.cpu;
 }

@@ -1,16 +1,42 @@
 {
+  "disableFormatting": false,
+
+  "indentation": {
+    "character": "    ",
+    "tabWidth": 2,
+    "indentCaseLabels": true,
+    "trailingWhitespace": true
+  },
+
   "lineEnds": {
+    "emptyCurly": "break",
     "leftCurly": "both",
     "rightCurly": "both",
-    "emptyCurly": "break",
     "objectLiteralCurly": {
       "leftCurly": "after"
     }
   },
   "sameLine": {
+    "ifBody": "same",
     "ifElse": "next",
     "doWhile": "next",
     "tryBody": "next",
     "tryCatch": "next"
+  },
+
+  "whitespace": {
+    "switchPolicy": "around",
+    "arrowFunctionsPolicy": "around",
+    "functionTypeHaxe3Policy": "around",
+    "functionTypeHaxe4Policy": "around"
+  },
+
+  "emptyLines": {
+    "importAndUsing": {
+      "betweenImportsLevel": "firstLevelPackage",
+      "betweenImports": 1,
+      "beforeUsing": 1
+    },
+    "maxAnywhereInFile": 1
   }
 }

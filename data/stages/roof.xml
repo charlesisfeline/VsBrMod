@@ -1,8 +1,8 @@
 <!DOCTYPE codename-engine-stage>
 <stage folder="stages/roof/" zoom="0.95">
-	<sprite x="-47.55" y="-87.5" sprite="heav" scale="1.5" name="roof" scrollx="1.01"/>
-	<gf x="338" y="-258.5"/>
-	<dad x="73" y="138"/>
-	<bf x="644" y="154.5"/>
-	<combo x="504.5" y="455.5"/>
+	<sprite x="-47.55" y="-87.5" sprite="heav" scale="1.5" name="roof" scrollx="1.01" />
+	<gf x="338" y="-258.5" />
+	<dad x="73" y="138" />
+	<bf x="644" y="154.5" />
+	<combo x="504.5" y="455.5" />
 </stage>

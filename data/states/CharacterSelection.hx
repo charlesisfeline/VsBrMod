@@ -1,3 +1,4 @@
-function create(){
-	FlxG.sound.music.destroy();
+function create()
+{
+    FlxG.sound.music.destroy();
 }
