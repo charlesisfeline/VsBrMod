@@ -78,7 +78,7 @@ function postUpdate(elapsed)
         menuInfomation.text = curQuote;
     }
     
-    if (FlxG.keys.justPressed.EIGHT) FlxG.switchState(new ModState("br/EndState"));
+    if (FlxG.keys.justPressed.EIGHT) FlxG.switchState(new ModState("EndState"));
     
     magenta.visible = false; // no
     menuItems.forEach((a:FlxSprite) -> a.x += 350);
