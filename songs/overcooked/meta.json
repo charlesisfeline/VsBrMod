@@ -1,8 +1,17 @@
 {
-	"displayName": "Overcooked",
-	"bpm": 190.0,
-	"icon": "br-glitch",
-	"color": "#A0D1FF",
+	"beatsPerMeasure": 4,
+	"opponentModeAllowed": true,
 	"coopAllowed": true,
-	"opponentModeAllowed": true
+	"stepsPerBeat": 4,
+	"bpm": 190,
+	"difficulties": [
+		"HARD"
+	],
+	"needsVoices": true,
+	"parsedColor": -63744,
+	"displayName": "Overcooked",
+	"icon": "br-glitch",
+	"name": "overcooked",
+	"color": "#FF0700",
+	"customValues": {}
 }

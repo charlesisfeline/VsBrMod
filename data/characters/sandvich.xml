@@ -1,4 +1,4 @@
 <!DOCTYPE codename-engine-character>
-<character x="5" y="515" sprite="sandvich" camy="400" icon="sandvich" color="#61FD51">
-	<anim name="idle" anim="sandvich" x="0" y="0" fps="24" loop="false" />
+<character x="5" y="515" sprite="sandvich" icon="sandvich" color="#DAB79B">
+	<anim name="idle" anim="sandvich" x="0" y="0" fps="24" loop="false"/>
 </character>

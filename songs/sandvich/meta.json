@@ -1,8 +1,16 @@
 {
-	"displayName": "Sandvich",
-	"bpm": 160.0,
+	"opponentModeAllowed": true,
+	"difficulties": [
+		"HARD"
+	],
 	"icon": "sandvich",
-	"color": "#DA7E44",
+	"parsedColor": -2458044,
+	"name": "sandvich",
 	"coopAllowed": true,
-	"opponentModeAllowed": true
+	"color": "#DA7E44",
+	"stepsPerBeat": 4,
+	"displayName": "Sandvich",
+	"needsVoices": true,
+	"beatsPerMeasure": 4,
+	"bpm": 160
 }

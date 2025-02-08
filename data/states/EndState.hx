@@ -9,6 +9,8 @@ function create()
     
     trace("read");
     
+    FlxG.camera.bgColor = 0xff000000;
+    
     if (FlxG.sound.music != null) FlxG.sound.music.stop();
     
     removeRedirectStates("StoryMenuState");

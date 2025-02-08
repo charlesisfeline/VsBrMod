@@ -3,7 +3,29 @@ import hxvlc.flixel.FlxVideo;
 
 import flixel.util.FlxTimer;
 
-if (PlayState.SONG.meta.name != "depart")
+FlxG.camera.bgColor = 0xff000000;
+if (PlayState.SONG.meta.name == "smiler")
+{
+    var jumps:FlxSprite;
+    function postCreate()
+    {
+        trace("fucking");
+        jumps = new FlxSprite(0, 0).loadGraphic(Paths.image('game/JUMPSCAREFRED'));
+        jumps.screenCenter();
+        jumps.updateHitbox();
+        jumps.antialiasing = Options.antialiasing;
+        add(jumps);
+        FlxG.sound.play(Paths.sound('scream'));
+        camFollow.x = jumps.x + 650;
+        camFollow.y = jumps.y + 650;
+    }
+    function update()
+    {
+        lossSFX.volume = 0;
+        if (FlxG.sound.music != null) FlxG.sound.music.stop();
+    }
+}
+else if (PlayState.SONG.meta.name != "depart")
 {
     var video:FlxVideo = new FlxVideo();
     video.onEndReached.add(function():Void

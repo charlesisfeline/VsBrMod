@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character x="-25" y="350" sprite="Animate_CC" icon="animate-cc" color="#CD4642">
+	<anim name="idle" anim="Idle instance 1" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="downn instance 1" x="0" y="5" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="left instance 1" x="47" y="13" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="rightn instance 1" x="90" y="13" fps="24" loop="false"/>
+	<anim name="singUP" anim="upn instance 1" x="5" y="30" fps="24" loop="false"/>
+</character>

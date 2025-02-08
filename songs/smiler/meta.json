@@ -1,8 +1,17 @@
 {
-	"displayName": "Smiler",
-	"bpm": 160.0,
-	"icon": "fred",
-	"color": "#A0D1FF",
+	"beatsPerMeasure": 4,
+	"opponentModeAllowed": true,
 	"coopAllowed": true,
-	"opponentModeAllowed": true
+	"stepsPerBeat": 4,
+	"bpm": 160,
+	"difficulties": [
+		"HARD"
+	],
+	"needsVoices": true,
+	"parsedColor": -8513769,
+	"displayName": "Smiler",
+	"icon": "fred",
+	"name": "smiler",
+	"color": "#7E1717",
+	"customValues": {}
 }

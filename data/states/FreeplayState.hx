@@ -5,6 +5,8 @@ var timeFormat12h:Bool = true; // the illusion of choice
 
 function postCreate()
 {
+    FlxG.camera.bgColor = 0xff000000;
+    
     scoreText.alpha = 1;
     coopText.y = scoreText.y + 36;
     

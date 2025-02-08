@@ -1,0 +1,40 @@
+{
+	"scrollSpeed": 2.7,
+	"codenameChart": true,
+	"strumLines": [
+		{
+			"notes": [],
+			"visible": false,
+			"strumPos": [
+				0,
+				50
+			],
+			"position": "dad",
+			"strumScale": 1,
+			"vocalsSuffix": "",
+			"strumLinePos": 0.25,
+			"type": 0,
+			"characters": [
+				"sandvich"
+			]
+		},
+		{
+			"notes": [],
+			"visible": true,
+			"strumPos": [
+				0,
+				50
+			],
+			"position": "boyfriend",
+			"strumScale": 1,
+			"vocalsSuffix": "",
+			"strumLinePos": 0.5,
+			"type": 1,
+			"characters": [
+				"bf-br"
+			]
+		}
+	],
+	"stage": "roof",
+	"noteTypes": []
+}

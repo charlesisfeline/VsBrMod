@@ -12,11 +12,12 @@ public function changePlayerSkin(skin)
     {
         strum.frames = frames;
         strum.antialiasing = false;
-        strum.setGraphicSize(Std.int(frames.width * 1.9));
+        // strum.setGraphicSize(Std.int(frames.width * 2.777));
         var animPrefix = playerStrums.strumAnimPrefix[strum.ID % playerStrums.strumAnimPrefix.length];
         strum.animation.addByPrefix("static", "arrow" + animPrefix.toUpperCase());
         strum.animation.addByPrefix("pressed", animPrefix + " press", 24, false);
         strum.animation.addByPrefix("confirm", animPrefix + " confirm", 24, false);
+        strum.scale.set(1.9, 1.9);
         strum.updateHitbox();
         strum.playAnim("static");
     }
@@ -30,7 +31,7 @@ public function changePlayerSkin(skin)
             case 0:
                 note.animation.addByPrefix("scroll", "purple0");
                 note.animation.addByPrefix("hold", "purple hold piece");
-                note.animation.addByPrefix("holdend", "pruple end hold");
+                note.animation.addByPrefix("holdend", "pruple hold end");
             case 1:
                 note.animation.addByPrefix("scroll", "blue0");
                 note.animation.addByPrefix("hold", "blue hold piece");
@@ -69,11 +70,12 @@ public function changeCPUSkin(skin)
     {
         strum.frames = frames;
         strum.antialiasing = false;
-        strum.setGraphicSize(Std.int(frames.width * 1.9));
+        // strum.setGraphicSize(Std.int(frames.width * 2.777));
         var animPrefix = cpuStrums.strumAnimPrefix[strum.ID % cpuStrums.strumAnimPrefix.length];
         strum.animation.addByPrefix("static", "arrow" + animPrefix.toUpperCase());
         strum.animation.addByPrefix("pressed", animPrefix + " press", 24, false);
         strum.animation.addByPrefix("confirm", animPrefix + " confirm", 24, false);
+        strum.scale.set(1.9, 1.9);
         strum.updateHitbox();
         strum.playAnim("static");
     }
@@ -87,7 +89,7 @@ public function changeCPUSkin(skin)
             case 0:
                 note.animation.addByPrefix("scroll", "purple0");
                 note.animation.addByPrefix("hold", "purple hold piece");
-                note.animation.addByPrefix("holdend", "pruple end hold");
+                note.animation.addByPrefix("holdend", "pruple hold end");
             case 1:
                 note.animation.addByPrefix("scroll", "blue0");
                 note.animation.addByPrefix("hold", "blue hold piece");

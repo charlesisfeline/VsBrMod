@@ -1,0 +1,40 @@
+{
+	"codenameChart": true,
+	"scrollSpeed": 3.4,
+	"strumLines": [
+		{
+			"strumScale": 1,
+			"position": "dad",
+			"notes": [],
+			"characters": [
+				"br"
+			],
+			"type": 0,
+			"scrollSpeed": 3.4,
+			"visible": true,
+			"strumPos": [
+				0,
+				50
+			],
+			"strumLinePos": 0.25
+		},
+		{
+			"strumScale": 1,
+			"position": "boyfriend",
+			"notes": [],
+			"characters": [
+				"bf-br"
+			],
+			"type": 1,
+			"scrollSpeed": 3.4,
+			"visible": true,
+			"strumPos": [
+				0,
+				50
+			],
+			"strumLinePos": 0.75
+		}
+	],
+	"stage": "frontyard-scary",
+	"noteTypes": []
+}

@@ -1,4 +1,6 @@
 {
+	"scrollSpeed": 2.7,
+	"stage": "roof",
 	"strumLines": [
 		{
 			"notes": [
@@ -1119,7 +1121,7 @@
 					"type": 0
 				}
 			],
-			"visible": true,
+			"visible": false,
 			"strumPos": [
 				0,
 				50
@@ -2404,7 +2406,7 @@
 			"position": "boyfriend",
 			"strumScale": 1,
 			"vocalsSuffix": "",
-			"strumLinePos": 0.75,
+			"strumLinePos": 0.5,
 			"type": 1,
 			"characters": [
 				"bf-br"
@@ -2412,7 +2414,5 @@
 		}
 	],
 	"codenameChart": true,
-	"stage": "stage",
-	"scrollSpeed": 2.9,
 	"noteTypes": []
 }

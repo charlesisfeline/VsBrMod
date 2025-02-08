@@ -132,6 +132,8 @@ function postCreate()
     // myCursor.cameras = [uiCamera];
     // add(myCursor);
     // trace(myCursor.cameras);
+    
+    FlxG.camera.bgColor = 0xff000000;
 }
 
 function update(elapsed:Float)

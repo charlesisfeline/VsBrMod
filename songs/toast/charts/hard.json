@@ -1,0 +1,42 @@
+{
+	"stage": "frontyard-shaded",
+	"events": [],
+	"scrollSpeed": 2.7,
+	"codenameChart": true,
+	"strumLines": [
+		{
+			"notes": [],
+			"visible": true,
+			"strumPos": [
+				0,
+				50
+			],
+			"position": "dad",
+			"scrollSpeed": null,
+			"strumScale": 1,
+			"strumLinePos": 0.25,
+			"type": 0,
+			"characters": [
+				"br"
+			]
+		},
+		{
+			"notes": [],
+			"visible": true,
+			"strumPos": [
+				0,
+				50
+			],
+			"position": "boyfriend",
+			"scrollSpeed": null,
+			"strumScale": 1,
+			"strumLinePos": 0.75,
+			"type": 1,
+			"characters": [
+				"bf-br"
+			]
+		}
+	],
+	"meta": null,
+	"noteTypes": []
+}

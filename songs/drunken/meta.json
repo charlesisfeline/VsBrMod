@@ -1,8 +1,16 @@
 {
-	"displayName": "Drunken",
-	"bpm": 160.0,
+	"opponentModeAllowed": true,
+	"difficulties": [
+		"HARD"
+	],
 	"icon": "silly-guitar",
-	"color": "#A0D1FF",
+	"parsedColor": -6237697,
+	"name": "drunken",
 	"coopAllowed": true,
-	"opponentModeAllowed": true
+	"color": "#A0D1FF",
+	"stepsPerBeat": 4,
+	"displayName": "Drunken",
+	"needsVoices": true,
+	"beatsPerMeasure": 4,
+	"bpm": 160
 }

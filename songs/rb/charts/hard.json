@@ -1,0 +1,42 @@
+{
+	"stage": "stage",
+	"events": [],
+	"scrollSpeed": 2.6,
+	"codenameChart": true,
+	"strumLines": [
+		{
+			"notes": [],
+			"visible": true,
+			"strumPos": [
+				0,
+				50
+			],
+			"position": "dad",
+			"scrollSpeed": 2.6,
+			"strumScale": 1,
+			"strumLinePos": 0.25,
+			"type": 0,
+			"characters": [
+				"rb"
+			]
+		},
+		{
+			"notes": [],
+			"visible": true,
+			"strumPos": [
+				0,
+				50
+			],
+			"position": "boyfriend",
+			"scrollSpeed": 2.6,
+			"strumScale": 1,
+			"strumLinePos": 0.75,
+			"type": 1,
+			"characters": [
+				"bf-br"
+			]
+		}
+	],
+	"meta": null,
+	"noteTypes": []
+}

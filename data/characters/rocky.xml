@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<character x="-26" y="490" sprite="rocky_yapping" scale="2.5" flipX="true" isPlayer="true" icon="face" color="#FEFDFF">
+	<anim name="idle" anim="idle0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="right0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="down0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singUP" anim="up0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="left0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="miss" anim="miss0" x="0" y="0" fps="24" loop="true"/>
+</character>
