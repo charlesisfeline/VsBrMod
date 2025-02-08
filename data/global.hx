@@ -42,14 +42,18 @@ function new()
     if (optiony.botPlay == null) optiony.botPlay = false;
     if (optiony.eyesores == null) optiony.eyesores = true;
     if (optiony.hitsoundStyle == null) optiony.hitsoundStyle = "none";
+    
+    window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
 }
 
 function update(elapsed:Float)
 {
     // here for debugging purposes i think
-    // #if windows
-    if (FlxG.keys.justPressed.F6) NativeAPI.allocConsole(); // SHOW CONSOLE
-    // #end
+    if (FlxG.keys.justPressed.F6)
+    {
+        NativeAPI.allocConsole(); // SHOW CONSOLE
+        trace("cons");
+    }
     if (FlxG.keys.justPressed.F5) FlxG.resetState(); // RESETTING STATES
 }
 
@@ -57,9 +61,11 @@ function postStateSwitch()
 {
     Framerate.debugMode = 1;
     
-    if (Std.isOfType(FlxG.state, PlayState)) window.title += ' - ' + PlayState.SONG.meta.displayName;
+    if (Std.isOfType(FlxG.state, PlayState)) window.title = 'fnf vs br - ' + PlayState.SONG.meta.displayName;
     else
         window.title = "fnf vs br";
+        
+    trace("help ee");
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
 }
 

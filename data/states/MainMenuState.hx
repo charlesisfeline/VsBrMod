@@ -16,7 +16,14 @@ var randQuotes:Array<String> = [
     "shush im garning\nmy 47",
     "turkey sandwich",
     "are you learning\nabout rocks",
-    "pickleball"
+    "pickleball",
+    "too much milf",
+    "k fred",
+    "DIGA BYEEEE\n BYEEEE",
+    "wish this was\nme lowkey",
+    "you goofballs",
+    "very nut shivering",
+    "menu theme by\nbrumbo!"
 ];
 
 function new()
