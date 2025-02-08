@@ -1,6 +1,9 @@
 var vhs:CustomShader;
 var staticShader:CustomShader;
 
+// i just took em from gorefield lol
+// hi lunar
+
 function postCreate()
 {
     trace("add vhs");
