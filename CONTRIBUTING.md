@@ -1,14 +1,14 @@
 # Vs. br Contributor Guide
 
-# Table of Contents
+## Table of Contents
 
--   [Pledge](#pledge)
--   [Standards](#standards)
--   [Responsibilities](#responsibilities)
--   [Scope](#scope)
--   [Enforcement](#enforcement)
--   [Reporting Bugs and Crashes](#reporting-bugs-and-crashes)
--   [Pull Requests](#pull-requests)
+- [Pledge](#pledge)
+- [Standards](#standards)
+- [Responsibilities](#responsibilities)
+- [Scope](#scope)
+- [Enforcement](#enforcement)
+- [Reporting Bugs and Crashes](#reporting-bugs-and-crashes)
+- [Pull Requests](#pull-requests)
 
 <!-- those first 5 sections are taken from https://github.com/EliteMasterEric/EnigmaEngine/blob/stable/CONTRIBUTING.md btw -->
 
@@ -26,22 +26,22 @@ orientation.
 Examples of behavior that contributes to creating such a positive environment
 include:
 
--   Usage of welcoming and inclusive language.
--   Being respectful of differing viewpoints and experiences.
--   Gracefully accepting constructive criticism.
--   Focusing on what is best for our community.
--   Showing empathy towards other community members.
+- Usage of welcoming and inclusive language.
+- Being respectful of differing viewpoints and experiences.
+- Gracefully accepting constructive criticism.
+- Focusing on what is best for our community.
+- Showing empathy towards other community members.
 
 Examples of unacceptable behavior by participants include:
 
--   The use of sexualized language or imagery and unwelcome sexual attention or
-    advances.
--   Trolling, insulting/derogatory comments, and personal or political attacks.
--   Public or private harassment.
--   Publishing others' private information, such as a physical or electronic
-    address, or a phone number, without explicit permission.
--   Other conduct which could reasonably be considered inappropriate in a
-    professional setting.
+- The use of sexualized language or imagery and unwelcome sexual attention or
+  advances.
+- Trolling, insulting/derogatory comments, and personal or political attacks.
+- Public or private harassment.
+- Publishing others' private information, such as a physical or electronic
+  address, or a phone number, without explicit permission.
+- Other conduct which could reasonably be considered inappropriate in a
+  professional setting.
 
 ## Responsibilities
 
@@ -79,9 +79,9 @@ If you don't find a relevant match or if you're just unsure, do not hesitate to 
 
 If you want to contribute to the mod/engine, make sure that:
 
--   The contribution does not affect performance significantly. You can ignore this rule if
-    your PR does not alter much code in any way.
--   Your PR is useful for future work by another developer, regardless of it not getting merged.
--   Document every change. If your pull requests add methods that others may not understand in a way,
-    please add a comment that briefly explains them.
--   If the PR is made to resolve an issue, please link the original.
+- The contribution does not affect performance significantly. You can ignore this rule if
+  your PR does not alter much code in any way.
+- Your PR is useful for future work by another developer, regardless of it not getting merged.
+- Document every change. If your pull requests add methods that others may not understand in a way,
+  please add a comment that briefly explains them.
+- If the PR is made to resolve an issue, please link the original.

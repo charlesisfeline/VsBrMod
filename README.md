@@ -8,7 +8,7 @@ codename engine, the 2nd best fnf engine lol, made by [the codename crew](https:
 
 its character editor is shit tho, use a Psych to Codename converter or a custom offset editor for now until when they finish the stage editor
 
-## HOW TO PLAY:
+## HOW TO PLAY
 
 - get [codename engine](https://github.com/CodenameCrew/CodenameEngine/actions)
 - extract it
