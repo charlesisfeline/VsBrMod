@@ -2,6 +2,13 @@ function postCreate()
 {
     changePlayerSkin("NOTE_assets_br");
     changeCPUSkin("NOTE_assets_br");
+    
+    for (vcrTo in [scoreTxt, missesTxt, accuracyTxt])
+    {
+        vcrTo.font = Paths.font("roboto.ttf");
+        vcrTo.size = 20;
+        vcrTo.borderSize = 2.25;
+    }
 }
 
 public function changePlayerSkin(skin)
