@@ -1,16 +1,14 @@
 {
-	"opponentModeAllowed": true,
-	"difficulties": [
-		"HARD"
-	],
-	"icon": "br",
-	"parsedColor": -2458044,
-	"name": "baguette",
-	"coopAllowed": true,
-	"color": "#DA7E44",
-	"stepsPerBeat": 4,
-	"displayName": "Baguette",
-	"needsVoices": true,
-	"beatsPerMeasure": 4,
-	"bpm": 120
+  "opponentModeAllowed": true,
+  "difficulties": ["HARD"],
+  "icon": "br",
+  "parsedColor": -2458044,
+  "name": "baguette",
+  "coopAllowed": true,
+  "color": "#DA7E44",
+  "stepsPerBeat": 4,
+  "displayName": "Baguette",
+  "needsVoices": true,
+  "beatsPerMeasure": 4,
+  "bpm": 180
 }

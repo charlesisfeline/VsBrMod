@@ -1,10 +1,8 @@
 {
-	"codenameChart": true,
-	"scrollSpeed": 2.4,
+	"stage": "stage",
 	"strumLines": [
 		{
-			"strumScale": 1,
-			"position": "dad",
+			"keyCount": 4,
 			"notes": [
 				{
 					"id": 0,
@@ -943,6 +941,12 @@
 					"type": 0
 				},
 				{
+					"id": 2,
+					"sLen": 0,
+					"time": 52375,
+					"type": 0
+				},
+				{
 					"id": 1,
 					"sLen": 0,
 					"time": 52500,
@@ -1345,7 +1349,7 @@
 					"type": 0
 				},
 				{
-					"id": 3,
+					"id": 0,
 					"sLen": 0,
 					"time": 76875,
 					"type": 0
@@ -1520,8 +1524,14 @@
 				},
 				{
 					"id": 3,
-					"sLen": 125,
+					"sLen": 0,
 					"time": 87250,
+					"type": 0
+				},
+				{
+					"id": 2,
+					"sLen": 0,
+					"time": 87375,
 					"type": 0
 				},
 				{
@@ -2113,12 +2123,14 @@
 					"type": 0
 				}
 			],
+			"position": "dad",
+			"strumScale": 1,
+			"visible": true,
+			"scrollSpeed": 2.4,
+			"type": 0,
 			"characters": [
 				"tankman"
 			],
-			"type": 0,
-			"scrollSpeed": 2.4,
-			"visible": true,
 			"strumPos": [
 				0,
 				50
@@ -2126,8 +2138,7 @@
 			"strumLinePos": 0.25
 		},
 		{
-			"strumScale": 1,
-			"position": "boyfriend",
+			"keyCount": 4,
 			"notes": [
 				{
 					"id": 0,
@@ -2245,7 +2256,7 @@
 				},
 				{
 					"id": 2,
-					"sLen": 875.000000000001,
+					"sLen": 875.000000000002,
 					"time": 8000,
 					"type": 0
 				},
@@ -3072,6 +3083,12 @@
 					"type": 0
 				},
 				{
+					"id": 2,
+					"sLen": 0,
+					"time": 56375,
+					"type": 0
+				},
+				{
 					"id": 1,
 					"sLen": 0,
 					"time": 56500,
@@ -3171,12 +3188,6 @@
 					"id": 3,
 					"sLen": 0,
 					"time": 63500,
-					"type": 0
-				},
-				{
-					"id": 0,
-					"sLen": 0,
-					"time": 63625,
 					"type": 0
 				},
 				{
@@ -3516,7 +3527,7 @@
 					"type": 0
 				},
 				{
-					"id": 3,
+					"id": 0,
 					"sLen": 0,
 					"time": 80875,
 					"type": 0
@@ -4254,12 +4265,14 @@
 					"type": 0
 				}
 			],
+			"position": "boyfriend",
+			"strumScale": 1,
+			"visible": true,
+			"scrollSpeed": 2.4,
+			"type": 1,
 			"characters": [
 				"bf-br"
 			],
-			"type": 1,
-			"scrollSpeed": 2.4,
-			"visible": true,
 			"strumPos": [
 				0,
 				50
@@ -4267,6 +4280,7 @@
 			"strumLinePos": 0.75
 		}
 	],
-	"stage": "stage",
+	"codenameChart": true,
+	"scrollSpeed": 2.4,
 	"noteTypes": []
 }

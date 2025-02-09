@@ -6,7 +6,7 @@ function postCreate()
     for (vcrTo in [scoreTxt, missesTxt, accuracyTxt])
     {
         vcrTo.font = Paths.font("roboto.ttf");
-        vcrTo.size = 20;
+        vcrTo.size = 16;
         vcrTo.borderSize = 2.25;
     }
 }
