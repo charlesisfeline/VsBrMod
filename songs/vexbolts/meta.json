@@ -1,17 +1,17 @@
 {
 	"opponentModeAllowed": true,
-	"icon": "br",
 	"difficulties": [
 		"HARD"
 	],
+	"icon": "br",
 	"parsedColor": -7391539,
-	"customValues": {},
-	"color": "#8F36CD",
-	"name": "vexbolts",
 	"coopAllowed": true,
+	"name": "vexbolts",
+	"color": "#8F36CD",
+	"customValues": {},
 	"stepsPerBeat": 4,
 	"displayName": "Vexbolts",
-	"beatsPerMeasure": 4,
 	"needsVoices": true,
+	"beatsPerMeasure": 4,
 	"bpm": 117
 }
