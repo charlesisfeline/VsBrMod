@@ -5,9 +5,6 @@ import flixel.text.FlxTextAlign;
 import flixel.text.FlxTextBorderStyle;
 import flixel.util.FlxTimer;
 
-import funkin.editors.charter.Charter;
-import funkin.game.PlayState;
-
 import hxvlc.openfl.Video;
 import hxvlc.flixel.FlxVideo;
 

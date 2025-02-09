@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-stage>
+<stage folder="stages/inside/" zoom="1.02">
+	<sprite x="20" y="90" sprite="fredStage" scale="1.5" name="home"/>
+	<gf x="882" y="159"/>
+	<dad x="53" y="100"/>
+	<bf x="493" y="113"/>
+	<combo x="443.5" y="393.5"/>
+</stage>

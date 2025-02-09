@@ -17,10 +17,11 @@ function create()
         
         if (game.inst != null && game.vocals != null) menuItems.insert(5, 'Skip Song');
     }
-    
-    levelDifficulty.visible = false; // lmfao
 }
 
+function postCreate()
+    levelDifficulty.visible = false; // lmfao
+    
 function postUpdate()
 {
     if (controls.ACCEPT)

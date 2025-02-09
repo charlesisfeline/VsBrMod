@@ -2,6 +2,8 @@ import Date;
 
 import flixel.text.FlxTextBorderStyle;
 
+import funkin.game.PlayState;
+
 var curQuote:String = "";
 
 var randQuotes:Array<String> = [

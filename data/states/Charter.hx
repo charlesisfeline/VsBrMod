@@ -17,12 +17,15 @@ import flixel.math.FlxPoint;
 
 import funkin.editors.charter.Charter;
 import funkin.editors.charter.CharterEvent;
+import funkin.editors.ui.UIContextMenu;
+import funkin.editors.ui.UIContextMenu.UIContextMenuOptionSpr;
+import funkin.editors.ui.UIButton;
 import funkin.editors.ui.UIWindow;
+import funkin.editors.ui.UINumericStepper;
 import funkin.editors.ui.UIText;
 import funkin.editors.ui.UISlider;
+import funkin.editors.ui.UISubstateWindow;
 import funkin.editors.ui.UITopMenu;
-
-// import youtube.ThisCursorIsStupid;
 
 var bottomMenuSpr:UITopMenu;
 var volumeButton:UITopMenuButton;
@@ -33,15 +36,6 @@ var vocalsVolumeSlider:UISlider;
 var sliderWidth:Int = 100;
 var trackedInstVolume:Int = 1;
 var trackedVoicesVolume:Int = 1;
-
-// var myCursor:ThisCursorIsStupid; // lol
-
-var backdropshit:FlxBackdrop;
-
-function create()
-{
-    gridColor1 = 0xFFFF5555;
-}
 
 function muteinst(t)
 {
@@ -71,13 +65,6 @@ var volumeOptions:Map<String, Void> = ["Mute instrumental" => muteinst, "Mute vo
 
 function postCreate()
 {
-    /* backdropshit = new FlxBackdrop(Paths.image('editors/bgs/charter'));
-
-        insert(members.indexOf(charterBG) + 1, backdropshit);
-        backdropshit.cameras = [charterCamera];
-        charterBG.alpha = 1;
-        backdropshit.alpha = 0.5; */
-    // backdropshit.color = 0x113D3D3D ;
     FlxG.mouse.visible = true;
     
     bottomMenuSpr = new UITopMenu([]);
@@ -128,24 +115,39 @@ function postCreate()
     scrollBar.scale.y = Std.int(FlxG.height - (bottomMenuSpr.bHeight * 2));
     scrollBar.updateHitbox();
     
-    // myCursor = new ThisCursorIsStupid(0.4, 0.4);
-    // myCursor.cameras = [uiCamera];
-    // add(myCursor);
-    // trace(myCursor.cameras);
+    topMenu[2].childs.push({
+        label: "Change key count (in editor)",
+        color: 0xFF959829,
+        icon: 4,
+        onCreate: (button) ->
+        {
+            button.label.offset.x = button.icon.offset.x = -2;
+        },
+        onSelect: (_) ->
+        {
+            // var saveButton:UIButton;
+            // var closeButton:UIButton;
+            // var keyCountStepper:UINumericStepper;
+            
+            var keyCountChangeSubstate = new UISubstateWindow(true, 'KeyCountSubstate');
+            // keyCountChangeSubstate.scriptName = 'data/states/KeyCountSubstate';
+            
+            FlxG.sound.music.pause();
+            Charter.instance.vocals.pause();
+            
+            keyCountChangeSubstate.winTitle = 'Edit key count';
+            keyCountChangeSubstate.winWidth = 310;
+            keyCountChangeSubstate.winHeight = 200;
+            
+            FlxG.state.openSubState(keyCountChangeSubstate);
+        }
+    });
     
     FlxG.camera.bgColor = 0xff000000;
 }
 
 function update(elapsed:Float)
 {
-    /* if(FlxG.sound.music.playing){
-            backdropshit.velocity.x = 0;
-
-        } else {
-            backdropshit.velocity.x = 	Conductor.bpm * 0.8;
-
-    }*/
-    
     instVolumeSlider.x = (instVolumeText.x + instVolumeText.width + 4) + 30 + instVolumeSlider.valueStepper.bWidth;
     vocalsVolumeSlider.x = (vocalsVolumeText.x + vocalsVolumeText.width + 4) + 30 + vocalsVolumeSlider.valueStepper.bWidth;
 }
