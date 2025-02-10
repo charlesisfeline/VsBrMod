@@ -44,6 +44,6 @@ function startCheat()
 {
     cheatActive = true;
     
-    PlayState.loadSong("smiler", "hard");
+    PlayState.loadSong("rb", "hard");
     FlxG.switchState(new PlayState());
 }

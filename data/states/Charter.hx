@@ -115,34 +115,6 @@ function postCreate()
     scrollBar.scale.y = Std.int(FlxG.height - (bottomMenuSpr.bHeight * 2));
     scrollBar.updateHitbox();
     
-    topMenu[2].childs.push({
-        label: "Change key count (in editor)",
-        color: 0xFF959829,
-        icon: 4,
-        onCreate: (button) ->
-        {
-            button.label.offset.x = button.icon.offset.x = -2;
-        },
-        onSelect: (_) ->
-        {
-            // var saveButton:UIButton;
-            // var closeButton:UIButton;
-            // var keyCountStepper:UINumericStepper;
-            
-            var keyCountChangeSubstate = new UISubstateWindow(true, 'KeyCountSubstate');
-            // keyCountChangeSubstate.scriptName = 'data/states/KeyCountSubstate';
-            
-            FlxG.sound.music.pause();
-            Charter.instance.vocals.pause();
-            
-            keyCountChangeSubstate.winTitle = 'Edit key count';
-            keyCountChangeSubstate.winWidth = 310;
-            keyCountChangeSubstate.winHeight = 200;
-            
-            FlxG.state.openSubState(keyCountChangeSubstate);
-        }
-    });
-    
     FlxG.camera.bgColor = 0xff000000;
 }
 

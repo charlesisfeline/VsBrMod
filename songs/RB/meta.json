@@ -1,8 +1,17 @@
 {
-	"displayName": "rB",
-	"bpm": 160.0,
-	"icon": "rb",
-	"color": "#FFEF88",
+	"beatsPerMeasure": 4,
+	"opponentModeAllowed": true,
 	"coopAllowed": true,
-	"opponentModeAllowed": true
+	"stepsPerBeat": 4,
+	"bpm": 150,
+	"difficulties": [
+		"HARD"
+	],
+	"needsVoices": true,
+	"parsedColor": -4216,
+	"displayName": "rB",
+	"icon": "rb",
+	"name": "rb",
+	"color": "#FFEF88",
+	"customValues": {}
 }

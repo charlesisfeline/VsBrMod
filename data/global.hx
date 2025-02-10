@@ -62,8 +62,6 @@ function update(elapsed:Float)
     if (FlxG.keys.justPressed.F5) FlxG.resetState(); // RESETTING STATES
 }
 
-var init:Bool = false;
-
 function postStateSwitch()
 {
     Framerate.debugMode = 1;
@@ -74,22 +72,6 @@ function postStateSwitch()
         
     trace("help ee");
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
-    
-    if (init) return;
-    
-    init = true;
-    
-    PlayerSettings.solo.controls.removeGamepad(0);
-    PlayerSettings.solo.controls.addGamepadLiteral(0, [
-        Control.ACCEPT => [FlxGamepadInputID.A],
-        Control.BACK => [FlxGamepadInputID.B],
-        Control.UP => [FlxGamepadInputID.DPAD_UP, FlxGamepadInputID.LEFT_STICK_DIGITAL_UP],
-        Control.DOWN => [FlxGamepadInputID.DPAD_DOWN, FlxGamepadInputID.LEFT_STICK_DIGITAL_DOWN],
-        Control.LEFT => [FlxGamepadInputID.DPAD_LEFT, FlxGamepadInputID.LEFT_STICK_DIGITAL_LEFT],
-        Control.RIGHT => [FlxGamepadInputID.DPAD_RIGHT, FlxGamepadInputID.LEFT_STICK_DIGITAL_RIGHT],
-        Control.PAUSE => [FlxGamepadInputID.START],
-        Control.RESET => [-100]
-    ]);
 }
 
 static function getInnerData(xml:Xml)
