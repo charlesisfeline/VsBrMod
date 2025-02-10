@@ -9,9 +9,11 @@
 	<credit name="Gamerboi99" icon="gamerboi" desc="Artist, Animator" />
 	<credit name="Gold" icon="gold" desc="Composer" url="https://www.youtube.com/@goldisflammable" />
 	<credit name="ShaggyNRogers" icon="missing_icon" desc="Charter" />
+	<credit name="CosmosProductions" icon="missing_icon" desc="Artist, Animator" />
 	<credit name="HollowSoulxs" icon="missing_icon" desc="Artist, Animator, Composer" />
 	<credit name="Dj_Jami" icon="jami" desc="Composer" />
-	<credit name="Keith" icon="missing_icon" desc="Artist, Animator" />
+	<credit name="Alex" icon="missing_icon" desc="Charter" />
+	<credit name="Keith" icon="missing_icon" desc="Artist, Animator, Composer" />
 </menu>
 <menu name="Contributors" desc="Whoever contributed to the mod, they go here.">
 	<credit name="lunarcleint" icon="lunar" desc="some of these uhhhhhh events and scripts???????" url="https://github.com/lunarcleint" />

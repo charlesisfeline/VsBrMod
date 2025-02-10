@@ -5,7 +5,7 @@ function postCreate()
     for (option in main.members)
         if (option.desc == "Modify mod options here") main.members.remove(option);
         
-    CoolUtil.playMusic(Paths.music("breakfast"), false, 1, true, 95);
+    // CoolUtil.playMusic(Paths.music("breakfast"), false, 1, true, 95);
     
     background = new FlxSprite(0, 0).loadGraphic(Paths.image('menus/menuDesat'));
     background.color = FlxColor.ORANGE;
