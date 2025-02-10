@@ -1,0 +1,14 @@
+{
+  "opponentModeAllowed": true,
+  "difficulties": ["HARD"],
+  "icon": "br",
+  "parsedColor": -2458044,
+  "name": "feeling b",
+  "coopAllowed": true,
+  "color": "#DA7E44",
+  "stepsPerBeat": 4,
+  "displayName": "Feeling B",
+  "needsVoices": true,
+  "beatsPerMeasure": 4,
+  "bpm": 130
+}
