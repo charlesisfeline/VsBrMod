@@ -4,16 +4,17 @@
 	<credit name="BreadBoyoo" icon="breadboyoo" desc="Director, Artist, Crack Supplier" url="https://www.youtube.com/@breadwithouttheead" color="#d4783b" />
 	<credit name="Isaiah Mods" icon="isaiah" desc="Artist, Composer" url="https://www.youtube.com/@isaiahmodsofficial" />
 	<credit name="TheAnimateMan" icon="animate" desc="Composer, Artist, Animator" url="https://www.youtube.com/@TheAnimateMan0" />
-	<credit name="Brumbo" icon="brumbo" desc="Composer" />
+	<credit name="Brumbo" icon="brumbo" desc="Composer" url="https://www.youtube.com/@brumbo54" />
 	<credit name="ArloAreebs" icon="vencerist" desc="Composer, Artist, Animator" url="https://www.youtube.com/@VencerVents" />
-	<credit name="Gamerboi99" icon="gamerboi" desc="Artist, Animator" />
+	<credit name="Gamerboi99" icon="gamerboi" desc="Artist, Animator" url="https://www.youtube.com/@therealgamerboi99" />
 	<credit name="Gold" icon="gold" desc="Composer" url="https://www.youtube.com/@goldisflammable" />
-	<credit name="ShaggyNRogers" icon="missing_icon" desc="Charter" />
-	<credit name="CosmosProductions" icon="missing_icon" desc="Artist, Animator" />
-	<credit name="HollowSoulxs" icon="missing_icon" desc="Artist, Animator, Composer" />
+	<credit name="ShaggyNRogers" icon="missing_icon" desc="Charter" url="https://www.youtube.com/@ShaggyNRogers" />
+	<credit name="CosmosProductions" icon="missing_icon" desc="Artist, Animator" url="https://www.youtube.com/@CosmosThe64th" />
+	<credit name="HollowSoulxs" icon="missing_icon" desc="Artist, Animator, Composer" url="https://www.youtube.com/@HollowSoulxs" />
 	<credit name="Dj_Jami" icon="jami" desc="Composer" />
-	<credit name="Alex" icon="missing_icon" desc="Charter" />
+	<credit name="Alex" icon="missing_icon" desc="Charter" url="https://www.youtube.com/@evilalex1593" />
 	<credit name="Keith" icon="missing_icon" desc="Artist, Animator, Composer" />
+	<credit name="CrunchyTaco29" icon="missing_icon" desc="Artist" url="https://www.youtube.com/@CrunchyTaco29" />
 </menu>
 <menu name="Contributors" desc="Whoever contributed to the mod, they go here.">
 	<credit name="lunarcleint" icon="lunar" desc="some of these uhhhhhh events and scripts???????" url="https://github.com/lunarcleint" />
