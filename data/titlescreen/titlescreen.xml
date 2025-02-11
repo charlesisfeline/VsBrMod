@@ -21,14 +21,12 @@
 		</text>
 		<text beat="4" /> <!-- clears the screen !-->
 		<text beat="5">
-			<line text="Not associated with" />
-			<line text="with" />
+			<line text="THIS IS A BETA" />
 		</text>
 		<text beat="7">
-			<line text="Not associated with" />
-			<line text="with" />
-			<line text="Newgrounds" />
-			<sprite path="menus/titlescreen/newgrounds_logo" scale="0.8" />
+			<line text="THIS IS A BETA" />
+			<line text="UNFINISHED SHITS N GIGGLES" />
+			<sprite path="menus/titlescreen/br" scale="0.8" />
 		</text>
 		<text beat="8" /> <!-- clears the screen !-->
 		<text beat="9">
@@ -38,18 +36,20 @@
 			<introtext line="1" />
 			<introtext line="2" />
 		</text>
-		<text beat="12" />
-		<text beat="13">
+		<text beat="12">
 			<line text="FNF" />
 			<line text="Vs" />
 			<line text="Br" />
 		</text>
-		<text beat="14">
+		<text beat="13">
 			<line text="FNF" />
 			<line text="Vs" />
 		</text>
-		<text beat="15">
+		<text beat="14">
 			<line text="FNF" />
+		</text>
+		<text beat="15">
+			<sprite path="game/JUMPSCAREFRED" scale="0.25" />
 		</text>
 	</intro>
 </titlestate>
