@@ -1,10 +1,27 @@
+import Sys;
+
 import hxvlc.openfl.Video;
 import hxvlc.flixel.FlxVideo;
 
 import flixel.util.FlxTimer;
 
 FlxG.camera.bgColor = 0xff000000;
-if (PlayState.SONG.meta.name == "smiler")
+if (PlayState.SONG.meta.name == "rb")
+{
+    var dontCrash:Bool = false;
+    function update()
+    {
+        if (FlxG.sound.music != null) FlxG.sound.music.stop();
+        
+        if (controls.ACCEPT) dontCrash = true;
+        
+        lossSFX.onComplete = () ->
+        {
+            if (!dontCrash) Sys.exit(); // how do u actually make the game crash instead of just closing it hmmm
+        }
+    }
+}
+else if (PlayState.SONG.meta.name == "smiler")
 {
     var jumps:FlxSprite;
     function postCreate()

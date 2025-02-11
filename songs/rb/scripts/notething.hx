@@ -9,6 +9,8 @@ function postCreate()
         vcrTo.size = 16;
         vcrTo.borderSize = 2.5;
     }
+    
+    lossSFX = "rbLoss";
 }
 
 public function changePlayerSkin(skin)
