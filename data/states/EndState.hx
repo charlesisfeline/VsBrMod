@@ -1,6 +1,8 @@
 import funkin.menus.StoryMenuState;
 import funkin.options.Options;
 
+import lime.graphics.Image;
+
 var endingImage:FlxSprite;
 
 function create()
@@ -8,6 +10,12 @@ function create()
     importScript("data/scripts/redirectUtil");
     
     trace("read");
+    
+    window.title = "the end";
+    window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
+    
+    FlxG.mouse.useSystemCursor = false;
+    FlxG.mouse.load(Paths.image("ui/cursor"));
     
     FlxG.camera.bgColor = 0xff000000;
     

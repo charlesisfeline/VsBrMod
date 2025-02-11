@@ -115,6 +115,8 @@ function postCreate()
     scrollBar.scale.y = Std.int(FlxG.height - (bottomMenuSpr.bHeight * 2));
     scrollBar.updateHitbox();
     
+    window.title = "fnf vs br editing a chart";
+    
     FlxG.camera.bgColor = 0xff000000;
 }
 

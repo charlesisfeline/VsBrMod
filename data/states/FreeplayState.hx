@@ -1,11 +1,19 @@
 import Date;
 
+import lime.graphics.Image;
+
 var icoPlacement:String = "left";
 var timeFormat12h:Bool = true; // the illusion of choice
 
 function postCreate()
 {
     FlxG.camera.bgColor = 0xff000000;
+    
+    window.title = "fnf vs br";
+    window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
+    
+    FlxG.mouse.useSystemCursor = false;
+    FlxG.mouse.load(Paths.image("ui/cursor"));
     
     scoreText.alpha = 1;
     coopText.y = scoreText.y + 36;

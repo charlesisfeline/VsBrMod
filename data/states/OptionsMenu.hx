@@ -1,7 +1,15 @@
 import funkin.backend.system.framerate.Framerate;
 
+import lime.graphics.Image;
+
 function postCreate()
 {
+    window.title = "fnf vs br but in options";
+    window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
+    
+    FlxG.mouse.useSystemCursor = false;
+    FlxG.mouse.load(Paths.image("ui/cursor"));
+    
     for (option in main.members)
         if (option.desc == "Modify mod options here") main.members.remove(option);
         

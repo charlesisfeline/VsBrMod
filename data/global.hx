@@ -9,6 +9,7 @@ import funkin.backend.system.framerate.Framerate;
 import funkin.backend.utils.ShaderResizeFix;
 import funkin.backend.utils.WindowUtils;
 import funkin.options.PlayerSettings;
+import funkin.backend.utils.NativeAPI;
 
 import lime.graphics.Image;
 
@@ -52,14 +53,16 @@ function new()
 }
 
 function update(elapsed:Float)
+    if (FlxG.keys.justPressed.F5) FlxG.resetState(); // RESETTING STATES
+    
+function postUpdate(elapsed:Float)
 {
     // here for debugging purposes i think
     if (FlxG.keys.justPressed.F6)
     {
-        NativeAPI.allocConsole(); // SHOW CONSOLE
         trace("cons");
+        NativeAPI.allocConsole();
     }
-    if (FlxG.keys.justPressed.F5) FlxG.resetState(); // RESETTING STATES
 }
 
 function postStateSwitch()
@@ -70,6 +73,9 @@ function postStateSwitch()
     else
         window.title = "fnf vs br";
         
+    FlxG.mouse.useSystemCursor = false;
+    FlxG.mouse.load(Paths.image("ui/cursor"));
+    
     trace("help ee");
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
 }

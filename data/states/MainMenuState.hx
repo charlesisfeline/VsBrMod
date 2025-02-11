@@ -4,6 +4,8 @@ import flixel.text.FlxTextBorderStyle;
 
 import funkin.game.PlayState;
 
+import lime.graphics.Image;
+
 var curQuote:String = "";
 
 var randQuotes:Array<String> = [
@@ -43,6 +45,12 @@ function postCreate()
     FlxG.camera.bgColor = 0xFF000000;
     
     FlxG.camera.followLerp = 0;
+    
+    window.title = "fnf vs br";
+    window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
+    
+    FlxG.mouse.useSystemCursor = false;
+    FlxG.mouse.load(Paths.image("ui/cursor"));
     
     curQuote = FlxG.random.getObject(randQuotes);
     

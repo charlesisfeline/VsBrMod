@@ -1,3 +1,4 @@
+import funkin.backend.utils.NativeAPI;
 import funkin.backend.utils.WindowUtils;
 
 import lime.graphics.Image;
@@ -6,9 +7,12 @@ function postCreate()
 {
     window.title = "fnf vs br";
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
+    
+    FlxG.mouse.useSystemCursor = false;
+    FlxG.mouse.load(Paths.image("ui/cursor"));
 }
 
-function postUpdate(elapsed)
+function postUpdate(elapsed:Float)
     cheatCodeShit();
     
 // cheat code taken from base fnf (v-slice) !!!
@@ -18,6 +22,12 @@ var cheatActive:Bool = false;
 
 function cheatCodeShit()
 {
+    if (FlxG.keys.justPressed.SIX)
+    {
+        trace("cons");
+        NativeAPI.allocConsole();
+    }
+    
     if (FlxG.keys.justPressed.ANY)
     {
         if (controls.DOWN_P) codePress(0x1000);

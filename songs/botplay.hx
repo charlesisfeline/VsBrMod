@@ -23,6 +23,13 @@ function postCreate()
     trace('bootplay ' + (PlayState.SONG.meta.name != "dealer" && PlayState.SONG.meta.name != "overcooked"));
     
     player.cpu = FlxG.save.data.botplay;
+    
+    if (PlayState.SONG.meta.name == "feeling b"
+        || PlayState.SONG.meta.name == "suns"
+        || PlayState.SONG.meta.name == "depart"
+        || PlayState.SONG.meta.name == "drunken"
+        || PlayState.SONG.meta.name == "overcooked"
+        || PlayState.SONG.meta.name == "toast") defaultDisplayCombo = true;
 }
 
 function update(elapsed:Float)
