@@ -56,10 +56,10 @@ function postCreate()
     
     var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menus/menuBG'));
     insert(1, bg);
-    var clouds:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menus/mainmenu/clouds'));
-    insert(2, clouds);
     var yard:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menus/mainmenu/menuHouse'));
-    insert(3, yard);
+    insert(2, yard);
+    var clouds:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menus/mainmenu/clouds'));
+    insert(3, clouds);
     var brGuy:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menus/mainmenu/br_sign'));
     insert(4, brGuy);
     var border:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menus/mainmenu/boreder'));
