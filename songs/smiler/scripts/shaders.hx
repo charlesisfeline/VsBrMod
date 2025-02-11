@@ -1,3 +1,5 @@
+import funkin.options.Options;
+
 var vhs:CustomShader;
 var staticShader:CustomShader;
 
@@ -11,13 +13,13 @@ function postCreate()
     vhs.time = 0;
     vhs.noiseIntensity = 0.003;
     vhs.colorOffsetIntensity = 0.1;
-    FlxG.camera.addShader(vhs);
+    if (Options.gameplayShaders) FlxG.camera.addShader(vhs);
     
     staticShader = new CustomShader("tvstatic");
     staticShader.time = 0;
     staticShader.strength = 0.3;
     staticShader.speed = 20;
-    FlxG.camera.addShader(staticShader);
+    if (Options.gameplayShaders) FlxG.camera.addShader(staticShader);
 }
 
 var totalTime:Float = 0;
