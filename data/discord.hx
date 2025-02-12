@@ -18,6 +18,14 @@ function onPlayStateUpdate()
 {
     DiscordUtil.changeSongPresence(PlayState.instance.detailsText, (PlayState.instance.paused ? "PAUSED GAME - " : "") + "NO LEAKS", PlayState.instance.inst,
         PlayState.instance.getIconRPC());
+    /* DiscordUtil.changeSongPresence(PlayState.instance.detailsText,
+        (PlayState.instance.paused ? "PAUSED GAME - " : "")
+        + PlayState.SONG.meta.displayName
+        + " ("
+        + PlayState.difficulty
+        + ")", PlayState.instance.inst,
+        PlayState.instance.getIconRPC());
+     */
 }
 
 function onMenuLoaded(name:String)
