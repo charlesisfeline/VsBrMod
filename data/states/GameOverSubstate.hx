@@ -9,15 +9,30 @@ FlxG.camera.bgColor = 0xff000000;
 if (PlayState.SONG.meta.name == "rb")
 {
     var dontCrash:Bool = false;
+    var black = new FlxSprite().makeSolid(FlxG.width, FlxG.height, 0xFF000000);
+    add(black);
+    var video:FlxVideo = new FlxVideo();
+    video.onEndReached.add(function():Void
+    {
+        video.dispose();
+        FlxG.removeChild(video);
+        if (!dontCrash) Sys.exit(); // how do u actually make the game crash instead of just closing it hmmm
+    });
+    FlxG.addChildBelowMouse(video);
+    // video.volumeAdjust = 6.0;
+    if (video.load(Paths.video("arbys"))) new FlxTimer().start(0.000001, (_) -> video.play());
     function update()
     {
+        lossSFX.volume = 0;
         if (FlxG.sound.music != null) FlxG.sound.music.stop();
-        
         if (controls.ACCEPT) dontCrash = true;
-        
-        lossSFX.onComplete = () ->
+        // lossSFX.onComplete = () -> if (!dontCrash) Sys.exit(); // how do u actually make the game crash instead of just closing it hmmm
+        if (controls.BACK || controls.ACCEPT)
         {
-            if (!dontCrash) Sys.exit(); // how do u actually make the game crash instead of just closing it hmmm
+            FlxG.game.removeChild(video);
+            video.dispose();
+            trace(video.time == -1);
+            FlxG.switchState(new PlayState());
         }
     }
 }
@@ -44,6 +59,8 @@ else if (PlayState.SONG.meta.name == "smiler")
 }
 else if (PlayState.SONG.meta.name != "depart")
 {
+    var black = new FlxSprite().makeSolid(FlxG.width, FlxG.height, 0xFF000000);
+    add(black);
     var video:FlxVideo = new FlxVideo();
     video.onEndReached.add(function():Void
     {

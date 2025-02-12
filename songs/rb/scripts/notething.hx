@@ -9,8 +9,6 @@ function postCreate()
         vcrTo.size = 16;
         vcrTo.borderSize = 2.5;
     }
-    
-    lossSFX = "rbLoss";
 }
 
 public function changePlayerSkin(skin)
@@ -62,12 +60,15 @@ public function changePlayerSkin(skin)
         if (note.isSustainNote)
         {
             note.animation.play("holdend");
-            note.updateHitbox();
             
             if (note.nextSustain != null) note.animation.play('hold');
+            note.updateHitbox();
         }
         else
+        {
             note.animation.play("scroll");
+            note.updateHitbox();
+        }
     }
 }
 
