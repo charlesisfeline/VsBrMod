@@ -1,0 +1,31 @@
+name: Charting Issue
+description: Report an issue with the placement of notes in the mod's charting.
+labels: ["charting issue"]
+title: "[CHARTING ISSUE] "
+body:
+  - type: checkboxes
+    attributes:
+      label: Issue Checklist
+      description: Be sure to complete these steps to increase the chances of your issue being addressed!
+      options:
+        - label: I have checked the Issues/Discussions pages to see if my issue has already been reported
+        - label: I have properly named my issue
+
+  - type: markdown
+    attributes:
+      value: "## Describe the charting issue(s)."
+
+  - type: textarea
+    attributes:
+      label: Location
+      description: Where did you find the issue(s)? Include the name of the song, the variation, the difficulty, the time/section of the song, and any images or videos.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Description
+      description: Why do you believe this is an issue? Is a note at the wrong time, a hold note too short/long, or something else?
+      placeholder: Describe the charting issue(s) here...
+    validations:
+      required: true

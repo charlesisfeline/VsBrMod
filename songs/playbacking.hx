@@ -10,6 +10,8 @@ var playbackRateTxt:FlxText;
 
 function create()
 {
+    if (FlxG.save.data.playbackRate == null || FlxG.save.data.playbackRate == 0) FlxG.save.data.playbackRate = 1;
+    
     playbackRateTxt = new FunkinText(400, 83, FlxG.width - 800, "Playback Rate: " + FlxG.save.data.playbackRate, 40);
     playbackRateTxt.setFormat(Paths.font("vcr.ttf"), 23.5, FlxColor.WHITE, "center", FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
     playbackRateTxt.scrollFactor.set();

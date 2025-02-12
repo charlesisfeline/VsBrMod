@@ -1,87 +1,87 @@
-# Vs. br Contributor Guide
+# -- **Contributing to Vs. br --**
 
-## Table of Contents
+Welcome to the contributing guide! You can contribute to the Vs. br repository by opening issues or pull requests. This guide will cover best practices for each type of contribution.
 
-- [Pledge](#pledge)
-- [Standards](#standards)
-- [Responsibilities](#responsibilities)
-- [Scope](#scope)
-- [Enforcement](#enforcement)
-- [Reporting Bugs and Crashes](#reporting-bugs-and-crashes)
-- [Pull Requests](#pull-requests)
+# Chapter 1 - Issues
 
-<!-- those first 5 sections are taken from https://github.com/EliteMasterEric/EnigmaEngine/blob/stable/CONTRIBUTING.md btw -->
+Issues serve many purposes, from reporting bugs to suggesting new features.
+This section provides guidelines to follow when [opening an issue](https://github.com/charlesisfeline/VsBrMod/issues).
 
-## Pledge
+## Requirements
 
-In the interest of fostering an open and welcoming environment, we as
-contributors and maintainers pledge to making participation in our project and
-our community a harassment-free experience for everyone, regardless of age, body
-size, disability, ethnicity, gender identity and expression, level of experience,
-nationality, personal appearance, race, religion, or sexual identity and
-orientation.
+Make sure you're playing:
 
-## Standards
+- the latest version of [Codename Engine](https://codename-engine.com/)
+- in a clean slate, without any addons
 
-Examples of behavior that contributes to creating such a positive environment
-include:
+## Issue Types
 
-- Usage of welcoming and inclusive language.
-- Being respectful of differing viewpoints and experiences.
-- Gracefully accepting constructive criticism.
-- Focusing on what is best for our community.
-- Showing empathy towards other community members.
+> [!TIP]
+> If neither of these templates suit your inquiry (ex. Questions), it's best to open a [discussion](https://github.com/charlesisfeline/VsBrMod/discussions) instead to prevent clutter.
 
-Examples of unacceptable behavior by participants include:
+Choose the issue template that best suits your needs!
+Here's what each template is designed for:
 
-- The use of sexualized language or imagery and unwelcome sexual attention or
-  advances.
-- Trolling, insulting/derogatory comments, and personal or political attacks.
-- Public or private harassment.
-- Publishing others' private information, such as a physical or electronic
-  address, or a phone number, without explicit permission.
-- Other conduct which could reasonably be considered inappropriate in a
-  professional setting.
+### Bug Report ([view list](https://github.com/charlesisfeline/VsBrMod/issues?q=is%3Aissue%20state%3Aopen%20label%3Abug))
 
-## Responsibilities
+For minor bugs and general issues with the mod. Choose this one if none of the others fit your needs.
 
-Project maintainers are responsible for clarifying the standards of acceptable
-behavior and are expected to take appropriate and fair corrective action in
-response to any instances of unacceptable behavior.
+### Crash Report ([view list](https://github.com/charlesisfeline/VsBrMod/issues?q=is%3Aissue%20state%3Aopen%20label%3Acrash))
 
-Project maintainers have the right and responsibility to remove, edit, or
-reject comments, commits, code, wiki edits, issues, and other contributions
-that are not aligned to this guide, or to ban temporarily or
-permanently any contributor for other behaviors that they deem inappropriate,
-threatening, offensive, or harmful.
+For crashes and freezes. Codename Engine is still in beta, so you probably might expect some. Not to mention, the mod hasn't even released yet, so keep that in mind.
 
-## Scope
+### Charting Issue ([view list](https://github.com/charlesisfeline/VsBrMod/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22charting%20issue%22))
 
-This guide applies both within project spaces and in public spaces when an individual is representing the project or its community. Examples of representing a project or community include using an official project e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event. Representation of a project may be further defined and clarified by project maintainers.
+For misplaced notes, wonky camera movements, broken song events, and everything related to the mod's charts.
 
-## Enforcement
+### Enhancement ([view list](http://github.com/charlesisfeline/VsBrMod/issues?q=is%3Aissue%20state%3Aopen%20label%3Aenhancement))
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at . All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.
+For suggestions to add new features or improve existing ones. We'd love to hear your ideas!
 
-Project maintainers who do not follow or enforce this guidein good faith may face temporary/permanent repercussions as determined by other members of the project's leadership.
+## But before you submit...
 
-## Reporting Bugs and Crashes
+Use the search bar on the Issues page to check that your issue hasn't already been reported by someone else! Duplicate issues make it harder to keep track of important issues with the game.
+Also only report one issue or enhancement at a time! That way they're easier to track. Once you're sure your issue is unique and specific, feel free to submit it.
 
-When reporting an issue, make sure to always report one issue per bug/crash.
-If you notice several bugs and you want to report them, I'd highly recommend making **seperate issues for all of them**.
+**Thank you for opening issues!**
 
-Issues are often reported a bunch, so please go check to see if your issue already exists before reporting them.
-You can search them first [here](https://github.com/charlesisfeline/VsBrMod/issues), by the way.
+# Chapter 2 - Pull Requests
 
-If you don't find a relevant match or if you're just unsure, do not hesitate to **open a new issue**.
+Community members are welcome to contribute their changes by [opening pull requests](https://github.com/charlesisfeline/VsBrMod/pulls).
+This section covers guidelines for opening and managing pull requests (PRs).
 
-## Pull Requests
+## Merge Conflicts and Rebasing
 
-If you want to contribute to the mod/engine, make sure that:
+Some updates for the mod introduce significant breaking changes that may create merge conflicts in your PR. To resolve them, you will need to update or rebase your PR.
 
-- The contribution does not affect performance significantly. You can ignore this rule if
-  your PR does not alter much code in any way.
-- Your PR is useful for future work by another developer, regardless of it not getting merged.
-- Document every change. If your pull requests add methods that others may not understand in a way,
-  please add a comment that briefly explains them.
-- If the PR is made to resolve an issue, please link the original.
+Most merge conflicts are pretty small and will only require you to modify a few files to resolve them. However, some changes are so big that your commit history will look like a mess! In this case, you will have to perform a [**rebase**](https://docs.github.com/en/get-started/using-git/about-git-rebase). This process reapplies your changes on top of the updated branch and cleanly resolves the merge conflicts.
+
+## Code PRs
+
+Code-based PRs make changes such as **fixing bugs** or **implementing new features** in the mod. This involves modifying one or several of the repository’s `.hx` files, found within the `data/`, `songs/` and `source/` folders.
+
+### Codestyle
+
+Before submitting your PR, check that your code follows the [Style Guide](https://github.com/charlesisfeline/VsBrMod/blob/main/CODESTYLE.md).
+
+Here are some guidelines for writing comments in your code:
+
+- Leave comments only when you believe a piece of code warrants explanation.
+- Ensure that your comments provide meaningful insight into the function or purpose of the code.
+- Write your comments in a clear and concise manner.
+- Only sign your comments with your name when your changes are complex and may require further explanation.
+
+## Documentation PRs
+
+Documentation-based PRs make changes such as **fixing typos** or **adding new information** in documentation files. This involves modifying one or several of the repository’s `.md` files, found throughout the repository. Make sure your changes are easy to understand and formatted consistently to maximize clarity and readability.
+
+> [!CAUTION]
+> DON'T YOU DARE TOUCH THE `LICENSE` FILE, EVEN TO MAKE SMALL CHANGES!
+
+## GitHub PRs
+
+GitHub-related PRs make changes such as **tweaking the Issue Templates** or **updating the repository’s workflows**. This involves modifying one or several of the repository’s `.yml` files, or any other file in the `.github/` folder. Please test these changes on your fork’s main branch to avoid breaking anything in this repository (e.g. GitHub Actions, issue templates, etc.)!
+
+# Closing
+
+Thank you for reading the Contributing Guide. We look forward to seeing your contributions to the mod!

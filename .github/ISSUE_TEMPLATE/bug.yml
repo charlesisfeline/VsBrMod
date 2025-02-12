@@ -1,0 +1,30 @@
+name: Bug Report
+description: Report a bug or an issue in the mod.
+labels: ["bug"]
+title: "[BUG REPORT] "
+body:
+  - type: checkboxes
+    attributes:
+      label: Issue Checklist
+      description: Be sure to complete these steps to increase the chances of your issue being addressed!
+      options:
+        - label: I have checked the Issues/Discussions pages to see if my issue has already been reported
+        - label: I have properly named my issue
+
+  - type: markdown
+    attributes:
+      value: "## Describe your bug."
+
+  - type: textarea
+    attributes:
+      label: Description (include any images, videos, errors, or crash logs)
+      description: Provide as much detail as you can. The better others understand your issue, the more they can help you!
+      placeholder: Describe your issue here...
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Steps to Reproduce
+      description: What steps can other people take to reliably encounter this issue?
+      placeholder: 1. Open Codename Engine...
