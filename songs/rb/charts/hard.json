@@ -1,6 +1,6 @@
 {
-	"scrollSpeed": 3.5,
-	"stage": "StageWhite",
+	"scrollSpeed": 2.8,
+	"stage": "rb",
 	"strumLines": [
 		{
 			"keyCount": 4,
