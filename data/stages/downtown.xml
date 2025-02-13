@@ -1,0 +1,14 @@
+<!DOCTYPE codename-engine-stage>
+<stage folder="stages/downtown/" zoom="1.05">
+	<sprite x="-420" y="-477" sprite="sky" scale="1.5" name="sky"/>
+	<sprite x="-645" y="-301" sprite="buildings" scale="1.5" name="buildings"/>
+	<sprite x="-716" y="-280" sprite="grassOutside" scale="1.5" name="grass"/>
+	<sprite x="-645" y="-301" sprite="win" scale="1.5" name="window"/>
+	<sprite x="-645" y="-315" sprite="topSidewalk" scale="1.5" name="topsidewalk"/>
+	<sprite x="-650" y="-335" sprite="bottomSidewalk" scale="1.5" name="bottomSidewalk"/>
+	<sprite x="-630" y="-325" sprite="townRoad" scale="1.5" name="road"/>
+	<dad/>
+	<gf/>
+	<bf/>
+	<combo/>
+</stage>
