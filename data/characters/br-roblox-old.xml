@@ -1,4 +1,4 @@
 <!DOCTYPE codename-engine-character>
-<character x="-145" y="150" sprite="Roblox_BR" antialiasing="false" icon="br-roblox" color="#FBDCB9">
+<character x="-145" y="150" sprite="Roblox_BR" antialiasing="false" icon="br-roblox-old" color="#FBDCB9">
 	<anim name="idle" anim="br idle dance0" x="0" y="0" fps="12" loop="false"/>
 </character>
