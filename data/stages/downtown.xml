@@ -1,14 +1,14 @@
 <!DOCTYPE codename-engine-stage>
-<stage folder="stages/downtown/" zoom="1.05">
-	<sprite x="-420" y="-477" sprite="sky" scale="1.5" name="sky"/>
-	<sprite x="-645" y="-301" sprite="buildings" scale="1.5" name="buildings"/>
-	<sprite x="-716" y="-280" sprite="grassOutside" scale="1.5" name="grass"/>
-	<sprite x="-645" y="-301" sprite="win" scale="1.5" name="window"/>
-	<sprite x="-645" y="-315" sprite="topSidewalk" scale="1.5" name="topsidewalk"/>
-	<sprite x="-650" y="-335" sprite="bottomSidewalk" scale="1.5" name="bottomSidewalk"/>
-	<sprite x="-630" y="-325" sprite="townRoad" scale="1.5" name="road"/>
-	<dad/>
-	<gf/>
-	<bf/>
-	<combo/>
+<stage folder="stages/downtown/" zoom="0.5">
+	<sprite x="-420" sprite="sky" y="-477" scale="3" name="sky"/>
+	<sprite x="-645" sprite="buildings" y="-301" scale="2" scrollx="1.35" name="buildings"/>
+	<sprite x="-645" sprite="win" y="-301" scale="2" scrollx="1.35" name="window"/>
+	<sprite x="-612" y="-441" sprite="grassOutside" scale="2.3" scrollx="1.4" name="grass"/>
+	<sprite x="-645" sprite="topSidewalk" y="-315" scale="2" name="topsidewalk"/>
+	<sprite x="-650" y="-335" sprite="bottomSidewalk" scale="2" scrollx="1.2" name="bottomSidewalk"/>
+	<sprite x="-630" y="-325" sprite="townRoad" scale="2" scrollx="1.1" name="road"/>
+	<dad x="74" y="158"/>
+	<gf x="357" y="139"/>
+	<bf x="766" y="154"/>
+	<combo x="685.5" y="471.5"/>
 </stage>
