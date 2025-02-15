@@ -26,19 +26,12 @@ var ratingStuff:Array<Dynamic> = [
     ['AAA', 1] // The value on this one isn't used actually, since Perfect is always "1"
 ];
 
+/* @see https://github.com/SorbetLover/NostalgicFunkin/blob/main/songs/kadeUI.hx */
 function getRating(accuracy:Float):String
 {
-    if (accuracy < 0)
-    {
-        return "?";
-    }
+    if (accuracy < 0) return "?";
     for (rating in ratingStuff)
-    {
-        if (accuracy < rating[1])
-        {
-            return rating[0];
-        }
-    }
+        if (accuracy < rating[1]) return rating[0];
     return ratingStuff[ratingStuff.length - 1][0];
 }
 
@@ -65,20 +58,12 @@ function create()
     hudTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, "center", FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
     hudTxt.borderSize = 1.25;
     hudTxt.screenCenter(FlxAxes.X);
-    
-    // timeBarBG.x = timeBar.x - 4;
-    // timeBarBG.y = timeBar.y - 4;
-    
     hudTxt.cameras = [camHUD];
 }
 
 function update(elapsed:Float)
 {
-    if (inst != null && timeBar != null && timeBar.max != inst.length)
-    {
-        timeBar.setRange(0, Math.max(1, inst.length));
-    }
-    
+    if (inst != null && timeBar != null && timeBar.max != inst.length) timeBar.setRange(0, Math.max(1, inst.length));
     if (inst != null && timeTxt != null)
     {
         var timeRemaining = Std.int((inst.length - Conductor.songPosition) / 1000);
@@ -89,21 +74,23 @@ function update(elapsed:Float)
     var acc = FlxMath.roundDecimal(Math.max(accuracy, 0) * 100, 2);
     var rating:String = getRating(accuracy);
     getRatingFC(accuracy, misses);
-    if (songScore > 0 || acc > 0 || misses > 0)
-    {
-        hudTxt.text = "Score:" + songScore + " | Combo Breaks:" + misses + " | Accuracy:" + acc + "%" + " | " + "(" + ratingFC + ") " + rating;
-        
-        //     hudTxt.text = "Score: " + songScore + " | Combo Breaks: " + misses +  " | Accuracy: " + rating + " (" + acc + "%)" + " | " + ratingFC;
-        //     backup code above
-    }
+    if (songScore > 0 || acc > 0 || misses > 0) hudTxt.text = "Score:" + songScore + " | Combo Breaks:" + misses + " | Accuracy:" + acc + "%" + " | " + "("
+        + ratingFC + ") " + rating;
     for (i in [missesTxt, accuracyTxt, scoreTxt])
-    {
         i.visible = false;
-    }
+}
+
+function postUpdate(elapsed)
+{
+    iconP1.scale.set(lerp(iconP1.scale.x, 1, 0.33), lerp(iconP1.scale.y, 1, 0.33));
+    iconP2.scale.set(lerp(iconP2.scale.x, 1, 0.33), lerp(iconP2.scale.y, 1, 0.33));
 }
 
 function postCreate()
 {
+    for (i in strumLines.members)
+        for (s in i.members)
+            s.x -= 40;
     for (i in [missesTxt, accuracyTxt, scoreTxt])
     {
         i.visible = false;
@@ -113,3 +100,13 @@ function postCreate()
     if (downscroll) hudTxt.y = 605;
     add(hudTxt);
 }
+
+function onPostStrumCreation(e)
+{
+    // the characters will insta play their idle after hitting notes
+    boyfriend.holdTime = FlxG.random.int(1, 2);
+    dad.holdTime = FlxG.random.int(2, 4);
+}
+
+function onPostNoteCreation(e)
+ if (e.note.isSustainNote) e.note.scale.y -= 0.4; // closest i can get to kade sustains awww
