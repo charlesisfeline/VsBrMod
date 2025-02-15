@@ -22,7 +22,7 @@ function postCreate()
     
     trace('bootplay ' + (PlayState.SONG.meta.name != "dealer" && PlayState.SONG.meta.name != "overcooked"));
     
-    player.cpu = FlxG.save.data.botplay;
+    doBotplay = FlxG.save.data.botplay;
     
     if (PlayState.SONG.meta.name == "feeling b"
         || PlayState.SONG.meta.name == "suns"
@@ -65,12 +65,19 @@ function dealerMechanic()
         FlxG.switchState(new Charter(PlayState.SONG.meta.name, PlayState.difficulty, true));
 }
 
+static var doBotplay:Bool = false;
+
 function updateBotplay(elapsed:Float)
 {
-    if (FlxG.keys.justPressed.SIX) player.cpu = !player.cpu;
+    if (doBotplay == null) doBotplay = FlxG.save.data.botplay;
     
-    botplayTxt.visible = player.cpu;
+    if (FlxG.keys.justPressed.SIX) doBotplay = !doBotplay;
+    
+    for (strumLine in strumLines)
+        if (!strumLine.opponentSide) strumLine.cpu = FlxG.keys.pressed.FIVE || doBotplay;
+        
+    botplayTxt.visible = doBotplay;
     
     for (txt in [scoreTxt, missesTxt, accuracyTxt])
-        txt.visible = !player.cpu;
+        txt.visible = !doBotplay;
 }
