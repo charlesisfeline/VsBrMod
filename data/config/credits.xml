@@ -16,7 +16,11 @@
 	<credit name="Keith" icon="missing_icon" desc="Artist, Animator, Composer" />
 	<credit name="CrunchyTaco29" icon="missing_icon" desc="Artist" url="https://www.youtube.com/@CrunchyTaco29" />
 </menu>
-<menu name="Contributors" desc="Whoever contributed to the mod, they go here.">
+<menu name="Contributors" desc="You know who else-">
+	<credit name="Tice" icon="tice" desc="Creator of rb" url="https://github.com/lunarcleint" />
+	<credit name="Sebastain" icon="seb" desc="Made Sprites for Mini Mike (circa March 2021)" url="https://github.com/lunarcleint" />
+</menu>
+<menu name="Script Credits" desc="They're here for a reason, obviously. I'd get killed if I don't include this page so, there you go.">
 	<credit name="lunarcleint" icon="lunar" desc="some of these uhhhhhh events and scripts???????" url="https://github.com/lunarcleint" />
 	<credit name="Towodile" desc="Depart Song lololol" icon="missing_icon" url="https://www.youtube.com/@TowoMusic" />
 	<credit name="SIG7Pro" desc="Kade-style UI" icon="missing_icon" url="https://github.com/SIG7Pro" />

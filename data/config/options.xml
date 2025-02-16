@@ -5,14 +5,16 @@
 		<checkbox id="midsongPlaybackRate" name="Change Midsong" desc="If checked, the playback rate will be changeable mid song by using the keys Q and E." />
 	</menu>
 	<checkbox id="botplay" name="Bot Play" desc="If checked, the computer will play the song for you, no hands needed!." />
-	<checkbox id="eyesores" name="Eyesores" desc="If unchecked, your eyes won't get fucked by shaders, lol." />
+	<checkbox id="comboDisplay" name="Show Combo Display" desc="If checked, COMBO!" />
 	<choice id="hitsoundStyle" name="Hitsound Type" desc="I love hitsounds.">
 		<!-- default -->
 		<value name="None" value="none" />
 		<!-- mods & games -->
 		<value name="Psych" value="psych" />
+		<value name="V-Slice" value="vslice" />
 		<value name="Bambi" value="bambi" />
 		<value name="Indie Cross" value="indieCross" />
+		<value name="Andromeda" value="andromeda" />
 		<value name="ADOFAI" value="adofai" /> <!-- a dance of fire and ice -->
 		<!-- memes -->
 		<value name="Discord Ping" value="ping" />
@@ -22,6 +24,10 @@
 		<!-- irl -->
 		<value name="Keyboard" value="keyboard" />
 		<value name="Finger Snap" value="snap" />
+		<value name="Hi-Hat" value="hiHat" />
+		<value name="Drop" value="drop" />
+		<value name="Cowbell" value="cowbell" />
+		<value name="Tick" value="tick" />
 		<value name="Hand Clap" value="clap" />
 	</choice>
 </menu>

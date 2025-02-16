@@ -29,7 +29,7 @@ function postCreate()
         || PlayState.SONG.meta.name == "depart"
         || PlayState.SONG.meta.name == "drunken"
         || PlayState.SONG.meta.name == "overcooked"
-        || PlayState.SONG.meta.name == "toast") defaultDisplayCombo = true;
+        || PlayState.SONG.meta.name == "toast") defaultDisplayCombo = FlxG.save.data.comboDisplay;
 }
 
 function update(elapsed:Float)
