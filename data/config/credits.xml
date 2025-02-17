@@ -10,19 +10,19 @@
 	<credit name="Gold" icon="gold" desc="Composer" url="https://www.youtube.com/@goldisflammable" />
 	<credit name="ShaggyNRogers" icon="missing_icon" desc="Charter" url="https://www.youtube.com/@ShaggyNRogers" />
 	<credit name="CosmosProductions" icon="cosmo" desc="Artist, Animator" url="https://www.youtube.com/@CosmosThe64th" />
-	<credit name="HollowSoulxs" icon="missing_icon" desc="Artist, Animator, Composer" url="https://www.youtube.com/@HollowSoulxs" />
+	<credit name="HollowSoulxs" icon="hollow" desc="Artist, Animator, Composer" url="https://www.youtube.com/@HollowSoulxs" />
 	<credit name="Dj_Jami" icon="jami" desc="Composer" />
 	<credit name="Alex" icon="missing_icon" desc="Charter" url="https://www.youtube.com/@evilalex1593" />
 	<credit name="Keith" icon="missing_icon" desc="Artist, Animator, Composer" />
 	<credit name="CrunchyTaco29" icon="missing_icon" desc="Artist" url="https://www.youtube.com/@CrunchyTaco29" />
 </menu>
 <menu name="Contributors" desc="You know who else-">
-	<credit name="Tice" icon="tice" desc="Creator of rb" url="https://github.com/lunarcleint" />
-	<credit name="Sebastain" icon="seb" desc="Made Sprites for Mini Mike (circa March 2021)" url="https://github.com/lunarcleint" />
+	<credit name="Tice" icon="tice" desc="Creator of rb" url="https://www.youtube.com/@TiceTiceTice" />
+	<credit name="Sebastain" icon="seb" desc="Made Sprites for Mini Mike (circa March 2021)" url="https://www.youtube.com/@sebastianridings8536" />
+	<credit name="Towodile" desc="Depart Song (lol)" icon="towo" url="https://www.youtube.com/@TowoMusic" />
 </menu>
 <menu name="Script Credits" desc="They're here for a reason, obviously. I'd get killed if I don't include this page so, there you go.">
 	<credit name="lunarcleint" icon="lunar" desc="some of these uhhhhhh events and scripts???????" url="https://github.com/lunarcleint" />
-	<credit name="Towodile" desc="Depart Song lololol" icon="missing_icon" url="https://www.youtube.com/@TowoMusic" />
 	<credit name="SIG7Pro" desc="Kade-style UI" icon="missing_icon" url="https://github.com/SIG7Pro" />
 	<credit name="Fiffi" desc="Camera Events" icon="fiffi" url="https://www.youtube.com/@fiffi_the_yoshi-sloth" />
 	<credit name="Mlaofmd" desc="Health Tween Event" icon="missing_icon" url="https://github.com/Mlaofmd" />
