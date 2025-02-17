@@ -35,26 +35,26 @@ WindowUtils.winTitle = windowName;
 function new()
 {
     if (!PreprocessorUtil.processorsSetup) PreprocessorUtil.setCustomPreprocessors("data/preprocessors.json");
-
+    
     window.title = "Made with Codename Engine!";
-
+    
     FlxG.mouse.useSystemCursor = false;
     FlxG.mouse.load(Paths.image("ui/cursor"));
-
+    
     // makes all of these options automatically set to their default values
-    var optiony = FlxG.save.data;
-    if (optiony.playbackRate == null) optiony.playbackRate = 1;
-    if (optiony.midsongPlaybackRate == null) optiony.midsongPlaybackRate = false;
-    if (optiony.botplay == null) optiony.botplay = false;
-    if (optiony.comboDisplay == null) optiony.comboDisplay = true;
-    if (optiony.hitsoundStyle == null) optiony.hitsoundStyle = "none";
-
+    if (FlxG.save.data.playbackRate == null) FlxG.save.data.playbackRate = 1;
+    if (FlxG.save.data.midsongPlaybackRate == null) FlxG.save.data.midsongPlaybackRate = false;
+    if (FlxG.save.data.botplay == null) FlxG.save.data.botplay = false;
+    if (FlxG.save.data.comboDisplay == null) FlxG.save.data.comboDisplay = true;
+    if (FlxG.save.data.skipLoading == null) FlxG.save.data.skipLoading = false;
+    if (FlxG.save.data.hitsoundStyle == null) FlxG.save.data.hitsoundStyle = "none";
+    
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
 }
 
 function update(elapsed:Float)
     if (FlxG.keys.justPressed.F5) FlxG.resetState(); // RESETTING STATES
-
+    
 function postUpdate(elapsed:Float)
 {
     // here for debugging purposes i think
@@ -68,14 +68,14 @@ function postUpdate(elapsed:Float)
 function postStateSwitch()
 {
     Framerate.debugMode = 1;
-
+    
     if (Std.isOfType(FlxG.state, PlayState)) window.title = 'fnf vs br - ' + PlayState.SONG.meta.displayName;
     else
         window.title = "fnf vs br";
-
+        
     FlxG.mouse.useSystemCursor = false;
     FlxG.mouse.load(Paths.image("ui/cursor"));
-
+    
     trace("help ee");
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
 }
@@ -104,17 +104,28 @@ function destroy()
 {
     FlxG.mouse.useSystemCursor = true;
     FlxG.mouse.unload();
-
+    
     WindowUtils.winTitle = "br is dead";
 }
 
 function preStateSwitch()
 {
     FlxG.camera.bgColor = 0xFF000000;
-
+    
+    // gorefield again
+    if (Std.isOfType(FlxG.state, PlayState)
+        && (FlxG.state.subState == null ? true : !Std.isOfType(FlxG.state.subState, GameOverSubstate)
+            && !Std.isOfType(FlxG.state.subState, PauseSubState)) // ! CHECK IN GAME/NOT IN GAME OVER
+        && Std.isOfType(FlxG.game._requestedState, PlayState)
+        && PlayState.isStoryMode) // ! CHECK STORY MODE/NEXT SONG
+    {
+        FlxG.switchState(new ModState("LoadingState"));
+        return;
+    } // LOADING SCREEN
+    
     var stateClassName = Type.getClassName(Type.getClass(FlxG.game._requestedState));
     reqStateName = stateClassName.substr(stateClassName.lastIndexOf(".") + 1);
-
+    
     for (redirect in redirectStates.keys())
     {
         if (reqStateName == redirect)
@@ -135,7 +146,7 @@ static function convertTime(steps:Float, beats:Float, sections:Float):Float
         + (Conductor.stepCrochet * (beats * 4)) / 1000
         + (Conductor.stepCrochet * (sections * 16)) / 1000)
         - 0.01;
-
+        
 // hi usb_port2 !!!!!!!!!!!!!!!!!!
 var winWidth:Int;
 var winHeight:Int;
@@ -173,3 +184,4 @@ function aspectShit(width:Int, height:Int):String
 
 static function gradientText(text:FlxText, colors:Array<FlxColor>)
     return FlxSpriteUtil.alphaMask(text, FlxGradient.createGradientBitmapData(text.width, text.height, colors), text.pixels);
+    

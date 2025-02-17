@@ -2,10 +2,11 @@
 <menu name="Vs Br" desc="holy fuck">
 	<menu name="Playback Rate" desc="Options for Playback Rate! The higher the number, the faster the song will go.">
 		<number id="playbackRate" name="Playback Rate" desc="Change the playback rate! The higher, the faster the song will go by." min="0.25" max="3" change="0.25" />
-		<checkbox id="midsongPlaybackRate" name="Change Midsong" desc="If checked, the playback rate will be changeable mid song by using the keys Q and E." />
+		<checkbox id="midsongPlaybackRate" name="Change Midsong" desc="If checked, the playback rate will be adjustable mid song by using the keys Q and E." />
 	</menu>
-	<checkbox id="botplay" name="Bot Play" desc="If checked, the computer will play the song for you, no hands needed!." />
-	<checkbox id="comboDisplay" name="Show Combo Display" desc="If checked, COMBO!" />
+	<checkbox id="botplay" name="Bot Play" desc="If checked, the computer will play the song for you, no hands needed!" />
+	<checkbox id="comboDisplay" name="Show Combo Display" desc="If checked, the COMBO sprite will appear every time you hit a note unless you break a combo." />
+	<checkbox id="skipLoading" name="Skip Loading Screen" desc="If checked, the game won't lead you to the loading screen in Story Mode." />
 	<choice id="hitsoundStyle" name="Hitsound Type" desc="I love hitsounds.">
 		<!-- default -->
 		<value name="None" value="none" />

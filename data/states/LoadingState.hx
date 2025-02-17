@@ -13,6 +13,7 @@ var black:FlxSprite;
 var funkay:FlxSprite;
 var doneLoading:Bool = false;
 var justPressedEnter:Bool = false;
+var skipLoadingAllowed:Bool = FlxG.save.data.skipLoading;
 
 function create()
 {
@@ -47,11 +48,16 @@ function update(elapsed:Float)
 }
 
 function loadAssets()
-{ // pfffffffft get trolled!!!!!! this isnt an actual loading screen!!!!!!!
+{ // pfffffffft get trolled!!!!!! this isnt an actual loading screen!!!!!!! fuck you!!!!!!!!!!!!!!!!!!!!!1
     var quoteUnquoteLoad = 0;
     
     for (sprite in 0...FlxG.random.int(8, 21))
         quoteUnquoteLoad += FlxG.random.float(0.1, 0.225);
+        
+    new FlxTimer().start(timeToLoadalldat, (tmr:FlxTimer) ->
+    {
+        finishedLoading = true;
+    });
 }
 
 function goToSong()
