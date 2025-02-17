@@ -97,6 +97,8 @@ function postUpdate(elapsed)
     
     if (FlxG.keys.justPressed.EIGHT) FlxG.switchState(new ModState("EndState"));
     
+    if (FlxG.keys.justPressed.NINE) FlxG.switchState(new ModState("LoadingState"));
+    
     magenta.visible = false; // no
     menuItems.forEach((a:FlxSprite) -> a.x += 350);
 }

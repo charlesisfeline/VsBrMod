@@ -1,6 +1,7 @@
 //
 import Type;
 
+importScript("data/global");
 public function setRedirectStates(oldState:String, newState:String, data:Dynamic)
 {
     redirectStates.set(oldState, newState);
