@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="bacteriaMonster.png" width="4022" height="1189">
+	<SubTexture name="bacteria0000" x="8" y="8" width="591" height="1115" frameX="-399" frameY="-71" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="bacteria0001" x="2815" y="8" width="586" height="1165" frameX="-414" frameY="-4" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="bacteria0002" x="3409" y="8" width="605" height="1173" frameX="-422" frameY="-13" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="bacteria0003" x="1666" y="8" width="551" height="1150" frameX="-389" frameY="-24" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="bacteria0004" x="607" y="8" width="545" height="1126" frameX="-374" frameY="-31" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="bacteria0005" x="2225" y="8" width="582" height="1157" frameX="-343" frameY="-11" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="bacteria0006" x="1160" y="8" width="498" height="1144" frameX="-388" frameY="-33" frameWidth="1280" frameHeight="1280"/>
+</TextureAtlas>
