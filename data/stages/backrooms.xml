@@ -3,7 +3,7 @@
 	<sprite x="-1163" sprite="backrooms" y="-722" scale="0.8" name="space" scrollx="1.06"/>
 	<sprite x="-697.36" sprite="bacteriaMonster" y="-416" scale="0.7" type="loop" name="bacteria1" scrollx="1.03"/>
 	<sprite x="136.35" sprite="bacteriaMonster" y="-408" scale="0.7" type="loop" name="bacteria2" scrollx="1.03"/>
-	<sprite x="-462" y="-486" sprite="hazmat" type="loop" scale="0.46" name="hazmat"/>
+	<sprite x="-583" y="-297" sprite="hazmat" type="loop" scale="0.46" name="hazmat"/>
 	<gf x="52" y="66"/>
 	<dad x="-283" y="90.5"/>
 	<bf x="460" y="90"/>
