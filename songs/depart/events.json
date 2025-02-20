@@ -166,6 +166,23 @@
 		},
 		{
 			"params": [
+				"high_asf",
+				"1.25",
+				"",
+				"",
+				"camHUD/showHUD",
+				true,
+				false,
+				false,
+				"stage",
+				false,
+				false
+			],
+			"time": 65738.255033557,
+			"name": "video event"
+		},
+		{
+			"params": [
 				1,
 				"hey",
 				true

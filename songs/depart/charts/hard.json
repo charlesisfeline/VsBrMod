@@ -1,7 +1,6 @@
 {
-	"stage": "downtown",
 	"scrollSpeed": 2.1,
-	"codenameChart": true,
+	"stage": "downtown",
 	"strumLines": [
 		{
 			"keyCount": 4,
@@ -693,7 +692,7 @@
 				},
 				{
 					"id": 2,
-					"sLen": 100.671140939638,
+					"sLen": 100.671140939645,
 					"time": 56979.8657718121,
 					"type": 0
 				},
@@ -3194,5 +3193,6 @@
 			"type": 1
 		}
 	],
+	"codenameChart": true,
 	"noteTypes": []
 }

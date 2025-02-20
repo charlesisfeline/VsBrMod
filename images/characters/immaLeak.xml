@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--nuke cards-->
+<TextureAtlas imagePath="immaLeak.png" width="2308" height="532">
+	<SubTexture name="idle0000" x="8" y="8" width="390" height="480" frameX="-116" frameY="-121" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="idle0001" x="406" y="8" width="374" height="496" frameX="-115" frameY="-105" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="idle0002" x="788" y="8" width="366" height="508" frameX="-99" frameY="-93" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="idle0003" x="1162" y="8" width="370" height="514" frameX="-91" frameY="-87" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="idle0004" x="1540" y="8" width="376" height="516" frameX="-90" frameY="-85" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="idle0005" x="1924" y="8" width="376" height="516" frameX="-90" frameY="-85" frameWidth="640" frameHeight="640"/>
+</TextureAtlas>
