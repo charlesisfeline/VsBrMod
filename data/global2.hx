@@ -89,6 +89,8 @@ function preStateSwitch()
     
     FlxG.camera.bgColor = 0xFF000000;
     
+    Main.framerateSprite.codenameBuildField.text = "Codename Engine Alpha (Vs. br)";
+    
     // gorefield again
     if (Std.isOfType(FlxG.state, PlayState)
         && (FlxG.state.subState == null ? true : !Std.isOfType(FlxG.state.subState, GameOverSubstate)

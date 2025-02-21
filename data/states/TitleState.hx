@@ -5,6 +5,7 @@ import lime.graphics.Image;
 
 function postCreate()
 {
+    Main.framerateSprite.codenameBuildField.text = "Codename Engine Alpha (Vs. br)";
     window.title = "fnf vs br";
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
     
