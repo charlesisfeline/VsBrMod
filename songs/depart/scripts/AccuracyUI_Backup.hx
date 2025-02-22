@@ -52,15 +52,6 @@ function getRatingFC(accuracy:Float, misses:Int):String
     }
 }
 
-function create()
-{
-    hudTxt = new FlxText(0, 685, FlxG.width, "Score: 0 | Combo Breaks: 0 | Accuracy: 0% | N/A");
-    hudTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, "center", FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-    hudTxt.borderSize = 1.25;
-    hudTxt.screenCenter(FlxAxes.X);
-    hudTxt.cameras = [camHUD];
-}
-
 function update(elapsed:Float)
 {
     if (inst != null && timeBar != null && timeBar.max != inst.length) timeBar.setRange(0, Math.max(1, inst.length));
@@ -84,10 +75,18 @@ function postUpdate(elapsed)
 {
     iconP1.scale.set(lerp(iconP1.scale.x, 1, 0.33), lerp(iconP1.scale.y, 1, 0.33));
     iconP2.scale.set(lerp(iconP2.scale.x, 1, 0.33), lerp(iconP2.scale.y, 1, 0.33));
+
+    if (!player.cpu) boyfriend.holdTime = FlxG.random.int(1, 4);
+    else boyfriend.holdTime = 4;
 }
 
 function postCreate()
 {
+    hudTxt = new FlxText(FlxG.width / 2 - 235, healthBarBG.y + 30, 0, "Score: 0 | Combo Breaks: 0 | Accuracy: 0% | N/A");
+    hudTxt.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, "right", FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+    hudTxt.borderSize = 1.25;
+    // hudTxt.screenCenter(FlxAxes.X);
+    hudTxt.cameras = [camHUD];
     for (i in strumLines.members)
         for (s in i.members)
             s.x -= 40;
@@ -98,7 +97,8 @@ function postCreate()
         trace("hihihi");
     }
     if (downscroll) hudTxt.y = 605;
-    add(hudTxt);
+    // add(hudTxt);
+    insert(8, hudTxt);
 }
 
 function onPostStrumCreation(e)
@@ -106,7 +106,7 @@ function onPostStrumCreation(e)
     e.strum.animation.addByIndices("confirm", e.animPrefix + " confirm", [0, 1, 2, 3], "", 60, false);
     e.strum.animation.addByIndices("pressed", e.animPrefix + " press", [0, 1, 2, 3], "", 12, false); // 12 frames when pressing (pretty minor detail :shrug:)
     // the characters will insta play their idle after hitting notes
-    boyfriend.holdTime = FlxG.random.int(1, 2);
+    if (!player.cpu) boyfriend.holdTime = FlxG.random.int(1, 2);
     dad.holdTime = FlxG.random.int(2, 4);
 }
 

@@ -2,6 +2,7 @@ import Type;
 
 import funkin.backend.system.Main;
 import funkin.backend.system.framerate.Framerate;
+import funkin.backend.system.framerate.FramerateCounter;
 import funkin.backend.utils.MemoryUtil;
 import funkin.backend.utils.WindowUtils;
 
@@ -13,7 +14,6 @@ import openfl.display.FPS;
 import openfl.text.TextField;
 import openfl.text.TextFormat;
 
-var fakeFPS:FPS;
 var realFPS:FPS;
 var lastDebugMode:Int = 0;
 var coolDebugMode:Int = 0;
@@ -23,15 +23,13 @@ var fpsUpdateTimer:Float = 999999;
 
 function postCreate()
 {
-    fakeFPS = new FPS(-999999, -999999, 0xFFFFFFFF);
-    fakeFPS.visible = false;
-    Main.instance.addChild(fakeFPS);
-    
     realFPS = new TextField();
     realFPS.x = 10;
     realFPS.y = 3;
     realFPS.text = "FPS: 0";
     realFPS.autoSize = 1; // 1 = left
+    realFPS.selectable = false;
+    realFPS.mouseEnabled = false;
     
     var format:TextFormat = new TextFormat("_sans", 12, 0xFFFFFFFF);
     format.leading = -4;
@@ -62,14 +60,18 @@ function onEnterFrame(e)
         lastDebugMode = (Framerate.debugMode + 1) % 3;
         fpsUpdateTimer = 999999;
     }
+    
+    if (!(Std.isOfType(FlxG.state, PlayState) && PlayState.SONG.meta.name == "depart")) realFPS.visible = false;
+    
     if (fpsUpdateTimer > Conductor.stepCrochet)
     {
-        var text:String = "FPS: " + fakeFPS.currentFPS;
+        var text:String = "FPS: " + Std.string(Math.floor(Framerate.instance.fpsCounter.lastFPS));
         
         if (Framerate.debugMode > 1)
         {
             var objCount:Int = 0;
             var state:FlxState = FlxG.state;
+            
             while (state != null)
             {
                 state.forEach((o) ->
@@ -78,7 +80,9 @@ function onEnterFrame(e)
                 }, true);
                 state = state.subState;
             }
+            
             var bitmapCount:Int = 0;
+            
             for (_ in FlxG.bitmap._cache.keys())
                 bitmapCount++;
                 
@@ -95,18 +99,20 @@ function onEnterFrame(e)
             text += "\nCached Sounds: " + FlxG.sound.list.length;
             text += "\nFlxGame Child Count: " + FlxG.game.numChildren;
         }
-        realFPS.text = text;
+        
+        if (Std.isOfType(FlxG.state, PlayState) && PlayState.SONG.meta.name == "depart") realFPS.text = text;
+        else
+            realFPS.text = " ";
+            
         fpsUpdateTimer = 0;
     }
 }
 
 function destroy()
 {
-    fakeFPS.visible = false;
-    Main.instance.removeChild(fakeFPS);
-    
     realFPS.removeEventListener("enterFrame", onEnterFrame);
     realFPS.visible = false;
+    trace(realFPS.visible);
     Main.instance.removeChild(realFPS);
     
     Framerate.debugMode = lastDebugMode;
@@ -114,6 +120,8 @@ function destroy()
     
     WindowUtils.winTitle = "fnf vs br";
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
+    
+    trace(realFPS.visible);
     
     FlxG.mouse.useSystemCursor = false;
     FlxG.mouse.load(Paths.image("ui/cursor"));
