@@ -14,10 +14,10 @@ public var nukeVid:FlxVideo;
 function postCreate()
 {
     botplayTxt = new FlxText(400, 537, FlxG.width - 800, "BOTPLAY", 50);
-    botplayTxt.setFormat(Paths.font("vcr.ttf"), 40, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+    botplayTxt.setFormat(Paths.font("vcr.ttf"), 42, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
     botplayTxt.borderSize = 3;
     botplayTxt.camera = camHUD;
-    botplayTxt.alpha = 0.6;
+    if (PlayState.SONG.meta.name != "depart") botplayTxt.alpha = 0.6;
     add(botplayTxt);
     
     trace('bootplay ' + (PlayState.SONG.meta.name != "dealer" && PlayState.SONG.meta.name != "overcooked"));

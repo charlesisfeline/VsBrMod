@@ -33,7 +33,7 @@ function create()
     add(funkay);
     
     loadBar = new FlxSprite(0, FlxG.height - 20).makeGraphic(FlxG.width, 10, 0xFFff16d2);
-    loadBar.screenCenter(0x01);
+    loadBar.screenCenter(FlxAxes.X);
     add(loadBar);
     
     new FlxTimer().start(1.5, (tmr:FlxTimer) -> FlxTween.tween(black, {alpha: 0}, 0.5, {onComplete: (tween:FlxTween) -> loadAssets()}));

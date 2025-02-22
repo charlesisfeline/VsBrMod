@@ -1,0 +1,32 @@
+<!DOCTYPE codename-engine-dialogue>
+<dialogue box="mini">
+	<!-- All characters -->
+	<char name="mike" char="mike" position="left" />
+	<char name="bfRestored" char="bfRestored" position="right" />
+
+	<!-- Lines -->
+	<line char="mike" changeMusic="arrival" >
+		oh hi
+	</line>
+<line char="bfRestored">
+		who tf are you
+	</line>
+	<line char="mike">
+		mini mike
+	</line>
+	<line char="bfRestored">
+		oh
+	</line>
+<line char="mike">
+		just gonna pull up this hit i whipped up weeks ago one sec
+	</line>
+<line char="bfRestored">
+		it better be good this time cuz last week i have heard worse
+	</line>
+<line char="mike">
+		just trust me, it bangs, just try-
+	</line>
+<line char="bfRestored">
+		aight bet
+	</line>
+</dialogue>

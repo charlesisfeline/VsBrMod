@@ -1,9 +1,9 @@
 import openfl.geom.Rectangle;
 import openfl.text.TextFormat;
 
+import flixel.FlxG;
 import flixel.text.FlxTextBorderStyle;
 import flixel.ui.FlxBar;
-import flixel.FlxG;
 
 var timeBarBG:FlxSprite;
 var timeBar:FlxBar;
@@ -103,6 +103,8 @@ function postCreate()
 
 function onPostStrumCreation(e)
 {
+    e.strum.animation.addByIndices("confirm", e.animPrefix + " confirm", [0, 1, 2, 3], "", 60, false);
+    e.strum.animation.addByIndices("pressed", e.animPrefix + " press", [0, 1, 2, 3], "", 12, false); // 12 frames when pressing (pretty minor detail :shrug:)
     // the characters will insta play their idle after hitting notes
     boyfriend.holdTime = FlxG.random.int(1, 2);
     dad.holdTime = FlxG.random.int(2, 4);

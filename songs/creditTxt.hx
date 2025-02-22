@@ -14,7 +14,7 @@ function onSongStart()
     var info = Assets.getText(Paths.file('songs/' + PlayState.SONG.meta.name + '/info.txt')).split("\n");
     
     songTxt = new FlxText(0, 0, 0, info[0] + "\n" + info[1], fontSize);
-    songTxt.screenCenter(0x01);
+    songTxt.screenCenter(FlxAxes.X);
     trace(songTxt.y);
     songTxt.setFormat(Paths.font("arial.ttf"), fontSize, FlxColor.WHITE, "center", FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
     songTxt.borderSize = 3;

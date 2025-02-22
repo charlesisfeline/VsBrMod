@@ -1,5 +1,6 @@
 import Type;
 
+import funkin.backend.system.framerate.Framerate;
 import funkin.backend.utils.NativeAPI;
 import funkin.backend.utils.WindowUtils;
 
