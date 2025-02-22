@@ -54,7 +54,7 @@ function preStateSwitch()
     trace("oops");
     
     FlxG.camera.bgColor = 0xFF000000;
-
+    
     Main.framerateSprite.codenameBuildField.text = "Codename Engine Alpha (Vs. br)";
     
     trace(Std.isOfType(FlxG.state, PlayState)
@@ -98,9 +98,21 @@ function postStateSwitch()
 {
     trace("hi");
     
-    // Framerate.debugMode = 1;
+    Framerate.debugMode = 1;
     
-    if (Std.isOfType(FlxG.state, PlayState)) window.title = 'fnf vs br - ' + PlayState.SONG.meta.displayName;
+    if (Std.isOfType(FlxG.state, PlayState))
+    {
+        if (PlayState.SONG.meta.name == "depart")
+        {
+            trace("depart " + PlayState.SONG.meta.name == "depart");
+            window.title = "Friday Night Funkin'";
+        }
+        else
+        {
+            trace("not depart " + PlayState.SONG.meta.name == "depart");
+            window.title = 'fnf vs br - ' + PlayState.SONG.meta.displayName;
+        }
+    }
     else
         window.title = "fnf vs br";
         
@@ -108,5 +120,7 @@ function postStateSwitch()
     FlxG.mouse.load(Paths.image("ui/cursor"));
     
     trace("help ee");
-    window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
+    if (PlayState.SONG.meta.name != "depart") window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
+    else
+        window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/defaultFunkin'))));
 }

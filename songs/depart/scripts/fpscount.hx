@@ -45,7 +45,7 @@ function postCreate()
     
     Framerate.instance.visible = false;
     
-    window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/defaultIcon'))));
+    window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/defaultFunkin'))));
     WindowUtils.winTitle = "Friday Night Funkin'";
     
     FlxG.mouse.useSystemCursor = false;
