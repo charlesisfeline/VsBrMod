@@ -1,7 +1,7 @@
 function postCreate()
 {
-    changePlayerSkin("NOTE_assets_br");
-    changeCPUSkin("NOTE_assets_br");
+    changePlayerSkin("fredNotes_Assets");
+    changeCPUSkin("fredNotes_Assets");
     
     for (vcrTo in [scoreTxt, missesTxt, accuracyTxt])
     {
