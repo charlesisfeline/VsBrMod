@@ -19,9 +19,9 @@
 	<SubTexture name="purple0000" x="159" y="87" width="55" height="56" frameX="-0" frameY="-0" frameWidth="55" frameHeight="56"/>
 	<SubTexture name="red hold end0000" x="300" y="88" width="21" height="25" frameX="-0" frameY="-0" frameWidth="21" frameHeight="25"/>
 	<SubTexture name="red hold piece0000" x="411" y="88" width="22" height="20" frameX="-0" frameY="-0" frameWidth="22" frameHeight="20"/>
-	<SubTexture name="red0000" x="444" y="16" width="53" height="56" frameX="-0" frameY="-0" frameWidth="53" frameHeight="56"/>
+	<SubTexture name="red0000" x="443" y="16" width="55" height="56" frameX="-0" frameY="-0" frameWidth="55" frameHeight="56"/>
 	<SubTexture name="right confirm0000" x="87" y="88" width="55" height="56" frameX="-0" frameY="-0" frameWidth="55" frameHeight="56"/>
-	<SubTexture name="right press0000" x="444" y="16" width="53" height="56" frameX="-0" frameY="-0" frameWidth="53" frameHeight="56"/>
+	<SubTexture name="right press0000" x="443" y="16" width="55" height="56" frameX="-0" frameY="-0" frameWidth="55" frameHeight="56"/>
 	<SubTexture name="up confirm0000" x="374" y="16" width="54" height="55" frameX="-0" frameY="-0" frameWidth="54" frameHeight="55"/>
 	<SubTexture name="up press0000" x="230" y="87" width="54" height="55" frameX="-0" frameY="-0" frameWidth="54" frameHeight="55"/>
 </TextureAtlas>
