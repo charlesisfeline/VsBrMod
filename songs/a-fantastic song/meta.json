@@ -1,0 +1,10 @@
+{
+  "opponentModeAllowed": true,
+  "coopAllowed": true,
+  "bpm": 95,
+  "needsVoices": true,
+  "displayName": "A-Fantastic Song!",
+  "icon": "jeepers",
+  "name": "a-fantastic song",
+  "color": "#FF0700"
+}

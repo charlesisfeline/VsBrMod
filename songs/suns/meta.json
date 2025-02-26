@@ -1,8 +1,17 @@
 {
-  "displayName": "Suns",
-  "bpm": 127.0,
-  "icon": "suns",
-  "color": "#A0D1FF",
-  "coopAllowed": true,
-  "opponentModeAllowed": true
+	"beatsPerMeasure": 4,
+	"opponentModeAllowed": true,
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
+	"bpm": 127,
+	"difficulties": [
+		"HARD"
+	],
+	"needsVoices": true,
+	"parsedColor": -10921,
+	"displayName": "Suns",
+	"icon": "suns",
+	"name": "suns",
+	"color": "#FFD557",
+	"customValues": {}
 }

@@ -1,0 +1,10 @@
+{
+  "displayName": "Apart",
+  "name": "apart",
+  "bpm": 154,
+  "icon": "mike",
+  "color": "#FFFFFF",
+  "coopAllowed": true,
+  "opponentModeAllowed": true,
+  "needsVoices": true
+}

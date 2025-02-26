@@ -1,0 +1,10 @@
+{
+  "opponentModeAllowed": true,
+  "coopAllowed": true,
+  "bpm": 196,
+  "needsVoices": true,
+  "displayName": "Meme Stealer",
+  "icon": "blank",
+  "name": "meme stealer",
+  "color": "#FFFFFF"
+}

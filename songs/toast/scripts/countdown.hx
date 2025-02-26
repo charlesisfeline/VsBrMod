@@ -1,10 +1,9 @@
-function create()
-    playCutscenes = false;
-    
-function onCountdown(event) {
+function onCountdown(event)
+{
     if (event.soundPath != null) event.soundPath = 'vanilla/' + event.soundPath;
     
-    event.spritePath = switch (event.swagCounter) {
+    event.spritePath = switch (event.swagCounter)
+    {
         case 0: null;
         case 1: 'game/vanilla/ready';
         case 2: 'game/vanilla/set';
@@ -13,5 +12,12 @@ function onCountdown(event) {
 }
 
 function onPlayerHit(event:NoteHitEvent)
-    event.ratingPrefix = "game/vanilla/score/";
-    
+{
+    try
+    {
+        event.ratingPrefix = "game/vanilla/score/";
+    }
+    catch (e)
+    {
+    }
+}
