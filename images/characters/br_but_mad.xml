@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="br_but_mad.png" width="3054" height="2649">
+	<SubTexture name="br idle dance0000" x="2511" y="8" width="535" height="588" frameX="-443" frameY="-522" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="br idle dance0001" x="2511" y="8" width="535" height="588" frameX="-443" frameY="-522" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="br idle dance0002" x="2461" y="1198" width="535" height="583" frameX="-451" frameY="-527" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="br idle dance0003" x="2511" y="604" width="512" height="586" frameX="-465" frameY="-524" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="br idle dance0004" x="1667" y="1881" width="534" height="593" frameX="-434" frameY="-517" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="br idle dance0005" x="1667" y="1881" width="534" height="593" frameX="-434" frameY="-517" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="br idle dance0006" x="1127" y="1984" width="532" height="602" frameX="-420" frameY="-508" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="br idle dance0007" x="1127" y="1984" width="532" height="602" frameX="-420" frameY="-508" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="br idle dance0008" x="588" y="2025" width="531" height="606" frameX="-417" frameY="-504" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="br idle dance0009" x="8" y="2025" width="572" height="616" frameX="-435" frameY="-493" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="br idle dance0010" x="588" y="2025" width="531" height="606" frameX="-417" frameY="-504" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="br idle dance0011" x="588" y="2025" width="531" height="606" frameX="-417" frameY="-504" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="br sing down0000" x="844" y="1372" width="756" height="604" frameX="-323" frameY="-543" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="br sing down0001" x="1814" y="8" width="689" height="637" frameX="-364" frameY="-509" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="br sing left0000" x="8" y="8" width="953" height="594" frameX="-263" frameY="-527" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="br sing left0001" x="8" y="1372" width="828" height="645" frameX="-350" frameY="-476" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="br sing right0000" x="1608" y="1268" width="633" height="605" frameX="-360" frameY="-515" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="br sing right0001" x="1814" y="653" width="639" height="607" frameX="-322" frameY="-512" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="br sing up0000" x="969" y="8" width="837" height="794" frameX="-235" frameY="-316" frameWidth="1280" frameHeight="1280"/>
+	<SubTexture name="br sing up0001" x="8" y="610" width="858" height="754" frameX="-259" frameY="-356" frameWidth="1280" frameHeight="1280"/>
+</TextureAtlas>

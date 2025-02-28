@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character x="-420" y="-250" sprite="Silly_Guitar_Sprites" scale="0.9" icon="silly-guitar" color="#FFA257">
+	<anim name="idle" anim="silly guitar idle0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="silly guitar sing down0" x="-15" y="13" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="silly guitar sing left0" x="-1" y="8" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="silly guitar sing right0" x="-16" y="5" fps="24" loop="false"/>
+	<anim name="singUP" anim="silly guitar sing up0" x="-15" y="10" fps="24" loop="false"/>
+</character>

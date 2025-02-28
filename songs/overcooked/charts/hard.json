@@ -1,40 +1,44 @@
 {
-	"codenameChart": true,
-	"scrollSpeed": 3.4,
 	"strumLines": [
 		{
-			"strumScale": 1,
-			"position": "dad",
-			"notes": [],
-			"characters": [
-				"br"
-			],
-			"type": 0,
 			"scrollSpeed": 3.4,
-			"visible": true,
+			"keyCount": 4,
+			"notes": [],
+			"visible": false,
 			"strumPos": [
 				0,
 				50
 			],
-			"strumLinePos": 0.25
+			"position": "dad",
+			"strumScale": 1,
+			"vocalsSuffix": "",
+			"strumLinePos": 0.25,
+			"type": 0,
+			"characters": [
+				"br-glitch"
+			]
 		},
 		{
-			"strumScale": 1,
-			"position": "boyfriend",
-			"notes": [],
-			"characters": [
-				"bf-br"
-			],
-			"type": 1,
 			"scrollSpeed": 3.4,
+			"keyCount": 4,
+			"notes": [],
 			"visible": true,
 			"strumPos": [
 				0,
 				50
 			],
-			"strumLinePos": 0.75
+			"position": "boyfriend",
+			"strumScale": 1,
+			"vocalsSuffix": "",
+			"strumLinePos": 0.5,
+			"type": 1,
+			"characters": [
+				"bf-br"
+			]
 		}
 	],
 	"stage": "frontyard-scary",
+	"codenameChart": true,
+	"scrollSpeed": 3.4,
 	"noteTypes": []
 }
