@@ -1,5 +1,5 @@
 function create()
-    playCutscenes = false;
+    playCutscenes = true;
     
 function onCountdown(event) {
     if (event.soundPath != null) event.soundPath = 'vanilla/' + event.soundPath;

@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-stage>
+<stage folder="stages/backyard/" zoom="1">
+	<sprite x="-393.5" y="-156" sprite="sillies" scale="1.25" name="yard"/>
+	<gf x="311" y="133.5"/>
+	<dad x="-122" y="84.5"/>
+	<bf x="768" y="139.5"/>
+	<combo x="658.5" y="402"/>
+</stage>
