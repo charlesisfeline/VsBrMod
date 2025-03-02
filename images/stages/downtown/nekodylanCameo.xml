@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="nekodylanCameo.png" width="428" height="534">
+	<SubTexture name="nekodylan cameo0001" x="8" y="8" width="215" height="245" frameX="-319" frameY="-179" frameWidth="882" frameHeight="577"/>
+	<SubTexture name="nekodylan cameo0002" x="8" y="8" width="215" height="245" frameX="-319" frameY="-179" frameWidth="882" frameHeight="577"/>
+	<SubTexture name="nekodylan cameo0003" x="207" y="276" width="203" height="250" frameX="-327" frameY="-174" frameWidth="882" frameHeight="577"/>
+	<SubTexture name="nekodylan cameo0004" x="207" y="276" width="203" height="250" frameX="-327" frameY="-174" frameWidth="882" frameHeight="577"/>
+	<SubTexture name="nekodylan cameo0005" x="8" y="261" width="191" height="259" frameX="-334" frameY="-165" frameWidth="882" frameHeight="577"/>
+	<SubTexture name="nekodylan cameo0006" x="8" y="261" width="191" height="259" frameX="-334" frameY="-165" frameWidth="882" frameHeight="577"/>
+	<SubTexture name="nekodylan cameo0007" x="231" y="8" width="189" height="260" frameX="-335" frameY="-164" frameWidth="882" frameHeight="577"/>
+	<SubTexture name="nekodylan cameo0008" x="231" y="8" width="189" height="260" frameX="-335" frameY="-164" frameWidth="882" frameHeight="577"/>
+<SubTexture name="nekodylan cameo0009" x="231" y="8" width="189" height="260" frameX="-335" frameY="-164" frameWidth="882" frameHeight="577"/>
+<SubTexture name="nekodylan cameo00010" x="231" y="8" width="189" height="260" frameX="-335" frameY="-164" frameWidth="882" frameHeight="577"/>
+<SubTexture name="nekodylan cameo00011" x="231" y="8" width="189" height="260" frameX="-335" frameY="-164" frameWidth="882" frameHeight="577"/>
+<SubTexture name="nekodylan cameo00012" x="231" y="8" width="189" height="260" frameX="-335" frameY="-164" frameWidth="882" frameHeight="577"/>
+</TextureAtlas>
