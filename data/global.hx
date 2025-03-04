@@ -15,8 +15,7 @@ var windowName = 'fnf vs br';
 
 trace("oh cool reloaded global wowzers!1!! . " + Math.random());
 WindowUtils.winTitle = windowName;
-function new()
-{
+function new() {
     trace("hi");
     
     window.title = "Made with Codename Engine!";
@@ -32,31 +31,27 @@ function new()
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
 }
 
-function destroy()
-{
+function destroy() {
     WindowUtils.winTitle = "br is dead";
 }
 
-function update(elapsed:Float)
-{
+function update(elapsed:Float) {
     //  trace("hi");
     if (FlxG.keys.justPressed.F5) FlxG.resetState(); // RESETTING STATES
     
     // here for debugging purposes i think
-    if (FlxG.keys.justPressed.F6)
-    {
+    if (FlxG.keys.justPressed.F6) {
         trace("cons");
         NativeAPI.allocConsole();
     }
 }
 
-function preStateSwitch()
-{
+function preStateSwitch() {
     trace("oops");
     
     FlxG.camera.bgColor = 0xFF000000;
     
-    Main.framerateSprite.codenameBuildField.text = "Codename Engine Alpha (Vs. br)";
+    Main.framerateSprite.codenameBuildField.text = "Codename Engine Alpha (Vs. br)\nDEV/PLAYTESTER BUILD dont leak!";
     
     trace(Std.isOfType(FlxG.state, PlayState)
         && (FlxG.state.subState == null ? true : !Std.isOfType(FlxG.state.subState, GameOverSubstate)
@@ -74,18 +69,15 @@ function preStateSwitch()
         FlxG.switchState(new ModState("LoadingState"));
         return;
     }
-    else
-    {
+    else {
         trace("no load oops");
     } // LOADING SCREEN
     
     var stateClassName = Type.getClassName(Type.getClass(FlxG.game._requestedState));
     reqStateName = stateClassName.substr(stateClassName.lastIndexOf(".") + 1);
     
-    for (redirect in redirectStates.keys())
-    {
-        if (reqStateName == redirect)
-        {
+    for (redirect in redirectStates.keys()) {
+        if (reqStateName == redirect) {
             trace("YEP");
             var daModState = redirectStates.get(redirect);
             FlxG.game._requestedState = new ModState(daModState, redirectStateData.get(daModState));
@@ -95,21 +87,17 @@ function preStateSwitch()
     }
 }
 
-function postStateSwitch()
-{
+function postStateSwitch() {
     trace("hi");
     
     Framerate.debugMode = 1;
     
-    if (Std.isOfType(FlxG.state, PlayState))
-    {
-        if (PlayState.SONG.meta.name == "depart")
-        {
+    if (Std.isOfType(FlxG.state, PlayState)) {
+        if (PlayState.SONG.meta.name == "depart") {
             trace("depart " + PlayState.SONG.meta.name == "depart");
             window.title = "Friday Night Funkin'";
         }
-        else
-        {
+        else {
             trace("not depart " + PlayState.SONG.meta.name == "depart");
             window.title = 'fnf vs br - ' + PlayState.SONG.meta.displayName;
         }
