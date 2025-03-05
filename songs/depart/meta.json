@@ -1,17 +1,18 @@
 {
+	"beatsPerMeasure": 4,
 	"opponentModeAllowed": true,
-	"icon": "mini-mike",
-	"difficulties": [
-		"HARD"
-	],
-	"parsedColor": -2137152,
-	"customValues": {},
-	"color": "#DF63C0",
-	"name": "depart",
 	"coopAllowed": true,
 	"stepsPerBeat": 4,
-	"displayName": "Depart",
-	"beatsPerMeasure": 4,
+	"bpm": 149,
+	"difficulties": [
+		"HARD",
+		"bf"
+	],
 	"needsVoices": true,
-	"bpm": 149
+	"parsedColor": -6529290,
+	"displayName": "Depart",
+	"icon": "mini-mike",
+	"name": "depart",
+	"color": "#9C5EF6",
+	"customValues": {}
 }

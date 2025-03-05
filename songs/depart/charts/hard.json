@@ -1,8 +1,11 @@
 {
+	"stage": "downtown",
+	"scrollSpeed": 2.1,
 	"codenameChart": true,
 	"strumLines": [
 		{
 			"keyCount": 4,
+			"position": "dad",
 			"notes": [
 				{
 					"id": 2,
@@ -1643,12 +1646,11 @@
 					"type": 0
 				}
 			],
-			"position": "dad",
-			"type": 0,
-			"visible": true,
 			"characters": [
 				"mini-mike"
-			]
+			],
+			"visible": true,
+			"type": 0
 		},
 		{
 			"keyCount": 4,
@@ -3195,28 +3197,9 @@
 			"strumLinePos": 0.75,
 			"type": 1,
 			"characters": [
-				"bf"
-			]
-		},
-		{
-			"keyCount": 4,
-			"notes": [],
-			"visible": false,
-			"strumPos": [
-				0,
-				50
-			],
-			"position": "girlfriend",
-			"strumScale": 1,
-			"vocalsSuffix": "",
-			"strumLinePos": 0.25,
-			"type": 2,
-			"characters": [
-				"gf"
+				"bf-br"
 			]
 		}
 	],
-	"scrollSpeed": 2.1,
-	"stage": "downtown",
 	"noteTypes": []
 }

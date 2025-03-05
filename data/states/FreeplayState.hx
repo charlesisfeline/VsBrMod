@@ -2,11 +2,11 @@ import Date;
 
 import lime.graphics.Image;
 
+public var newDiffText:FlxText;
 var icoPlacement:String = "left";
 var timeFormat12h:Bool = true; // the illusion of choice
 
-function postCreate()
-{
+function postCreate() {
     FlxG.camera.bgColor = 0xff000000;
     
     window.title = "fnf vs br";
@@ -14,6 +14,12 @@ function postCreate()
     
     FlxG.mouse.useSystemCursor = false;
     FlxG.mouse.load(Paths.image("ui/cursor"));
+    
+    newDiffText = new FlxText(0, 400, 0, "", 24);
+    newDiffText.font = scoreText.font;
+    newDiffText.color = FlxColor.BLACK;
+    newDiffText.text = "hi";
+    add(newDiffText);
     
     scoreText.alpha = 1;
     coopText.y = scoreText.y + 36;
@@ -35,15 +41,13 @@ function postCreate()
     insert(members.indexOf(timeTxt), timeBG);
 }
 
-function update(elapsed:Float)
-{
+function update(elapsed:Float) {
     var theDate = Date.now();
     var hours = theDate.getHours();
     var minutes = theDate.getMinutes();
     var seconds = theDate.getSeconds();
     
-    if (timeFormat12h)
-    {
+    if (timeFormat12h) {
         // 24 hr system haters gonna cry
         if (hours >= 12) hours -= 12;
     }
@@ -53,17 +57,22 @@ function update(elapsed:Float)
     timeTxt.text = formattedTime;
 }
 
-function postUpdate()
-{
-    for (p in 0...iconArray.length)
-    {
+function postUpdate() {
+    for (p in 0...iconArray.length) {
         grpSongs.members[p].screenCenter(FlxAxes.X);
-        switch (icoPlacement)
-        {
+        switch (icoPlacement) {
             case "right":
                 iconArray[p].x = iconArray[p].sprTracker.x + grpSongs.members[p].width + 10;
             case "left":
                 iconArray[p].x = iconArray[p].sprTracker.x - grpSongs.members[p].width + iconArray[p].sprTracker.width - 150;
         }
     }
+}
+
+function onChangeDiff(e) {
+    var currSong = songs[curSelected];
+    
+    if (currSong.difficulties.length > 1) newDiffText.text = '<' + currSong.difficulties[curDifficulty] + '>';
+    else
+        newDiffText.text = "";
 }
