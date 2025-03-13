@@ -1,7 +1,12 @@
 {
-	"stage": "stage",
+	"scrollSpeed": 2.5,
+	"codenameChart": true,
+	"stage": "sketch",
 	"strumLines": [
 		{
+			"keyCount": 4,
+			"strumScale": 1,
+			"position": "dad",
 			"notes": [
 				{
 					"id": 1,
@@ -1510,14 +1515,12 @@
 					"type": 0
 				}
 			],
-			"position": "dad",
-			"strumScale": 1,
-			"visible": true,
-			"scrollSpeed": 2.6,
-			"type": 0,
 			"characters": [
 				"br"
 			],
+			"type": 0,
+			"scrollSpeed": 2.6,
+			"visible": true,
 			"strumPos": [
 				0,
 				50
@@ -1525,6 +1528,9 @@
 			"strumLinePos": 0.25
 		},
 		{
+			"keyCount": 4,
+			"strumScale": 1,
+			"position": "boyfriend",
 			"notes": [
 				{
 					"id": 3,
@@ -1828,13 +1834,13 @@
 				},
 				{
 					"id": 1,
-					"sLen": 111.111111111113,
+					"sLen": 111.111111111117,
 					"time": 28888.8888888889,
 					"type": 0
 				},
 				{
 					"id": 2,
-					"sLen": 111.111111111113,
+					"sLen": 111.111111111117,
 					"time": 29111.1111111111,
 					"type": 0
 				},
@@ -1912,7 +1918,7 @@
 				},
 				{
 					"id": 1,
-					"sLen": 111.111111111113,
+					"sLen": 111.111111111117,
 					"time": 30888.8888888889,
 					"type": 0
 				},
@@ -1942,7 +1948,7 @@
 				},
 				{
 					"id": 2,
-					"sLen": 111.111111111109,
+					"sLen": 111.111111111106,
 					"time": 32000,
 					"type": 0
 				},
@@ -2290,7 +2296,7 @@
 				},
 				{
 					"id": 2,
-					"sLen": 333.333333333336,
+					"sLen": 333.33333333335,
 					"time": 58222.2222222222,
 					"type": 0
 				},
@@ -2991,14 +2997,12 @@
 					"type": 0
 				}
 			],
-			"position": "boyfriend",
-			"strumScale": 1,
-			"visible": true,
-			"scrollSpeed": 2.6,
-			"type": 1,
 			"characters": [
 				"bf-br"
 			],
+			"type": 1,
+			"scrollSpeed": 2.6,
+			"visible": true,
 			"strumPos": [
 				0,
 				50
@@ -3006,7 +3010,5 @@
 			"strumLinePos": 0.75
 		}
 	],
-	"codenameChart": true,
-	"scrollSpeed": 2.6,
 	"noteTypes": []
 }

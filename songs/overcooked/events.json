@@ -1,3 +1,146 @@
 {
-	"events": []
+	"events": [
+		{
+			"params": [
+				"overcookedOpening",
+				"1.65",
+				"",
+				"",
+				"camHUD/showHUD",
+				true,
+				false,
+				false,
+				"stage",
+				false,
+				true
+			],
+			"name": "video event",
+			"time": 0
+		},
+		{
+			"params": [
+				4,
+				1
+			],
+			"name": "Camera Modulo Change",
+			"time": 0
+		},
+		{
+			"params": [
+				1
+			],
+			"name": "Camera Movement",
+			"time": 0
+		},
+		{
+			"params": [
+				0
+			],
+			"name": "Camera Movement",
+			"time": 16421.0526315789
+		},
+		{
+			"params": [
+				1,
+				1.1
+			],
+			"name": "Camera Modulo Change",
+			"time": 20210.5263157895
+		},
+		{
+			"params": [
+				1
+			],
+			"name": "Camera Movement",
+			"time": 30631.5789473684
+		},
+		{
+			"params": [
+				false,
+				-1,
+				8,
+				"camGame"
+			],
+			"name": "Camera Flash",
+			"time": 40421.0526315789
+		},
+		{
+			"params": [
+				"1.3",
+				4,
+				"CLASSIC",
+				"direct"
+			],
+			"name": "ZoomCamera",
+			"time": 40421.0526315789
+		},
+		{
+			"params": [
+				8,
+				1
+			],
+			"name": "Camera Modulo Change",
+			"time": 40421.0526315789
+		},
+		{
+			"params": [
+				0
+			],
+			"name": "Camera Movement",
+			"time": 41368.4210526316
+		},
+		{
+			"params": [
+				1,
+				0,
+				0,
+				6,
+				"cubeOut"
+			],
+			"name": "FocusCamera",
+			"time": 50526.3157894737
+		},
+		{
+			"params": [
+				"1.37",
+				16,
+				"quadOut",
+				"direct"
+			],
+			"name": "ZoomCamera",
+			"time": 55578.9473684211
+		},
+		{
+			"params": [
+				0
+			],
+			"name": "Camera Movement",
+			"time": 60631.5789473684
+		},
+		{
+			"params": [
+				1,
+				1.1
+			],
+			"name": "Camera Modulo Change",
+			"time": 60631.5789473684
+		},
+		{
+			"params": [
+				"0.9",
+				4,
+				"cubeOut",
+				"direct"
+			],
+			"name": "ZoomCamera",
+			"time": 60631.5789473684
+		},
+		{
+			"params": [
+				1
+			],
+			"name": "Camera Movement",
+			"time": 71052.6315789474
+		}
+	]
 }
