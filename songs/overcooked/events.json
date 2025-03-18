@@ -14,45 +14,45 @@
 				false,
 				true
 			],
-			"time": 0,
-			"name": "video event"
+			"name": "video event",
+			"time": 0
 		},
 		{
 			"params": [
 				4,
 				1
 			],
-			"time": 0,
-			"name": "Camera Modulo Change"
+			"name": "Camera Modulo Change",
+			"time": 0
 		},
 		{
 			"params": [
 				1
 			],
-			"time": 0,
-			"name": "Camera Movement"
+			"name": "Camera Movement",
+			"time": 0
 		},
 		{
 			"params": [
 				0
 			],
-			"time": 16421.0526315789,
-			"name": "Camera Movement"
+			"name": "Camera Movement",
+			"time": 16421.0526315789
 		},
 		{
 			"params": [
 				1,
 				1.1
 			],
-			"time": 20210.5263157895,
-			"name": "Camera Modulo Change"
+			"name": "Camera Modulo Change",
+			"time": 20210.5263157895
 		},
 		{
 			"params": [
 				1
 			],
-			"time": 30631.5789473684,
-			"name": "Camera Movement"
+			"name": "Camera Movement",
+			"time": 30631.5789473684
 		},
 		{
 			"params": [
@@ -61,8 +61,8 @@
 				8,
 				"camGame"
 			],
-			"time": 40421.0526315789,
-			"name": "Camera Flash"
+			"name": "Camera Flash",
+			"time": 40421.0526315789
 		},
 		{
 			"params": [
@@ -71,23 +71,23 @@
 				"CLASSIC",
 				"direct"
 			],
-			"time": 40421.0526315789,
-			"name": "ZoomCamera"
+			"name": "ZoomCamera",
+			"time": 40421.0526315789
 		},
 		{
 			"params": [
 				8,
 				1
 			],
-			"time": 40421.0526315789,
-			"name": "Camera Modulo Change"
+			"name": "Camera Modulo Change",
+			"time": 40421.0526315789
 		},
 		{
 			"params": [
 				0
 			],
-			"time": 41368.4210526316,
-			"name": "Camera Movement"
+			"name": "Camera Movement",
+			"time": 41368.4210526316
 		},
 		{
 			"params": [
@@ -97,8 +97,8 @@
 				6,
 				"cubeOut"
 			],
-			"time": 50526.3157894737,
-			"name": "FocusCamera"
+			"name": "FocusCamera",
+			"time": 50526.3157894737
 		},
 		{
 			"params": [
@@ -107,23 +107,23 @@
 				"quadOut",
 				"direct"
 			],
-			"time": 55578.9473684211,
-			"name": "ZoomCamera"
+			"name": "ZoomCamera",
+			"time": 55578.9473684211
 		},
 		{
 			"params": [
 				0
 			],
-			"time": 60631.5789473684,
-			"name": "Camera Movement"
+			"name": "Camera Movement",
+			"time": 60631.5789473684
 		},
 		{
 			"params": [
 				1,
 				1.1
 			],
-			"time": 60631.5789473684,
-			"name": "Camera Modulo Change"
+			"name": "Camera Modulo Change",
+			"time": 60631.5789473684
 		},
 		{
 			"params": [
@@ -132,22 +132,22 @@
 				"cubeOut",
 				"direct"
 			],
-			"time": 60631.5789473684,
-			"name": "ZoomCamera"
+			"name": "ZoomCamera",
+			"time": 60631.5789473684
 		},
 		{
 			"params": [
 				1
 			],
-			"time": 71052.6315789474,
-			"name": "Camera Movement"
+			"name": "Camera Movement",
+			"time": 71052.6315789474
 		},
 		{
 			"params": [
 				0
 			],
-			"name": "Camera Movement",
-			"time": 80842.1052631579
+			"time": 80842.1052631579,
+			"name": "Camera Movement"
 		},
 		{
 			"params": [
@@ -156,8 +156,8 @@
 				"expoOut",
 				"direct"
 			],
-			"name": "ZoomCamera",
-			"time": 80842.1052631579
+			"time": 80842.1052631579,
+			"name": "ZoomCamera"
 		},
 		{
 			"params": [
@@ -166,16 +166,16 @@
 				"cubeOut",
 				"direct"
 			],
-			"name": "ZoomCamera",
-			"time": 83368.4210526316
+			"time": 83368.4210526316,
+			"name": "ZoomCamera"
 		},
 		{
 			"params": [
 				8,
 				1
 			],
-			"name": "Camera Modulo Change",
-			"time": 83368.4210526316
+			"time": 83368.4210526316,
+			"name": "Camera Modulo Change"
 		},
 		{
 			"params": [
@@ -185,8 +185,8 @@
 				4,
 				"INSTANT"
 			],
-			"name": "FocusCamera",
-			"time": 87789.4736842105
+			"time": 87789.4736842105,
+			"name": "FocusCamera"
 		},
 		{
 			"params": [
@@ -196,8 +196,8 @@
 				4,
 				"INSTANT"
 			],
-			"name": "FocusCamera",
-			"time": 89052.6315789474
+			"time": 89052.6315789474,
+			"name": "FocusCamera"
 		},
 		{
 			"params": [
@@ -207,8 +207,8 @@
 				4,
 				"INSTANT"
 			],
-			"name": "FocusCamera",
-			"time": 90315.7894736842
+			"time": 90315.7894736842,
+			"name": "FocusCamera"
 		},
 		{
 			"params": [
@@ -218,8 +218,8 @@
 				4,
 				"INSTANT"
 			],
-			"name": "FocusCamera",
-			"time": 90947.3684210526
+			"time": 90947.3684210526,
+			"name": "FocusCamera"
 		},
 		{
 			"params": [
@@ -229,8 +229,8 @@
 				4,
 				"INSTANT"
 			],
-			"name": "FocusCamera",
-			"time": 92210.5263157895
+			"time": 92210.5263157895,
+			"name": "FocusCamera"
 		},
 		{
 			"params": [
@@ -240,78 +240,78 @@
 				4,
 				"INSTANT"
 			],
-			"name": "FocusCamera",
-			"time": 92526.3157894737
+			"time": 92526.3157894737,
+			"name": "FocusCamera"
 		},
 		{
 			"params": [
 				1
 			],
-			"name": "Camera Movement",
-			"time": 93473.6842105263
+			"time": 93473.6842105263,
+			"name": "Camera Movement"
 		},
 		{
 			"params": [
 				0
 			],
-			"name": "Camera Movement",
-			"time": 94736.8421052632
+			"time": 94736.8421052632,
+			"name": "Camera Movement"
 		},
 		{
 			"params": [
 				1
 			],
-			"name": "Camera Movement",
-			"time": 96000
+			"time": 96000,
+			"name": "Camera Movement"
 		},
 		{
 			"params": [
 				0
 			],
-			"name": "Camera Movement",
-			"time": 103578.947368421
+			"time": 103578.947368421,
+			"name": "Camera Movement"
 		},
 		{
 			"params": [
 				1
 			],
-			"name": "Camera Movement",
-			"time": 108631.578947368
+			"time": 108631.578947368,
+			"name": "Camera Movement"
 		},
 		{
 			"params": [
 				0
 			],
-			"name": "Camera Movement",
-			"time": 113684.210526316
+			"time": 113684.210526316,
+			"name": "Camera Movement"
 		},
 		{
 			"params": [
 				1
 			],
-			"name": "Camera Movement",
-			"time": 116210.526315789
+			"time": 116210.526315789,
+			"name": "Camera Movement"
 		},
 		{
 			"params": [
 				0
 			],
-			"name": "Camera Movement",
-			"time": 118736.842105263
+			"time": 118736.842105263,
+			"name": "Camera Movement"
 		},
 		{
 			"params": [
 				1
 			],
-			"name": "Camera Movement",
-			"time": 121263.157894737
+			"time": 121263.157894737,
+			"name": "Camera Movement"
 		},
 		{
 			"params": [
 				0
 			],
-			"name": "Camera Movement",
-			"time": 123789.473684211
+			"time": 123789.473684211,
+			"name": "Camera Movement"
 		}
 	]
 }
