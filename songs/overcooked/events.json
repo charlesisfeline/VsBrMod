@@ -263,6 +263,55 @@
 			],
 			"name": "Camera Movement",
 			"time": 96000
+		},
+		{
+			"params": [
+				0
+			],
+			"name": "Camera Movement",
+			"time": 103578.947368421
+		},
+		{
+			"params": [
+				1
+			],
+			"name": "Camera Movement",
+			"time": 108631.578947368
+		},
+		{
+			"params": [
+				0
+			],
+			"name": "Camera Movement",
+			"time": 113684.210526316
+		},
+		{
+			"params": [
+				1
+			],
+			"name": "Camera Movement",
+			"time": 116210.526315789
+		},
+		{
+			"params": [
+				0
+			],
+			"name": "Camera Movement",
+			"time": 118736.842105263
+		},
+		{
+			"params": [
+				1
+			],
+			"name": "Camera Movement",
+			"time": 121263.157894737
+		},
+		{
+			"params": [
+				0
+			],
+			"name": "Camera Movement",
+			"time": 123789.473684211
 		}
 	]
 }
