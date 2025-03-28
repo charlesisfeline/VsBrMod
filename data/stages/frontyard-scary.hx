@@ -1,7 +1,7 @@
 var windows:FlxSpriteGroup;
 
 // this is mostly just rb's stage code but edited a bit to act like fake window popups. 
-// u cant drag them tho. for now....
+// u cant drag or close them yet tho. for now....
 // WIP! 
 
 var borders:FlxSprite;
@@ -22,19 +22,19 @@ function postCreate() {
 
 function addWindow(popup:Int = 2)
 {
-        var spr:FlxSprite = new FlxSprite(0, 0);
-        spr.frames = Paths.getSparrowAtlas("stages/house-scary/windowPopups");
-        spr.x = FlxG.random.int(0, Std.int(FlxG.width - spr.width));
-        spr.y = FlxG.random.int(0, Std.int(FlxG.height - spr.height));
-        for (pop in 0...9) 
-             spr.animation.addByPrefix("window" + pop, "window" + pop, 24, true);
-        spr.updateHitbox();
-        spr.antialiasing = true;
-        spr.playAnim("window" + popup);
-        windows.add(spr);
+    var spr:FlxSprite = new FlxSprite(0, 0);
+    spr.frames = Paths.getSparrowAtlas("stages/house-scary/windowPopups");
+    spr.x = FlxG.random.int(0, Std.int(FlxG.width - spr.width));
+    spr.y = FlxG.random.int(0, Std.int(FlxG.height - spr.height));
+    for (pop in 0...9) spr.animation.addByPrefix("window" + pop, "window" + pop, 24, true);
+    spr.updateHitbox();
+    spr.antialiasing = true;
+    spr.playAnim("window" + popup);
+    FlxG.sound.play(Paths.sound('errorpopup'), 0.6);
+    windows.add(spr);
 }
 
-function update(elapsed:Float)
+function beatHit(curBeat:Int)
 {
-// not now bud
+    if (FlxG.random.bool(0.9)) addWindow(FlxG.random.int(1, 9));
 }
