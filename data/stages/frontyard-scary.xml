@@ -1,12 +1,12 @@
 <!DOCTYPE codename-engine-stage>
-<stage folder="stages/house-scary/" zoom="0.5">
-	<sprite x="-700" sprite="skyRed" y="-668" scale="1.5" name="sky"/>
-	<sprite scrolly="1.1" x="-837" y="-772" sprite="deathMountain" scale="1.01" scrollx="1.45" name="mountains"/>
-	<sprite scrolly="1.05" x="-913" y="-574" sprite="hillsNHouse" scrollx="1.25" name="hills"/>
-	<sprite x="-724" sprite="daPillars" y="-1331" scale="1.25" name="pillars"/>
+<stage folder="stages/house-scary/" zoom="0.8">
+	<sprite x="-700" y="-668" sprite="skyRed" scale="1.5" name="sky"/>
+	<sprite x="-284.45" scrolly="1.1" sprite="deathMountain" y="-784.25" scale="1.01" name="mountains" scrollx="1.45"/>
+	<sprite scrolly="1.05" x="-513.25" y="-609.375" sprite="hillsNHouse" scale="1.1" scrollx="1.25" name="hills"/>
+	<sprite x="-724" y="-1331" sprite="daPillars" scale="1.25" name="pillars"/>
 	<gf x="1303" y="-238"/>
-	<bf x="1259" y="-200.5"/>
-	<sprite x="-455" scrolly="1.1" sprite="clouding" y="-600" scale="1.3" alpha="0.9" name="clouds" scrollx="1.3"/>
-	<dad x="-217" y="-260"/>
-	<combo x="1305.5" y="106"/>
+	<bf x="1246" y="-224.5"/>
+	<dad x="-188" y="-265.5"/>
+	<sprite scrolly="1.1" x="-452.3" y="-616.25" sprite="clouding" alpha="0.9" scale="1.3" scrollx="1.3" name="clouds"/>
+	<combo x="1114.5" y="71"/>
 </stage>

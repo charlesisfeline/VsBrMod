@@ -1,5 +1,4 @@
-class FlxColorHelper extends flixel.FlxBasic
-{
+class FlxColorHelper extends flixel.FlxBasic {
     public function maxColor(color:FlxColor):Int
         return Math.max(redFloat(color), Math.max(greenFloat(color), blueFloat(color)));
         
@@ -30,8 +29,7 @@ class FlxColorHelper extends flixel.FlxBasic
     public function alphaFloat(color:FlxColor):Float
         return alpha(color) / 255;
         
-    public function hue(color:FlxColor):Float
-    {
+    public function hue(color:FlxColor):Float {
         var hueRad = Math.atan2(Math.sqrt(3) * (greenFloat(color) - blueFloat(color)), 2 * redFloat(color) - greenFloat(color) - blueFloat(color));
         var hue:Float = 0;
         if (hueRad != 0) hue = 180 / Math.PI * hueRad;
