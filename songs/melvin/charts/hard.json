@@ -1,0 +1,42 @@
+{
+	"stage": "melvin",
+	"events": [],
+	"scrollSpeed": 2.4,
+	"codenameChart": true,
+	"strumLines": [
+		{
+			"notes": [],
+			"visible": false,
+			"strumPos": [
+				0,
+				50
+			],
+			"position": "dad",
+			"scrollSpeed": 2.4,
+			"strumScale": 1,
+			"strumLinePos": 0.25,
+			"type": 0,
+			"characters": [
+				"melvin"
+			]
+		},
+		{
+			"notes": [],
+			"visible": true,
+			"strumPos": [
+				0,
+				50
+			],
+			"position": "boyfriend",
+			"scrollSpeed": 2.4,
+			"strumScale": 1,
+			"strumLinePos": 0.5,
+			"type": 1,
+			"characters": [
+				"invisible"
+			]
+		}
+	],
+	"meta": null,
+	"noteTypes": []
+}
