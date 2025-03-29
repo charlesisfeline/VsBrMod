@@ -1,17 +1,17 @@
 {
+	"beatsPerMeasure": 4,
 	"opponentModeAllowed": true,
-	"icon": "br-sketch",
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
+	"bpm": 135,
 	"difficulties": [
 		"HARD"
 	],
-	"parsedColor": -1,
-	"customValues": {},
-	"color": "#FFFFFF",
-	"name": "crumbled toast",
-	"coopAllowed": true,
-	"stepsPerBeat": 4,
-	"displayName": "Crumbled Toast",
-	"beatsPerMeasure": 4,
 	"needsVoices": true,
-	"bpm": 135
+	"parsedColor": -2953729,
+	"displayName": "Crumbled Toast",
+	"icon": "br-sketch",
+	"name": "crumbled toast",
+	"color": "#D2EDFF",
+	"customValues": {}
 }
