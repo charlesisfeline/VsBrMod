@@ -44,7 +44,6 @@ function addWindow(popup:Int = 2) {
     box.updateHitbox();
     box.antialiasing = true;
     box.animation.play("window" + FlxG.random.int(1, 9));
-    
     add(box);
     
     var closeBtn = new FlxSprite(0, 0);
@@ -53,29 +52,36 @@ function addWindow(popup:Int = 2) {
     closeBtn.y = box.y;
     closeBtn.antialiasing = true;
     closeBtn.updateHitbox();
-    
     add(closeBtn);
-    
-    FlxG.signals.preUpdate.add(() -> {
-        if (closeBtn != null && FlxG.mouse.overlaps(closeBtn) && FlxG.mouse.justPressed) {
-            trace("closed");
-            
-            if (box != null) {
-                box.visible = false;
-                box.kill();
-            }
-            if (closeBtn != null) {
-                closeBtn.visible = false;
-                closeBtn.kill();
-            }
-        }
-    });
     
     if (popup == 1) FlxG.sound.play(Paths.sound('errorpopupScary'), 0.7);
     else
         FlxG.sound.play(Paths.sound('errorpopup'), 0.6);
     if (box != null && windows != null) windows.add(box);
-    if (closeBtn != null && windows != null) windows.add(closeBtn);
+    if (closeBtn != null && windows != null) windows.add(closeBtn);  
+    
+    FlxG.signals.postUpdate.add(() -> {
+        if (closeBtn != null)
+        {
+        var focusing:Bool =  closeBtn.overlapsPoint(FlxG.mouse.getScreenPosition(camHUD), true, camHUD);
+        trace("focus " + focusing + " - click " + FlxG.mouse.justPressed);
+        
+        if (focusing && FlxG.mouse.justPressed) {
+            trace("closed");
+            
+            if (box != null) {
+                box.visible = false;
+                box.x = 6480;
+                box.kill();
+            }
+            if (closeBtn != null) {
+                closeBtn.visible = false;
+                closeBtn.x = 6480;
+                closeBtn.kill();
+            }
+        }
+}
+    });
 }
 
 // HARDCODED EVENTS cuz lazy
@@ -88,7 +94,7 @@ function beatHit(curBeat:Int) {
             borders.visible = false;
             
         // if (curBeat >= 264) {
-        FlxG.mouse.visible = true; // show mouse so u can close the popups
+        FlxG.mouse.visible = true; // show mouse so u can close the popups (actually u cant but yea)
         if (FlxG.random.bool(3)) addWindow(FlxG.random.int(1, 9));
         // }
     }
