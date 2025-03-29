@@ -98,6 +98,10 @@ function beatHit(curBeat:Int) {
             FlxG.mouse.visible = true; // show mouse so u can close the popups
             goPopups = true;
         }
+        else {
+            FlxG.mouse.visible = false;
+            goPopups = false;
+        }
     }
 }
 
