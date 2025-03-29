@@ -1,19 +1,14 @@
 import flixel.FlxG;
 import flixel.FlxSprite;
-import flixel.group.FlxSpriteGroup;
 
-// working around the whole "cant extend flxspritegroup" thing
-class PopupWindow extends flixel.FlxBasic {
+import funkin.backend.MusicBeatGroup; // cuz typed groups arent supported.
+
+class PopupWindow extends MusicBeatGroup {
     public var box:FlxSprite;
     public var closeBtn:FlxSprite;
     
-    public var _group:FlxSpriteGroup;
-    
-    public function new() {
-    } // its just haxe being haxe.
-    
-    public function create(x:Float, y:Float, popped:Int = 2) {
-        _group = new FlxSpriteGroup(x, y);
+    public function new(x:Float = 0.0, y:Float = 0.0, popped:Int = 2) {
+        if (popped == 0) popped = 1; // safety!
         
         box = new FlxSprite(0, 0);
         box.frames = Paths.getSparrowAtlas("stages/house-scary/windowPopups");
@@ -21,24 +16,33 @@ class PopupWindow extends flixel.FlxBasic {
             box.animation.addByPrefix("window" + pop, "window" + pop, 24, true);
         box.updateHitbox();
         box.antialiasing = true;
-        box.animation.play("window" + popped);
-        _group.add(box);
+        trace(popped);
+        box.animation.play("window" + FlxG.random.int(1, 9));
+        
+        add(box);
         
         closeBtn = new FlxSprite(0, 0);
         closeBtn.loadGraphic(Paths.image('stages/house-scary/closeButton'));
+        closeBtn.x = box.x;
+        closeBtn.y = box.y;
         closeBtn.antialiasing = true;
         closeBtn.updateHitbox();
-        _group.add(closeBtn);
         
-        return _group;
-    }
-    
-    override function update(elapsed:Float) {
-        super.update(elapsed);
+        add(closeBtn);
         
-        if (closeBtn != null && FlxG.mouse.overlaps(closeBtn) && FlxG.mouse.justPressed) {
-            if (box != null) box.destroy();
-            if (closeBtn != null) closeBtn.destroy();
-        }
+        FlxG.signals.preUpdate.add(() -> {
+            if (closeBtn != null && FlxG.mouse.overlaps(closeBtn) && FlxG.mouse.justPressed) {
+                trace("closed");
+                
+                if (box != null) {
+                    box.visible = false;
+                    box.kill();
+                }
+                if (closeBtn != null) {
+                    closeBtn.visible = false;
+                    closeBtn.kill();
+                }
+            }
+        });
     }
 }

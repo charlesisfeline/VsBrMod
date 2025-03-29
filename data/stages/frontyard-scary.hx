@@ -1,5 +1,7 @@
 import br.PopupWindow;
 
+import flixel.group.FlxSpriteGroup;
+
 var windows:FlxSpriteGroup;
 
 // this is mostly just rb's stage code but edited a bit to act like fake window popups.
@@ -22,19 +24,58 @@ function postCreate() {
     borders.cameras = [camHUD];
     
     windows = new FlxSpriteGroup();
-    insert(7, windows); // wishing cne will add `zIndex` like v-slice.....
+    add(windows);
     
     windows.cameras = [camHUD];
 }
 
 function addWindow(popup:Int = 2) {
-    var spr:PopupWindow = new PopupWindow(0, 0, popup);
-    spr.x = FlxG.random.int(0, FlxG.width);
-    spr.y = FlxG.random.int(0, FlxG.height);
+    // var spr:PopupWindow = new PopupWindow(0, 0, 0, popup);
+    // if (spr != null) {
+    //    spr.x = FlxG.random.int(0, FlxG.width - spr.box.width);
+    //    spr.y = FlxG.random.int(0, FlxG.height - spr.box.width);
+    // }
+    var box = new FlxSprite(0, 0);
+    box.frames = Paths.getSparrowAtlas("stages/house-scary/windowPopups");
+    for (pop in 1...9)
+        box.animation.addByPrefix("window" + pop, "window" + pop, 24, true);
+    box.x = FlxG.random.int(0, FlxG.width - box.width);
+    box.y = FlxG.random.int(0, FlxG.height - box.width);
+    box.updateHitbox();
+    box.antialiasing = true;
+    box.animation.play("window" + FlxG.random.int(1, 9));
+    
+    add(box);
+    
+    var closeBtn = new FlxSprite(0, 0);
+    closeBtn.loadGraphic(Paths.image('stages/house-scary/closeButton'));
+    closeBtn.x = box.x;
+    closeBtn.y = box.y;
+    closeBtn.antialiasing = true;
+    closeBtn.updateHitbox();
+    
+    add(closeBtn);
+    
+    FlxG.signals.preUpdate.add(() -> {
+        if (closeBtn != null && FlxG.mouse.overlaps(closeBtn) && FlxG.mouse.justPressed) {
+            trace("closed");
+            
+            if (box != null) {
+                box.visible = false;
+                box.kill();
+            }
+            if (closeBtn != null) {
+                closeBtn.visible = false;
+                closeBtn.kill();
+            }
+        }
+    });
+    
     if (popup == 1) FlxG.sound.play(Paths.sound('errorpopupScary'), 0.7);
     else
         FlxG.sound.play(Paths.sound('errorpopup'), 0.6);
-    windows.add(spr);
+    if (box != null && windows != null) windows.add(box);
+    if (closeBtn != null && windows != null) windows.add(closeBtn);
 }
 
 // HARDCODED EVENTS cuz lazy
