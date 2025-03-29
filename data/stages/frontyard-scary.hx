@@ -64,7 +64,7 @@ function addWindow(popup:Int = 2) {
         if (closeBtn != null)
         {
         var focusing:Bool =  closeBtn.overlapsPoint(FlxG.mouse.getScreenPosition(camHUD), true, camHUD);
-        trace("focus " + focusing + " - click " + FlxG.mouse.justPressed);
+        // trace("focus " + focusing + " - click " + FlxG.mouse.justPressed);
         
         if (focusing && FlxG.mouse.justPressed) {
             trace("closed");
