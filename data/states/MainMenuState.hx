@@ -27,19 +27,18 @@ var randQuotes:Array<String> = [
     "wish this was\nme lowkey",
     "you goofballs",
     "very nut shivering",
-    "menu theme by\nbrumbo!"
+    "menu theme by\nbrumbo!",
+    "can i strangle\none of you guys"
 ];
 
-function new()
-{
+function new() {
     FlxG.mouse.visible = false;
     
     CoolUtil.playMenuSong();
     Conductor.bpm = 110;
 }
 
-function postCreate()
-{
+function postCreate() {
     PlayState.deathCounter = 0;
     
     FlxG.camera.bgColor = 0xFF000000;
@@ -65,8 +64,8 @@ function postCreate()
     var border:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menus/mainmenu/boreder'));
     insert(5, border);
     
-    menuInfomation = new FlxText(-285, 520, FlxG.width, curQuote, 16);
-    menuInfomation.setFormat("fonts/comic.ttf", 16, FlxColor.BLACK, "center");
+    menuInfomation = new FlxText(-285, 520, FlxG.width, curQuote, 14);
+    menuInfomation.setFormat("fonts/comicbold.ttf", 16, FlxColor.BLACK, "center");
     insert(6, menuInfomation);
     
     bg.x += 350;
@@ -83,13 +82,11 @@ function postCreate()
     // so i had to work around that like this.
 }
 
-function postUpdate(elapsed)
-{
+function postUpdate(elapsed) {
     FlxG.camera.scroll.x = FlxG.camera.scroll.y = 0;
     FlxG.camera.scroll.set();
     
-    if (FlxG.keys.justPressed.FIVE)
-    {
+    if (FlxG.keys.pressed.FIVE) {
         trace(curQuote);
         curQuote = FlxG.random.getObject(randQuotes);
         menuInfomation.text = curQuote;
