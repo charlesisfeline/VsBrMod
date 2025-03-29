@@ -90,13 +90,11 @@ var goPopups:Bool = false;
 // HARDCODED EVENTS cuz lazy
 function beatHit(curBeat:Int) {
     if (PlayState.SONG.meta.name == "overcooked") {
-        if (curBeat >= 1) blackout.visible = false;
+        blackout.visible = !(curBeat >= 1);
+        borders.visible = (curBeat >= 64);
+        lava.visible = (curBeat >= 128 && curBeat <= 192);
         
-        if (curBeat >= 64) borders.visible = true;
-        else
-            borders.visible = false;
-            
-        if (curBeat >= 264) {
+        if (curBeat >= 264 && curBeat <= 472) {
             FlxG.mouse.visible = true; // show mouse so u can close the popups
             goPopups = true;
         }
@@ -104,5 +102,5 @@ function beatHit(curBeat:Int) {
 }
 
 function stepHit(curStep:Int)
-    if (PlayState.SONG.meta.name == "overcooked" && goPopups) if (FlxG.random.bool(0.3)) addWindow(FlxG.random.int(1, 9));
+    if (PlayState.SONG.meta.name == "overcooked" && goPopups) if (FlxG.random.bool(1.5)) addWindow(FlxG.random.int(1, 9));
     
