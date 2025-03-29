@@ -27,6 +27,8 @@ function postCreate() {
     add(windows);
     
     windows.cameras = [camHUD];
+    
+    lava.visible = false;
 }
 
 function addWindow(popup:Int = 2) {
@@ -58,29 +60,28 @@ function addWindow(popup:Int = 2) {
     else
         FlxG.sound.play(Paths.sound('errorpopup'), 0.6);
     if (box != null && windows != null) windows.add(box);
-    if (closeBtn != null && windows != null) windows.add(closeBtn);  
+    if (closeBtn != null && windows != null) windows.add(closeBtn);
     
     FlxG.signals.postUpdate.add(() -> {
-        if (closeBtn != null)
-        {
-        var focusing:Bool =  closeBtn.overlapsPoint(FlxG.mouse.getScreenPosition(camHUD), true, camHUD);
-        // trace("focus " + focusing + " - click " + FlxG.mouse.justPressed);
-        
-        if (focusing && FlxG.mouse.justPressed) {
-            trace("closed");
+        if (closeBtn != null) {
+            var focusing:Bool = closeBtn.overlapsPoint(FlxG.mouse.getScreenPosition(camHUD), true, camHUD);
+            // trace("focus " + focusing + " - click " + FlxG.mouse.justPressed);
             
-            if (box != null) {
-                box.visible = false;
-                box.x = 6480;
-                box.kill();
-            }
-            if (closeBtn != null) {
-                closeBtn.visible = false;
-                closeBtn.x = 6480;
-                closeBtn.kill();
+            if (focusing && FlxG.mouse.justPressed) {
+                trace("closed");
+                
+                if (box != null) {
+                    box.visible = false;
+                    box.x = 6480;
+                    box.kill();
+                }
+                if (closeBtn != null) {
+                    closeBtn.visible = false;
+                    closeBtn.x = 6480;
+                    closeBtn.kill();
+                }
             }
         }
-}
     });
 }
 
@@ -96,14 +97,12 @@ function beatHit(curBeat:Int) {
             borders.visible = false;
             
         if (curBeat >= 264) {
-        FlxG.mouse.visible = true; // show mouse so u can close the popups
-        goPopups = true;
+            FlxG.mouse.visible = true; // show mouse so u can close the popups
+            goPopups = true;
         }
     }
 }
 
-
 function stepHit(curStep:Int)
-{
-if (PlayState.SONG.meta.name == "overcooked" && goPopups) if (FlxG.random.bool(0.3)) addWindow(FlxG.random.int(1, 9));
-}
+    if (PlayState.SONG.meta.name == "overcooked" && goPopups) if (FlxG.random.bool(0.3)) addWindow(FlxG.random.int(1, 9));
+    
