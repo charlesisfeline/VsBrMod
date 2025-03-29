@@ -84,6 +84,8 @@ function addWindow(popup:Int = 2) {
     });
 }
 
+var goPopups:Bool = false;
+
 // HARDCODED EVENTS cuz lazy
 function beatHit(curBeat:Int) {
     if (PlayState.SONG.meta.name == "overcooked") {
@@ -93,9 +95,15 @@ function beatHit(curBeat:Int) {
         else
             borders.visible = false;
             
-        // if (curBeat >= 264) {
-        FlxG.mouse.visible = true; // show mouse so u can close the popups (actually u cant but yea)
-        if (FlxG.random.bool(3)) addWindow(FlxG.random.int(1, 9));
-        // }
+        if (curBeat >= 264) {
+        FlxG.mouse.visible = true; // show mouse so u can close the popups
+        goPopups = true;
+        }
     }
+}
+
+
+function stepHit(curStep:Int)
+{
+if (PlayState.SONG.meta.name == "overcooked" && goPopups) if (FlxG.random.bool(0.3)) addWindow(FlxG.random.int(1, 9));
 }
