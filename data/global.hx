@@ -96,20 +96,21 @@ function postStateSwitch() {
         if (PlayState.SONG.meta.name == "depart") {
             trace("depart " + PlayState.SONG.meta.name == "depart");
             window.title = "Friday Night Funkin'";
+            window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/defaultFunkin'))));
         }
         else {
             trace("not depart " + PlayState.SONG.meta.name == "depart");
             window.title = 'fnf vs br - ' + PlayState.SONG.meta.displayName;
+            window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
         }
     }
-    else
+    else {
         window.title = "fnf vs br";
-        
+        window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
+    }
+    
     FlxG.mouse.useSystemCursor = false;
     FlxG.mouse.load(Paths.image("ui/cursor"));
     
     trace("help ee");
-    if (PlayState.SONG.meta.name != "depart") window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
-    else
-        window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/defaultFunkin'))));
 }

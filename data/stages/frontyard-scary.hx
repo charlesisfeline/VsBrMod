@@ -94,7 +94,7 @@ function beatHit(curBeat:Int) {
         borders.visible = (curBeat >= 64);
         lava.visible = (curBeat >= 128 && curBeat <= 192);
         
-        if (curBeat >= 264 && curBeat <= 472) {
+        if (curBeat >= 264 && curBeat <= 680) {
             FlxG.mouse.visible = true; // show mouse so u can close the popups
             goPopups = true;
         }

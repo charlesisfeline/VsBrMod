@@ -72,7 +72,9 @@ function postUpdate() {
 function onChangeDiff(e) {
     var currSong = songs[curSelected];
     
-    if (currSong.difficulties.length > 1) newDiffText.text = '<' + currSong.difficulties[curDifficulty] + '>';
-    else
-        newDiffText.text = "";
+    if (newDiffText != null) {
+        if (currSong.difficulties.length > 1) newDiffText.text = '<' + currSong.difficulties[curDifficulty] + '>';
+        else
+            newDiffText.text = "";
+    }
 }
