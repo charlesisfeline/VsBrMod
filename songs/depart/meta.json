@@ -4,10 +4,7 @@
 	"coopAllowed": true,
 	"stepsPerBeat": 4,
 	"bpm": 149,
-	"difficulties": [
-		"HARD",
-		"bf"
-	],
+	"difficulties": ["HARD", "BF"],
 	"needsVoices": true,
 	"parsedColor": -6529290,
 	"displayName": "Depart",

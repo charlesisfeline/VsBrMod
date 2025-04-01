@@ -8,24 +8,25 @@ import funkin.editors.charter.Charter;
  */
 var isDebugEnabled:Bool = true; // set to false before release
 
-function create()
-{
-    if (isDebugEnabled)
-    {
-        menuItems.insert(2, 'Charter');
-        menuItems.insert(3, 'Open Console');
-        
-        if (game.inst != null && game.vocals != null) menuItems.insert(5, 'Skip Song');
+function create() {
+    if (isDebugEnabled) {
+        if (PlayState.SONG.meta.name != "depart") {
+            menuItems.insert(2, 'Charter');
+            menuItems.insert(3, 'Open Console');
+            
+            if (game.inst != null && game.vocals != null) menuItems.insert(5, 'Skip Song');
+        }
+        else {
+            if (game.inst != null && game.vocals != null) menuItems.insert(4, 'fuck fuck fuck');
+        }
     }
 }
 
 function postCreate()
-    levelDifficulty.visible = false; // lmfao
+    if (PlayState.SONG.meta.name != "depart") levelDifficulty.visible = false; // lmfao
     
-function postUpdate()
-{
-    if (controls.ACCEPT)
-    {
+function postUpdate() {
+    if (controls.ACCEPT) {
         if (menuItems[curSelected] == "Skip Song") game.endSong();
         if (menuItems[curSelected] == "Charter") FlxG.switchState(new Charter(PlayState.instance.SONG.meta.name, PlayState.instance.difficulty, false));
         if (menuItems[curSelected] == "Open Console") NativeAPI.allocConsole();

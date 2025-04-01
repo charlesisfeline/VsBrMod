@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="eg.png" width="3475" height="3977">
+	<SubTexture name="eg idle dance0000" x="8" y="3135" width="730" height="834" frameX="-217" frameY="-289" frameWidth="1160" frameHeight="1160" />
+	<SubTexture name="eg idle dance0001" x="8" y="3135" width="730" height="834" frameX="-217" frameY="-289" frameWidth="1160" frameHeight="1160" />
+	<SubTexture name="eg idle dance0002" x="2167" y="1856" width="699" height="862" frameX="-259" frameY="-261" frameWidth="1160" frameHeight="1160" />
+	<SubTexture name="eg idle dance0003" x="2167" y="1856" width="699" height="862" frameX="-259" frameY="-261" frameWidth="1160" frameHeight="1160" />
+	<SubTexture name="eg idle dance0004" x="2785" y="8" width="682" height="891" frameX="-298" frameY="-232" frameWidth="1160" frameHeight="1160" />
+	<SubTexture name="eg idle dance0005" x="2785" y="8" width="682" height="891" frameX="-298" frameY="-232" frameWidth="1160" frameHeight="1160" />
+	<SubTexture name="eg idle dance0006" x="2107" y="935" width="668" height="913" frameX="-318" frameY="-210" frameWidth="1160" frameHeight="1160" />
+	<SubTexture name="eg idle dance0007" x="2107" y="935" width="668" height="913" frameX="-318" frameY="-210" frameWidth="1160" frameHeight="1160" />
+	<SubTexture name="eg idle dance0008" x="990" y="1119" width="662" height="920" frameX="-331" frameY="-203" frameWidth="1160" frameHeight="1160" />
+	<SubTexture name="eg idle dance0009" x="990" y="1119" width="662" height="920" frameX="-331" frameY="-203" frameWidth="1160" frameHeight="1160" />
+	<SubTexture name="eg idle dance0010" x="990" y="1119" width="662" height="920" frameX="-331" frameY="-203" frameWidth="1160" frameHeight="1160" />
+	<SubTexture name="eg idle dance0011" x="990" y="1119" width="662" height="920" frameX="-331" frameY="-203" frameWidth="1160" frameHeight="1160" />
+</TextureAtlas>

@@ -18,7 +18,7 @@ function postCreate() {
     newDiffText = new FlxText(0, 400, 0, "", 24);
     newDiffText.font = scoreText.font;
     newDiffText.color = FlxColor.BLACK;
-    newDiffText.text = "hi";
+    newDiffText.text = "";
     add(newDiffText);
     
     scoreText.alpha = 1;
@@ -26,7 +26,7 @@ function postCreate() {
     
     scoreBG.alpha = 0.6;
     
-    diffText.destroy();
+    diffText.visible = false;
     
     timeTxt = new FunkinText(0, FlxG.height - 60, 400, "X:XX", 32, true);
     timeTxt.borderSize = 2;
@@ -73,7 +73,7 @@ function onChangeDiff(e) {
     var currSong = songs[curSelected];
     
     if (newDiffText != null) {
-        if (currSong.difficulties.length > 1) newDiffText.text = '<' + currSong.difficulties[curDifficulty] + '>';
+        if (currSong.difficulties.length > 1) newDiffText.text = diffText.text;
         else
             newDiffText.text = "";
     }

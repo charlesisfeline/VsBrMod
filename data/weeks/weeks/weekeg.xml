@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-week>
-<week name="EG" chars="none" sprite="weekeg">
+<week name="FLIPACLIP" chars="eg,bf-br,none" sprite="weekeg">
 	<difficulty name="hard" />
 	<song>Yolk</song>
 	<song>Cracked</song>
