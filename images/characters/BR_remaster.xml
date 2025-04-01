@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="BR remaster.png">
+<TextureAtlas imagePath="BR_remaster.png">
 	<!-- Created with Adobe Animate version 22.0.3.179 -->
 	<!-- http://www.adobe.com/products/animate.html -->
 	<SubTexture name="Down0000" x="10" y="10" width="537" height="409" frameX="-14" frameY="0" frameWidth="570" frameHeight="411"/>
