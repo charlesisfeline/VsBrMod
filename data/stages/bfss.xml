@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-stage>
+<stage folder="stages/bfss/" zoom="1.03">
+	<sprite x="146" y="-35" sprite="joyfully" scale="2" name="back"/>
+	<gf x="454" y="46"/>
+	<dad/>
+	<bf/>
+	<combo x="842.5" y="379.5"/>
+</stage>

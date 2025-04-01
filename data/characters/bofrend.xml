@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character x="150" y="100" sprite="BOFREND" scale="1.15" flipX="true" isPlayer="true" icon="bofrend" color="#30B0D1">
+	<anim name="idle" anim="BF idle dance0" x="0" y="0" fps="12" loop="false"/>
+	<anim name="singUP" anim="BF sing up0" x="0" y="0" fps="12" loop="false"/>
+	<anim name="singLEFT" anim="BF sing left0" x="0" y="0" fps="12" loop="false"/>
+	<anim name="singRIGHT" anim="BF sing right0" x="0" y="0" fps="12" loop="false"/>
+	<anim name="singDOWN" anim="BF sing down0" x="0" y="0" fps="12" loop="false"/>
+</character>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="gif.png" width="758" height="1084">
+	<SubTexture name="gif dance left0000" x="8" y="8" width="367" height="530" frameX="-136" frameY="-92" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="gif dance right0000" x="383" y="8" width="367" height="530" frameX="-137" frameY="-92" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="gif sad0000" x="8" y="546" width="367" height="530" frameX="-136" frameY="-92" frameWidth="640" frameHeight="640"/>
+	<SubTexture name="gif sad0001" x="383" y="546" width="367" height="530" frameX="-136" frameY="-92" frameWidth="640" frameHeight="640"/>
+</TextureAtlas>

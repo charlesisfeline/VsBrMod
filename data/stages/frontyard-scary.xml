@@ -1,7 +1,7 @@
 <!DOCTYPE codename-engine-stage>
 <stage folder="stages/house-scary/" zoom="0.67">
 	<sprite x="-700" sprite="skyRed" y="-668" scale="1.5" name="sky"/>
-	<sprite scrolly="1.1" x="-284.45" y="-784.25" sprite="deathMountain" scale="1.01" scrollx="1.45" name="mountains"/>
+	<sprite scrolly="1.1" x="-284.45" y="-784.25" sprite="deathMountain" scale="1.01" scrollx="1.45" name="spikes"/>
 	<sprite x="-513.25" scrolly="1.05" sprite="hillsNHouse" y="-609.375" scale="1.1" name="hills" scrollx="1.25"/>
 	<sprite x="-721.125" y="-72" type="loop" scale="4.5" name="lava" scrollx="-0.5" antialiasing="false" scrolly="0" sprite="glitchyLava"/>
 	<sprite x="-724" sprite="daPillars" y="-1331" scale="1.25" name="pillars"/>
