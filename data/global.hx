@@ -27,6 +27,7 @@ function new() {
     if (FlxG.save.data.comboDisplay == null) FlxG.save.data.comboDisplay = true;
     if (FlxG.save.data.skipLoading == null) FlxG.save.data.skipLoading = false;
     if (FlxG.save.data.hitsoundStyle == null) FlxG.save.data.hitsoundStyle = "none";
+    if (FlxG.save.data.medalsUnlocked == null) FlxG.save.data.medalsUnlocked = [];
     
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
 }
