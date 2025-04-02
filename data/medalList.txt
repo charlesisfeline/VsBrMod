@@ -1,6 +1,1 @@
-brWeek--Moldy Bread--Beat br's week in Story Mode.
-egWeek--Gotten Mashed!--Beat eg's week in Story Mode.
-sandvich--Sandvich Found--Find the Heavy Sandvich on top of br's house.
-rb--My Name is rB--Access the song "rB" from the Title Screen.
-fridayNight--Just Like The Game--Play the game on a Friday Night.
-retry--Retry--Die on any song.
+brWeek::Moldy Bread::Beat br's week in Story Mode.

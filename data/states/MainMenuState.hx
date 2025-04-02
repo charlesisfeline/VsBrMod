@@ -6,8 +6,6 @@ import funkin.game.PlayState;
 
 import lime.graphics.Image;
 
-import br.Medals;
-
 var curQuote:String = "";
 
 var randQuotes:Array<String> = [
@@ -82,30 +80,11 @@ function postCreate() {
     add(moreVersionShit);
     moreVersionShit.text = "fr ni fu: vs br v1.0"; // i sadly cant extend the original versionShit text actually
     // so i had to work around that like this.
-    trace(Medals.medalsStuff);
-    
-    Medals.loadMedals();
-    
-    var leDate = Date.now();
-    if (leDate.getDay() == 5 && leDate.getHours() >= 18) {
-        var medalId:Int = Medals.getMedalIndex('friday_night_play');
-        if (!Medals.isMedalUnlocked(Medals.medalsStuff[medalId][2])) { // its a friday night. WEEEEEEEEEEEEEEEEEE
-            Medals.medalsMap.set(Medals.medalsStuff[medalId][2], true);
-            giveMedal();
-        }
-    }
-}
-
-function giveMedal() {
-    FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
-    trace('giving medal "friday_night_play"');
 }
 
 function postUpdate(elapsed) {
     FlxG.camera.scroll.x = FlxG.camera.scroll.y = 0;
     FlxG.camera.scroll.set();
-    
-    if (FlxG.keys.justPressed.THREE) FlxG.switchState(new ModState("MedalsState"));
     
     if (FlxG.keys.pressed.FIVE) {
         trace(curQuote);
