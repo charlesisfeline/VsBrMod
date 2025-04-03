@@ -21,10 +21,10 @@
 		</text>
 		<text beat="4" /> <!-- clears the screen !-->
 		<text beat="5">
-			<line text="THIS IS A BETA" />
+			<line text="THIS IS AN ALPHA" />
 		</text>
 		<text beat="7">
-			<line text="THIS IS A BETA" />
+			<line text="THIS IS AN ALPHA" />
 			<line text="UNFINISHED SHITS N GIGGLES" />
 			<sprite path="menus/titlescreen/br" scale="0.8" />
 		</text>
