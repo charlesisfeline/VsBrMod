@@ -69,6 +69,17 @@ function postUpdate() {
     }
 }
 
+function onSelect(event) {
+    event.cancel();
+    Options.freeplayLastSong = songs[curSelected].name;
+    Options.freeplayLastDifficulty = songs[curSelected].difficulties[curDifficulty];
+    
+    if (songs[curSelected].difficulties[curDifficulty] == "BF") PlayState.loadSong(event.song, "BF", event.opponentMode, event.coopMode);
+    else
+        PlayState.loadSong(event.song, event.difficulty, event.opponentMode, event.coopMode);
+    FlxG.switchState(new PlayState());
+}
+
 function onChangeDiff(e) {
     var currSong = songs[curSelected];
     

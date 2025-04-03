@@ -44,7 +44,7 @@ function addWindow(popup:Int = 2) {
     box.x = FlxG.random.int(0, FlxG.width - box.width);
     box.y = FlxG.random.int(0, FlxG.height - box.width);
     box.updateHitbox();
-    box.antialiasing = true;
+    box.antialiasing = Options.antialiasing;
     box.animation.play("window" + FlxG.random.int(1, 9));
     add(box);
     
@@ -52,7 +52,7 @@ function addWindow(popup:Int = 2) {
     closeBtn.loadGraphic(Paths.image('stages/house-scary/closeButton'));
     closeBtn.x = box.x;
     closeBtn.y = box.y;
-    closeBtn.antialiasing = true;
+    closeBtn.antialiasing = Options.antialiasing;
     closeBtn.updateHitbox();
     add(closeBtn);
     

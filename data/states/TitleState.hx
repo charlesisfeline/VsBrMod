@@ -1,18 +1,3 @@
-import funkin.backend.utils.NativeAPI;
-import funkin.backend.utils.WindowUtils;
-
-import lime.graphics.Image;
-
-function postCreate()
-{
-    Main.framerateSprite.codenameBuildField.text = "Codename Engine Alpha (Vs. br)\nDEV/PLAYTESTER BUILD dont leak!";
-    window.title = "fnf vs br";
-    window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
-    
-    FlxG.mouse.useSystemCursor = false;
-    FlxG.mouse.load(Paths.image("ui/cursor"));
-}
-
 function postUpdate(elapsed:Float)
     cheatCodeShit();
     
@@ -21,16 +6,13 @@ var cheatArray:Array<Int> = [0x0001, 0x0010, 0x0001, 0x0010, 0x0100, 0x1000, 0x0
 var curCheatPos:Int = 0;
 var cheatActive:Bool = false;
 
-function cheatCodeShit()
-{
-    if (FlxG.keys.justPressed.SIX)
-    {
+function cheatCodeShit() {
+    if (FlxG.keys.justPressed.SIX) {
         trace("cons");
         NativeAPI.allocConsole();
     }
     
-    if (FlxG.keys.justPressed.ANY)
-    {
+    if (FlxG.keys.justPressed.ANY) {
         if (controls.DOWN_P) codePress(0x1000);
         if (controls.UP_P) codePress(0x0100);
         if (controls.LEFT_P) codePress(0x0001);
@@ -38,10 +20,8 @@ function cheatCodeShit()
     }
 }
 
-function codePress(input:Int)
-{
-    if (input == cheatArray[curCheatPos])
-    {
+function codePress(input:Int) {
+    if (input == cheatArray[curCheatPos]) {
         curCheatPos += 1;
         if (curCheatPos >= cheatArray.length) startCheat();
     }
@@ -51,8 +31,7 @@ function codePress(input:Int)
     trace("cheat - " + input);
 }
 
-function startCheat()
-{
+function startCheat() {
     cheatActive = true;
     
     PlayState.loadSong("rb", "hard");

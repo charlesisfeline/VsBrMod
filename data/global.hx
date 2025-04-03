@@ -33,6 +33,9 @@ function new() {
 
 function destroy() {
     WindowUtils.winTitle = "br is dead";
+    
+    WindowUtils.resetTitle();
+    Main.framerateSprite.codenameBuildField.text = "Codename Engine Alpha\noh god did u just switch back to base cne???"
 }
 
 function update(elapsed:Float) {
