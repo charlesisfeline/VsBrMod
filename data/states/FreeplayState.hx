@@ -70,7 +70,8 @@ function postUpdate() {
 }
 
 function onSelect(event) {
-    event.cancel();
+    event.cancelled = true;
+    
     Options.freeplayLastSong = songs[curSelected].name;
     Options.freeplayLastDifficulty = songs[curSelected].difficulties[curDifficulty];
     

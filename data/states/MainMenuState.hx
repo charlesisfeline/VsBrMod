@@ -48,6 +48,8 @@ function postCreate() {
     window.title = "fnf vs br";
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
     
+    if (!FlxG.save.data.freeplayUnlocked) optionShit = ["story mode", "credits", "options"];
+    
     FlxG.mouse.useSystemCursor = false;
     FlxG.mouse.load(Paths.image("ui/cursor"));
     
