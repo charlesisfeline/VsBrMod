@@ -58,7 +58,7 @@ function create() {
 }
 
 function update(elapsed) {
-    if (controls.ACCEPT) {
+    if (FlxG.keys.pressed.ANY) {
         if (transitioning) {
             FlxG.camera.stopFX();
             FlxG.camera.visible = false;
