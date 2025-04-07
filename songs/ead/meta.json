@@ -1,8 +1,16 @@
 {
-	"displayName": "Ead",
-	"bpm": 155.0,
+	"opponentModeAllowed": true,
+	"difficulties": [
+		"HARD"
+	],
 	"icon": "br",
-	"color": "#DA7E44",
+	"parsedColor": -2458044,
+	"name": "ead",
 	"coopAllowed": true,
-	"opponentModeAllowed": true
+	"color": "#DA7E44",
+	"stepsPerBeat": 4,
+	"displayName": "Ead",
+	"needsVoices": true,
+	"beatsPerMeasure": 4,
+	"bpm": 155
 }

@@ -1,7 +1,10 @@
 <!DOCTYPE codename-engine-stage>
 <stage folder="stages/ruins/" zoom="1">
-	<sprite x="266.5" y="-136" sprite="aftermathBg" scale="1.75" name="house"/>
+	<sprite x="345" y="-73" sprite="skys" scale="3" name="sky"/>
+	<sprite x="319" y="89" sprite="leMountains" scale="2" scrollx="1.4" name="mountains"/>
+	<sprite x="264" y="-33" sprite="grassUhh" scale="2.1" name="grass" scrollx="1.2"/>
 	<gf x="441.5" y="-162"/>
+	<sprite x="219.15" y="-89" sprite="dirt" scale="2.2" name="dirt" scrollx="1.01"/>
 	<dad x="171.5" y="-24"/>
 	<bf x="747.5" y="-18"/>
 	<combo x="1263" y="459.5"/>
