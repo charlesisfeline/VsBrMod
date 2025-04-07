@@ -1,8 +1,6 @@
-function onPostCountdown(event)
-{
+function onPostCountdown(event) {
     var spr = event.sprite;
-    if (spr != null)
-    {
+    if (spr != null) {
         spr.camera = camHUD;
         spr.scale.set(1, 1);
     }
