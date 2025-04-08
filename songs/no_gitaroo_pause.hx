@@ -2,6 +2,13 @@
 function onGamePause(e) {
     e.cancel();
     
+    pauseGameNoGitaroo();
+}
+
+function onFocusLost()
+    pauseGameNoGitaroo();
+    
+function pauseGameNoGitaroo() {
     persistentUpdate = false;
     persistentDraw = true;
     paused = true;
@@ -10,7 +17,3 @@ function onGamePause(e) {
     
     updateDiscordPresence();
 }
-
-function onFocusLost()
-    openSubState(new PauseSubState());
-    
