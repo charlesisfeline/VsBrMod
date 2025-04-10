@@ -1,8 +1,17 @@
 {
-	"displayName": "Toast",
-	"bpm": 120.0,
-	"icon": "br",
-	"color": "#DA7E44",
+	"beatsPerMeasure": 4,
+	"opponentModeAllowed": true,
 	"coopAllowed": true,
-	"opponentModeAllowed": true
+	"stepsPerBeat": 4,
+	"bpm": 188,
+	"difficulties": [
+		"HARD"
+	],
+	"needsVoices": true,
+	"parsedColor": -2458044,
+	"displayName": "Toast",
+	"icon": "br",
+	"name": "toast",
+	"color": "#DA7E44",
+	"customValues": {}
 }
