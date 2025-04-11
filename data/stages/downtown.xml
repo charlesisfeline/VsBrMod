@@ -8,9 +8,9 @@
 	<sprite x="-650" y="-335" sprite="bottomSidewalk" scale="2" scrollx="1.2" name="bottomSidewalk"/>
 	<sprite x="-630" y="-325" sprite="townRoad" scale="2" scrollx="1.1" name="road"/>
 	<sprite x="-813" y="319.5" sprite="nekodylanCameo" scale="2.1" scrollx="1.01" name="cameo1"/>
-	<gf x="357" y="139"/>
+	<gf x="400" y="150"/>
 	<dad x="74" y="158"/>
-	<bf x="746" y="172"/>
+	<bf x="684" y="125.5"/>
 	<sprite x="2480" scrolly="1.02" sprite="fastCar" y="666" scale="2" skewx="5" name="car" scrollx="1.2"/>
 	<combo x="532" y="430"/>
 </stage>

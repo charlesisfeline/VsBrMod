@@ -1,7 +1,7 @@
 <!DOCTYPE codename-engine-stage>
 <stage folder="stages/rb/" zoom="1">
 	<sprite x="-82.5" sprite="rb" y="-303.5" scale="2" name="page"/>
-	<gf x="1428" y="66"/>
+	<gf x="418" y="-85"/>
 	<dad x="102" y="-133"/>
 	<bf x="797" y="-95"/>
 	<combo x="671.5" y="203.5"/>

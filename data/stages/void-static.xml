@@ -1,8 +1,8 @@
 <!DOCTYPE codename-engine-stage>
 <stage folder="stages/void-static/" zoom="0.6">
-	<sprite x="54" y="10" sprite="fredVoid" type="loop" scale="2" name="crack"/>
-	<gf x="-1521" y="142"/>
+	<sprite x="54" sprite="fredVoid" y="10" scale="2" type="loop" name="crack"/>
+	<gf x="410" y="164"/>
 	<dad x="-8" y="84"/>
-	<bf x="843" y="73"/>
+	<bf x="815" y="84.5"/>
 	<combo x="1398.5" y="551.5"/>
 </stage>
