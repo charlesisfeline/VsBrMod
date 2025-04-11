@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character x="-375" y="-250" sprite="Fred_sprites" scale="0.6" icon="fred" color="#B3683A">
+<character x="-375" y="-250" sprite="Fred_sprites" scale="0.6" icon="fred" color="#884731">
 	<anim name="idle" anim="fred idle dance0" x="0" y="0" fps="24" loop="false"/>
 	<anim name="singDOWN" anim="fred sing down0" x="0" y="1" fps="24" loop="false"/>
 	<anim name="singLEFT" anim="fred sing left0" x="0" y="1" fps="24" loop="false"/>

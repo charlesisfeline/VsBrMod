@@ -1,14 +1,14 @@
 <!DOCTYPE codename-engine-character>
-<character x="40" y="156" sprite="BF_BR" flipX="true" camy="47" isPlayer="true" icon="bf-br" color="#30ADCF">
+<character x="40" y="156" sprite="BF_BR" flipX="true" camy="47" isPlayer="true" icon="bf-br" color="#31B0D1">
 	<anim name="idle" anim="BF idle dance" x="0" y="0" fps="12" loop="false"/>
-	<anim name="singLEFT" anim="BF NOTE RIGHT" x="0" y="0" fps="12" loop="false"/>
+	<anim name="singRIGHT" anim="BF NOTE RIGHT" x="0" y="0" fps="12" loop="false"/>
 	<anim name="singDOWN" anim="BF NOTE DOWN" x="0" y="0" fps="12" loop="false"/>
 	<anim name="singUP" anim="BF NOTE UP" x="0" y="0" fps="12" loop="false"/>
-	<anim name="singRIGHT" anim="BF NOTE LEFT" x="0" y="0" fps="12" loop="false"/>
-	<anim name="singLEFTmiss" anim="BF MISS RIGHT" x="0" y="0" fps="12" loop="false"/>
+	<anim name="singLEFT" anim="BF NOTE LEFT" x="0" y="0" fps="12" loop="false"/>
+	<anim name="singRIGHTmiss" anim="BF MISS RIGHT" x="0" y="0" fps="12" loop="false"/>
 	<anim name="singDOWNmiss" anim="BF MISS DOWN" x="0" y="0" fps="12" loop="false"/>
 	<anim name="singUPmiss" anim="BF MISS UP" x="0" y="0" fps="12" loop="false"/>
-	<anim name="singRIGHTmiss" anim="BF MISS LEFT" x="0" y="0" fps="12" loop="false"/>
+	<anim name="singLEFTmiss" anim="BF MISS LEFT" x="0" y="0" fps="12" loop="false"/>
 	<anim name="hey" anim="BF HEY" x="0" y="0" fps="12" loop="false"/>
 	<anim name="scared" anim="BF idle shaking" x="0" y="0" fps="6" loop="true"/>
 </character>
