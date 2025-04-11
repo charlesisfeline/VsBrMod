@@ -2,5 +2,6 @@
 <week name="FLIPACLIP" chars="eg,bf-br,none" sprite="weekeg">
 	<difficulty name="hard" />
 	<song>Yolk</song>
-	<song>Cracked</song>
+	<!--will uncomment when song n chart are done-->
+	<!--<song>Cracked</song>-->
 </week>

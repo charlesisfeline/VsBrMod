@@ -1,10 +1,10 @@
 {
+	"stage": "roof",
+	"scrollSpeed": 2.7,
 	"codenameChart": true,
 	"strumLines": [
 		{
 			"keyCount": 4,
-			"strumScale": 1,
-			"position": "dad",
 			"notes": [
 				{
 					"id": 2,
@@ -1123,22 +1123,22 @@
 					"type": 0
 				}
 			],
+			"position": "dad",
+			"strumScale": 1,
+			"visible": false,
+			"type": 0,
 			"characters": [
 				"br"
 			],
-			"type": 0,
-			"visible": false,
 			"strumPos": [
 				0,
 				50
 			],
-			"vocalsSuffix": "",
-			"strumLinePos": 0.25
+			"strumLinePos": 0.25,
+			"vocalsSuffix": ""
 		},
 		{
 			"keyCount": 4,
-			"strumScale": 1,
-			"position": "boyfriend",
 			"notes": [
 				{
 					"id": 0,
@@ -2401,20 +2401,37 @@
 					"type": 0
 				}
 			],
+			"position": "boyfriend",
+			"strumScale": 1,
+			"visible": true,
+			"type": 1,
 			"characters": [
 				"bf-br"
 			],
-			"type": 1,
-			"visible": true,
 			"strumPos": [
 				0,
 				50
 			],
+			"strumLinePos": 0.5,
+			"vocalsSuffix": ""
+		},
+		{
+			"keyCount": 4,
+			"notes": [],
+			"visible": false,
+			"strumPos": [
+				0,
+				50
+			],
+			"position": "girlfriend",
+			"strumScale": 1,
 			"vocalsSuffix": "",
-			"strumLinePos": 0.5
+			"strumLinePos": 0.25,
+			"type": 2,
+			"characters": [
+				"gf-br"
+			]
 		}
 	],
-	"scrollSpeed": 2.7,
-	"stage": "roof",
 	"noteTypes": []
 }

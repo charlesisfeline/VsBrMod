@@ -1,11 +1,8 @@
 {
-	"codenameChart": true,
-	"scrollSpeed": 2.5,
+	"stage": "sketch",
 	"strumLines": [
 		{
 			"keyCount": 4,
-			"strumScale": 1,
-			"position": "dad",
 			"notes": [
 				{
 					"id": 1,
@@ -2468,12 +2465,14 @@
 					"type": 0
 				}
 			],
+			"position": "dad",
+			"strumScale": 1,
+			"visible": true,
+			"scrollSpeed": 2.6,
+			"type": 0,
 			"characters": [
 				"br"
 			],
-			"type": 0,
-			"scrollSpeed": 2.6,
-			"visible": true,
 			"strumPos": [
 				0,
 				50
@@ -2482,8 +2481,6 @@
 		},
 		{
 			"keyCount": 4,
-			"strumScale": 1,
-			"position": "boyfriend",
 			"notes": [
 				{
 					"id": 3,
@@ -4916,19 +4913,39 @@
 					"type": 0
 				}
 			],
+			"position": "boyfriend",
+			"strumScale": 1,
+			"visible": true,
+			"scrollSpeed": 2.6,
+			"type": 1,
 			"characters": [
 				"bf-br"
 			],
-			"type": 1,
-			"scrollSpeed": 2.6,
-			"visible": true,
 			"strumPos": [
 				0,
 				50
 			],
 			"strumLinePos": 0.75
+		},
+		{
+			"keyCount": 4,
+			"notes": [],
+			"visible": false,
+			"strumPos": [
+				0,
+				50
+			],
+			"position": "girlfriend",
+			"strumScale": 1,
+			"vocalsSuffix": "",
+			"strumLinePos": 0.25,
+			"type": 2,
+			"characters": [
+				"gf-br"
+			]
 		}
 	],
-	"stage": "sketch",
+	"codenameChart": true,
+	"scrollSpeed": 2.5,
 	"noteTypes": []
 }

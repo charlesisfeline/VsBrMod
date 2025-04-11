@@ -1,42 +1,42 @@
 {
-	"stage": "frontyard",
+	"stage": "stage",
+	"events": [],
+	"scrollSpeed": 2.5,
+	"codenameChart": true,
 	"strumLines": [
 		{
-			"keyCount": 4,
 			"notes": [],
-			"position": "dad",
-			"strumScale": 1,
-			"visible": false,
-			"scrollSpeed": 1,
-			"type": 0,
-			"characters": [
-				"br"
-			],
+			"visible": true,
 			"strumPos": [
 				0,
 				50
 			],
-			"strumLinePos": 0.25
+			"position": "dad",
+			"scrollSpeed": 2.5,
+			"strumScale": 1,
+			"strumLinePos": 0.25,
+			"type": 0,
+			"characters": [
+				"jeepers"
+			]
 		},
 		{
-			"keyCount": 4,
 			"notes": [],
-			"position": "boyfriend",
-			"strumScale": 1,
 			"visible": true,
-			"scrollSpeed": 1,
+			"strumPos": [
+				0,
+				50
+			],
+			"position": "boyfriend",
+			"scrollSpeed": 2.5,
+			"strumScale": 1,
+			"strumLinePos": 0.75,
 			"type": 1,
 			"characters": [
 				"bf-br"
-			],
-			"strumPos": [
-				0,
-				50
-			],
-			"strumLinePos": 0.5
+			]
 		},
 		{
-			"keyCount": 4,
 			"notes": [],
 			"visible": false,
 			"strumPos": [
@@ -44,16 +44,15 @@
 				50
 			],
 			"position": "girlfriend",
+			"scrollSpeed": 2.5,
 			"strumScale": 1,
-			"vocalsSuffix": "",
-			"strumLinePos": 0.25,
+			"strumLinePos": 0.5,
 			"type": 2,
 			"characters": [
 				"gf-br"
 			]
 		}
 	],
-	"codenameChart": true,
-	"scrollSpeed": 2.4,
+	"meta": null,
 	"noteTypes": []
 }
