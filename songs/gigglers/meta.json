@@ -1,0 +1,15 @@
+{
+	"beatsPerMeasure": 4,
+	"opponentModeAllowed": true,
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
+	"bpm": 145,
+	"difficulties": ["HARD"],
+	"needsVoices": true,
+	"parsedColor": -2953729,
+	"displayName": "Gigglers",
+	"icon": "br",
+	"name": "gigglers",
+	"color": "#D2EDFF",
+	"customValues": {}
+}
