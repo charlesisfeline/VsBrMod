@@ -23,6 +23,7 @@ function new() {
     // makes all of these options automatically set to their default values
     if (FlxG.save.data.playbackRate == null) FlxG.save.data.playbackRate = 1;
     if (FlxG.save.data.midsongPlaybackRate == null) FlxG.save.data.midsongPlaybackRate = false;
+    if (FlxG.save.data.practice == null) FlxG.save.data.practice = false;
     if (FlxG.save.data.botplay == null) FlxG.save.data.botplay = false;
     if (FlxG.save.data.comboDisplay == null) FlxG.save.data.comboDisplay = true;
     if (FlxG.save.data.skipLoading == null) FlxG.save.data.skipLoading = false;

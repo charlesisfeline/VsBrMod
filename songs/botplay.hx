@@ -11,8 +11,7 @@ import hxvlc.flixel.FlxVideo;
 public var botplayTxt:FlxText;
 public var nukeVid:FlxVideo;
 
-function postCreate()
-{
+function postCreate() {
     botplayTxt = new FlxText(400, 537, FlxG.width - 800, "BOTPLAY", 50);
     botplayTxt.setFormat(Paths.font("vcr.ttf"), 42, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
     botplayTxt.borderSize = 3;
@@ -32,8 +31,7 @@ function postCreate()
         || PlayState.SONG.meta.name == "toast") defaultDisplayCombo = FlxG.save.data.comboDisplay;
 }
 
-function update(elapsed:Float)
-{
+function update(elapsed:Float) {
     updateBotplay(elapsed);
     
     if (FlxG.keys.justPressed.SEVEN) dealerMechanic();
@@ -43,16 +41,17 @@ function update(elapsed:Float)
     if (FlxG.keys.justPressed.ONE && generatedMusic) endSong();
 }
 
-function dealerMechanic()
-{
+function postUpdate(elasped:Float) {
+    if (FlxG.save.data.practice) canDie = canDadDie = false;
+}
+
+function dealerMechanic() {
     trace("help me pls " + (PlayState.SONG.meta.name == "dealer"));
     
-    if (PlayState.SONG.meta.name == "dealer")
-    {
+    if (PlayState.SONG.meta.name == "dealer") {
         nukeVid = new FlxVideo();
         
-        nukeVid.onEndReached.add(function():Void
-        {
+        nukeVid.onEndReached.add(function():Void {
             nukeVid.dispose();
             FlxG.removeChild(nukeVid);
         });
@@ -67,8 +66,7 @@ function dealerMechanic()
 
 static var doBotplay:Bool = false;
 
-function updateBotplay(elapsed:Float)
-{
+function updateBotplay(elapsed:Float) {
     if (doBotplay == null) doBotplay = FlxG.save.data.botplay;
     
     if (FlxG.keys.justPressed.SIX) doBotplay = !doBotplay;
