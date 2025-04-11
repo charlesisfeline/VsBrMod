@@ -1,8 +1,6 @@
 function postCreate() {
-    doIconBop = false;
-    
-    changePlayerSkin("fredNote_Assets");
-    changeCPUSkin("fredNote_Assets");
+    changePlayerSkin("NOTE_assets_br");
+    changeCPUSkin("NOTE_assets_br");
     
     for (vcrTo in [scoreTxt, missesTxt, accuracyTxt]) {
         vcrTo.font = Paths.font("roboto.ttf");

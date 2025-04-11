@@ -1,4 +1,5 @@
 var upscaleAmt = 4;
+
 function postCreate() {
     for (i in [scoreTxt, missesTxt, accuracyTxt]) {
         i.size *= upscaleAmt;
@@ -8,7 +9,7 @@ function postCreate() {
         i.y -= 21;
         i.borderSize *= upscaleAmt;
         i.fieldWidth += 1000;
-        i.x -= 1000/2;
+        i.x -= 1000 / 2;
         i.borderQuality = 100;
     }
     

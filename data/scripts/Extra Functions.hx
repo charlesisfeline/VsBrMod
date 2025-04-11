@@ -7,8 +7,7 @@ public function psychBoundTo(value:Float, min:Float, max:Float)
 public function clamp(value:Float, min:Float, max:Float)
     return Math.min(Math.max(value, min), max);
     
-public function leatherBoundTo(v:Float, min:Float, max:Float)
-{
+public function leatherBoundTo(v:Float, min:Float, max:Float) {
     var nv:Float = v;
     
     if (nv < min) nv = min;
