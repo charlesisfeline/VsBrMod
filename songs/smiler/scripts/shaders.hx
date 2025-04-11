@@ -6,8 +6,12 @@ var staticShader:CustomShader;
 // i just took em from gorefield lol
 // hi lunar
 
-function postCreate()
-{
+function postCreate() {
+    if (!Options.gameplayShaders) {
+        disableScript();
+        return;
+    }
+    
     trace("add vhs");
     vhs = new CustomShader("vhs");
     vhs.time = 0;
@@ -26,8 +30,7 @@ var totalTime:Float = 0;
 var noiseIntensity:Float = 0;
 var colorOffsetIntensity:Float = 0;
 
-function update(elapsed)
-{
+function update(elapsed) {
     totalTime += elapsed;
     staticShader.time = totalTime;
     vhs.time = totalTime;

@@ -13,8 +13,9 @@ function create() {
         if (PlayState.SONG.meta.name != "depart") {
             menuItems.insert(2, 'Charter');
             menuItems.insert(3, 'Open Console');
+            menuItems.insert(4, 'Toggle Botplay');
             
-            if (game.inst != null && game.vocals != null) menuItems.insert(5, 'Skip Song');
+            if (game.inst != null && game.vocals != null) menuItems.insert(6, 'Skip Song');
         }
         else {
             if (game.inst != null && game.vocals != null) menuItems.insert(4, 'fuck fuck fuck');
@@ -27,8 +28,9 @@ function postCreate()
     
 function postUpdate() {
     if (controls.ACCEPT) {
-        if (menuItems[curSelected] == "Skip Song") game.endSong();
+        if (menuItems[curSelected] == "Skip Song" || menuItems[curSelected] == "fuck fuck fuck") game.endSong();
         if (menuItems[curSelected] == "Charter") FlxG.switchState(new Charter(PlayState.instance.SONG.meta.name, PlayState.instance.difficulty, false));
         if (menuItems[curSelected] == "Open Console") NativeAPI.allocConsole();
+        if (menuItems[curSelected] == "Toggle Botplay") FlxG.save.data.botplay = !FlxG.save.data.botplay;
     }
 }
