@@ -23,12 +23,19 @@ var randQuotes:Array<String> = [
     "pickleball",
     "too much milf",
     "k fred",
+    "This game blows!",
     "DIGA BYEEEE\n BYEEEE",
     "wish this was\nme lowkey",
     "you goofballs",
     "very nut shivering",
     "menu theme by\nbrumbo!",
-    "can i strangle\none of you guys"
+    "can i strangle\none of you guys",
+    "the shower thoughts ever",
+    "yippee",
+    "stick of butter",
+    "CHICKEN JOCKEY",
+    "br so\nfricking evil",
+    "suns"
 ];
 
 function new() {
