@@ -1,7 +1,7 @@
 import funkin.backend.MusicBeatState;
 
 function create() {
-    Main.framerateSprite.codenameBuildField.text = "Codename Engine Alpha (Vs. br)\nDEV/PLAYTESTER BUILD dont leak!";
+    #if SHOW_BUILD_ON_FPS Main.framerateSprite.codenameBuildField.text = "Codename Engine Alpha (Vs. br)\nDEV/PLAYTESTER BUILD dont leak!"; #end
     window.title = "fnf vs br";
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
     
@@ -12,6 +12,7 @@ function create() {
 }
 
 function postUpdate() {
+    // insta skip the `BetaWarningState` cuz it aint important
     MusicBeatState.skipTransIn = MusicBeatState.skipTransOut = true;
     FlxG.switchState(new ModState("WarningState"));
 }

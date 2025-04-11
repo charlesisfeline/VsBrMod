@@ -37,7 +37,7 @@ function destroy() {
     WindowUtils.winTitle = "br is dead";
     
     WindowUtils.resetTitle();
-    Main.framerateSprite.codenameBuildField.text = "Codename Engine Alpha\noh god did u just switch back to base cne???";
+    #if SHOW_BUILD_ON_FPS Main.framerateSprite.codenameBuildField.text = "Codename Engine Alpha\noh god did u just switch back to base cne???"; #end
 }
 
 function update(elapsed:Float) {
@@ -56,7 +56,7 @@ function preStateSwitch() {
     
     FlxG.camera.bgColor = 0xFF000000;
     
-    Main.framerateSprite.codenameBuildField.text = "Codename Engine Alpha (Vs. br)\nDEV/PLAYTESTER BUILD dont leak!";
+    #if SHOW_BUILD_ON_FPS Main.framerateSprite.codenameBuildField.text = "Codename Engine Alpha (Vs. br)\nDEV/PLAYTESTER BUILD dont leak!"; #end
     
     trace(Std.isOfType(FlxG.state, PlayState)
         && (FlxG.state.subState == null ? true : !Std.isOfType(FlxG.state.subState, GameOverSubstate)
