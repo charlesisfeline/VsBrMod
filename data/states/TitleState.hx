@@ -34,6 +34,8 @@ function codePress(input:Int) {
 function startCheat() {
     cheatActive = true;
     
-    PlayState.loadSong("rb", "hard");
+    if (FlxG.random.bool(4)) PlayState.loadSong("melvin", "hard");
+    else
+        PlayState.loadSong("rb", "hard");
     FlxG.switchState(new PlayState());
 }

@@ -2,8 +2,7 @@ import funkin.backend.system.framerate.Framerate;
 
 import lime.graphics.Image;
 
-function postCreate()
-{
+function postCreate() {
     window.title = "fnf vs br but in options";
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
     
