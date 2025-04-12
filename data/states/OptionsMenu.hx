@@ -20,5 +20,10 @@ function postCreate() {
     background.scrollFactor.set();
     insert(1, background);
     
-    FlxTween.tween(Framerate.offset, {y: pathBG.height + 5}, 1, {ease: FlxEase.elasticOut});
+    if (FlxG.save.data.showFPS) FlxTween.tween(Framerate.offset, {y: pathBG.height + 5}, 1.5, {ease: FlxEase.elasticOut});
+}
+
+function postUpdate() {
+    if (FlxG.mouse.justPressed) FlxG.sound.play(Paths.sound('editors/click'));
+    if (FlxG.mouse.justReleased) FlxG.sound.play(Paths.sound('editors/release'));
 }
