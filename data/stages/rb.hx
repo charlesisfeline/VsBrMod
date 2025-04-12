@@ -1,5 +1,3 @@
-import flixel.addons.effects.FlxTrail;
-
 var babyRbs:FlxSpriteGroup;
 
 function postCreate() {
@@ -18,12 +16,6 @@ function postCreate() {
         spr.elasticity = 1;
         babyRbs.add(spr);
     }
-    
-    var evilTrail = new FlxTrail(boyfriend, null, 4, 24, 0.3, 0.069);
-    add(evilTrail);
-    
-    var evilTrail2 = new FlxTrail(dad, null, 4, 24, 0.3, 0.069);
-    add(evilTrail2);
 }
 
 function update(elapsed:Float) {
