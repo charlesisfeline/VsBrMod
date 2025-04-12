@@ -29,6 +29,7 @@ function new() {
     if (FlxG.save.data.hitWin == null) FlxG.save.data.hitWin = 250;
     if (FlxG.save.data.comboDisplay == null) FlxG.save.data.comboDisplay = true;
     if (FlxG.save.data.skipLoading == null) FlxG.save.data.skipLoading = false;
+    if (FlxG.save.data.fullscreen == null) FlxG.save.data.fullscreen = false;
     if (FlxG.save.data.hitsoundStyle == null) FlxG.save.data.hitsoundStyle = "none";
     if (FlxG.save.data.freeplayUnlocked == null) FlxG.save.data.freeplayUnlocked = true;
     
@@ -51,7 +52,7 @@ function update(elapsed:Float) {
         NativeAPI.allocConsole();
     }
     
-    if (FlxG.keys.justPressed.F11) performFullscreen();
+    performFullscreen();
 }
 
 function preStateSwitch() {
@@ -126,9 +127,9 @@ function postStateSwitch() {
 }
 
 function performFullscreen() {
-    if (FlxG.state is PlayState) PlayState.instance.scripts.call('onFullscreenPerform');
-    
-    return window.fullscreen = !window.fullscreen;
+    if (FlxG.save.data.fullscreen != null) window.fullscreen = FlxG.save.data.fullscreen;
+    else
+        window.fullscreen = true;
 }
 
 static function __resizeGame(width:Float, height:Float) {
