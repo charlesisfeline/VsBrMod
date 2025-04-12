@@ -105,8 +105,6 @@ function beatHit(curBeat:Int) {
             FlxG.mouse.visible = false;
             goPopups = false;
         }
-        
-        if (curBeat >= 831) FlxG.save.data.egUnlocked = true;
     }
 }
 

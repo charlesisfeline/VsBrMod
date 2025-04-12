@@ -1,3 +1,5 @@
+import br.SaveUtil;
+
 import flixel.util.FlxTimer;
 
 import funkin.savedata.FunkinSave;
@@ -7,9 +9,6 @@ var spamEgTimes:Int = 0;
 function postCreate() {
     persistentUpdate = true;
     persistentDraw = true;
-    
-    if (FlxG.save.data.egUnlocked == null) FlxG.save.data.egUnlocked = false;
-    trace(FlxG.save.data.egUnlocked);
     
     FlxG.camera.bgColor = 0xff000000;
     
@@ -25,9 +24,7 @@ function onChangeWeek(event)
 function onWeekSelect(event) {
     event.cancelled = true;
     
-    trace(FlxG.save.data.egUnlocked);
-    
-    if (curWeek != 0 && !FlxG.save.data.egUnlocked) {
+    if (curWeek != 0 && SaveUtil.hasBeatenWeek("weekbr")) {
         if (spamEgTimes >= 9) {
             trace("u spammed like " + spamEgTimes + " times wtf???");
             persistentUpdate = false;
