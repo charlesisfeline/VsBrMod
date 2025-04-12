@@ -25,6 +25,7 @@ function new() {
     if (FlxG.save.data.midsongPlaybackRate == null) FlxG.save.data.midsongPlaybackRate = false;
     if (FlxG.save.data.practice == null) FlxG.save.data.practice = false;
     if (FlxG.save.data.botplay == null) FlxG.save.data.botplay = false;
+    if (FlxG.save.data.showFPS == null) FlxG.save.data.showFPS = true;
     if (FlxG.save.data.hitWin == null) FlxG.save.data.hitWin = 250;
     if (FlxG.save.data.comboDisplay == null) FlxG.save.data.comboDisplay = true;
     if (FlxG.save.data.skipLoading == null) FlxG.save.data.skipLoading = false;
@@ -42,7 +43,6 @@ function destroy() {
 }
 
 function update(elapsed:Float) {
-    //  trace("hi");
     if (FlxG.keys.justPressed.F5) FlxG.resetState(); // RESETTING STATES
     
     // here for debugging purposes i think
@@ -50,6 +50,8 @@ function update(elapsed:Float) {
         trace("cons");
         NativeAPI.allocConsole();
     }
+    
+    if (FlxG.keys.justPressed.F11) performFullscreen();
 }
 
 function preStateSwitch() {
@@ -57,7 +59,7 @@ function preStateSwitch() {
     
     FlxG.camera.bgColor = 0xFF000000;
     
-    #if SHOW_BUILD_ON_FPS Main.framerateSprite.codenameBuildField.text = "Codename Engine Alpha (Vs. br)\nDEV/PLAYTESTER BUILD dont leak!"; #end
+    #if SHOW_BUILD_ON_FPS Main.framerateSprite.codenameBuildField.text = "Vs. br v1.0 DEV/PLAYTESTER BUILD\nCodename Engine Alpha\npls dont leak pls dont leak"; #end
     
     trace(Std.isOfType(FlxG.state, PlayState)
         && (FlxG.state.subState == null ? true : !Std.isOfType(FlxG.state.subState, GameOverSubstate)
@@ -98,6 +100,8 @@ function postStateSwitch() {
     
     Framerate.debugMode = 1;
     
+    if (!FlxG.save.data.showFPS) Framerate.offset.y = 9999;
+    
     if (Std.isOfType(FlxG.state, PlayState)) {
         if (PlayState.SONG.meta.name == "depart") {
             trace("depart " + PlayState.SONG.meta.name == "depart");
@@ -119,6 +123,12 @@ function postStateSwitch() {
     FlxG.mouse.load(Paths.image("ui/cursor"));
     
     trace("help ee");
+}
+
+function performFullscreen() {
+    if (FlxG.state is PlayState) PlayState.instance.scripts.call('onFullscreenPerform');
+    
+    return window.fullscreen = !window.fullscreen;
 }
 
 static function __resizeGame(width:Float, height:Float) {

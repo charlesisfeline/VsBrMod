@@ -7,3 +7,7 @@ function create()
 function _file_exit()
     FlxG.sound.music.stop();
     
+function postUpdate() {
+    if (FlxG.mouse.justPressed) FlxG.sound.play(Paths.sound('editors/click'));
+    if (FlxG.mouse.justReleased) FlxG.sound.play(Paths.sound('editors/release'));
+}

@@ -7,6 +7,7 @@
 	<!--<checkbox id="botplay" name="Bot Play" desc="If checked, the computer will play the song for you, no hands needed!" />-->
 	<checkbox id="comboDisplay" name="Show Combo Display" desc="If checked, the COMBO sprite will appear every time you hit a note unless you break a combo." />
 	<checkbox id="skipLoading" name="Skip Loading Screen" desc="If checked, the game won't lead you to the loading screen in Story Mode." />
+	<checkbox id="showFPS" name="Show FPS Counter" desc="If checked, the debug text (FPS + RAM counter + misc shits) on the top left will appear." />
 	<checkbox id="laneUnderlay" name="Lane Underlay" desc="If checked, oh look lane underlay. helps for easier reading if ur diagnosed with blind"/>
 	<number id="hitWin" name="Hit Window" desc="The 'window' of when you can hit a note perfectly. (Does not apply to 'Toast' and Depart'!)" min="60" max="250" change="1" />
 	<choice id="hitsoundStyle" name="Hitsound Type" desc="I love hitsounds.">
