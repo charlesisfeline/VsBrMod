@@ -25,6 +25,7 @@ function new() {
     if (FlxG.save.data.midsongPlaybackRate == null) FlxG.save.data.midsongPlaybackRate = false;
     if (FlxG.save.data.practice == null) FlxG.save.data.practice = false;
     if (FlxG.save.data.botplay == null) FlxG.save.data.botplay = false;
+    if (FlxG.save.data.hitWin == null) FlxG.save.data.hitWin = 250;
     if (FlxG.save.data.comboDisplay == null) FlxG.save.data.comboDisplay = true;
     if (FlxG.save.data.skipLoading == null) FlxG.save.data.skipLoading = false;
     if (FlxG.save.data.hitsoundStyle == null) FlxG.save.data.hitsoundStyle = "none";

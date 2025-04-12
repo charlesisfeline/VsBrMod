@@ -26,6 +26,8 @@ function postCreate() {
     windows = new FlxSpriteGroup();
     add(windows);
     
+    if (PlayState.SONG.meta.name == "overcooked") doIconBop = false;
+    
     windows.cameras = [camHUD];
     
     lava.visible = false;
@@ -93,6 +95,7 @@ function beatHit(curBeat:Int) {
         blackout.visible = !(curBeat >= 1);
         borders.visible = (curBeat >= 64);
         lava.visible = (curBeat >= 128 && curBeat <= 192);
+        doIconBop = (curBeat >= 64);
         
         if (curBeat >= 264 && curBeat <= 680) {
             FlxG.mouse.visible = true; // show mouse so u can close the popups

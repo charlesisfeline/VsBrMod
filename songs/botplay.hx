@@ -42,6 +42,8 @@ function update(elapsed:Float) {
 }
 
 function postUpdate(elasped:Float) {
+    if (FlxG.save.data.hitWin != null) Options.hitWindow = FlxG.save.data.hitWin;
+    
     if (FlxG.save.data.practice) canDie = canDadDie = false;
 }
 
