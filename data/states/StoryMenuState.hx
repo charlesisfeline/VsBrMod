@@ -24,7 +24,9 @@ function onChangeWeek(event)
 function onWeekSelect(event) {
     event.cancelled = true;
     
-    if (curWeek != 0 && SaveUtil.hasBeatenWeek("weekbr")) {
+    var beatBr = FunkinSave.getWeekHighscore('weekbr', 'hard').score > 0;
+    
+    if (curWeek != 0 && !beatBr) {
         if (spamEgTimes >= 9) {
             trace("u spammed like " + spamEgTimes + " times wtf???");
             persistentUpdate = false;
