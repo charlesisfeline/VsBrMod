@@ -18,8 +18,12 @@ function create() {
             
             if (game.inst != null && game.vocals != null) menuItems.insert(7, 'Skip Song');
         }
-        else {
-            if (game.inst != null && game.vocals != null) menuItems.insert(4, 'fuck fuck fuck');
+        else if (game.inst != null && game.vocals != null) menuItems.insert(4, 'fuck fuck fuck');
+    }
+    else {
+        if (PlayState.SONG.meta.name != "depart") {
+            menuItems.insert(2, 'Toggle Botplay');
+            menuItems.insert(3, 'Toggle Practice Mode');
         }
     }
 }
