@@ -2,21 +2,17 @@ import haxe.ds.StringMap;
 
 public var charMap:Array<Array<StringMap<Character>>> = [];
 
-function charMapNullCheck(strumIndex:Int, charIndex:Int)
-{
+function charMapNullCheck(strumIndex:Int, charIndex:Int) {
     if (charMap[strumIndex] == null) charMap[strumIndex] = [];
     if (charMap[strumIndex][charIndex] == null) charMap[strumIndex][charIndex] = new StringMap();
 }
 
 // partially stole from gorefield lol
-function postCreate()
-{
+function postCreate() {
     // add preexisting
-    for (strumLine in strumLines)
-    {
+    for (strumLine in strumLines) {
         var strumIndex:Int = strumLines.members.indexOf(strumLine);
-        for (char in strumLine.characters)
-        {
+        for (char in strumLine.characters) {
             var charIndex:Int = strumLine.characters.indexOf(char);
             
             // null check
@@ -32,55 +28,51 @@ function postCreate()
         if (event.name == 'Change Character') precacheCharacter(event.params[0], event.params[1], event.params[2]);
 }
 
-public function precacheCharacter(strumIndex:Int, charName:String = 'bf', memberIndex:Int = 0)
-{
+public function precacheCharacter(strumIndex:Int, charName:String = 'bf', memberIndex:Int = 0) {
     // null check
     charMapNullCheck(strumIndex, memberIndex);
     
     // precache process
-    if (!charMap[strumIndex][memberIndex].exists(charName))
-    {
+    if (!charMap[strumIndex][memberIndex].exists(charName)) {
         // vars
         var strumLine:StrumLine = strumLines.members[strumIndex];
         var existingChar:Character = strumLine.characters[memberIndex];
         
-        var newChar:Character = new Character(existingChar.x, existingChar.y, charName, existingChar.isPlayer);
-        charMap[strumIndex][memberIndex].set(newChar.curCharacter, newChar);
-        newChar.active = false;
-        
-        trace('Precached index "' + memberIndex + '" character "' + newChar.curCharacter + '" on strumLine "' + strumIndex + '".');
-        
-        try
-        { // sometimes this works because atlases lmao
-            if (newChar.animateAtlas != null) newChar.animateAtlas.drawComplex(FlxG.camera);
-            else
-                newChar.drawComplex(FlxG.camera);
+        if (existingChar != null) {
+            var newChar:Character = new Character(existingChar.x, existingChar.y, charName, existingChar.isPlayer);
+            charMap[strumIndex][memberIndex].set(newChar.curCharacter, newChar);
+            newChar.active = false;
+            
+            trace('Precached index "' + memberIndex + '" character "' + newChar.curCharacter + '" on strumLine "' + strumIndex + '".');
+            
+            try { // sometimes this works because atlases lmao
+                if (newChar.animateAtlas != null) newChar.animateAtlas.drawComplex(FlxG.camera);
+                else
+                    newChar.drawComplex(FlxG.camera);
+            }
+            catch (e:Dynamic) {
+                trace('drawComplex didn\'t work this time for some reason');
+            }
+            
+            // cam stage offsets
+            switch (strumIndex) {
+                case 0:
+                    newChar.cameraOffset.x += stage?.characterPoses['dad']?.camxoffset;
+                    newChar.cameraOffset.y += stage?.characterPoses['dad']?.camyoffset;
+                case 1:
+                    newChar.cameraOffset.x += stage?.characterPoses['boyfriend']?.camxoffset;
+                    newChar.cameraOffset.y += stage?.characterPoses['boyfriend']?.camyoffset;
+                case 2:
+                    newChar.cameraOffset.x += stage?.characterPoses['girlfriend']?.camxoffset;
+                    newChar.cameraOffset.y += stage?.characterPoses['girlfriend']?.camyoffset;
+            }
+            newChar.setPosition(existingChar.x, existingChar.y);
+            scripts.call('onCharacterCached', [newChar, strumIndex, memberIndex]);
         }
-        catch (e:Dynamic)
-        {
-            trace('drawComplex didn\'t work this time for some reason');
-        }
-        
-        // cam stage offsets
-        switch (strumIndex)
-        {
-            case 0:
-                newChar.cameraOffset.x += stage?.characterPoses['dad']?.camxoffset;
-                newChar.cameraOffset.y += stage?.characterPoses['dad']?.camyoffset;
-            case 1:
-                newChar.cameraOffset.x += stage?.characterPoses['boyfriend']?.camxoffset;
-                newChar.cameraOffset.y += stage?.characterPoses['boyfriend']?.camyoffset;
-            case 2:
-                newChar.cameraOffset.x += stage?.characterPoses['girlfriend']?.camxoffset;
-                newChar.cameraOffset.y += stage?.characterPoses['girlfriend']?.camyoffset;
-        }
-        newChar.setPosition(existingChar.x, existingChar.y);
-        scripts.call('onCharacterCached', [newChar, strumIndex, memberIndex]);
     }
 }
 
-public function changeCharacter(strumIndex:Int, charName:String = 'bf', memberIndex:Int = 0, ?updateBar:Bool = true)
-{
+public function changeCharacter(strumIndex:Int, charName:String = 'bf', memberIndex:Int = 0, ?updateBar:Bool = true) {
     // if new char no exist
     if (!charMap[strumIndex][memberIndex].exists(charName)) precacheCharacter(strumIndex, charName, memberIndex);
     
@@ -93,16 +85,13 @@ public function changeCharacter(strumIndex:Int, charName:String = 'bf', memberIn
     if (oldChar.curCharacter == newChar.curCharacter) return trace('It\'s the same character bro.');
     
     // icon change + healthBar color update
-    if (memberIndex == 0 && updateBar)
-    {
-        if (strumIndex == 0)
-        { // opponent side
+    if (memberIndex == 0 && updateBar) {
+        if (strumIndex == 0) { // opponent side
             iconP2.setIcon(newChar.getIcon());
             if (Options.colorHealthBar) healthBar.createColoredEmptyBar(newChar.iconColor ?? (PlayState.opponentMode ? 0xFF66FF33 : 0xFFFF0000));
             healthBar.updateBar();
         }
-        else if (strumIndex == 1)
-        { // player side
+        else if (strumIndex == 1) { // player side
             iconP1.setIcon(newChar.getIcon());
             if (Options.colorHealthBar) healthBar.createColoredFilledBar(newChar.iconColor ?? (PlayState.opponentMode ? 0xFFFF0000 : 0xFF66FF33));
             healthBar.updateBar();
@@ -125,10 +114,8 @@ public function changeCharacter(strumIndex:Int, charName:String = 'bf', memberIn
     scripts.call('onChangeCharacter', [oldChar, newChar, strumIndex, memberIndex]);
 }
 
-function onEvent(event)
-{
-    switch (event.event.name)
-    {
+function onEvent(event) {
+    switch (event.event.name) {
         case 'Change Character':
             changeCharacter(event.event.params[0], event.event.params[1], event.event.params[2], event.event.params[3]);
     }

@@ -11,8 +11,6 @@ function onStartSong()
     FlxTween.tween(black, {alpha: 0}, 1.25, {ease: FlxEase.cubeOut});
     
 function onCountdown(event) {
-    if (event.soundPath != null) event.soundPath = 'vanilla/' + event.soundPath;
-    
     event.spritePath = switch (event.swagCounter) {
         case 0: null;
         case 1: 'game/vanilla/ready';
