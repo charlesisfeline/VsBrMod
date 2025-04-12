@@ -17,6 +17,13 @@ the rest of the credits, just check the credits menu idk
 if u wanna give suggestions or help work with me and the crew on this mod
 yeah sure feel free to dm me (`charlescatyt`) or the co-director (`breadboyoo`) over discord or whatevs
 
+oh and just to let yknow...
+
+this mod uses CODENAME ENGINE, a friday night funkin' engine (currently in beta) that could have some bugs & unfinished things.
+any issues related to the engine (editors, modding, whatevs) DONT YAP BOUT IT AT US, THE VS BR CREW DID NOT CREATE THE ENGINE!!!!!!!!!!1!!!
+blame the codename crew for it, report it to them.
+CNE GITHUB: https://github.com/FNF-CNE-Devs/CodenameEngine/issues ||| CNE DISCORD: https://discord.gg/3WZdVGBMW8
+
 ================================================
 -----[content the mod has, yes in detail.]------
 ================================================
@@ -30,6 +37,25 @@ btw tho vs br still isnt ready just yet, but dont worry we be workin nonstop to 
 oh yeah, probly should also mention that the majority of this stuff is made on mobile, content-wise, the code doesn't count tho lol
 
 so um... yeah thats pretty much it, tysm for playing the build n we hope u get hyped up for the final build of v1!
+
+=============================================
+-----[faq, or qna, idc whats it called]------
+=============================================
+
+- why do i only see a black screen when opening the game
+  ^ bro ur folder path to the game has special characters, move the folder somewhere else and boot the game again
+
+- wheres the vs br main menu, i only get the base game ones
+  ^ sometimes the engine is kinda fucky to the point it can forget to go to custom menus. just restart the game, we have plans to fix it
+
+- loading up the game only shows the base game!!!!
+  ^ just press tab in the main menu and select your vs br mod folder (we have plans to do an executable build btw)
+
+- how can i see my fps counter?
+  ^ u go to the options menu, click `vs br` -> `appearance` and turn on `SHOW FPS COUNTER`
+
+- is this mod playable on normal CNE builds?
+  ^ yeah it is. tho some stuff may break which could be because of future CNE updates the mod wouldn't be able to handle yet.... also by the time we do an executable build for this mod, more stuff will break without it lol
 
 ========================================
 -----[extra notes just in case lol]-----

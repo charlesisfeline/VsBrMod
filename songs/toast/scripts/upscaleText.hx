@@ -5,7 +5,7 @@ function postCreate() {
         i.size *= upscaleAmt;
         i.scale.x /= upscaleAmt;
         i.scale.y /= upscaleAmt;
-        i.antialiasing = true;
+        i.antialiasing = Options.antialiasing;
         i.y -= 21;
         i.borderSize *= upscaleAmt;
         i.fieldWidth += 1000;

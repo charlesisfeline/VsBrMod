@@ -48,8 +48,7 @@ function postUpdate(elasped:Float) {
 }
 
 function dealerMechanic() {
-    trace("help me pls " + (PlayState.SONG.meta.name == "dealer"));
-    
+    #if VIDEO_CUTSCENES
     if (PlayState.SONG.meta.name == "dealer") {
         nukeVid = new FlxVideo();
         
@@ -64,6 +63,9 @@ function dealerMechanic() {
     }
     else
         FlxG.switchState(new Charter(PlayState.SONG.meta.name, PlayState.difficulty, true));
+    #else
+    FlxG.switchState(new Charter(PlayState.SONG.meta.name, PlayState.difficulty, true));
+    #end
 }
 
 static var doBotplay:Bool = false;

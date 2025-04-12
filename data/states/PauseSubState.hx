@@ -11,7 +11,7 @@ var isDebugEnabled:Bool = true; // set to false before release
 function create() {
     if (isDebugEnabled) {
         if (PlayState.SONG.meta.name != "depart") {
-            menuItems.insert(2, 'Charter');
+            menuItems.insert(2, 'Open Charter');
             menuItems.insert(3, 'Open Console');
             menuItems.insert(4, 'Toggle Botplay');
             menuItems.insert(5, 'Toggle Practice Mode');
@@ -34,7 +34,7 @@ function postCreate()
 function postUpdate() {
     if (controls.ACCEPT) {
         if (menuItems[curSelected] == "Skip Song" || menuItems[curSelected] == "fuck fuck fuck") game.endSong();
-        if (menuItems[curSelected] == "Charter") FlxG.switchState(new Charter(PlayState.instance.SONG.meta.name, PlayState.instance.difficulty, false));
+        if (menuItems[curSelected] == "Open Charter") FlxG.switchState(new Charter(PlayState.instance.SONG.meta.name, PlayState.instance.difficulty, false));
         if (menuItems[curSelected] == "Open Console") NativeAPI.allocConsole();
         if (menuItems[curSelected] == "Toggle Botplay") FlxG.save.data.botplay = !FlxG.save.data.botplay;
         if (menuItems[curSelected] == "Toggle Practice Mode") FlxG.save.data.practice = !FlxG.save.data.practice;

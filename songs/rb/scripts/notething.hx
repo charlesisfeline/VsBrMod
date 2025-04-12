@@ -1,22 +1,18 @@
-function postCreate()
-{
+function postCreate() {
     changePlayerSkin("NOTE_assets_br");
     changeCPUSkin("rbNotes");
     
-    for (vcrTo in [scoreTxt, missesTxt, accuracyTxt])
-    {
+    for (vcrTo in [scoreTxt, missesTxt, accuracyTxt]) {
         vcrTo.font = Paths.font("comic.ttf");
         vcrTo.size = 16;
         vcrTo.borderSize = 2.5;
     }
 }
 
-public function changePlayerSkin(skin)
-{
+public function changePlayerSkin(skin) {
     frames = Paths.getSparrowAtlas("game/notes/" + skin);
     
-    for (strum in playerStrums)
-    {
+    for (strum in playerStrums) {
         strum.frames = frames;
         strum.antialiasing = false;
         // strum.setGraphicSize(Std.int(frames.width * 2.777));
@@ -29,12 +25,10 @@ public function changePlayerSkin(skin)
         strum.playAnim("static");
     }
     
-    for (note in playerStrums.notes)
-    {
+    for (note in playerStrums.notes) {
         note.frames = frames;
         
-        switch (note.noteData % 4)
-        {
+        switch (note.noteData % 4) {
             case 0:
                 note.animation.addByPrefix("scroll", "purple0");
                 note.animation.addByPrefix("hold", "purple hold piece");
@@ -57,29 +51,25 @@ public function changePlayerSkin(skin)
         note.antialiasing = false;
         note.updateHitbox();
         
-        if (note.isSustainNote)
-        {
+        if (note.isSustainNote) {
             note.animation.play("holdend");
             
             if (note.nextSustain != null) note.animation.play('hold');
             note.updateHitbox();
         }
-        else
-        {
+        else {
             note.animation.play("scroll");
             note.updateHitbox();
         }
     }
 }
 
-public function changeCPUSkin(skin)
-{
+public function changeCPUSkin(skin) {
     frames = Paths.getSparrowAtlas("game/notes/" + skin);
     
-    for (strum in cpuStrums)
-    {
+    for (strum in cpuStrums) {
         strum.frames = frames;
-        strum.antialiasing = true;
+        strum.antialiasing = Options.antialiasing;
         // strum.setGraphicSize(Std.int(frames.width * 2.777));
         var animPrefix = cpuStrums.strumAnimPrefix[strum.ID % cpuStrums.strumAnimPrefix.length];
         strum.animation.addByPrefix("static", "strum rb");
@@ -90,12 +80,10 @@ public function changeCPUSkin(skin)
         strum.playAnim("static");
     }
     
-    for (note in cpuStrums.notes)
-    {
+    for (note in cpuStrums.notes) {
         note.frames = frames;
         
-        switch (note.noteData % 4)
-        {
+        switch (note.noteData % 4) {
             case 0:
                 note.animation.addByPrefix("scroll", "note rb");
                 note.animation.addByPrefix("hold", "purple hold piece");
@@ -115,18 +103,16 @@ public function changeCPUSkin(skin)
         }
         
         note.scale.set(0.7, 0.7);
-        note.antialiasing = true;
+        note.antialiasing = Options.antialiasing;
         note.updateHitbox();
         
-        if (note.isSustainNote)
-        {
+        if (note.isSustainNote) {
             note.animation.play("holdend");
             note.updateHitbox();
             
             if (note.nextSustain != null) note.animation.play('hold');
         }
-        else
-        {
+        else {
             note.animation.play("scroll");
             note.updateHitbox();
         }

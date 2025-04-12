@@ -33,9 +33,12 @@ var randQuotes:Array<String> = [
     "the shower thoughts ever",
     "yippee",
     "stick of butter",
-    "CHICKEN JOCKEY",
+    "CHICKEN\nJOCKEY",
     "br so\nfricking evil",
-    "suns"
+    "suns",
+    "bro's not\nmr saltbaker",
+    "adding quotes\nbut not working :sob:",
+    "running outta\nquotes noooo"
 ];
 
 function new() {
@@ -74,7 +77,7 @@ function postCreate() {
     insert(5, border);
     
     menuInfomation = new FlxText(-285, 520, FlxG.width, curQuote, 14);
-    menuInfomation.setFormat("fonts/comicbold.ttf", 16, FlxColor.BLACK, "center");
+    menuInfomation.setFormat("fonts/comicbold.ttf", 14, FlxColor.BLACK, "center");
     insert(6, menuInfomation);
     
     bg.x += 350;

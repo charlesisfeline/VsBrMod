@@ -6,14 +6,13 @@ import hxvlc.flixel.FlxVideo;
 import flixel.util.FlxTimer;
 
 FlxG.camera.bgColor = 0xff000000;
-if (PlayState.SONG.meta.name == "rb")
-{
+if (PlayState.SONG.meta.name == "rb") {
+    #if VIDEO_CUTSCENES
     var dontCrash:Bool = false;
     var black = new FlxSprite().makeSolid(FlxG.width, FlxG.height, 0xFF000000);
     add(black);
     var video:FlxVideo = new FlxVideo();
-    video.onEndReached.add(function():Void
-    {
+    video.onEndReached.add(function():Void {
         video.dispose();
         FlxG.removeChild(video);
         if (!dontCrash) Sys.exit(); // how do u actually make the game crash instead of just closing it hmmm
@@ -21,26 +20,23 @@ if (PlayState.SONG.meta.name == "rb")
     FlxG.addChildBelowMouse(video);
     // video.volumeAdjust = 6.0;
     if (video.load(Paths.video("arbys"))) new FlxTimer().start(0.000001, (_) -> video.play());
-    function update()
-    {
+    function update() {
         lossSFX.volume = 0;
         if (FlxG.sound.music != null) FlxG.sound.music.stop();
         if (controls.ACCEPT) dontCrash = true;
         // lossSFX.onComplete = () -> if (!dontCrash) Sys.exit(); // how do u actually make the game crash instead of just closing it hmmm
-        if (controls.BACK || controls.ACCEPT)
-        {
+        if (controls.BACK || controls.ACCEPT) {
             FlxG.game.removeChild(video);
             video.dispose();
             trace(video.time == -1);
             FlxG.switchState(new PlayState());
         }
     }
+    #end
 }
-else if (PlayState.SONG.meta.name == "smiler")
-{
+else if (PlayState.SONG.meta.name == "smiler") {
     var jumps:FlxSprite;
-    function postCreate()
-    {
+    function postCreate() {
         trace("fucking");
         jumps = new FlxSprite(0, 0).loadGraphic(Paths.image('game/JUMPSCAREFRED'));
         jumps.screenCenter();
@@ -51,38 +47,33 @@ else if (PlayState.SONG.meta.name == "smiler")
         camFollow.x = jumps.x + 650;
         camFollow.y = jumps.y + 650;
     }
-    function update()
-    {
+    function update() {
         lossSFX.volume = 0;
         if (FlxG.sound.music != null) FlxG.sound.music.stop();
     }
 }
-else if (PlayState.SONG.meta.name != "depart")
-{
+else if (PlayState.SONG.meta.name != "depart") {
+    #if VIDEO_CUTSCENES
     var black = new FlxSprite().makeSolid(FlxG.width, FlxG.height, 0xFF000000);
     add(black);
+    #if VIDEO_CUTSCENES
     var video:FlxVideo = new FlxVideo();
-    video.onEndReached.add(function():Void
-    {
+    video.onEndReached.add(function():Void {
         video.dispose();
         FlxG.removeChild(video);
     });
     FlxG.addChildBelowMouse(video);
     if (video.load(Paths.video("retryNoSnd"))) new FlxTimer().start(0.000001, (_) -> video.play());
-    function update()
-    {
+    function update() {
         lossSFX.volume = 0;
-        if (controls.BACK || controls.ACCEPT)
-        {
+        if (controls.BACK || controls.ACCEPT) {
             FlxG.game.removeChild(video);
             video.dispose();
             trace(video.time == -1);
             FlxG.switchState(new PlayState());
         }
-        if (video.time == -1)
-        {
-            video.onEndReached.add(function():Void
-            {
+        if (video.time == -1) {
+            video.onEndReached.add(function():Void {
                 video.dispose();
                 FlxG.removeChild(video);
             });
@@ -90,4 +81,6 @@ else if (PlayState.SONG.meta.name != "depart")
             if (video.load(Paths.video("retryNoSnd"))) new FlxTimer().start(0.000001, (_) -> video.play());
         }
     }
-}
+    #end
+    }
+    

@@ -15,21 +15,21 @@ function postCreate() {
     blackout = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
     if (PlayState.SONG.meta.name == "overcooked") add(blackout);
     blackout.cameras = [camHUD];
-
+    
     borders = new FlxSprite(0, 0).loadGraphic(Paths.image('stages/blackBorder'));
     borders.screenCenter();
     borders.updateHitbox();
     add(borders);
-
+    
     borders.cameras = [camHUD];
-
+    
     windows = new FlxSpriteGroup();
     add(windows);
-
+    
     if (PlayState.SONG.meta.name == "overcooked") doIconBop = false;
-
+    
     windows.cameras = [camHUD];
-
+    
     lava.visible = false;
 }
 
@@ -49,7 +49,7 @@ function addWindow(popup:Int = 2) {
     box.antialiasing = Options.antialiasing;
     box.animation.play("window" + FlxG.random.int(1, 9));
     add(box);
-
+    
     var closeBtn = new FlxSprite(0, 0);
     closeBtn.loadGraphic(Paths.image('stages/house-scary/closeButton'));
     closeBtn.x = box.x;
@@ -57,28 +57,29 @@ function addWindow(popup:Int = 2) {
     closeBtn.antialiasing = Options.antialiasing;
     closeBtn.updateHitbox();
     add(closeBtn);
-
+    
     if (popup == 1) FlxG.sound.play(Paths.sound('errorpopupScary'), 0.7);
     else
         FlxG.sound.play(Paths.sound('errorpopup'), 0.6);
     if (box != null && windows != null) windows.add(box);
     if (closeBtn != null && windows != null) windows.add(closeBtn);
-
+    
     FlxG.signals.postUpdate.add(() -> {
         if (closeBtn != null && camHUD != null) {
             try {
                 var focusing:Bool = closeBtn.overlapsPoint(FlxG.mouse.getScreenPosition(camHUD), true, camHUD);
-
+                
                 // trace("focus " + focusing + " - click " + FlxG.mouse.justPressed);
-
+                
                 if (focusing && FlxG.mouse.justPressed) {
-                    trace("closed");
-
+                    // trace("closed");
+                    
                     if (box != null) {
                         box.visible = false;
                         box.x = 6480;
                         box.kill();
                     }
+                    
                     if (closeBtn != null) {
                         closeBtn.visible = false;
                         closeBtn.x = 6480;
@@ -87,7 +88,7 @@ function addWindow(popup:Int = 2) {
                 }
             }
             catch (e:Error) { // cne hscript for some reason needs the catch to be like this. why? idk...
-                trace("fucking shit");
+                #if debug trace("fucking shit"); #end
             }
         }
     });
@@ -102,7 +103,7 @@ function beatHit(curBeat:Int) {
         borders.visible = (curBeat >= 64);
         lava.visible = (curBeat >= 128 && curBeat <= 192);
         doIconBop = (curBeat >= 64);
-
+        
         if (curBeat >= 264 && curBeat <= 680) {
             FlxG.mouse.visible = true; // show mouse so u can close the popups
             goPopups = true;
@@ -116,3 +117,4 @@ function beatHit(curBeat:Int) {
 
 function stepHit(curStep:Int)
     if (PlayState.SONG.meta.name == "overcooked" && goPopups) if (FlxG.random.bool(1.5)) addWindow(FlxG.random.int(1, 9));
+    

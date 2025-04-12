@@ -1,5 +1,5 @@
 // Script by Nex_isDumb
-var daX:Float = -425,
+var daX:Float = -450,
     daY:Float = 300; // Change these to move them around and position them correctly
     
 var limitAdder:Float = 1400; // If the notes spawn too late or early mess with this value

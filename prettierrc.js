@@ -1,15 +1,15 @@
 module.exports = {
-  printWidth: 80,
+	printWidth: 80,
 
-  tabs: false,
-  useTabs: false,
-  tabWidth: 2,
+	tabs: false,
+	useTabs: false,
+	tabWidth: 2,
 
-  singleQuote: false,
-  quoteProps: "preserve",
-  parser: "json",
+	singleQuote: false,
+	quoteProps: "preserve",
+	parser: "json",
 
-  bracketSpacing: true,
-  trailingComma: "none",
-  semi: false,
+	bracketSpacing: true,
+	trailingComma: "none",
+	semi: false,
 };
