@@ -1,17 +1,14 @@
 //
 var characterTweens:Map<Int, Array<FlxTween>> = [];
 
-function onEvent(eventEvent)
-{
-    if (eventEvent.event.name == "Change Character Offset")
-    {
+function onEvent(eventEvent) {
+    if (eventEvent.event.name == "Change Character Offset") {
         var params:Array = eventEvent.event.params;
         var flxease:String = params[5] + (params[5] == "linear" ? "" : params[6]);
         
         var character:Character = strumLines.members[params[1]].characters[0];
         
-        if (params[0])
-        {
+        if (params[0]) {
             if (characterTweens[params[1]] != null) for (tween in characterTweens[params[1]])
                 if (tween != null) tween.cancel();
                 
@@ -25,8 +22,7 @@ function onEvent(eventEvent)
                 }, (val:Float) -> character.cameraOffset.y = val)
             ];
         }
-        else
-        {
+        else {
             character.cameraOffset.x += params[2];
             character.cameraOffset.y += params[3];
         }

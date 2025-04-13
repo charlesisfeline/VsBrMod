@@ -53,7 +53,7 @@ function onChangeItem(event:MenuChangeEvent) {
     
     curSelected = event.value;
     
-    CoolUtil.playMenuSFX(0, 0.7);
+    FlxG.sound.play(Paths.sound("menu/scroll"));
     
     for (i => item in grpMenuShit.members) {
         item.targetY = i - curSelected;

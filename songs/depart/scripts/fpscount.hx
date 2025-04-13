@@ -21,8 +21,7 @@ var fpsUpdateTimer:Float = 999999;
 
 // taken from c-slice !!
 
-function postCreate()
-{
+function postCreate() {
     realFPS = new TextField();
     realFPS.x = 10;
     realFPS.y = 3;
@@ -35,6 +34,7 @@ function postCreate()
     format.leading = -4;
     
     realFPS.defaultTextFormat = format;
+    realFPS.visible = FlxG.save.data.showFPS;
     realFPS.addEventListener("enterFrame", onEnterFrame);
     Main.instance.addChild(realFPS);
     
@@ -50,32 +50,26 @@ function postCreate()
     FlxG.mouse.load(Paths.image("ui/flixelCursor"));
 }
 
-function onEnterFrame(e)
-{
+function onEnterFrame(e) {
     var lastTime:Float = Timer.stamp();
     fpsUpdateTimer += FlxG.elapsed * 1000;
     
-    if (FlxG.keys.justPressed.F3)
-    {
+    if (FlxG.keys.justPressed.F3) {
         lastDebugMode = (Framerate.debugMode + 1) % 3;
         fpsUpdateTimer = 999999;
     }
     
     if (!(Std.isOfType(FlxG.state, PlayState) && PlayState.SONG.meta.name == "depart")) realFPS.visible = false;
     
-    if (fpsUpdateTimer > Conductor.stepCrochet)
-    {
+    if (fpsUpdateTimer > Conductor.stepCrochet) {
         var text:String = "FPS: " + Std.string(Math.floor(Framerate.instance.fpsCounter.lastFPS));
         
-        if (Framerate.debugMode > 1)
-        {
+        if (Framerate.debugMode > 1) {
             var objCount:Int = 0;
             var state:FlxState = FlxG.state;
             
-            while (state != null)
-            {
-                state.forEach((o) ->
-                {
+            while (state != null) {
+                state.forEach((o) -> {
                     objCount++;
                 }, true);
                 state = state.subState;
@@ -108,15 +102,14 @@ function onEnterFrame(e)
     }
 }
 
-function destroy()
-{
+function destroy() {
     realFPS.removeEventListener("enterFrame", onEnterFrame);
     realFPS.visible = false;
     trace(realFPS.visible);
     Main.instance.removeChild(realFPS);
     
     Framerate.debugMode = lastDebugMode;
-    Framerate.instance.visible = true;
+    Framerate.instance.visible = FlxG.save.data.showFPS;
     
     WindowUtils.winTitle = "fnf vs br";
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));

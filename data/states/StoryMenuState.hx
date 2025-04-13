@@ -2,6 +2,7 @@ import br.SaveUtil;
 
 import flixel.util.FlxTimer;
 
+import funkin.backend.utils.DiscordUtil;
 import funkin.savedata.FunkinSave;
 
 var spamEgTimes:Int = 0;
@@ -9,6 +10,8 @@ var spamEgTimes:Int = 0;
 function postCreate() {
     persistentUpdate = true;
     persistentDraw = true;
+    
+    DiscordUtil.changePresence("in story mode", null);
     
     FlxG.camera.bgColor = 0xff000000;
     

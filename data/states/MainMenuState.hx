@@ -3,6 +3,7 @@ import Date;
 import flixel.text.FlxTextBorderStyle;
 
 import funkin.game.PlayState;
+import funkin.backend.utils.DiscordUtil;
 
 import lime.graphics.Image;
 
@@ -49,6 +50,8 @@ function new() {
 }
 
 function postCreate() {
+    DiscordUtil.changePresence("the main menu", null);
+    
     PlayState.deathCounter = 0;
     
     FlxG.camera.bgColor = 0xFF000000;

@@ -11,6 +11,7 @@ import funkin.backend.FunkinText;
 import funkin.backend.MusicBeatState;
 import funkin.backend.utils.NativeAPI;
 import funkin.backend.utils.WindowUtils;
+import funkin.backend.utils.DiscordUtil;
 
 import lime.graphics.Image;
 
@@ -20,6 +21,8 @@ var warnText:FlxSprite;
 var boyoo:FlxSprite;
 
 function create() {
+    DiscordUtil.changePresence("warning screen", null);
+    
     #if SHOW_BUILD_ON_FPS Main.framerateSprite.codenameBuildField.text = "Codename Engine Alpha (Vs. br)\nDEV/PLAYTESTER BUILD dont leak!"; #end
     window.title = "fnf vs br";
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));

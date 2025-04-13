@@ -1,5 +1,7 @@
 import Date;
 
+import funkin.backend.utils.DiscordUtil;
+
 import lime.graphics.Image;
 
 public var newDiffText:FlxText;
@@ -7,6 +9,8 @@ var icoPlacement:String = "left";
 var timeFormat12h:Bool = true; // the illusion of choice
 
 function postCreate() {
+    DiscordUtil.changePresence("selecting song in freeplay", null);
+    
     FlxG.camera.bgColor = 0xff000000;
     
     window.title = "fnf vs br";

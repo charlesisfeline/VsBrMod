@@ -21,17 +21,17 @@ function new() {
     window.title = "Made with Codename Engine!";
     
     // makes all of these options automatically set to their default values
-    if (FlxG.save.data.playbackRate == null) FlxG.save.data.playbackRate = 1;
-    if (FlxG.save.data.midsongPlaybackRate == null) FlxG.save.data.midsongPlaybackRate = false;
-    if (FlxG.save.data.practice == null) FlxG.save.data.practice = false;
-    if (FlxG.save.data.botplay == null) FlxG.save.data.botplay = false;
-    if (FlxG.save.data.showFPS == null) FlxG.save.data.showFPS = true;
-    if (FlxG.save.data.hitWin == null) FlxG.save.data.hitWin = 250;
-    if (FlxG.save.data.comboDisplay == null) FlxG.save.data.comboDisplay = true;
-    if (FlxG.save.data.skipLoading == null) FlxG.save.data.skipLoading = false;
-    if (FlxG.save.data.fullscreen == null) FlxG.save.data.fullscreen = false;
-    if (FlxG.save.data.hitsoundStyle == null) FlxG.save.data.hitsoundStyle = "none";
-    if (FlxG.save.data.freeplayUnlocked == null) FlxG.save.data.freeplayUnlocked = true;
+    FlxG.save.data.playbackRate ??= 1;
+    FlxG.save.data.midsongPlaybackRate ??= false;
+    FlxG.save.data.practice ??= false;
+    FlxG.save.data.botplay ??= false;
+    FlxG.save.data.showFPS ??= true;
+    FlxG.save.data.hitWin ??= 250;
+    FlxG.save.data.comboDisplay ??= true;
+    FlxG.save.data.skipLoading ??= false;
+    FlxG.save.data.fullscreen ??= false;
+    FlxG.save.data.hitsoundStyle ??= "none";
+    FlxG.save.data.freeplayUnlocked ??= true;
     
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
 }
