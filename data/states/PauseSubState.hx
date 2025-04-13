@@ -28,9 +28,16 @@ function create() {
     }
 }
 
-function postCreate()
-    if (PlayState.SONG.meta.name != "depart") levelDifficulty.visible = false; // lmfao
-    
+function postCreate() {
+    if (PlayState.SONG.meta.name != "depart") {
+        deathCounter.text = "Deaths: " + PlayState.deathCounter; // bf doesnt get "blue balled" here (only in depart)
+        deathCounter.x = FlxG.width - (deathCounter.width + 20);
+        levelDifficulty.visible = false;
+    }
+    else
+        deathCounter.visible = false;
+}
+
 function postUpdate() {
     if (controls.ACCEPT) {
         if (menuItems[curSelected] == "Skip Song" || menuItems[curSelected] == "fuck fuck fuck") game.endSong();
@@ -39,4 +46,22 @@ function postUpdate() {
         if (menuItems[curSelected] == "Toggle Botplay") FlxG.save.data.botplay = !FlxG.save.data.botplay;
         if (menuItems[curSelected] == "Toggle Practice Mode") FlxG.save.data.practice = !FlxG.save.data.practice;
     }
+}
+
+function onChangeItem(event:MenuChangeEvent) {
+    event.cancel(false);
+    
+    curSelected = event.value;
+    
+    CoolUtil.playMenuSFX(0, 0.7);
+    
+    for (i => item in grpMenuShit.members) {
+        item.targetY = i - curSelected;
+        
+        if (item.targetY == 0) item.alpha = 1;
+        else
+            item.alpha = 0.6;
+    }
+    
+    trace("select");
 }

@@ -101,6 +101,18 @@ function addWindow(popup:Int = 2) {
     });
 }
 
+function onCountdown(event) {
+    event.spritePath = switch (event.swagCounter) {
+        case 0: null;
+        case 1: 'game/ready-white';
+        case 2: 'game/set-white';
+        case 3: 'game/go';
+    };
+}
+
+function onPlayerHit(event:NoteHitEvent)
+    if (!curBeat >= 680) event.ratingPrefix = "game/score/white_";
+    
 var showLava:Bool = false;
 
 function postUpdate() {
@@ -115,10 +127,20 @@ function postUpdate() {
 
 var goPopups:Bool = false;
 
+function flashBlack() {
+    var flash = new FlxSprite();
+    flash.cameras = [camHUD];
+    flash.makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+    add(flash);
+    
+    FlxTween.tween(flash, {alpha: 0}, 3);
+}
+
 // HARDCODED EVENTS cuz lazy
 function beatHit(curBeat:Int) {
     if (PlayState.SONG.meta.name == "overcooked") {
         blackout.visible = !(curBeat >= 1);
+        if (curBeat == 1) flashBlack();
         borders.visible = (curBeat >= 64);
         showLava = (curBeat >= 128 && curBeat <= 192);
         doIconBop = (curBeat >= 64);
