@@ -10,8 +10,11 @@ var windows:FlxSpriteGroup;
 
 var blackout:FlxSprite;
 var borders:FlxSprite;
+var drainHealth:Bool = false;
 
 function postCreate() {
+    drainHealth = false;
+    
     blackout = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
     if (PlayState.SONG.meta.name == "overcooked") add(blackout);
     blackout.cameras = [camHUD];
@@ -58,6 +61,8 @@ function addWindow(popup:Int = 2) {
     closeBtn.updateHitbox();
     add(closeBtn);
     
+    drainHealth = false;
+    
     if (popup == 1) FlxG.sound.play(Paths.sound('errorpopupScary'), 0.7);
     else
         FlxG.sound.play(Paths.sound('errorpopup'), 0.6);
@@ -85,6 +90,8 @@ function addWindow(popup:Int = 2) {
                         closeBtn.x = 6480;
                         closeBtn.kill();
                     }
+                    
+                    drainHealth = false;
                 }
             }
             catch (e:Error) { // cne hscript for some reason needs the catch to be like this. why? idk...
@@ -94,6 +101,18 @@ function addWindow(popup:Int = 2) {
     });
 }
 
+var showLava:Bool = false;
+
+function postUpdate() {
+    lava.visible = showLava;
+    
+    for (char in [dad, boyfriend]) {
+        if (showLava) char.colorTransform.color = FlxColor.BLACK;
+        else
+            char.setColorTransform();
+    }
+}
+
 var goPopups:Bool = false;
 
 // HARDCODED EVENTS cuz lazy
@@ -101,7 +120,7 @@ function beatHit(curBeat:Int) {
     if (PlayState.SONG.meta.name == "overcooked") {
         blackout.visible = !(curBeat >= 1);
         borders.visible = (curBeat >= 64);
-        lava.visible = (curBeat >= 128 && curBeat <= 192);
+        showLava = (curBeat >= 128 && curBeat <= 192);
         doIconBop = (curBeat >= 64);
         
         if (curBeat >= 264 && curBeat <= 680) {
@@ -112,6 +131,8 @@ function beatHit(curBeat:Int) {
             FlxG.mouse.visible = false;
             goPopups = false;
         }
+        
+        if (drainHealth && !player.cpu) health -= 0.001;
     }
 }
 
