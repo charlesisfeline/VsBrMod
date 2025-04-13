@@ -7,14 +7,9 @@ function onGamePause(e) {
     pauseGameNoGitaroo();
 }
 
-function onFocusLost() {
-    #if VIDEO_CUTSCENES
-    if (!VideoCutscene.video != null) if (!VideoCutscene.video.isPlaying) pauseGameNoGitaroo();
-    else
-        pauseGameNoGitaroo();
-    #end
-}
-
+function onFocusLost()
+    pauseGameNoGitaroo();
+    
 function pauseGameNoGitaroo() {
     persistentUpdate = false;
     persistentDraw = true;

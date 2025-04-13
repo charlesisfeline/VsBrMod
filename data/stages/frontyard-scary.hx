@@ -132,7 +132,7 @@ function beatHit(curBeat:Int) {
             goPopups = false;
         }
         
-        if (drainHealth && !player.cpu) health -= 0.001;
+        if (drainHealth && !player.cpu) health -= 0.01;
     }
 }
 
