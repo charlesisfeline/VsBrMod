@@ -38,6 +38,8 @@ function create() {
     add(funkay);
     
     if (PlayState.SONG.meta.name.toLowerCase() == "overcooked") {
+        funkay.visible = false;
+        
         funni = new FlxSprite(0, 0);
         funni.frames = Paths.getSparrowAtlas('loading/funkay_overcooked');
         
@@ -50,12 +52,12 @@ function create() {
         add(funni);
     }
     
-    loadBar = new FlxSprite(0, FlxG.height - 20).makeGraphic(FlxG.width, 10, 0xFFff16d2);
+    loadBar = new FlxSprite(0, FlxG.height - 20).makeGraphic(5, 10, 0xFFff16d2);
     if (PlayState.SONG.meta.name.toLowerCase() == "overcooked") loadBar.color = FlxColor.RED;
     loadBar.screenCenter(FlxAxes.X);
     add(loadBar);
     
-    new FlxTimer().start(1.5, (tmr:FlxTimer) -> FlxTween.tween(black, {alpha: 0}, 0.5, {onComplete: (tween:FlxTween) -> loadAssets()}));
+    new FlxTimer().start(FlxG.random.float(1.2, 1.7), (tmr:FlxTimer) -> FlxTween.tween(black, {alpha: 0}, 0.5, {onComplete: (tween:FlxTween) -> loadAssets()}));
     
     MusicBeatState.skipTransOut = true;
     
@@ -69,7 +71,7 @@ function update(elapsed:Float) {
     
     if (FlxG.keys.justPressed.ESCAPE) FlxG.switchState(PlayState.isStoryMode ? new StoryMenuState() : new FreeplayState());
     
-    loadBar.scale.x = FlxMath.lerp(loadBar.scale.x, quoteUnqouteLoad, 0.50);
+    loadBar.scale.x = FlxMath.lerp(loadBar.scale.x, quoteUnquoteLoad, 0.50);
     
     if (doneLoading) {
         goToSong();
@@ -82,8 +84,10 @@ function destroy() {
 }
 
 function loadAssets() { // pfffffffft get trolled!!!!!! this isnt an actual loading screen!!!!!!! fuck you!!!!!!!!!!!!!!!!!!!!!1
-    for (sprite in 0...FlxG.random.int(8, 21))
-        quoteUnquoteLoad += FlxG.random.float(0.1, 0.225);
+    var quoteUnquoteLoad = 0;
+    
+    for (sprite in 0...FlxG.random.int(10, 32))
+        quoteUnquoteLoad += FlxG.random.float(0.1, 0.32);
         
     new FlxTimer().start(quoteUnquoteLoad, (tmr:FlxTimer) -> {
         loadBar.scale.x = FlxMath.lerp(loadBar.scale.x, 2, 0.50);

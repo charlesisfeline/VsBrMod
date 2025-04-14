@@ -16,8 +16,6 @@ var windowName = 'fnf vs br';
 trace("oh cool reloaded global wowzers!1!! . " + Math.random());
 WindowUtils.winTitle = windowName;
 function new() {
-    trace("hi");
-    
     window.title = "Made with Codename Engine!";
     
     // shortcut to FlxG.save.data (for shortening code)
@@ -50,10 +48,7 @@ function update(elapsed:Float) {
     if (FlxG.keys.justPressed.F5) FlxG.resetState(); // RESETTING STATES
     
     // here for debugging purposes i think
-    if (FlxG.keys.justPressed.F6) {
-        trace("cons");
-        NativeAPI.allocConsole();
-    }
+    if (FlxG.keys.justPressed.F6) NativeAPI.allocConsole();
     
     performFullscreen();
 }
@@ -67,18 +62,14 @@ function preStateSwitch() {
         && (FlxG.state.subState == null ? true : !Std.isOfType(FlxG.state.subState, GameOverSubstate)
             && !Std.isOfType(FlxG.state.subState, PauseSubState)) // ! CHECK IN GAME/NOT IN GAME OVER
         && Std.isOfType(FlxG.game._requestedState, PlayState)); // ! CHECK STORY MODE/NEXT SONG
-    // gorefield again
+    // taken from gorefield again
     if (Std.isOfType(FlxG.state, PlayState)
         && (FlxG.state.subState == null ? true : !Std.isOfType(FlxG.state.subState, GameOverSubstate)
             && !Std.isOfType(FlxG.state.subState, PauseSubState)) // ! CHECK IN GAME/NOT IN GAME OVER
         && Std.isOfType(FlxG.game._requestedState, PlayState)) // ! CHECK STORY MODE/NEXT SONG
     {
-        trace("loading cools");
         FlxG.switchState(new ModState("LoadingState"));
         return;
-    }
-    else {
-        trace("no load oops");
     } // LOADING SCREEN
     
     var stateClassName = Type.getClassName(Type.getClass(FlxG.game._requestedState));
@@ -86,12 +77,9 @@ function preStateSwitch() {
     
     for (redirect in redirectStates.keys()) {
         if (reqStateName == redirect) {
-            trace("YEP");
             var daModState = redirectStates.get(redirect);
             FlxG.game._requestedState = new ModState(daModState, redirectStateData.get(daModState));
         }
-        else
-            trace("die");
     }
 }
 
