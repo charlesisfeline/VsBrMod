@@ -107,6 +107,8 @@ function postUpdate(elapsed) {
         menuInfomation.text = curQuote;
     }
     
+    if (FlxG.keys.justPressed.THREE) FlxG.switchState(new ModState("CreditsRoll"));
+    
     if (FlxG.keys.justPressed.EIGHT) FlxG.switchState(new ModState("EndState"));
     
     if (FlxG.keys.justPressed.NINE) FlxG.switchState(new ModState("LoadingState"));
