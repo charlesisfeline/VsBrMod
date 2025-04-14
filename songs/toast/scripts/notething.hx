@@ -2,10 +2,19 @@ function transitionToBrNotes() {
     changePlayerSkin("NOTE_assets_br");
     changeCPUSkin("NOTE_assets_br");
     
-    for (vcrTo in [scoreTxt, missesTxt, accuracyTxt]) {
-        vcrTo.font = Paths.font("roboto.ttf");
-        vcrTo.size = 16;
-        vcrTo.borderSize = 2.25;
+    for (i in [scoreTxt, missesTxt, accuracyTxt]) {
+        i.font = Paths.font("roboto.ttf");
+        i.size = 16;
+        i.borderSize = 2.25;
+        i.size *= upscaleAmt;
+        i.scale.x /= upscaleAmt;
+        i.scale.y /= upscaleAmt;
+        i.antialiasing = Options.antialiasing;
+        i.y -= 21;
+        i.borderSize *= upscaleAmt;
+        i.fieldWidth += 1000;
+        i.x -= 1000 / 2;
+        i.borderQuality = 100;
     }
 }
 
