@@ -59,8 +59,6 @@ function update(elapsed:Float) {
 }
 
 function preStateSwitch() {
-    trace("oops");
-    
     FlxG.camera.bgColor = 0xFF000000;
     
     #if SHOW_BUILD_ON_FPS Main.framerateSprite.codenameBuildField.text = "Vs. br v1.0 DEV/PLAYTESTER BUILD\nCodename Engine Alpha\npls dont leak pls dont leak"; #end
@@ -68,14 +66,12 @@ function preStateSwitch() {
     trace(Std.isOfType(FlxG.state, PlayState)
         && (FlxG.state.subState == null ? true : !Std.isOfType(FlxG.state.subState, GameOverSubstate)
             && !Std.isOfType(FlxG.state.subState, PauseSubState)) // ! CHECK IN GAME/NOT IN GAME OVER
-        && Std.isOfType(FlxG.game._requestedState, PlayState)
-        && PlayState.isStoryMode); // ! CHECK STORY MODE/NEXT SONG
+        && Std.isOfType(FlxG.game._requestedState, PlayState)); // ! CHECK STORY MODE/NEXT SONG
     // gorefield again
     if (Std.isOfType(FlxG.state, PlayState)
         && (FlxG.state.subState == null ? true : !Std.isOfType(FlxG.state.subState, GameOverSubstate)
             && !Std.isOfType(FlxG.state.subState, PauseSubState)) // ! CHECK IN GAME/NOT IN GAME OVER
-        && Std.isOfType(FlxG.game._requestedState, PlayState)
-        && PlayState.isStoryMode) // ! CHECK STORY MODE/NEXT SONG
+        && Std.isOfType(FlxG.game._requestedState, PlayState)) // ! CHECK STORY MODE/NEXT SONG
     {
         trace("loading cools");
         FlxG.switchState(new ModState("LoadingState"));

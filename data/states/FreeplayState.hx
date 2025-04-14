@@ -82,7 +82,7 @@ function onSelect(event) {
     if (songs[curSelected].difficulties[curDifficulty] == "BF") PlayState.loadSong(event.song, "BF", event.opponentMode, event.coopMode);
     else
         PlayState.loadSong(event.song, event.difficulty, event.opponentMode, event.coopMode);
-    FlxG.switchState(new PlayState());
+    FlxG.switchState(new ModState("LoadingState"));
 }
 
 function onChangeDiff(e) {

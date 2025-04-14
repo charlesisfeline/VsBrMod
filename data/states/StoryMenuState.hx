@@ -55,7 +55,7 @@ function onWeekSelect(event) {
             
         PlayState.loadWeek(event.week, event.difficulty);
         
-        new FlxTimer().start(1, (tmr:FlxTimer) -> FlxG.switchState(new PlayState()));
+        new FlxTimer().start(1, (tmr:FlxTimer) -> FlxG.switchState(new ModState("LoadingState")));
         weekSprites.members[event.weekID].startFlashing();
     }
 }
