@@ -16,14 +16,15 @@ function postCreate() {
     FlxG.mouse.load(Paths.image("ui/cursor"));
     
     for (option in main.members) {
-        if (option.desc == "Modify mod options here"
-            || option.desc == "Use this menu to reset save data or engine settings.") main.members.remove(option);
+        if (option.desc == "Modify mod options here") main.members.remove(option);
     }
     
-    main.add(new TextOption("DANGER ZONE DONT TOUCH", "", function() {
-        var menu = new OptionsScreen("DANGER ZONE DONT TOUCH", "", [new TextOption("Reset Save Data", "", () -> openWarning())]);
-        optionsTree.add(menu);
-    }));
+    /*
+        main.add(new TextOption("DANGER ZONE DONT TOUCH", "", function() {
+            var menu = new OptionsScreen("DANGER ZONE DONT TOUCH", "", [new TextOption("Reset Save Data", "", () -> openWarning())]);
+            optionsTree.add(menu);
+        }));
+     */
     
     background = new FlxSprite(0, 0).loadGraphic(Paths.image('menus/menuDesat'));
     background.color = FlxColor.ORANGE;

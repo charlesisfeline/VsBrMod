@@ -20,18 +20,21 @@ function new() {
     
     window.title = "Made with Codename Engine!";
     
+    // shortcut to FlxG.save.data (for shortening code)
+    var saveData = FlxG.save.data;
+    
     // makes all of these options automatically set to their default values
-    FlxG.save.data.playbackRate ??= 1;
-    FlxG.save.data.midsongPlaybackRate ??= false;
-    FlxG.save.data.practice ??= false;
-    FlxG.save.data.botplay ??= false;
-    FlxG.save.data.showFPS ??= true;
-    FlxG.save.data.hitWin ??= 250;
-    FlxG.save.data.comboDisplay ??= true;
-    FlxG.save.data.skipLoading ??= false;
-    FlxG.save.data.fullscreen ??= false;
-    FlxG.save.data.hitsoundStyle ??= "none";
-    FlxG.save.data.freeplayUnlocked ??= true;
+    saveData.playbackRate ??= 1;
+    saveData.midsongPlaybackRate ??= false;
+    saveData.practice ??= false;
+    saveData.botplay ??= false;
+    saveData.showFPS ??= true;
+    saveData.hitWin ??= 250;
+    saveData.comboDisplay ??= true;
+    saveData.skipLoading ??= false;
+    saveData.fullscreen ??= false;
+    saveData.hitsoundStyle ??= "none";
+    saveData.freeplayUnlocked ??= true;
     
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
 }
