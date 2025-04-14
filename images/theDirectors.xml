@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="theDirectors.png" width="1675" height="629">
+	<SubTexture name="idle0000" x="8" y="8" width="549" height="611" frameX="-0" frameY="-3" frameWidth="549" frameHeight="614"/>
+	<SubTexture name="idle0001" x="8" y="8" width="549" height="611" frameX="-0" frameY="-3" frameWidth="549" frameHeight="614"/>
+	<SubTexture name="idle0002" x="1122" y="8" width="545" height="613" frameX="-3" frameY="-0" frameWidth="549" frameHeight="614"/>
+	<SubTexture name="idle0003" x="1122" y="8" width="545" height="613" frameX="-3" frameY="-0" frameWidth="549" frameHeight="614"/>
+	<SubTexture name="idle0004" x="565" y="8" width="549" height="611" frameX="-0" frameY="-3" frameWidth="549" frameHeight="614"/>
+	<SubTexture name="idle0005" x="565" y="8" width="549" height="611" frameX="-0" frameY="-3" frameWidth="549" frameHeight="614"/>
+	<SubTexture name="idle0006" x="1122" y="8" width="545" height="613" frameX="-3" frameY="-0" frameWidth="549" frameHeight="614"/>
+	<SubTexture name="idle0007" x="1122" y="8" width="545" height="613" frameX="-3" frameY="-0" frameWidth="549" frameHeight="614"/>
+</TextureAtlas>

@@ -10,8 +10,9 @@ var startHeight = FlxG.height;
 var paddin = 24;
 var headerSize:Float = 28;
 var creditSize:Float = 20;
-var baseSpeed = 100.0;
-var fastSpeed = baseSpeed * 4.0;
+var imageSize:Float = 24;
+var baseSpeed = 45.0;
+var fastSpeed = baseSpeed * 6.0;
 var pauseSpeed = 0.0;
 
 // be careful when modifying beyond this code pls
@@ -64,18 +65,39 @@ function buildCreditsGroup() {
             y += creditSize + entry.textField.numLines;
         }
         
-        y += creditSize * 2.5;
+        if (entry.directors != null && entry.directors == true) {
+            var directors:FlxSprite = new FlxSprite(0, y - 32);
+            directors.frames = Paths.getSparrowAtlas('theDirectors');
+            
+            directors.animation.addByPrefix('idle', 'idle', 24, true);
+            directors.animation.play('idle');
+            
+            directors.scale.set(0.45, 0.45);
+            directors.updateHitbox();
+            directors.screenCenter(FlxAxes.X);
+            directors.antialiasing = Options.antialiasing;
+            
+            creditGroup.add(directors);
+            
+            y += imageSize;
+        }
+        
+        y += creditSize * 3;
     }
 }
 
 var creditPeople:Array<String> = [];
 
-function buildCreditsLine(text:String, yPos:Float, header:Bool) {
+function buildCreditsLine(text:String, yPos:Float, header:Bool = false) {
     var size = header ? headerSize : creditSize;
     
-    var creditsLine = new FunkinText(0, yPos, 0, text, size);
+    var creditsLine = new FunkinText(0, yPos, FlxG.width - (paddin * 2), text, size);
     
-    creditsLine.screenCenter(FlxAxes.X);
+    if (header) creditsLine.font = Paths.font("robotoBl.ttf");
+    else
+        creditsLine.font = Paths.font("roboto.ttf");
+    // creditsLine.screenCenter(FlxAxes.X);
+    creditsLine.alignment = "left";
     creditsLine.antialiasing = Options.antialiasing;
     
     return creditsLine;

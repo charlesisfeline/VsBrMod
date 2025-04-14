@@ -11,6 +11,154 @@
 			]
 		},
 		{
+			"header": ""
+		},
+		{
+			"header": "",
+			"body": [{ "line": "+ oh look a player" }]
+		},
+		{
+			"header": "",
+			"body": [{ "line": "- who" }]
+		},
+		{
+			"header": "",
+			"body": [
+				{ "line": "+ yknow, the one who beat the song Cracked???" }
+			]
+		},
+		{
+			"header": "",
+			"body": [{ "line": "- oh" }]
+		},
+		{
+			"header": "",
+			"body": [
+				{
+					"line": "+ they have reached to a point they can read our thoughts now"
+				}
+			]
+		},
+		{
+			"header": "",
+			"body": [{ "line": "- yeah im fine with that" }]
+		},
+		{
+			"header": "",
+			"body": [{ "line": "+ same, at least they didnt give up..." }]
+		},
+		{
+			"header": "",
+			"body": [
+				{
+					"line": "- well i need to know HOW theyre reading our thoughts"
+				}
+			]
+		},
+		{
+			"header": "",
+			"body": [
+				{
+					"line": "+ ermmm i have no idea-"
+				}
+			]
+		},
+		{
+			"header": "",
+			"body": [
+				{
+					"line": "-  maybe theyre just readin them just thru the screen"
+				}
+			]
+		},
+		{
+			"header": "",
+			"body": [
+				{
+					"line": "+ oh.."
+				}
+			]
+		},
+		{
+			"header": "",
+			"body": [
+				{
+					"line": "-  i mean sure, words are pretty important around here,\nu need it for just about everything"
+				}
+			]
+		},
+		{
+			"header": "",
+			"body": [
+				{
+					"line": "+ true"
+				}
+			]
+		},
+		{
+			"header": "",
+			"body": [
+				{
+					"line": "+  ...wait."
+				},
+				{
+					"line": "+ ..."
+				}
+			]
+		},
+		{
+			"header": "",
+			"body": [
+				{
+					"line": "+  you're the player, right?"
+				}
+			]
+		},
+		{
+			"header": "",
+			"body": [
+				{
+					"line": "-  who, me?"
+				}
+			]
+		},
+		{
+			"header": "",
+			"body": [
+				{
+					"line": "+  no no no no no no no no no no no no no no no no no no no no no no no no."
+				},
+				{
+					"line": "+  im talking to the one seeing this screen"
+				}
+			]
+		},
+		{
+			"header": "",
+			"body": [
+				{
+					"line": "-  oh..."
+				},
+				{
+					"line": "-  tell them to wake up"
+				}
+			]
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": "Vs. br Team",
+			"body": [
+				{
+					"line": "\nwe have more people in the team but were saving them for v2 ok"
+				}
+			]
+		},
+		{
 			"header": "Direction",
 			"body": [{ "line": "charlesisfeline" }, { "line": "BreadBoyoo" }]
 		},
@@ -20,7 +168,8 @@
 				{ "line": "ArloAreebs" },
 				{ "line": "Brumbo" },
 				{ "line": "charlesisfeline" },
-				{ "line": "Antydote" }
+				{ "line": "Antydote (eevylution)" },
+				{ "line": "Friedchicken" }
 			]
 		},
 		{
@@ -63,10 +212,24 @@
 			"body": [{ "line": "BreadBoyoo" }, { "line": "charlesisfeline" }]
 		},
 		{
+			"header": "--V2 TEAM--",
+			"body": [
+				{ "line": "GiO" },
+				{
+					"line": "Micheal \"Shaggy on the Mic\" Myers"
+				},
+				{ "line": "Gold!" },
+				{ "line": "Isaiah Mods Official" },
+				{ "line": "TheAnimateMan" }
+			]
+		},
+		{
 			"header": "Special Thanks",
 			"body": [
 				{ "line": "Sebastian Riders" },
 				{ "line": "Tice" },
+				{ "line": "PaperKitty" },
+				{ "line": "Towodile" },
 				{ "line": "charles' fingers" },
 				{
 					"line": "The guys who made the scripts (check credits menu)"
@@ -81,14 +244,16 @@
 			"body": [
 				{ "line": "bbpanzu" },
 				{ "line": "cyborg henry" },
+				{ "line": "Diego! (MarioYoshi7)" },
+				{ "line": "NekoDylan" },
 				{ "line": "ItsToppy" },
-				{ "line": "TheAnimateMan" },
 				{ "line": "HayzTheArtist (formerly Foxa)" },
 				{ "line": "Roblox (its freeeeee)" }
 			]
 		},
 		{
-			"header": ""
+			"header": "",
+			"directors": true
 		},
 		{
 			"header": ""
@@ -130,52 +295,7 @@
 			"header": ""
 		},
 		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
+			"header": "hey."
 		},
 		{
 			"header": ""
@@ -214,27 +334,6 @@
 			"header": ""
 		},
 		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
 			"header": "i need to tell you one thing"
 		},
 		{
@@ -247,43 +346,7 @@
 			"header": ""
 		},
 		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
 			"header": "please"
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
-		},
-		{
-			"header": ""
 		},
 		{
 			"header": ""

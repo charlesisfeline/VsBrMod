@@ -1,5 +1,5 @@
 <!DOCTYPE codename-mod-credits>
-<menu name="Vs Br Credits" desc="We live here, lol. &#xA;">
+<menu name="Vs Br Team" desc="We live here, lol. &#xA;">
 	<credit name="charlesisfeline" icon="charles" desc="Director, Composer, Coder, Animator, and CEO of Hungry :3" url="https://www.youtube.com/@charlescatyt" color="#ff0000" />
 	<credit name="BreadBoyoo" icon="breadboyoo" desc="Director, Artist, VA, Crack Supplier" url="https://www.youtube.com/@breadwithouttheead" color="#d4783b" />
 	<credit name="TheAnimateMan" icon="animate" desc="Composer, Artist, Animator" url="https://www.youtube.com/@TheAnimateMan0" />
@@ -22,9 +22,10 @@
 </menu>
 <menu name="Contributors" desc="You know who else-">
 	<credit name="Tice" icon="tice" desc="Creator of rb" url="https://www.youtube.com/@TiceTiceTice" />
-	<credit name="Sebastain" icon="seb" desc="Made Sprites for Mini Mike (circa March 2021)" url="https://www.youtube.com/@sebastianridings8536" />
-	<credit name="Towodile" desc="Depart Song (lol)" icon="towo" url="https://www.youtube.com/@TowoMusic" />
-	<credit name="PaperKitty" icon="paperkitty" desc="nut shivering backbeat" url="https://www.youtube.com/@TiceTiceTice" />
+	<credit name="Sebastain" icon="seb" desc="Made sprites for Mini Mike (circa March 2021)" url="https://www.youtube.com/@sebastianridings8536" />
+	<credit name="Towodile" desc="Depart song (lol)" icon="towo" url="https://www.youtube.com/@TowoMusic" />
+	<credit name="PaperKitty" icon="paperkitty" desc="nut shivering backbeat" url="https://www.youtube.com/channel/UC9ORKA6WXIaa6oxlRLBJzrg" />
+	<credit name="You!" icon="you" desc="For playing the mod!" />
 </menu>
 <menu name="Script Credits" desc="They're here for a reason, obviously. I'd get killed if I don't include this page so, there you go.">
 	<credit name="lunarcleint" icon="lunar" desc="some of these uhhhhhh events and scripts???????" url="https://github.com/lunarcleint" />
