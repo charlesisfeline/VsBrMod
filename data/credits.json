@@ -1,336 +1,331 @@
 {
-    "entries": [
-        {
-      "header": "Vs. br",
-      "body": [
-        { "line": "A FNF mod created by" },
-        { "line": "charlesisfeline and BreadBoyoo" },
-{ "line": "\nwe have more people in the team but were saving them for v2 ok" }
-      ]
-    },
-        {
-            "header": "Direction",
-            "body": [
-                { "line": "charlesisfeline" },
-                { "line": "BreadBoyoo" }
-            ]
-        },
-        {
-            "header": "Music Production",
-            "body": [
-                { "line": "ArloAreebs" },
-{ "line": "Brumbo" },
-{ "line": "charlesisfeline" },
-                { "line": "Antydote" }
-            ]
-        },
-        {
-            "header": "Artists and Animation",
-            "body": [
-                { "line": "charlesisfeline" },
-                { "line": "BreadBoyoo" },
-{ "line": "ArloAreebs" },
-                { "line": "CosmosProductions" },
-{ "line": "Keith" },
-                { "line": "BreadBoyoo" }
-            ]
-        },
-        {
-            "header": "Charting",
-            "body": [
-                { "line": "charlesisfeline" },
-{ "line": "ArloAreebs" },
-{ "line": "evilalex5" }
-            ]
-        },
-        {
-            "header": "Programming Lead",
-            "body": [
-                { "line": "charlesisfeline" }
-            ]
-        }
-{
-      "header": "Cutscene Animation",
-      "body": [
-        { "line": "BreadBoyoo"},
-{ "line": "charlesisfeline"},
-        { "line": "CosmoProductions"}
-      ]
-    },
-    {
-      "header": "Cutscene Cleanup",
-      "body": [
-        { "line": "charlesisfeline"}
-      ]
-    },{
-      "header": "Gameplay Design",
-      "body": [
-        { "line": "BreadBoyoo" },
-        { "line": "charlesisfeline" }
-      ]
-    },
-{
-            "header": "Special Thanks",
-            "body": [
-              { "line": "Sebastian Riders" },
-              { "line": "Tice" },
-{ "line": "charles' fingers" },
-              { "line": "The guys who made the scripts (check credits menu)" },
-              { "line": "Codename Crew" },
-              { "line": "The Funkin' Crew Inc." },
-              { "line": "and You!" }
-            ]
-          },
-{
-      "header": "Charles (and Bready) would like to specially thank",
-      "body": [
- { "line": "bbpanzu" },
-        { "line": "cyborg henry" },
-        { "line": "ItsToppy" },
-        { "line": "TheAnimateMan" },
-        { "line": "HayzTheArtist (formerly Foxa)" },
-        { "line": "Roblox (its freeeeee)" }
-      ]
-    },
-        {
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-        {
-            "header": "what are you still doing here"
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": "i need to tell you one thing"
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": "please"
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": "let me say it"
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": ""
-        },
-{
-            "header": "get in the main menu. i have smth for ya"
-        },
-        {
-            "header": "- charlesisfeline"
-        }
-    ]
+	"entries": [
+		{
+			"header": "Vs. br",
+			"body": [
+				{ "line": "A FNF mod created by" },
+				{ "line": "charlesisfeline and BreadBoyoo" },
+				{
+					"line": "\nwe have more people in the team but were saving them for v2 ok"
+				}
+			]
+		},
+		{
+			"header": "Direction",
+			"body": [{ "line": "charlesisfeline" }, { "line": "BreadBoyoo" }]
+		},
+		{
+			"header": "Music Production",
+			"body": [
+				{ "line": "ArloAreebs" },
+				{ "line": "Brumbo" },
+				{ "line": "charlesisfeline" },
+				{ "line": "Antydote" }
+			]
+		},
+		{
+			"header": "Artists and Animation",
+			"body": [
+				{ "line": "charlesisfeline" },
+				{ "line": "BreadBoyoo" },
+				{ "line": "ArloAreebs" },
+				{ "line": "CosmosProductions" },
+				{ "line": "Keith" },
+				{ "line": "BreadBoyoo" }
+			]
+		},
+		{
+			"header": "Charting",
+			"body": [
+				{ "line": "charlesisfeline" },
+				{ "line": "ArloAreebs" },
+				{ "line": "evilalex5" }
+			]
+		},
+		{
+			"header": "Programming Lead",
+			"body": [{ "line": "charlesisfeline" }]
+		},
+		{
+			"header": "Cutscene Animation",
+			"body": [
+				{ "line": "BreadBoyoo" },
+				{ "line": "charlesisfeline" },
+				{ "line": "CosmoProductions" }
+			]
+		},
+		{
+			"header": "Cutscene Cleanup",
+			"body": [{ "line": "charlesisfeline" }]
+		},
+		{
+			"header": "Gameplay Design",
+			"body": [{ "line": "BreadBoyoo" }, { "line": "charlesisfeline" }]
+		},
+		{
+			"header": "Special Thanks",
+			"body": [
+				{ "line": "Sebastian Riders" },
+				{ "line": "Tice" },
+				{ "line": "charles' fingers" },
+				{
+					"line": "The guys who made the scripts (check credits menu)"
+				},
+				{ "line": "Codename Crew" },
+				{ "line": "The Funkin' Crew Inc." },
+				{ "line": "and You!" }
+			]
+		},
+		{
+			"header": "Charles (and Bready) would like to specially thank",
+			"body": [
+				{ "line": "bbpanzu" },
+				{ "line": "cyborg henry" },
+				{ "line": "ItsToppy" },
+				{ "line": "TheAnimateMan" },
+				{ "line": "HayzTheArtist (formerly Foxa)" },
+				{ "line": "Roblox (its freeeeee)" }
+			]
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": "what are you still doing here"
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": "i need to tell you one thing"
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": "please"
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": "let me say it"
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": ""
+		},
+		{
+			"header": "get in the main menu. i have smth for ya"
+		},
+		{
+			"header": "- charlesisfeline"
+		}
+	]
 }

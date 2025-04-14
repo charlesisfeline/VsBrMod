@@ -1,37 +1,25 @@
-function create()
-{
-    importScript("data/scripts/redirectUtil");
+function onStartSong() {
+    inst.onComplete = _endSong;
+}
+
+function _endSong() {
+    canPause = false;
     
-    trace("works ithink");
-}
-
-function postCreate()
-{
-    inst.onComplete = () ->
-    {
-        // if (PlayState.isStoryMode)
-        customEndFunction();
-        trace("hi again");
-        // FlxG.switchState(new ModState("br/EndState"));
+    inst.volume = 0;
+    vocals.volume = 0;
+    
+    for (strumLine in strumLines.members) {
+        strumLine.vocals.volume = 0;
+        strumLine.vocals.pause();
     }
-}
-
-function customEndFunction()
-{
-    trace("now the song wont end and I can do shit");
-}
-
-function onSongEnd()
-{
-    trace("pls work plsss work");
-    if (PlayState.isStoryMode)
-    {
-        trace("oof");
-        setRedirectStates("StoryMenuState", "EndState", null);
-    }
-    else
-    {
-        trace("aw man");
-        FlxG.switchState(new ModState("EndState"));
-    }
+    
+    inst.pause();
+    vocals.pause();
+    
+    startCutscene('end-', endCutscene, () -> {
+        // if (!PlayState.chartingMode && (PlayState.isStoryMode ? PlayState.storyPlaylist.length == 1 : true))
+        FlxG.switchState(new ModState('CreditsRoll'));
+    });
+    
+    PlayState.storyPlaylist.shift();
 }

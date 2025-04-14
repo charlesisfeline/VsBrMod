@@ -41,7 +41,7 @@ function update(elapsed:Float) {
     if (FlxG.keys.justPressed.ONE && generatedMusic) endSong();
 }
 
-function postUpdate(elasped:Float) {
+function postUpdate(elapsed:Float) {
     if (FlxG.save.data.hitWin != null) Options.hitWindow = FlxG.save.data.hitWin;
     
     if (FlxG.save.data.practice) canDie = canDadDie = false;

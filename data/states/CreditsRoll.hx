@@ -1,11 +1,20 @@
 import flixel.math.FlxMath;
 import flixel.group.FlxSpriteGroup;
 
-// taken from vs ross LOL also tbf its basically kinda like vslice credits soooo
+// taken from vs ross LOL also tbf its basically kinda like vslice credits soooo yeahh
 var creditGroup:FlxSpriteGroup = new FlxSpriteGroup();
 var creditsPath:Array = Json.parse(Assets.getText(Paths.json('../data/credits')));
+
+// the only things i'd recommend to configure
+var startHeight = FlxG.height;
+var paddin = 24;
 var headerSize:Float = 28;
 var creditSize:Float = 20;
+var baseSpeed = 100.0;
+var fastSpeed = baseSpeed * 4.0;
+var pauseSpeed = 0.0;
+
+// be careful when modifying beyond this code pls
 
 function create() {
     if (FlxG.sound.music != null) FlxG.sound.music.stop();
@@ -20,11 +29,14 @@ function create() {
     blackBorder = new FlxSprite().makeSolid(FlxG.width / 3.5, FlxG.height, FlxColor.RED);
     blackBorder.scrollFactor.set();
     blackBorder.cameras = [creditsCam];
+    blackBorder.screenCenter(FlxAxes.X);
+    blackBorder.visible = false;
     add(blackBorder);
     
     creditGroup.cameras = [creditsCam];
-    creditGroup.x = 24;
-    creditGroup.y = 25;
+    creditGroup.x = paddin;
+    creditGroup.y = startHeight;
+    // creditGroup.screenCenter(FlxAxes.X);
     add(creditGroup);
     
     buildCreditsGroup();
@@ -51,6 +63,8 @@ function buildCreditsGroup() {
             
             y += creditSize + entry.textField.numLines;
         }
+        
+        y += creditSize * 2.5;
     }
 }
 
@@ -60,6 +74,7 @@ function buildCreditsLine(text:String, yPos:Float, header:Bool) {
     var size = header ? headerSize : creditSize;
     
     var creditsLine = new FunkinText(0, yPos, 0, text, size);
+    
     creditsLine.screenCenter(FlxAxes.X);
     creditsLine.antialiasing = Options.antialiasing;
     
@@ -93,13 +108,17 @@ var curCreditY:Float = 25;
 var creditYLimit:Float = 500;
 var curSelected:Int = 0;
 
-function update() {
+function update(elapsed:Float) {
     if (controls.BACK) performTransition(true);
     
-    creditGroup.y = CoolUtil.fpsLerp(creditGroup.y, curCreditY, 0.2);
+    creditGroup.screenCenter(FlxAxes.X);
+    blackBorder.screenCenter(FlxAxes.X);
     
-    if (FlxG.mouse.wheel != 0) curCreditY = FlxMath.bound(curCreditY + (FlxG.mouse.wheel * 20), (-creditGroup.height / 1.65), 25);
-    
+    if (controls.ACCEPT || FlxG.keys.pressed.SPACE) creditGroup.y -= fastSpeed * elapsed;
+    // else if (controls.PAUSE || FlxG.keys.pressed.SHIFT) creditGroup.y -= pauseSpeed * elapsed;
+    else
+        creditGroup.y -= baseSpeed * elapsed;
+        
     if (controls.BACK || hasEnded()) exit();
     
     for (i in creditGroup.members) {
@@ -115,10 +134,12 @@ function update() {
 }
 
 function hasEnded():Bool {
-    return creditsGroup.y < -creditsGroup.height;
+    return creditGroup.y < -creditGroup.height;
 }
 
 function exit():Void {
+    if (FlxG.sound.music != null) FlxG.sound.music.stop();
+    
     // return to main menu, to show that you unlocked freeplay after beating eg week
     FlxG.switchState(new MainMenuState());
 }
