@@ -13,7 +13,6 @@ function postCreate() {
     
     FlxG.camera.bgColor = 0xff000000;
     
-    window.title = "fnf vs br";
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
     
     FlxG.mouse.useSystemCursor = false;

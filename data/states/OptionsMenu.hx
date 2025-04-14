@@ -9,7 +9,7 @@ import lime.graphics.Image;
 function postCreate() {
     DiscordUtil.changePresence("changing options", null);
     
-    window.title = "fnf vs br but in options";
+    window.title = "vs br - but in options";
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
     
     FlxG.mouse.useSystemCursor = false;

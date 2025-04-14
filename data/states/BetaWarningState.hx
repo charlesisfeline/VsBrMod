@@ -1,8 +1,9 @@
 import funkin.backend.MusicBeatState;
 
+import lime.graphics.Image;
+
 function create() {
     #if SHOW_BUILD_ON_FPS Main.framerateSprite.codenameBuildField.text = "Vs. br v1.0 DEV/PLAYTESTER BUILD\nCodename Engine Alpha\npls dont leak pls dont leak"; #end
-    window.title = "fnf vs br";
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
     
     FlxG.mouse.useSystemCursor = false;
@@ -29,7 +30,7 @@ function checkForBr() {
     trace('ok is br there??? ' + isThere);
     
     if (!isThere) {
-        FlxG.stage.window.alert('Did you just delete me?\nok face your fates then :)))', 'fnf vs br');
+        FlxG.stage.window.alert('Did you just delete me?\nok face your fates then :)))', 'vs br');
         Sys.exit(0);
     }
 }

@@ -111,7 +111,6 @@ function destroy() {
     Framerate.debugMode = lastDebugMode;
     Framerate.instance.visible = FlxG.save.data.showFPS;
     
-    WindowUtils.winTitle = "fnf vs br";
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
     
     trace(realFPS.visible);

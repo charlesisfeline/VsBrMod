@@ -24,7 +24,6 @@ function create() {
     DiscordUtil.changePresence("warning screen", null);
     
     #if SHOW_BUILD_ON_FPS Main.framerateSprite.codenameBuildField.text = "Codename Engine Alpha (Vs. br)\nDEV/PLAYTESTER BUILD dont leak!"; #end
-    window.title = "fnf vs br";
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
     
     FlxG.mouse.useSystemCursor = false;

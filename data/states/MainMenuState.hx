@@ -58,7 +58,6 @@ function postCreate() {
     
     FlxG.camera.followLerp = 0;
     
-    window.title = "fnf vs br";
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
     
     if (!FlxG.save.data.freeplayUnlocked) optionShit = ["story mode", "credits", "options"];
@@ -93,7 +92,7 @@ function postCreate() {
     var moreVersionShit:FunkinText = new FunkinText(5, 654, 0, '');
     moreVersionShit.scrollFactor.set();
     add(moreVersionShit);
-    moreVersionShit.text = "fr ni fu: vs br v1.0"; // i sadly cant extend the original versionShit text actually
+    moreVersionShit.text = "fr ni fu: vs br retoasted v1.0"; // i sadly cant extend the original versionShit text actually
     // so i had to work around that like this.
 }
 
@@ -111,7 +110,7 @@ function postUpdate(elapsed) {
     
     if (FlxG.keys.justPressed.EIGHT) FlxG.switchState(new ModState("EndState"));
     
-    if (FlxG.keys.justPressed.NINE) FlxG.switchState(new ModState("LoadingState"));
+    // if (FlxG.keys.justPressed.NINE) FlxG.switchState(new ModState("LoadingState"));
     
     magenta.visible = false; // no
     menuItems.forEach((a:FlxSprite) -> a.x += 350);
