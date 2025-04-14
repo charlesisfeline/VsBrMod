@@ -16,9 +16,9 @@ function create() {
             menuItems.insert(4, 'Toggle Botplay');
             menuItems.insert(5, 'Toggle Practice Mode');
             
-            if (game.inst != null && game.vocals != null) menuItems.insert(7, 'Skip Song');
+            if (game.inst != null && game.vocals != null && PlayState.isStoryMode) menuItems.insert(7, 'Skip Song');
         }
-        else if (game.inst != null && game.vocals != null) menuItems.insert(4, 'fuck fuck fuck');
+        else if (game.inst != null && game.vocals != null && PlayState.isStoryMode) menuItems.insert(4, 'fuck fuck fuck');
     }
     else {
         if (PlayState.SONG.meta.name != "depart") {
