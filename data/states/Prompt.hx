@@ -25,7 +25,7 @@ var cool:String = "";
 var versionShit:FlxText;
 
 function new() {
-    var randomized:String = FlxG.random.getObject(questions)
+    var randomized:String = FlxG.random.getObject(questions);
     
     selectedWord = switch (randomized) {
         case "What's Heavy's favorite food?": "sandvich";
