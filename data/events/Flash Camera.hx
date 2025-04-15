@@ -1,7 +1,6 @@
 var color:FlxColor;
 
-function flash(col:FlxColor, dur:Int)
-{
+function flash(col:FlxColor, dur:Int) {
     var flash = new FlxSprite();
     flash.cameras = [camHUD];
     flash.makeGraphic(FlxG.width, FlxG.height, col);
@@ -10,12 +9,9 @@ function flash(col:FlxColor, dur:Int)
     FlxTween.tween(flash, {alpha: 0}, dur);
 }
 
-function onEvent(e:EventGameEvent)
-{
-    if (e.event.name == "Flash Camera")
-    {
-        var colors = switch (e.event.params[1])
-        {
+function onEvent(e:EventGameEvent) {
+    if (e.event.name == "Flash Camera") {
+        var colors = switch (e.event.params[1]) {
             case 'Black': color = FlxColor.BLACK;
             case 'Blue': color = FlxColor.BLUE;
             case 'Cyan': color = FlxColor.CYAN;
