@@ -1,10 +1,10 @@
 {
-  "opponentModeAllowed": true,
-  "coopAllowed": true,
-  "bpm": 172,
-  "needsVoices": true,
-  "displayName": "You're Mine",
-  "icon": "fred",
-  "name": "youre mine",
-  "color": "#7E1717"
+	"opponentModeAllowed": false,
+	"coopAllowed": false,
+	"bpm": 172,
+	"needsVoices": true,
+	"displayName": "You're Mine",
+	"icon": "fred",
+	"name": "youre mine",
+	"color": "#7E1717"
 }

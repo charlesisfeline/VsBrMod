@@ -1,4 +1,3 @@
 function postCreate() {
-    this.pixelPerfectRender = false; // in case
-    this.pixelPerfectPosition = false;
+    this.pixelPerfectRender = this.pixelPerfectPosition = false; // in case
 }

@@ -31,17 +31,19 @@ function postCreate() {
     
     diffText.visible = false;
     
-    timeTxt = new FunkinText(0, FlxG.height - 60, 400, "X:XX", 32, true);
-    timeTxt.borderSize = 2;
-    timeTxt.alignment = "center";
-    timeTxt.scrollFactor.set();
-    timeTxt.updateHitbox();
-    add(timeTxt);
-    
-    timeBG = new FlxSprite(timeTxt.x + 80, timeTxt.y - 15).makeGraphic(timeTxt.width - 160, timeTxt.height + 40, FlxColor.BLACK);
-    timeBG.scrollFactor.set();
-    timeBG.alpha = 0.6;
-    insert(members.indexOf(timeTxt), timeBG);
+    if (FlxG.save.data.devMode) {
+        timeTxt = new FunkinText(0, FlxG.height - 60, 400, "X:XX", 32, true);
+        timeTxt.borderSize = 2;
+        timeTxt.alignment = "center";
+        timeTxt.scrollFactor.set();
+        timeTxt.updateHitbox();
+        add(timeTxt);
+        
+        timeBG = new FlxSprite(timeTxt.x + 80, timeTxt.y - 15).makeGraphic(timeTxt.width - 160, timeTxt.height + 40, FlxColor.BLACK);
+        timeBG.scrollFactor.set();
+        timeBG.alpha = 0.6;
+        insert(members.indexOf(timeTxt), timeBG);
+    }
 }
 
 function update(elapsed:Float) {

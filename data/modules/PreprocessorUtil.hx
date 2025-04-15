@@ -21,10 +21,8 @@ public static var PreprocessorUtil:T = {
      *
      * @param   jsonPath        The json file path, usually in `data` with the name `preprocessors.json`.
      */
-    setCustomPreprocessors: function(jsonPath:String)
-    {
-        if (!Assets.exists(jsonPath))
-        {
+    setCustomPreprocessors: function(jsonPath:String) {
+        if (!Assets.exists(jsonPath)) {
             trace('setCustomPreprocessors: Preprocessor json "' + jsonPath + '" does not exist!');
             return false;
         }
@@ -39,10 +37,8 @@ public static var PreprocessorUtil:T = {
      *
      * @param   haxeScript        The haxe script to cast to.
      */
-    castProcessorsToScript: function(haxeScript:HScript):Bool
-    {
-        if (haxeScript == null)
-        {
+    castProcessorsToScript: function(haxeScript:HScript):Bool {
+        if (haxeScript == null) {
             trace('castProcessorsToScript: Haxe script does not exist! There is no script to cast to...');
             return false;
         }
@@ -55,8 +51,7 @@ public static var PreprocessorUtil:T = {
 }
 
 // Thanks to my friend Ghostglowdev for this function, I totally forgot Reflect.fields existed
-function __structToMap(struct:Dynamic)
-{
+function __structToMap(struct:Dynamic) {
     var map:Map<String, Dynamic> = [];
     for (key in Reflect.fields(struct))
         map.set(key, Reflect.field(struct, key));

@@ -69,11 +69,12 @@ function new() {
     saveData.botplay ??= false;
     saveData.showFPS ??= true;
     saveData.hitWin ??= 250;
-    saveData.comboDisplay ??= true;
+    saveData.comboDisplay ??= false;
     saveData.skipLoading ??= false;
     saveData.fullscreen ??= false;
     saveData.hitsoundStyle ??= "none";
     saveData.freeplayUnlocked ??= false;
+    saveData.devMode ??= true; // TODO: disable this for release build
     
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
 }
@@ -94,7 +95,7 @@ function update(elapsed:Float) {
     if (FlxG.keys.justPressed.F5) FlxG.resetState(); // RESETTING STATES
     
     // here for debugging purposes i think
-    if (FlxG.keys.justPressed.F6) NativeAPI.allocConsole();
+    if (FlxG.keys.justPressed.F6 && FlxG.save.data.devMode) NativeAPI.allocConsole();
     
     performFullscreen();
 }

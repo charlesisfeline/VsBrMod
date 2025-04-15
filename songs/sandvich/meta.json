@@ -1,12 +1,10 @@
 {
-	"opponentModeAllowed": true,
-	"difficulties": [
-		"HARD"
-	],
+	"opponentModeAllowed": false,
+	"difficulties": ["HARD"],
 	"icon": "sandvich",
 	"parsedColor": -2458044,
 	"name": "sandvich",
-	"coopAllowed": true,
+	"coopAllowed": false,
 	"color": "#DA7E44",
 	"stepsPerBeat": 4,
 	"displayName": "Sandvich",

@@ -102,18 +102,26 @@ function postUpdate(elapsed) {
     FlxG.camera.scroll.x = FlxG.camera.scroll.y = 0;
     FlxG.camera.scroll.set();
     
-    if (FlxG.keys.justPressed.FIVE) {
-        trace(curQuote);
-        curQuote = FlxG.random.getObject(randQuotes);
-        menuInfomation.text = curQuote;
+    if (FlxG.save.data.devMode) {
+        if (FlxG.keys.justPressed.FIVE) {
+            trace(curQuote);
+            curQuote = FlxG.random.getObject(randQuotes);
+            menuInfomation.text = curQuote;
+        }
+        
+        if (FlxG.keys.justPressed.THREE) FlxG.switchState(new ModState("CreditsRoll"));
+        
+        if (FlxG.keys.justPressed.EIGHT) FlxG.switchState(new ModState("EndState"));
     }
     
-    if (FlxG.keys.justPressed.THREE) FlxG.switchState(new ModState("CreditsRoll"));
-    
-    if (FlxG.keys.justPressed.EIGHT) FlxG.switchState(new ModState("EndState"));
-    
-    // if (FlxG.keys.justPressed.NINE) FlxG.switchState(new ModState("LoadingState"));
+    if (FlxG.keys.justPressed.E) openPrompt();
     
     magenta.visible = false; // no
     menuItems.forEach((a:FlxSprite) -> a.x += 350);
+}
+
+function openPrompt() {
+    persistentUpdate = false;
+    
+    openSubState(new ModSubState("Prompt"));
 }

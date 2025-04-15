@@ -1,17 +1,15 @@
 {
 	"opponentModeAllowed": true,
 	"icon": "silly-guitar",
-	"difficulties": [
-		"HARD"
-	],
+	"difficulties": ["HARD"],
 	"parsedColor": -30422,
 	"customValues": {},
 	"color": "#FF892A",
 	"name": "drunken",
-	"coopAllowed": true,
+	"coopAllowed": false,
 	"stepsPerBeat": 4,
 	"displayName": "Drunken",
 	"beatsPerMeasure": 4,
-	"needsVoices": true,
+	"needsVoices": false,
 	"bpm": 160
 }

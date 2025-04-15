@@ -36,7 +36,7 @@ function update(elapsed:Float) {
     
     if (startingSong || !canPause || paused || health <= 0) return;
     
-    if (FlxG.keys.justPressed.ONE && generatedMusic) endSong();
+    if (FlxG.keys.justPressed.ONE && generatedMusic && FlxG.save.data.devMode) endSong();
 }
 
 function postUpdate(elapsed:Float) {

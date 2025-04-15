@@ -14,6 +14,12 @@ function onSongStart() {
     
     songTxt = new FlxText(0, 0, 0, info[0] + "\n" + info[1], fontSize);
     songTxt.screenCenter(FlxAxes.X);
+    songTxt.antialiasing = (PlayState.SONG.meta.name != "yolk"
+        && PlayState.SONG.meta.name != "cracked"
+        && PlayState.SONG.meta.name != "dealer"
+        && PlayState.SONG.meta.name != "depart"
+        && PlayState.SONG.meta.name != "apart"
+        && PlayState.SONG.meta.name != "henry cat");
     songTxt.setFormat(Paths.font("arial.ttf"), fontSize, FlxColor.WHITE, "center", FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
     songTxt.borderSize = 3;
     songTxt.x += 30;
@@ -21,6 +27,8 @@ function onSongStart() {
     if (PlayState.SONG.meta.name != "yolk"
         && PlayState.SONG.meta.name != "cracked"
         && PlayState.SONG.meta.name != "dealer"
+        && PlayState.SONG.meta.name != "depart"
+        && PlayState.SONG.meta.name != "apart"
         && PlayState.SONG.meta.name != "henry cat") songTxt.alpha = 0.6;
         
     songTxt.updateHitbox();
