@@ -1,14 +1,12 @@
 {
-	"opponentModeAllowed": true,
+	"opponentModeAllowed": false,
 	"icon": "br-glitch",
-	"difficulties": [
-		"HARD"
-	],
+	"difficulties": ["HARD"],
 	"parsedColor": -3990504,
 	"customValues": {},
 	"color": "#C31C18",
 	"name": "overcooked",
-	"coopAllowed": true,
+	"coopAllowed": false,
 	"stepsPerBeat": 4,
 	"displayName": "Overcooked",
 	"beatsPerMeasure": 4,

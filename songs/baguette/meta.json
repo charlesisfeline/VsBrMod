@@ -1,10 +1,10 @@
 {
-  "opponentModeAllowed": true,
+  "opponentModeAllowed": false,,
   "difficulties": ["HARD"],
   "icon": "br",
   "parsedColor": -2458044,
   "name": "baguette",
-  "coopAllowed": true,
+  "coopAllowed": false,
   "color": "#DA7E44",
   "stepsPerBeat": 4,
   "displayName": "Baguette",

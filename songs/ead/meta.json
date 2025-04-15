@@ -1,12 +1,10 @@
 {
-	"opponentModeAllowed": true,
-	"difficulties": [
-		"HARD"
-	],
+	"opponentModeAllowed": false,
+	"difficulties": ["HARD"],
 	"icon": "br",
 	"parsedColor": -2458044,
 	"name": "ead",
-	"coopAllowed": true,
+	"coopAllowed": false,
 	"color": "#DA7E44",
 	"stepsPerBeat": 4,
 	"displayName": "Ead",

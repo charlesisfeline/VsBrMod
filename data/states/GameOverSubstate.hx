@@ -6,7 +6,37 @@ import hxvlc.flixel.FlxVideo;
 import flixel.util.FlxTimer;
 
 FlxG.camera.bgColor = 0xff000000;
-if (PlayState.SONG.meta.name == "rb") {
+if (PlayState.SONG.meta.name == "overcooked") {
+    #if VIDEO_CUTSCENES
+    var black = new FlxSprite().makeSolid(FlxG.width, FlxG.height, 0xFF000000);
+    add(black);
+    var video:FlxVideo = new FlxVideo();
+    video.onEndReached.add(function():Void {
+        video.dispose();
+        FlxG.removeChild(video);
+        afterErrors(false);
+    });
+    FlxG.addChildBelowMouse(video);
+    // video.volumeAdjust = 6.0;
+    if (video.load(Paths.video("overcooked_gameover"))) new FlxTimer().start(0.000001, (_) -> video.play());
+    function postCreate()
+        character.visible = false;
+    function update() {
+        lossSFX.volume = 0;
+        if (FlxG.sound.music != null) {
+            FlxG.sound.music.volume = 0;
+            FlxG.sound.music.stop();
+        }
+    }
+    function afterErrors(dontCrash:Bool = false) {
+        new FlxTimer().start(1, () -> {
+            FlxG.sound.play(Paths.soundRandom('voicelines/comeback', 1, 4), 1, false, null, true,
+                () -> if (!dontCrash) Sys.exit()); // how do u actually make the game crash instead of just closing it hmmm
+        });
+    }
+    #end
+}
+else if (PlayState.SONG.meta.name == "rb") {
     #if VIDEO_CUTSCENES
     var dontCrash:Bool = false;
     var black = new FlxSprite().makeSolid(FlxG.width, FlxG.height, 0xFF000000);
@@ -56,7 +86,6 @@ else if (PlayState.SONG.meta.name != "depart") {
     #if VIDEO_CUTSCENES
     var black = new FlxSprite().makeSolid(FlxG.width, FlxG.height, 0xFF000000);
     add(black);
-    #if VIDEO_CUTSCENES
     var video:FlxVideo = new FlxVideo();
     video.onEndReached.add(function():Void {
         video.dispose();
@@ -82,5 +111,4 @@ else if (PlayState.SONG.meta.name != "depart") {
         }
     }
     #end
-    }
-    
+}
