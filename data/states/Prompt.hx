@@ -11,7 +11,7 @@ var theCam:FlxCamera;
 var questions:Array<String> = [
     "What's Heavy's favorite food?",
     "What is \"Br\" backwards?",
-    "YouPoo... It's a me... __!"
+    "YouPoo... It's a me... _______!"
 ];
 
 var answers:Array<String> = ["sandvich", "rb", "melvin"];
@@ -30,7 +30,7 @@ function new() {
     selectedWord = switch (randomized) {
         case "What's Heavy's favorite food?": "sandvich";
         case "What is \"Br\" backwards?": "rb";
-        case "YouPoo... It's a me... __!": "melvin";
+        case "YouPoo... It's a me... _______!": "melvin";
         default: "overcooked";
     }
     
