@@ -20,6 +20,8 @@ var realWord:String = '';
 var position:Int = 0;
 var bg:FlxSprite;
 var txt:FlxText;
+var txt2:FlxText;
+var cool:String = "";
 var versionShit:FlxText;
 
 function new() {
@@ -42,10 +44,15 @@ function new() {
     
     var randomized:String = FlxG.random.getObject(questions);
     
-    txt = new FunkinText(0, 0, 0, randomized, 28);
-    txt.screenCenter();
-    
+    txt = new FunkinText(0, 320, 0, randomized, 28);
+    txt.font = Paths.font("consola.ttf");
+    txt.screenCenter(FlxAxes.X);
     add(txt);
+    
+    txt2 = new FunkinText(0, 420, 0, "", 48);
+    txt2.font = Paths.font("arial.ttf");
+    txt2.screenCenter(FlxAxes.X);
+    add(txt2);
     
     selectedWord = switch (randomized) {
         case "What's Heavy's favorite food?": "sandvich";
@@ -65,7 +72,7 @@ function new() {
         
     trace(realWord);
     
-    versionShit = new FunkinText(0, FlxG.height, 0, "just press B to close this idk", 14);
+    versionShit = new FunkinText(0, FlxG.height, 0, "just press 2 to close this idk", 14);
     versionShit.scrollFactor.set();
     versionShit.screenCenter(FlxAxes.X);
     add(versionShit);
@@ -85,6 +92,7 @@ function update(elapsed:Float) {
         
         if (FlxG.keys.anyJustPressed([FlxKey.fromString(realWord.charAt(position))])) {
             position++;
+            cool += realWord.charAt(position - 1);
             
             if (position >= realWord.length) {
                 FlxG.sound.play(Paths.sound('menu/confirm'));
@@ -98,7 +106,10 @@ function update(elapsed:Float) {
             FlxG.sound.play(Paths.sound("menu/error"));
     }
     
-    if (FlxG.keys.justPressed.B) {
+    txt2.text = cool;
+    txt2.screenCenter(FlxAxes.X);
+    
+    if (FlxG.keys.justPressed.TWO) {
         FlxG.mouse.visible = false;
         close();
     }
