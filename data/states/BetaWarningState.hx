@@ -5,7 +5,7 @@ import lime.graphics.Image;
 import Sys;
 
 function create() {
-    #if SHOW_BUILD_ON_FPS Main.framerateSprite.codenameBuildField.text = "Vs. br v1.0 DEV/PLAYTESTER BUILD\nCodename Engine Alpha\npls dont leak pls dont leak"; #end
+    #if SHOW_BUILD_ON_FPS Main.framerateSprite.codenameBuildField.text = "Vs. br: Retoasted v1.0 DEV/PLAYTESTER BUILD\nCodename Engine\npls dont leak pls dont leak"; #end
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
     
     FlxG.mouse.useSystemCursor = false;

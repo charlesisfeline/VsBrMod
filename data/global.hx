@@ -59,8 +59,6 @@ var randQuotes:Array<String> = [
 
 trace("oh cool reloaded global wowzers!1!! . " + Math.random());
 function new() {
-    window.title = "Made with Codename Engine!";
-    
     // shortcut to FlxG.save.data (for shortening code)
     var saveData = FlxG.save.data;
     
@@ -104,7 +102,7 @@ function update(elapsed:Float) {
 function preStateSwitch() {
     FlxG.camera.bgColor = 0xFF000000;
     
-    #if SHOW_BUILD_ON_FPS Main.framerateSprite.codenameBuildField.text = "Vs. br: Retoasted v1.0 DEV/PLAYTESTER BUILD\nCodename Engine Alpha\npls dont leak pls dont leak"; #end
+    #if SHOW_BUILD_ON_FPS Main.framerateSprite.codenameBuildField.text = "Vs. br: Retoasted v1.0 DEV/PLAYTESTER BUILD\nCodename Engine\npls dont leak pls dont leak"; #end
     
     // taken from gorefield again
     if (Std.isOfType(FlxG.state, PlayState)

@@ -1,0 +1,9 @@
+{
+    "params": [
+        {
+            "name": "the speed (LERPED??)",
+            "type": "String",
+            "defaultValue": "0.05"
+        }
+    ]
+}
