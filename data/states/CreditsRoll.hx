@@ -46,6 +46,8 @@ function create() {
     FlxG.sound.music.fadeIn(6, 0, 0.8);
     
     performTransition(false);
+    
+    FlxG.save.data.freeplayUnlocked = true; // congrats
 }
 
 function buildCreditsGroup() {

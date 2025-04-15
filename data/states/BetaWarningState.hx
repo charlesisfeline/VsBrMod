@@ -2,6 +2,8 @@ import funkin.backend.MusicBeatState;
 
 import lime.graphics.Image;
 
+import Sys;
+
 function create() {
     #if SHOW_BUILD_ON_FPS Main.framerateSprite.codenameBuildField.text = "Vs. br v1.0 DEV/PLAYTESTER BUILD\nCodename Engine Alpha\npls dont leak pls dont leak"; #end
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
@@ -22,11 +24,11 @@ function checkForBr() {
     var isThere = Assets.exists(Paths.getPath("images/characters/br.png"))
         && Assets.exists(Paths.getPath("images/characters/BR_remaster.png"))
         && Assets.exists(Paths.getPath("images/characters/br_but_mad.png"))
-        && Assets.exists(Paths.getPath("images/characters/br_aftermath.png"))
+        && Assets.exists(Paths.getPath("images/characters/brAftermath.png"))
         && Assets.exists(Paths.getPath("images/characters/br.xml"))
         && Assets.exists(Paths.getPath("images/characters/BR_remaster.xml"))
         && Assets.exists(Paths.getPath("images/characters/br_but_mad.xml"))
-        && Assets.exists(Paths.getPath("images/characters/br_aftermath.xml"));
+        && Assets.exists(Paths.getPath("images/characters/brAftermath.xml"));
     trace('ok is br there??? ' + isThere);
     
     if (!isThere) {

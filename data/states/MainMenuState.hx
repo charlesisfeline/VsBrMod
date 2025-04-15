@@ -52,6 +52,8 @@ function new() {
 function postCreate() {
     DiscordUtil.changePresence("the main menu", null);
     
+    FlxG.save.data.freeplayUnlocked = true;
+    
     PlayState.deathCounter = 0;
     
     FlxG.camera.bgColor = 0xFF000000;

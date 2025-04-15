@@ -31,7 +31,7 @@ class SaveUtil {
         saveData.skipLoading ??= false;
         saveData.fullscreen ??= false;
         saveData.hitsoundStyle ??= "none";
-        saveData.freeplayUnlocked ??= true;
+        saveData.freeplayUnlocked ??= false;
         
         curWeek = 0;
     }

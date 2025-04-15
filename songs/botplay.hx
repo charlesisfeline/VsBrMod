@@ -19,8 +19,6 @@ function postCreate() {
     if (PlayState.SONG.meta.name != "depart") botplayTxt.alpha = 0.6;
     add(botplayTxt);
     
-    trace('bootplay ' + (PlayState.SONG.meta.name != "dealer" && PlayState.SONG.meta.name != "overcooked"));
-    
     doBotplay = FlxG.save.data.botplay;
     
     if (PlayState.SONG.meta.name == "feeling b"

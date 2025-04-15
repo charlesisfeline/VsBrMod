@@ -17,12 +17,7 @@ function cheatCodeShit() {
         NativeAPI.allocConsole();
     }
     
-    if (FlxG.keys.justPressed.ANY) {
-        if (controls.DOWN_P) codePress(0x1000);
-        if (controls.UP_P) codePress(0x0100);
-        if (controls.LEFT_P) codePress(0x0001);
-        if (controls.RIGHT_P) codePress(0x0010);
-    }
+    if (controls.BACK) openPrompt();
 }
 
 function codePress(input:Int) {
@@ -36,11 +31,8 @@ function codePress(input:Int) {
     trace("cheat - " + input);
 }
 
-function startCheat() {
-    cheatActive = true;
+function openPrompt() {
+    persistentUpdate = false;
     
-    if (FlxG.random.bool(4)) PlayState.loadSong("melvin", "hard");
-    else
-        PlayState.loadSong("rb", "hard");
-    FlxG.switchState(new PlayState());
+    openSubState(new ModSubState("Prompt"));
 }

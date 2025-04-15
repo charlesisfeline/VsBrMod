@@ -75,7 +75,7 @@ function new() {
     saveData.skipLoading ??= false;
     saveData.fullscreen ??= false;
     saveData.hitsoundStyle ??= "none";
-    saveData.freeplayUnlocked ??= true;
+    saveData.freeplayUnlocked ??= false;
     
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
 }
@@ -106,10 +106,6 @@ function preStateSwitch() {
     
     #if SHOW_BUILD_ON_FPS Main.framerateSprite.codenameBuildField.text = "Vs. br: Retoasted v1.0 DEV/PLAYTESTER BUILD\nCodename Engine Alpha\npls dont leak pls dont leak"; #end
     
-    trace(Std.isOfType(FlxG.state, PlayState)
-        && (FlxG.state.subState == null ? true : !Std.isOfType(FlxG.state.subState, GameOverSubstate)
-            && !Std.isOfType(FlxG.state.subState, PauseSubState)) // ! CHECK IN GAME/NOT IN GAME OVER
-        && Std.isOfType(FlxG.game._requestedState, PlayState)); // ! CHECK STORY MODE/NEXT SONG
     // taken from gorefield again
     if (Std.isOfType(FlxG.state, PlayState)
         && (FlxG.state.subState == null ? true : !Std.isOfType(FlxG.state.subState, GameOverSubstate)
@@ -132,8 +128,6 @@ function preStateSwitch() {
 }
 
 function postStateSwitch() {
-    trace("hi");
-    
     Framerate.debugMode = 1;
     
     if (!FlxG.save.data.showFPS) Framerate.offset.y = 9999;
@@ -157,8 +151,6 @@ function postStateSwitch() {
     
     FlxG.mouse.useSystemCursor = false;
     FlxG.mouse.load(Paths.image("ui/cursor"));
-    
-    trace("help ee");
 }
 
 function performFullscreen() {
