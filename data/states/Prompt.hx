@@ -25,6 +25,17 @@ var cool:String = "";
 var versionShit:FlxText;
 
 function new() {
+    var randomized:String = FlxG.random.getObject(questions)
+    
+    selectedWord = switch (randomized) {
+        case "What's Heavy's favorite food?": "sandvich";
+        case "What is \"Br\" backwards?": "rb";
+        case "YouPoo... It's a me... __!": "melvin";
+        default: "overcooked";
+    }
+    
+    trace(randomized);
+    
     add(parentDisabler = new FunkinParentDisabler());
     
     for (camera in FlxG.cameras.list)
@@ -42,8 +53,6 @@ function new() {
     bg.scrollFactor.set();
     add(bg);
     
-    var randomized:String = FlxG.random.getObject(questions);
-    
     txt = new FunkinText(0, 320, 0, randomized, 28);
     txt.font = Paths.font("consola.ttf");
     txt.screenCenter(FlxAxes.X);
@@ -53,15 +62,6 @@ function new() {
     txt2.font = Paths.font("arial.ttf");
     txt2.screenCenter(FlxAxes.X);
     add(txt2);
-    
-    selectedWord = switch (randomized) {
-        case "What's Heavy's favorite food?": "sandvich";
-        case "What is \"Br\" backwards?": "rb";
-        case "YouPoo... It's a me... __!": "melvin";
-        default: "overcooked";
-    }
-    
-    trace(randomized);
     
     selectedWord = selectedWord.toUpperCase();
     
@@ -125,7 +125,7 @@ function correctLetter(peak:String = "rb") {
     }
 }
 
-function goToSong(name:String = "rb") {
+function goToSong(name:String = "overcooked") {
     PlayState.loadSong(name, "hard");
     
     FlxG.switchState(new PlayState());
