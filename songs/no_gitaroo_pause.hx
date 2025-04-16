@@ -8,7 +8,7 @@ function onGamePause(e) {
 }
 
 function onFocusLost()
-    pauseGameNoGitaroo();
+    if (PlayState.SONG.meta.name != "depart" && PlayState.SONG.meta.name != "overcooked") pauseGameNoGitaroo();
     
 function pauseGameNoGitaroo() {
     persistentUpdate = false;

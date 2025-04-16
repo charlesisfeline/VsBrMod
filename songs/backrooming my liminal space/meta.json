@@ -1,14 +1,17 @@
 {
-	"opponentModeAllowed": false,
-	"difficulties": ["HARD"],
-	"icon": "br-roblox",
-	"parsedColor": -6237697,
-	"name": "backrooming my liminal space",
-	"coopAllowed": false,
-	"color": "#A0D1FF",
-	"stepsPerBeat": 4,
-	"displayName": "Backrooming My Liminal Space",
-	"needsVoices": true,
 	"beatsPerMeasure": 4,
-	"bpm": 125
+	"opponentModeAllowed": false,
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"bpm": 250,
+	"difficulties": [
+		"HARD"
+	],
+	"needsVoices": true,
+	"parsedColor": -6237697,
+	"displayName": "Backrooming My Liminal Space",
+	"icon": "br-roblox",
+	"name": "backrooming my liminal space",
+	"color": "#A0D1FF",
+	"customValues": {}
 }

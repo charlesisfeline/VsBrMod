@@ -6,8 +6,8 @@ function postCreate()
         
 function postUpdate(elapsed) {
     if (PlayState.SONG.meta.name != "toast"
-        || PlayState.SONG.meta.name != "dealer"
-        || PlayState.SONG.meta.name != "depart"
-        || PlayState.SONG.meta.name != "apart"
-        || PlayState.SONG.meta.name != "melvin") scoreTxt.text = "Score: " + FlxStringUtil.formatMoney(songScore, false, true);
+        && PlayState.SONG.meta.name != "dealer"
+        && PlayState.SONG.meta.name != "depart"
+        && PlayState.SONG.meta.name != "apart"
+        && PlayState.SONG.meta.name != "melvin") scoreTxt.text = "Score: " + FlxStringUtil.formatMoney(songScore, false, true);
 }

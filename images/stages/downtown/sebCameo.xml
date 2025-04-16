@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="sebCameo.png" width="483" height="236">
+	<SubTexture name="seb cameo0000" x="8" y="8" width="120" height="205" frameX="-0" frameY="-15" frameWidth="120" frameHeight="220"/>
+<SubTexture name="seb cameo0001" x="8" y="8" width="120" height="205" frameX="-0" frameY="-15" frameWidth="120" frameHeight="220"/>
+	<SubTexture name="seb cameo0002" x="136" y="8" width="113" height="212" frameX="-5" frameY="-8" frameWidth="120" frameHeight="220"/>
+<SubTexture name="seb cameo0003" x="136" y="8" width="113" height="212" frameX="-5" frameY="-8" frameWidth="120" frameHeight="220"/>
+	<SubTexture name="seb cameo0004" x="257" y="8" width="105" height="217" frameX="-4" frameY="-3" frameWidth="120" frameHeight="220"/>
+<SubTexture name="seb cameo0005" x="257" y="8" width="105" height="217" frameX="-4" frameY="-3" frameWidth="120" frameHeight="220"/>
+	<SubTexture name="seb cameo0006" x="370" y="8" width="105" height="220" frameX="-4" frameY="-0" frameWidth="120" frameHeight="220"/>
+<SubTexture name="seb cameo0007" x="370" y="8" width="105" height="220" frameX="-4" frameY="-0" frameWidth="120" frameHeight="220"/>
+<SubTexture name="seb cameo0008" x="370" y="8" width="105" height="220" frameX="-4" frameY="-0" frameWidth="120" frameHeight="220"/>
+<SubTexture name="seb cameo0009" x="370" y="8" width="105" height="220" frameX="-4" frameY="-0" frameWidth="120" frameHeight="220"/>
+<SubTexture name="seb cameo0010" x="370" y="8" width="105" height="220" frameX="-4" frameY="-0" frameWidth="120" frameHeight="220"/>
+<SubTexture name="seb cameo0011" x="370" y="8" width="105" height="220" frameX="-4" frameY="-0" frameWidth="120" frameHeight="220"/>
+</TextureAtlas>

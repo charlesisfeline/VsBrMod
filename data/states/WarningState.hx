@@ -23,7 +23,7 @@ var boyoo:FlxSprite;
 function create() {
     DiscordUtil.changePresence("warning screen", null);
     
-    #if (VSBR_BUILD && SHOW_BUILD_ON_FPS)
+    #if (!VSBR_BUILD && SHOW_BUILD_ON_FPS)
     Main.framerateSprite.codenameBuildField.text = "Vs. br: Retoasted v1.0 DEV/PLAYTESTER BUILD\nCodename Engine\npls dont leak pls dont leak";
     #end
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
