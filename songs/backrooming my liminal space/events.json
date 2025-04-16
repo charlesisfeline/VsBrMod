@@ -1,3 +1,154 @@
 {
-	"events": []
+	"events": [
+		{
+			"params": [
+				"backroomingIntro",
+				"1",
+				"",
+				"",
+				"camHUD/hideHUD",
+				true,
+				true,
+				true,
+				"stage",
+				false,
+				true
+			],
+			"time": 0,
+			"name": "video event"
+		},
+		{
+			"params": [
+				1
+			],
+			"time": 23040,
+			"name": "Camera Movement"
+		},
+		{
+			"params": [
+				0
+			],
+			"time": 25080,
+			"name": "Camera Movement"
+		},
+		{
+			"params": [
+				1
+			],
+			"time": 26880,
+			"name": "Camera Movement"
+		},
+		{
+			"params": [
+				0
+			],
+			"time": 30720,
+			"name": "Camera Movement"
+		},
+		{
+			"params": [
+				1
+			],
+			"time": 38400,
+			"name": "Camera Movement"
+		},
+		{
+			"params": [
+				0
+			],
+			"time": 46080,
+			"name": "Camera Movement"
+		},
+		{
+			"params": [
+				1
+			],
+			"time": 53760,
+			"name": "Camera Movement"
+		},
+		{
+			"params": [
+				0
+			],
+			"time": 61440,
+			"name": "Camera Movement"
+		},
+		{
+			"params": [
+				1
+			],
+			"time": 69120,
+			"name": "Camera Movement"
+		},
+		{
+			"params": [
+				0
+			],
+			"time": 76800,
+			"name": "Camera Movement"
+		},
+		{
+			"params": [
+				1
+			],
+			"time": 84480,
+			"name": "Camera Movement"
+		},
+		{
+			"params": [
+				0
+			],
+			"time": 92160,
+			"name": "Camera Movement"
+		},
+		{
+			"params": [
+				1
+			],
+			"time": 99840,
+			"name": "Camera Movement"
+		},
+		{
+			"params": [
+				1
+			],
+			"name": "Camera Movement",
+			"time": 107520
+		},
+		{
+			"params": [
+				0
+			],
+			"name": "Camera Movement",
+			"time": 109560
+		},
+		{
+			"params": [
+				1
+			],
+			"name": "Camera Movement",
+			"time": 111360
+		},
+		{
+			"params": [
+				0
+			],
+			"name": "Camera Movement",
+			"time": 115200
+		},
+		{
+			"params": [
+				1
+			],
+			"name": "Camera Movement",
+			"time": 122880
+		},
+		{
+			"params": [
+				0
+			],
+			"name": "Camera Movement",
+			"time": 130560
+		}
+	]
 }

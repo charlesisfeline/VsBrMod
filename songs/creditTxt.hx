@@ -13,7 +13,6 @@ function onSongStart() {
     var info = Assets.getText(Paths.file('songs/' + PlayState.SONG.meta.name + '/info.txt')).split("\n");
     
     songTxt = new FlxText(0, 0, 0, info[0] + "\n" + info[1], fontSize);
-    songTxt.screenCenter(FlxAxes.X);
     songTxt.antialiasing = (PlayState.SONG.meta.name != "yolk"
         && PlayState.SONG.meta.name != "cracked"
         && PlayState.SONG.meta.name != "dealer"
@@ -31,6 +30,7 @@ function onSongStart() {
         && PlayState.SONG.meta.name != "apart"
         && PlayState.SONG.meta.name != "henry cat") songTxt.alpha = 0.6;
         
+    songTxt.screenCenter(FlxAxes.X);
     songTxt.updateHitbox();
     
     songTxt.cameras = [camInfo];

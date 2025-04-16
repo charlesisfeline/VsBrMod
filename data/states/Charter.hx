@@ -33,6 +33,9 @@ import funkin.editors.ui.UITopMenu;
 
 import haxe.io.Path;
 
+import DateTools;
+import Date;
+
 for (script in Paths.getFolderContent("data/states/charterItems")) {
     if (Path.extension(script) != "hx") continue;
     script = Path.withoutExtension(script);
