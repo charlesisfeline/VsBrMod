@@ -5,8 +5,7 @@ import lime.graphics.Image;
 
 var endingImage:FlxSprite;
 
-function create()
-{
+function create() {
     importScript("data/scripts/redirectUtil");
     
     trace("read");
@@ -36,7 +35,6 @@ function create()
     CoolUtil.playMusic(Paths.music("gameOver"), false, 1, true, 100);
 }
 
-function update()
-{
-    if (controls.BACK || controls.ACCEPT) FlxG.switchState(new StoryMenuState());
+function update() {
+    if (controls.BACK || controls.ACCEPT #if mobile || TouchInput.BACK() #end) FlxG.switchState(new StoryMenuState());
 }

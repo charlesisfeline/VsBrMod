@@ -60,7 +60,14 @@ function create() {
 }
 
 function update(elapsed:Float) {
-    if (FlxG.keys.justPressed.B) {
+    var accepted:Bool = FlxG.keys.justPressed.B;
+    
+    #if mobile
+    for (touch in FlxG.touches.list)
+        if (touch.justPressed) accepted = true;
+    #end
+    
+    if (accepted) {
         StoryMenuState.canSelect = true;
         FlxTween.tween(FlxG.sound.music, {pitch: 1}, 1, {ease: FlxEase.quadOut});
         FlxG.sound.play(Paths.sound("menu/cancel"));

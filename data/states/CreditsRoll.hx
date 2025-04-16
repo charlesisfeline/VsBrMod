@@ -133,18 +133,23 @@ var creditYLimit:Float = 500;
 var curSelected:Int = 0;
 
 function update(elapsed:Float) {
-    if (controls.BACK) performTransition(true);
+    if (controls.BACK || hasEnded()) performTransition(true);
     
     creditGroup.screenCenter(FlxAxes.X);
     blackBorder.screenCenter(FlxAxes.X);
+    
+    var accepted:Bool = (controls.ACCEPT || FlxG.keys.pressed.SPACE);
+    
+    #if mobile
+    for (touch in FlxG.touches.list)
+        if (touch.justPressed) accepted = true;
+    #end
     
     if (controls.ACCEPT || FlxG.keys.pressed.SPACE) creditGroup.y -= fastSpeed * elapsed;
     // else if (controls.PAUSE || FlxG.keys.pressed.SHIFT) creditGroup.y -= pauseSpeed * elapsed;
     else
         creditGroup.y -= baseSpeed * elapsed;
         
-    if (controls.BACK || hasEnded()) exit();
-    
     for (i in creditGroup.members) {
         if (mouseOverlaps(i, creditsCam)) {
             curSelected = creditGroup.members.indexOf(i);

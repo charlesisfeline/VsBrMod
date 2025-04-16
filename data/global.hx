@@ -88,7 +88,7 @@ function destroy() {
     WindowUtils.winTitle = "br is dead";
     
     WindowUtils.resetTitle();
-    #if SHOW_BUILD_ON_FPS Main.framerateSprite.codenameBuildField.text = "Codename Engine Alpha\noh god did u just switch back to base cne???"; #end
+    #if (VSBR_BUILD && SHOW_BUILD_ON_FPS) Main.framerateSprite.codenameBuildField.text = "Codename Engine Alpha\noh god did u just switch back to base cne???"; #end
 }
 
 function update(elapsed:Float) {
@@ -103,7 +103,7 @@ function update(elapsed:Float) {
 function preStateSwitch() {
     FlxG.camera.bgColor = 0xFF000000;
     
-    #if SHOW_BUILD_ON_FPS Main.framerateSprite.codenameBuildField.text = "Vs. br: Retoasted v1.0 DEV/PLAYTESTER BUILD\nCodename Engine\npls dont leak pls dont leak"; #end
+    #if (VSBR_BUILD && SHOW_BUILD_ON_FPS) Main.framerateSprite.codenameBuildField.text = "Vs. br: Retoasted v1.0 DEV/PLAYTESTER BUILD\nCodename Engine\npls dont leak pls dont leak"; #end
     
     // taken from gorefield again
     if (Std.isOfType(FlxG.state, PlayState)

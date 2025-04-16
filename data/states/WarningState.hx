@@ -23,7 +23,7 @@ var boyoo:FlxSprite;
 function create() {
     DiscordUtil.changePresence("warning screen", null);
     
-    #if SHOW_BUILD_ON_FPS
+    #if (VSBR_BUILD && SHOW_BUILD_ON_FPS)
     Main.framerateSprite.codenameBuildField.text = "Vs. br: Retoasted v1.0 DEV/PLAYTESTER BUILD\nCodename Engine\npls dont leak pls dont leak";
     #end
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
@@ -62,7 +62,15 @@ function create() {
 }
 
 function update(elapsed) {
-    if (FlxG.keys.justPressed.ANY) {
+    var accepted:Bool = FlxG.keys.justPressed.ANY;
+    
+    #if mobile
+    for (touch in FlxG.touches.list) {
+        if (touch.justPressed) accepted = true;
+    }
+    #end
+    
+    if (accepted) {
         if (transitioning) {
             FlxG.camera.stopFX();
             FlxG.camera.visible = false;

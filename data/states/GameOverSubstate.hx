@@ -53,9 +53,9 @@ else if (PlayState.SONG.meta.name == "rb") {
     function update() {
         lossSFX.volume = 0;
         if (FlxG.sound.music != null) FlxG.sound.music.stop();
-        if (controls.ACCEPT) dontCrash = true;
+        if (controls.BACK || controls.ACCEPT #if android || TouchInput.BACK() #end) dontCrash = true;
         // lossSFX.onComplete = () -> if (!dontCrash) Sys.exit(); // how do u actually make the game crash instead of just closing it hmmm
-        if (controls.BACK || controls.ACCEPT) {
+        if (controls.BACK || controls.ACCEPT #if android || TouchInput.BACK() #end) {
             FlxG.game.removeChild(video);
             video.dispose();
             trace(video.time == -1);
@@ -95,7 +95,7 @@ else if (PlayState.SONG.meta.name != "depart") {
     if (video.load(Paths.video("retryNoSnd"))) new FlxTimer().start(0.000001, (_) -> video.play());
     function update() {
         lossSFX.volume = 0;
-        if (controls.BACK || controls.ACCEPT) {
+        if (controls.BACK || controls.ACCEPT #if android || TouchInput.BACK() #end) {
             FlxG.game.removeChild(video);
             video.dispose();
             trace(video.time == -1);
