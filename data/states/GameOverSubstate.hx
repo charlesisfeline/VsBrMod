@@ -5,8 +5,21 @@ import hxvlc.flixel.FlxVideo;
 
 import flixel.util.FlxTimer;
 
+import funkin.backend.MusicBeatState;
+
 FlxG.camera.bgColor = 0xff000000;
-if (PlayState.SONG.meta.name == "overcooked") {
+var doTheThing:Bool = false;
+if (FlxG.random.bool(0.05) || doTheThing) {
+    try {
+        MusicBeatState.skipTransIn = true;
+        MusicBeatState.skipTransOut = true;
+        FlxG.switchState(new ModState("RestInPeace"));
+    }
+    catch (e:Error) {
+        trace("no \n" + e);
+    }
+}
+else if (PlayState.SONG.meta.name == "overcooked") {
     #if VIDEO_CUTSCENES
     var black = new FlxSprite().makeSolid(FlxG.width, FlxG.height, 0xFF000000);
     add(black);
@@ -39,6 +52,8 @@ if (PlayState.SONG.meta.name == "overcooked") {
 else if (PlayState.SONG.meta.name == "rb") {
     #if VIDEO_CUTSCENES
     var dontCrash:Bool = false;
+    function postCreate()
+        character.visible = false;
     var black = new FlxSprite().makeSolid(FlxG.width, FlxG.height, 0xFF000000);
     add(black);
     var video:FlxVideo = new FlxVideo();
@@ -65,23 +80,15 @@ else if (PlayState.SONG.meta.name == "rb") {
     #end
 }
 else if (PlayState.SONG.meta.name == "smiler") {
-    var jumps:FlxSprite;
-    function postCreate() {
-        trace("fucking");
-        jumps = new FlxSprite(0, 0).loadGraphic(Paths.image('game/JUMPSCAREFRED'));
-        jumps.screenCenter();
-        jumps.updateHitbox();
-        jumps.antialiasing = Options.antialiasing;
-        add(jumps);
-        FlxG.sound.play(Paths.sound('scream'));
-        camFollow.x = jumps.x + 650;
-        camFollow.y = jumps.y + 650;
-        gameOverSong = "fred/gameOver";
-    }
-    function update()
-        lossSFX.volume = 0;
+    function postCreate()
+        character.visible = false;
+    MusicBeatState.skipTransIn = true;
+    MusicBeatState.skipTransOut = true;
+    FlxG.switchState(new ModState("PosterState"));
 }
 else if (PlayState.SONG.meta.name != "depart") {
+    function postCreate()
+        character.visible = false;
     #if VIDEO_CUTSCENES
     var black = new FlxSprite().makeSolid(FlxG.width, FlxG.height, 0xFF000000);
     add(black);
