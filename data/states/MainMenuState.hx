@@ -94,7 +94,7 @@ function postCreate() {
     var moreVersionShit:FunkinText = new FunkinText(5, 654, 0, '');
     moreVersionShit.scrollFactor.set();
     add(moreVersionShit);
-    moreVersionShit.text = "fr ni fu: vs br retoasted v1.0"; // i sadly cant extend the original versionShit text actually
+    moreVersionShit.text = "vs br retoasted v1.0"; // i sadly cant extend the original versionShit text actually
     // so i had to work around that like this.
 }
 
