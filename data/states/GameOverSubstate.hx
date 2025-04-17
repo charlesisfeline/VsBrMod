@@ -76,11 +76,10 @@ else if (PlayState.SONG.meta.name == "smiler") {
         FlxG.sound.play(Paths.sound('scream'));
         camFollow.x = jumps.x + 650;
         camFollow.y = jumps.y + 650;
+        gameOverSong = "fred/gameOver";
     }
-    function update() {
+    function update()
         lossSFX.volume = 0;
-        if (FlxG.sound.music != null) FlxG.sound.music.stop();
-    }
 }
 else if (PlayState.SONG.meta.name != "depart") {
     #if VIDEO_CUTSCENES
@@ -111,4 +110,8 @@ else if (PlayState.SONG.meta.name != "depart") {
         }
     }
     #end
+}
+else {
+    function postCreate()
+        gameOverSong = "vanilla/gameOver";
 }

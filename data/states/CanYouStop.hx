@@ -30,6 +30,8 @@ function create() {
     FlxG.cameras.add(theCam, false);
     cameras = [theCam];
     
+    insert(999999999999999, camVolume);
+    
     bg = new FlxSprite().makeSolid(FlxG.width + 100, FlxG.height + 100, FlxColor.BLACK);
     bg.updateHitbox();
     bg.alpha = 0;

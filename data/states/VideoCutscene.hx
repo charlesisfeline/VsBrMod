@@ -1,3 +1,3 @@
-function postCreate() {
+function postCreate()
     video.smoothing = Options.antialiasing;
-}
+    

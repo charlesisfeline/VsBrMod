@@ -23,6 +23,8 @@ function create() {
 }
 
 function postCreate() {
+    insert(999999999999999, camVolume);
+    
     if (PlayState.SONG.meta.name != "depart") {
         deathCounter.text = "Deaths: " + PlayState.deathCounter; // bf doesnt get "blue balled" here (only in depart)
         deathCounter.x = FlxG.width - (deathCounter.width + 20);

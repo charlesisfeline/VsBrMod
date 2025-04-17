@@ -4,7 +4,7 @@ var self = this;
 var trail:FlxTrail;
 
 function postCreate() {
-    this.pixelPerfectRender = this.pixelPerfectPosition = true;
+    if (Options.week6PixelPerfect) this.pixelPerfectRender = this.pixelPerfectPosition = true;
     
     trail = new FlxTrail(self, null, 4, 24, 0.3, 0.069);
 }
