@@ -103,8 +103,12 @@ function new() {
 }
 
 function setWindowTitle() {
-    brWindowShit = FlxG.random.getObject(randQuotes);
-    window.title = brWindowShit;
+    if (FlxG.random.bool(10)) {
+        brWindowShit = FlxG.random.getObject(randQuotes);
+        window.title = brWindowShit;
+    }
+    else
+        window.title = "vs br";
 }
 
 function update(elapsed:Float) {
