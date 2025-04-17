@@ -6,3 +6,7 @@ function create() {
         Sys.exit(0);
     }
 }
+
+function postCreate() {
+    insert(999999999999999, camVolume);
+}

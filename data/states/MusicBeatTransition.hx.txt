@@ -1,0 +1,56 @@
+import flixel.util.FlxDestroyUtil;
+
+var notDepart:Bool = true;
+
+function create() {
+    if (PlayState.SONG != null) notDepart = PlayState.SONG.meta.name != "depart";
+    
+    if (!nextFrameSkip && notDepart) {
+        var out = newState != null;
+        
+        transitionTween.cancel();
+        
+        remove(blackSpr);
+        remove(transitionSprite);
+        
+        FlxG.cameras.remove(transitionCamera);
+        
+        FlxG.cameras.add(brCamera = new FlxCamera(), false);
+        brCamera.bgColor = 0;
+        
+        bread = new FlxSprite();
+        bread.loadGraphic(Paths.image('ui/transitionButUmm'));
+        
+        bread.screenCenter();
+        bread.cameras = [brCamera];
+        bread.antialiasing = true;
+        add(bread);
+        
+        if (out) {
+            bread.scale.set(14, 14);
+            
+            FlxTween.tween(bread.scale, {x: 0, y: 0}, 1, {
+                ease: FlxEase.quadOut,
+                onComplete: () -> {
+                    for (camera in FlxG.cameras.list)
+                        camera.visible = false;
+                        
+                    finish();
+                }
+            });
+        }
+        else {
+            bread.scale.set(0, 0);
+            
+            FlxTween.tween(bread.scale, {x: 16, y: 16}, 0.75, {
+                ease: FlxEase.quadIn,
+                onComplete: () -> {
+                    for (camera in FlxG.cameras.list)
+                        camera.visible = true;
+                        
+                    finish();
+                }
+            });
+        }
+    }
+}
