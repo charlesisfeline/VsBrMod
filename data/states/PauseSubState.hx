@@ -16,7 +16,7 @@ function create() {
             menuItems.insert(2, 'Open Charter');
             menuItems.insert(3, 'Open Console');
             
-            if (game.inst != null && game.vocals != null && PlayState.isStoryMode) menuItems.insert(7, 'Skip Song');
+            if (game.inst != null && game.vocals != null && PlayState.isStoryMode) menuItems.insert(4, 'Skip Song');
         }
         else if (game.inst != null && game.vocals != null && PlayState.isStoryMode) menuItems.insert(4, 'fuck fuck fuck');
     }

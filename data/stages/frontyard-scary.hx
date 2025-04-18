@@ -1,5 +1,3 @@
-import br.PopupWindow;
-
 import flixel.group.FlxSpriteGroup;
 
 var windows:FlxSpriteGroup;
@@ -37,11 +35,6 @@ function postCreate() {
 }
 
 function addWindow(popup:Int = 2) {
-    // var spr:PopupWindow = new PopupWindow(0, 0, 0, popup);
-    // if (spr != null) {
-    //    spr.x = FlxG.random.int(0, FlxG.width - spr.box.width);
-    //    spr.y = FlxG.random.int(0, FlxG.height - spr.box.width);
-    // }
     var box = new FlxSprite(0, 0);
     box.frames = Paths.getSparrowAtlas("stages/house-scary/windowPopups");
     for (pop in 1...9)
