@@ -53,12 +53,14 @@ var trackedInstVolume:Int = 1;
 var trackedVoicesVolume:Int = 1;
 
 function muteinst(t) {
-    if (FlxG.sound.music.volume > 0) trackedInstVolume = FlxG.sound.music.volume;
-    
-    FlxG.sound.music.volume = FlxG.sound.music.volume > 0 ? 0 : trackedInstVolume;
-    t.icon = 1 - Std.int(Math.ceil(FlxG.sound.music.volume));
-    
-    instVolumeSlider.value = FlxG.sound.music.volume;
+    if (FlxG.sound.music != null) {
+        if (FlxG.sound.music.volume > 0) trackedInstVolume = FlxG.sound.music.volume;
+        
+        FlxG.sound.music.volume = FlxG.sound.music.volume > 0 ? 0 : trackedInstVolume;
+        t.icon = 1 - Std.int(Math.ceil(FlxG.sound.music.volume));
+        
+        instVolumeSlider.value = FlxG.sound.music.volume;
+    }
 }
 
 function mutevoices(t) {
@@ -101,7 +103,7 @@ function postCreate() {
     instVolumeSlider.x = (instVolumeText.x + instVolumeText.width) + 30 + instVolumeSlider.valueStepper.bWidth;
     
     instVolumeSlider.onChange = (v) -> {
-        FlxG.sound.music.volume = v;
+        if (FlxG.sound.music != null) FlxG.sound.music.volume = v;
     };
     
     vocalsVolumeText = new UIText((instVolumeSlider.x + (sliderWidth + 100)) + 4, bottomMenuSpr.y, 0, "Vocals Volume");

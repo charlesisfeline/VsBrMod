@@ -5,7 +5,7 @@ function create()
     FlxG.sound.playMusic(Paths.music(menumusic), volume);
     
 function _file_exit()
-    FlxG.sound.music.stop();
+    if (FlxG.sound.music != null) FlxG.sound.music.stop();
     
 function postUpdate() {
     if (FlxG.mouse.justPressed) FlxG.sound.play(Paths.sound('editors/click'));

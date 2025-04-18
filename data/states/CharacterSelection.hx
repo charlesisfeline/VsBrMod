@@ -1,3 +1,3 @@
 function create()
-    FlxG.sound.music.destroy();
+    if (FlxG.sound.music != null) FlxG.sound.music.destroy();
     

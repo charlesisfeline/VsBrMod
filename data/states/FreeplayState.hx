@@ -99,3 +99,7 @@ function onChangeDiff(e) {
             newDiffText.text = "";
     }
 }
+
+function destroy()
+    if (FlxG.sound.music != null) FlxG.sound.music.stop();
+    

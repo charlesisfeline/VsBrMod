@@ -59,7 +59,7 @@ function create() {
     FlxTween.tween(bg, {alpha: 0.6}, 0.4, {ease: FlxEase.cubeOut});
     FlxTween.tween(bro, {alpha: 1}, 0.4, {ease: FlxEase.cubeOut});
     FlxTween.tween(versionShit, {y: FlxG.height - 18}, 0.75, {ease: FlxEase.quadOut});
-    FlxTween.tween(FlxG.sound.music, {pitch: FlxG.random.float(0.3, 0.6)}, 1, {ease: FlxEase.quadInOut});
+    if (FlxG.sound.music != null) FlxTween.tween(FlxG.sound.music, {pitch: FlxG.random.float(0.3, 0.6)}, 1, {ease: FlxEase.quadInOut});
 }
 
 function update(elapsed:Float) {
@@ -72,7 +72,7 @@ function update(elapsed:Float) {
     
     if (accepted) {
         StoryMenuState.canSelect = true;
-        FlxTween.tween(FlxG.sound.music, {pitch: 1}, 1, {ease: FlxEase.quadOut});
+        if (FlxG.sound.music != null) FlxTween.tween(FlxG.sound.music, {pitch: 1}, 1, {ease: FlxEase.quadOut});
         FlxG.sound.play(Paths.sound("menu/cancel"));
         close();
     }
