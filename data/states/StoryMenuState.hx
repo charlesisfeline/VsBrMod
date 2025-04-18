@@ -1,10 +1,15 @@
-import br.SaveUtil;
-
 import flixel.util.FlxTimer;
 
 import funkin.backend.utils.DiscordUtil;
 import funkin.savedata.FunkinSave;
 
+var borders:FlxSprite;
+var bg:FlxSprite;
+var leftArrow:FlxSprite;
+var rightArrow:FlxSprite;
+var topBar:FlxSprite;
+var closeButton:FlxSprite;
+var weekThing:FlxSprite;
 var spamEgTimes:Int = 0;
 
 function postCreate() {
@@ -20,14 +25,59 @@ function postCreate() {
     for (arrow in [leftArrow, rightArrow])
         remove(arrow);
         
+    borders = new FlxSprite(0, 0).loadGraphic(Paths.image('stages/blackBorder'));
+    borders.screenCenter();
+    borders.updateHitbox();
+    borders.scrollFactor.set();
+    
+    bg = new FlxSprite(0, 0).loadGraphic(Paths.image('storymode/bg'));
+    bg.scale.set(0.6, 0.6);
+    bg.updateHitbox();
+    bg.screenCenter();
+    bg.scrollFactor.set();
+    add(bg);
+    
+    topBar = new FlxSprite(280, 0).loadGraphic(Paths.image('storymode/topbar'));
+    topBar.scale.set(0.6, 0.6);
+    topBar.updateHitbox();
+    topBar.scrollFactor.set();
+    add(topBar);
+    
+    closeButton = new FlxSprite(951, 0).loadGraphic(Paths.image('storymode/close'));
+    closeButton.scale.set(0.61, 0.6);
+    closeButton.updateHitbox();
+    closeButton.scrollFactor.set();
+    add(closeButton);
+    
+    weekThing = new FlxSprite(0, 0).loadGraphic(Paths.image('storymode/weeks/weekeg'));
+    weekThing.scale.set(0.5, 0.5);
+    weekThing.screenCenter();
+    weekThing.scrollFactor.set();
+    add(weekThing);
+    
     scoreText.font = Paths.font("eras.ttf");
     weekTitle.font = Paths.font("eras.ttf");
     tracklist.font = Paths.font("robotoBl.ttf");
+    
+    add(borders);
+    
+    FlxG.mouse.visible = true;
 }
 
-function onChangeWeek(event)
+function onChangeWeek(event) {
     MemoryUtil.clearMinor();
     
+    weekThing.loadGraphic(Paths.image('storymode/weeks/' + weeks[curWeek].id));
+    
+    trace(weeks[curWeek].id);
+}
+
+function postUpdate(elapsed:Float) {
+    var focusing:Bool = closeButton.overlapsPoint(FlxG.mouse.getScreenPosition(FlxG.camera), true, FlxG.camera);
+    
+    if (focusing && FlxG.mouse.justPressed) FlxG.switchState(new MainMenuState());
+}
+
 function onWeekSelect(event) {
     event.cancelled = true;
     
