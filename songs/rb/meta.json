@@ -1,17 +1,17 @@
 {
+	"beatsPerMeasure": 4,
 	"opponentModeAllowed": true,
+	"coopAllowed": true,
+	"stepsPerBeat": 4,
+	"bpm": 150,
 	"difficulties": [
 		"HARD"
 	],
-	"icon": "rb",
-	"parsedColor": -4216,
-	"coopAllowed": true,
-	"name": "rb",
-	"color": "#FFEF88",
-	"customValues": {},
-	"stepsPerBeat": 4,
-	"displayName": "rB",
 	"needsVoices": true,
-	"beatsPerMeasure": 4,
-	"bpm": 150
+	"parsedColor": -16756737,
+	"displayName": "rB",
+	"icon": "rb",
+	"name": "rb",
+	"color": "#004FFF",
+	"customValues": {}
 }

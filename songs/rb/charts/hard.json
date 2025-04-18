@@ -1,8 +1,12 @@
 {
+	"stage": "rb",
+	"scrollSpeed": 2.8,
 	"codenameChart": true,
 	"strumLines": [
 		{
 			"keyCount": 4,
+			"strumScale": 1,
+			"position": "dad",
 			"notes": [
 				{
 					"id": 2,
@@ -2250,7 +2254,7 @@
 				},
 				{
 					"id": 2,
-					"sLen": 0,
+					"sLen": 100,
 					"time": 106600,
 					"type": 1
 				},
@@ -2286,7 +2290,7 @@
 				},
 				{
 					"id": 2,
-					"sLen": 0,
+					"sLen": 100,
 					"time": 107500,
 					"type": 1
 				},
@@ -2334,7 +2338,7 @@
 				},
 				{
 					"id": 3,
-					"sLen": 0,
+					"sLen": 100,
 					"time": 108600,
 					"type": 1
 				},
@@ -2405,6 +2409,12 @@
 					"type": 1
 				},
 				{
+					"id": 3,
+					"sLen": 0,
+					"time": 110000,
+					"type": 1
+				},
+				{
 					"id": 0,
 					"sLen": 0,
 					"time": 110100,
@@ -2412,7 +2422,7 @@
 				},
 				{
 					"id": 1,
-					"sLen": 0,
+					"sLen": 100,
 					"time": 110100,
 					"type": 1
 				},
@@ -2436,7 +2446,7 @@
 				},
 				{
 					"id": 2,
-					"sLen": 0,
+					"sLen": 200,
 					"time": 110500,
 					"type": 1
 				},
@@ -2461,6 +2471,30 @@
 				{
 					"id": 2,
 					"sLen": 0,
+					"time": 111000,
+					"type": 1
+				},
+				{
+					"id": 1,
+					"sLen": 0,
+					"time": 111010,
+					"type": 1
+				},
+				{
+					"id": 0,
+					"sLen": 0,
+					"time": 111060,
+					"type": 1
+				},
+				{
+					"id": 1,
+					"sLen": 0,
+					"time": 111067.5,
+					"type": 1
+				},
+				{
+					"id": 2,
+					"sLen": 0,
 					"time": 111087.5,
 					"type": 1
 				},
@@ -2468,6 +2502,18 @@
 					"id": 1,
 					"sLen": 0,
 					"time": 111097.5,
+					"type": 1
+				},
+				{
+					"id": 0,
+					"sLen": 0,
+					"time": 111115,
+					"type": 1
+				},
+				{
+					"id": 2,
+					"sLen": 0,
+					"time": 111137.5,
 					"type": 1
 				},
 				{
@@ -2483,9 +2529,39 @@
 					"type": 1
 				},
 				{
+					"id": 3,
+					"sLen": 0,
+					"time": 111157.5,
+					"type": 1
+				},
+				{
+					"id": 0,
+					"sLen": 0,
+					"time": 111185,
+					"type": 1
+				},
+				{
 					"id": 0,
 					"sLen": 0,
 					"time": 111202.5,
+					"type": 1
+				},
+				{
+					"id": 3,
+					"sLen": 0,
+					"time": 111202.5,
+					"type": 1
+				},
+				{
+					"id": 1,
+					"sLen": 0,
+					"time": 111212.5,
+					"type": 1
+				},
+				{
+					"id": 1,
+					"sLen": 0,
+					"time": 111220,
 					"type": 1
 				},
 				{
@@ -2495,9 +2571,45 @@
 					"type": 1
 				},
 				{
+					"id": 0,
+					"sLen": 0,
+					"time": 111232.5,
+					"type": 1
+				},
+				{
 					"id": 3,
 					"sLen": 0,
 					"time": 111245,
+					"type": 1
+				},
+				{
+					"id": 1,
+					"sLen": 0,
+					"time": 111247.5,
+					"type": 1
+				},
+				{
+					"id": 2,
+					"sLen": 0,
+					"time": 111247.5,
+					"type": 1
+				},
+				{
+					"id": 0,
+					"sLen": 0,
+					"time": 111252.5,
+					"type": 1
+				},
+				{
+					"id": 2,
+					"sLen": 0,
+					"time": 111265,
+					"type": 1
+				},
+				{
+					"id": 3,
+					"sLen": 0,
+					"time": 111270,
 					"type": 1
 				},
 				{
@@ -2519,9 +2631,21 @@
 					"type": 1
 				},
 				{
+					"id": 0,
+					"sLen": 0,
+					"time": 111302.5,
+					"type": 1
+				},
+				{
 					"id": 1,
 					"sLen": 0,
 					"time": 111307.5,
+					"type": 1
+				},
+				{
+					"id": 3,
+					"sLen": 0,
+					"time": 111315,
 					"type": 1
 				},
 				{
@@ -2549,6 +2673,18 @@
 					"type": 1
 				},
 				{
+					"id": 0,
+					"sLen": 0,
+					"time": 111342.5,
+					"type": 1
+				},
+				{
+					"id": 3,
+					"sLen": 0,
+					"time": 111345,
+					"type": 1
+				},
+				{
 					"id": 2,
 					"sLen": 0,
 					"time": 111352.5,
@@ -2562,6 +2698,24 @@
 				},
 				{
 					"id": 0,
+					"sLen": 0,
+					"time": 111365,
+					"type": 1
+				},
+				{
+					"id": 2,
+					"sLen": 0,
+					"time": 111365,
+					"type": 1
+				},
+				{
+					"id": 0,
+					"sLen": 0,
+					"time": 111390,
+					"type": 1
+				},
+				{
+					"id": 1,
 					"sLen": 0,
 					"time": 111390,
 					"type": 1
@@ -2603,22 +2757,22 @@
 					"type": 1
 				}
 			],
-			"position": "dad",
-			"strumScale": 1,
-			"visible": true,
-			"type": 0,
 			"characters": [
 				"rb"
 			],
+			"type": 0,
+			"visible": true,
 			"strumPos": [
 				0,
 				50
 			],
-			"strumLinePos": 0.25,
-			"vocalsSuffix": ""
+			"vocalsSuffix": "",
+			"strumLinePos": 0.25
 		},
 		{
 			"keyCount": 4,
+			"strumScale": 1,
+			"position": "boyfriend",
 			"notes": [
 				{
 					"id": 2,
@@ -2978,12 +3132,6 @@
 					"id": 0,
 					"sLen": 0,
 					"time": 20600,
-					"type": 0
-				},
-				{
-					"id": 2,
-					"sLen": 0,
-					"time": 20650,
 					"type": 0
 				},
 				{
@@ -4655,40 +4803,36 @@
 					"type": 0
 				}
 			],
-			"position": "boyfriend",
-			"strumScale": 1,
-			"visible": true,
-			"type": 1,
 			"characters": [
 				"bf-br"
 			],
+			"type": 1,
+			"visible": true,
 			"strumPos": [
 				0,
 				50
 			],
-			"strumLinePos": 0.75,
-			"vocalsSuffix": ""
+			"vocalsSuffix": "",
+			"strumLinePos": 0.75
 		},
 		{
 			"keyCount": 4,
+			"strumScale": 1,
+			"position": "girlfriend",
 			"notes": [],
+			"characters": [
+				"gf-br"
+			],
+			"type": 2,
 			"visible": false,
 			"strumPos": [
 				0,
 				50
 			],
-			"position": "girlfriend",
-			"strumScale": 1,
 			"vocalsSuffix": "",
-			"strumLinePos": 0.25,
-			"type": 2,
-			"characters": [
-				"gf-br"
-			]
+			"strumLinePos": 0.25
 		}
 	],
-	"scrollSpeed": 2.8,
-	"stage": "rb",
 	"noteTypes": [
 		"No Animation"
 	]
