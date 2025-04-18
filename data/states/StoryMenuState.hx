@@ -19,6 +19,10 @@ function postCreate() {
         remove(sprite);
     for (arrow in [leftArrow, rightArrow])
         remove(arrow);
+        
+    scoreText.font = Paths.font("eras.ttf");
+    weekTitle.font = Paths.font("eras.ttf");
+    tracklist.font = Paths.font("robotoBl.ttf");
 }
 
 function onChangeWeek(event)

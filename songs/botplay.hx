@@ -13,7 +13,8 @@ public var nukeVid:FlxVideo;
 
 function postCreate() {
     botplayTxt = new FlxText(400, 537, FlxG.width - 800, "BOTPLAY", 50);
-    botplayTxt.setFormat(Paths.font("vcr.ttf"), 42, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+    botplayTxt.setFormat(Paths.font("robotoBl.ttf"), 42, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+    if (PlayState.SONG.meta.name == "toast" || PlayState.SONG.meta.name == "depart") botplayTxt.font = Paths.font("vcr.ttf");
     botplayTxt.borderSize = 3;
     botplayTxt.camera = camHUD;
     if (PlayState.SONG.meta.name != "depart") botplayTxt.alpha = 0.6;
@@ -27,6 +28,8 @@ function postCreate() {
         || PlayState.SONG.meta.name == "drunken"
         || PlayState.SONG.meta.name == "overcooked"
         || PlayState.SONG.meta.name == "toast") defaultDisplayCombo = FlxG.save.data.comboDisplay;
+    else
+        defaultDisplayCombo = false;
 }
 
 function update(elapsed:Float) {

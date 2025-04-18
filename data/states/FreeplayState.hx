@@ -18,6 +18,8 @@ function postCreate() {
     FlxG.mouse.useSystemCursor = false;
     FlxG.mouse.load(Paths.image("ui/cursor"));
     
+    scoreText.font = Paths.font("robotoBl.ttf");
+    
     newDiffText = new FlxText(0, 400, 0, "", 24);
     newDiffText.font = scoreText.font;
     newDiffText.color = FlxColor.BLACK;
@@ -26,6 +28,7 @@ function postCreate() {
     
     scoreText.alpha = 1;
     coopText.y = scoreText.y + 36;
+    coopText.font = Paths.font("roboto.ttf");
     
     scoreBG.alpha = 0.6;
     
@@ -34,6 +37,7 @@ function postCreate() {
     if (FlxG.save.data.devMode) {
         timeTxt = new FunkinText(0, FlxG.height - 60, 400, "X:XX", 32, true);
         timeTxt.borderSize = 2;
+        timeTxt.font = Paths.font("robotoBo.ttf");
         timeTxt.alignment = "center";
         timeTxt.scrollFactor.set();
         timeTxt.updateHitbox();

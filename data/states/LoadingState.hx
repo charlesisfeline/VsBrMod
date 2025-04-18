@@ -117,7 +117,7 @@ function create() {
     
     tipTxt = new FlxText(0, FlxG.height - 50, 1000, "", 16);
     tipTxt.scrollFactor.set();
-    tipTxt.setFormat(Paths.font("arial.ttf"), 16, FlxColor.WHITE, "center");
+    tipTxt.setFormat(Paths.font("roboto.ttf"), 16, FlxColor.WHITE, "center");
     tipTxt.screenCenter(FlxAxes.X);
     add(tipTxt);
     

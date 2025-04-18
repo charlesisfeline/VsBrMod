@@ -75,6 +75,7 @@ function new() {
     trace(realWord);
     
     versionShit = new FunkinText(0, FlxG.height, 0, "just press 2 to close this idk", 14);
+    versionShit.font = Paths.font("robotoBl.ttf");
     versionShit.scrollFactor.set();
     versionShit.screenCenter(FlxAxes.X);
     add(versionShit);
