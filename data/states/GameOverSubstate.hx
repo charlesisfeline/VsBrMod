@@ -10,6 +10,8 @@ import funkin.backend.MusicBeatState;
 FlxG.camera.bgColor = 0xff000000;
 var doTheThing:Bool = false;
 if (FlxG.random.bool(0.05) || doTheThing) {
+    function postCreate()
+        character.visible = false;
     try {
         MusicBeatState.skipTransIn = true;
         MusicBeatState.skipTransOut = true;
