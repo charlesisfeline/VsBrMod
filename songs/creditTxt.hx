@@ -20,6 +20,7 @@ function onSongStart() {
         && PlayState.SONG.meta.name != "apart"
         && PlayState.SONG.meta.name != "henry cat");
     songTxt.setFormat(Paths.font("eras.ttf"), fontSize, FlxColor.WHITE, "center", FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+    if (PlayState.SONG.meta.name != "depart" && PlayState.SONG.meta.name != "toast") songTxt.font = Paths.font("vcr.ttf");
     songTxt.borderSize = 3;
     songTxt.x += 30;
     

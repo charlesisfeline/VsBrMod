@@ -84,6 +84,8 @@ var randQuotes:Array<String> = [
 
 trace("oh cool reloaded global wowzers!1!! . " + Math.random());
 function new() {
+    if (FlxG.camera != null) FlxG.camera.bgColor = 0xFF000000;
+    
     // shortcut to FlxG.save.data (for shortening code)
     var saveData = FlxG.save.data;
     

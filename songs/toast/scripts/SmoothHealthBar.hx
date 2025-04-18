@@ -9,6 +9,7 @@ function create() {
     ogSet = Options.colorHealthBar;
     trace(ogSet);
     Options.colorHealthBar = true;
+    Options.applySettings();
 }
 
 function postUpdate(elapsed) {
@@ -29,4 +30,5 @@ function postUpdate(elapsed) {
 function destroy() {
     trace(ogSet);
     Options.colorHealthBar = ogSet;
+    Options.applySettings();
 }

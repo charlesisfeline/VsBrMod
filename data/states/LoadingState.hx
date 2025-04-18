@@ -71,8 +71,14 @@ var tips:Array<String> = [
     "Bop beep be be skdoo bep"
 ];
 
+var ogSet:Bool;
+
 function create() {
     FlxG.camera.bgColor = 0xff000000;
+    
+    ogSet = Options.autoPause;
+    trace(ogSet);
+    Options.autoPause = false;
     
     if (FlxG.sound.music != null) FlxG.sound.music.stop();
     
@@ -164,7 +170,9 @@ function loadAssets() { // pfffffffft get trolled!!!!!! this isnt an actual load
 function goToSong() {
     FlxTween.tween(black, {alpha: 1}, 0.75, {
         onComplete: (tween:FlxTween) -> {
-            trace("coolswag");
+            trace("coolswag " + ogSet);
+            Options.autoPause = ogSet;
+            Options.applySettings();
             FlxG.switchState(new PlayState());
         }
     });
