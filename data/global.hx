@@ -14,6 +14,7 @@ import openfl.utils.ByteArray;
 import openfl.display.PNGEncoderOptions;
 import openfl.events.MouseEvent;
 import openfl.display.Sprite;
+import openfl.text.TextFormat;
 
 import haxe.io.Path;
 
@@ -30,7 +31,9 @@ public static var reqStateName:String;
 var brWindowShit:String = "";
 static var useCustomSoundtray:Bool = true;
 static var camVolume:FlxCamera;
+var alphaTarget:Float = 0.0001;
 var lerpYPos:Float = -250;
+var bars:Array<FlxSprite> = [];
 var volumeTimer:FlxTimer;
 
 var randQuotes:Array<String> = [
@@ -117,8 +120,10 @@ function update(elapsed:Float) {
     // here for debugging purposes i think
     if (FlxG.keys.justPressed.F6 && FlxG.save.data.devMode) NativeAPI.allocConsole();
     
-    camVolume.y = CoolUtil.fpsLerp(camVolume.y, lerpYPos, 0.1);
-    camVolume.alpha = CoolUtil.fpsLerp(camVolume.alpha, alphaTarget, 0.25);
+    if (camVolume != null) {
+        camVolume.y = CoolUtil.fpsLerp(camVolume.y, lerpYPos, 0.1);
+        camVolume.alpha = CoolUtil.fpsLerp(camVolume.alpha, alphaTarget, 0.25);
+    }
     
     var globalVolume:Int = Math.round(FlxG.sound.volume * 10);
     
@@ -176,6 +181,12 @@ function postStateSwitch() {
     Framerate.debugMode = 1;
     
     if (!FlxG.save.data.showFPS) Framerate.offset.y = 9999;
+    
+    Framerate.codenameBuildField.defaultTextFormat = new TextFormat(Paths.getFontName(Paths.font('roboto.ttf')), 12, -1);
+    Framerate.memoryCounter.memoryText.defaultTextFormat = new TextFormat(Paths.getFontName(Paths.font('roboto.ttf')), 13, -1);
+    Framerate.memoryCounter.memoryPeakText.defaultTextFormat = new TextFormat(Paths.getFontName(Paths.font('roboto.ttf')), 13, -1);
+    Framerate.fpsCounter.fpsNum.defaultTextFormat = new TextFormat(Paths.getFontName(Paths.font('robotoBl.ttf')), 16, -1);
+    Framerate.fpsCounter.fpsLabel.defaultTextFormat = new TextFormat(Paths.getFontName(Paths.font('robotoBo.ttf')), 14, -1);
     
     if (Std.isOfType(FlxG.state, PlayState)) {
         if (PlayState.SONG.meta.name == "depart") {

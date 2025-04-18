@@ -49,7 +49,7 @@
 			<line text="FNF" />
 		</text>
 		<text beat="15">
-			<sprite path="game/JUMPSCAREFRED" scale="0.25" />
+			<sprite path="game/omniman" scale="2.25" />
 		</text>
 	</intro>
 </titlestate>
