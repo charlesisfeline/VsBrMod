@@ -31,7 +31,7 @@ var randQuotes:Array<String> = [
     "very nut shivering",
     "menu theme by\nbrumbo!",
     "can i strangle\none of you guys",
-    "the shower thoughts ever",
+    "the shower\nthoughts ever",
     "yippee",
     "stick of butter",
     "CHICKEN\nJOCKEY",
@@ -39,7 +39,9 @@ var randQuotes:Array<String> = [
     "suns",
     "bro's not\nmr saltbaker",
     "adding quotes\nbut not working :sob:",
-    "running outta\nquotes noooo"
+    "running outta\nquotes noooo",
+    "peta the dad\nis here",
+    "glazed better than\na krispy kreme"
 ];
 
 function new() {

@@ -110,6 +110,9 @@ function postUpdate(elapsed:Float) {
     var focusing:Bool = closeButton.overlapsPoint(FlxG.mouse.getScreenPosition(FlxG.camera), true, FlxG.camera);
     if (focusing && FlxG.mouse.justPressed) FlxG.switchState(new MainMenuState());
     
+    if (FlxG.mouse.justPressed) FlxG.sound.play(Paths.sound('editors/click'));
+    if (FlxG.mouse.justReleased) FlxG.sound.play(Paths.sound('editors/release'));
+    
     newScoreText.text = 'SCORE: ' + Math.round(lerpScore);
     
     var beatBr = FunkinSave.getWeekHighscore('weekbr', 'hard').score > 0;

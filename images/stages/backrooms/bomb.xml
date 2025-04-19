@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="bomb.png" width="368" height="308">
+	<SubTexture name="bomb10000" x="8" y="8" width="112" height="142" frameX="-20" frameY="-4" frameWidth="150" frameHeight="150"/>
+	<SubTexture name="bomb20000" x="128" y="8" width="112" height="142" frameX="-20" frameY="-4" frameWidth="150" frameHeight="150"/>
+	<SubTexture name="bomb30000" x="8" y="158" width="112" height="142" frameX="-20" frameY="-4" frameWidth="150" frameHeight="150"/>
+	<SubTexture name="bomb40000" x="128" y="158" width="112" height="142" frameX="-20" frameY="-4" frameWidth="150" frameHeight="150"/>
+	<SubTexture name="bomb50000" x="248" y="8" width="112" height="142" frameX="-20" frameY="-4" frameWidth="150" frameHeight="150"/>
+	<SubTexture name="idle0000" x="248" y="158" width="112" height="142" frameX="-20" frameY="-4" frameWidth="150" frameHeight="150"/>
+</TextureAtlas>

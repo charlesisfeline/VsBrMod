@@ -6,15 +6,6 @@ function transitionToBrNotes() {
         i.font = Paths.font("roboto.ttf");
         i.size = 16;
         i.borderSize = 2.25;
-        i.size *= upscaleAmt;
-        i.scale.x /= upscaleAmt;
-        i.scale.y /= upscaleAmt;
-        i.antialiasing = Options.antialiasing;
-        i.y -= 21;
-        i.borderSize *= upscaleAmt;
-        i.fieldWidth += 1000;
-        i.x -= 1000 / 2;
-        i.borderQuality = 100;
     }
 }
 
