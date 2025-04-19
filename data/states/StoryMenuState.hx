@@ -3,13 +3,21 @@ import flixel.util.FlxTimer;
 import funkin.backend.utils.DiscordUtil;
 import funkin.savedata.FunkinSave;
 
+// sprites
 var borders:FlxSprite;
 var bg:FlxSprite;
-var leftArrow:FlxSprite;
-var rightArrow:FlxSprite;
+var leftArrrow:FlxSprite;
+var rightArrrow:FlxSprite;
 var topBar:FlxSprite;
 var closeButton:FlxSprite;
 var weekThing:FlxSprite;
+var lock:FlxSprite;
+var newScoreText:FunkinText;
+
+// shaders
+var blurShader:CustomShader = new CustomShader("engine/editorBlur");
+
+// misc
 var spamEgTimes:Int = 0;
 
 function postCreate() {
@@ -55,27 +63,57 @@ function postCreate() {
     weekThing.scrollFactor.set();
     add(weekThing);
     
+    lock = new FlxSprite(0, 0).loadGraphic(Paths.image('storymode/locked'));
+    lock.scale.set(0.5, 0.5);
+    lock.screenCenter();
+    lock.scrollFactor.set();
+    lock.visible = false;
+    add(lock);
+    
     scoreText.font = Paths.font("eras.ttf");
     weekTitle.font = Paths.font("eras.ttf");
     tracklist.font = Paths.font("robotoBl.ttf");
     
+    newScoreText = new FunkinText(300, 56, 0, "SCORE: -", 36);
+    newScoreText.setFormat(Paths.font("eras.ttf"), 32, FlxColor.BLACK, "left");
+    add(newScoreText);
+    
     add(borders);
+    
+    blackBar.visible = false;
+    scoreText.visible = false;
+    characterSprites.visible = false;
+    weekSprites.visible = false;
+    tracklist.visible = false;
+    weekBG.visible = false;
+    weekTitle.visible = false;
     
     FlxG.mouse.visible = true;
 }
 
 function onChangeWeek(event) {
-    MemoryUtil.clearMinor();
+    if (weekThing != null) weekThing.loadGraphic(Paths.image('storymode/weeks/' + weeks[curWeek].id));
     
-    weekThing.loadGraphic(Paths.image('storymode/weeks/' + weeks[curWeek].id));
+    MemoryUtil.clearMinor();
     
     trace(weeks[curWeek].id);
 }
 
 function postUpdate(elapsed:Float) {
     var focusing:Bool = closeButton.overlapsPoint(FlxG.mouse.getScreenPosition(FlxG.camera), true, FlxG.camera);
-    
     if (focusing && FlxG.mouse.justPressed) FlxG.switchState(new MainMenuState());
+    
+    newScoreText.text = 'SCORE: ' + Math.round(lerpScore);
+    
+    var beatBr = FunkinSave.getWeekHighscore('weekbr', 'hard').score > 0;
+    if (!beatBr && curWeek != 0) {
+        weekThing.shader = blurShader;
+        lock.visible = true;
+    }
+    else {
+        lock.visible = false;
+        weekThing.shader = null;
+    }
 }
 
 function onWeekSelect(event) {
