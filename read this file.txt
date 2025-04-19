@@ -45,8 +45,8 @@ so um... yeah thats pretty much it, tysm for playing the build n we hope u get h
 - why do i only see a black screen when opening the game
   ^ bro ur folder path to the game has special characters, move the folder somewhere else and boot the game again
 
-- wheres the vs br main menu, i only get the base game ones
-  ^ sometimes the engine is kinda fucky to the point it can forget to go to custom menus. just restart the game, we have plans to fix it
+- wheres the vs br main menu and story mode menu, i only get the base game ones
+  ^ sometimes in rare cases, the engine is kinda fucky to the point it can forget to go to custom menus. just restart the game, we have plans to fix it
 
 - loading up the game only shows the base game!!!!
   ^ just press tab in the main menu and select your vs br mod folder (we have plans to do an executable build btw)

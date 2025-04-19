@@ -33,6 +33,13 @@ function postCreate() {
     for (arrow in [leftArrow, rightArrow])
         remove(arrow);
         
+    if (FlxG.sound.music != null) {
+        var curTimes = FlxG.sound.music.time;
+        FlxG.sound.music.stop();
+        FlxG.sound.playMusic(Paths.music('freakyMenuAlt'));
+        FlxG.sound.music.time = curTimes;
+    }
+    
     borders = new FlxSprite(0, 0).loadGraphic(Paths.image('stages/blackBorder'));
     borders.screenCenter();
     borders.updateHitbox();
@@ -149,5 +156,14 @@ function onWeekSelect(event) {
         
         new FlxTimer().start(1, (tmr:FlxTimer) -> FlxG.switchState(new ModState("LoadingState")));
         if (Options.flashingMenu) weekSprites.members[event.weekID].startFlashing();
+    }
+}
+
+function destroy() {
+    if (FlxG.sound.music != null) {
+        var curTimes = FlxG.sound.music.time;
+        FlxG.sound.music.stop();
+        FlxG.sound.playMusic(Paths.music('freakyMenu'));
+        FlxG.sound.music.time = curTimes;
     }
 }
