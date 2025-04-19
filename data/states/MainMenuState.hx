@@ -110,11 +110,9 @@ function postUpdate(elapsed) {
         }
         
         if (FlxG.keys.justPressed.THREE) FlxG.switchState(new ModState("CreditsRoll"));
-        
-        if (FlxG.keys.justPressed.EIGHT) FlxG.switchState(new ModState("EndState"));
     }
     
-    if (FlxG.keys.justPressed.E) openPrompt();
+    if (FlxG.keys.justPressed.E && FlxG.save.data.freeplayUnlocked) openPrompt();
     
     magenta.visible = false; // no
     menuItems.forEach((a:FlxSprite) -> a.x += 350);

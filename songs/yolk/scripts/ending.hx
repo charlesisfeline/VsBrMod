@@ -17,8 +17,8 @@ function _endSong() {
     vocals.pause();
     
     startCutscene('end-', endCutscene, () -> {
-        // if (!PlayState.chartingMode && (PlayState.isStoryMode ? PlayState.storyPlaylist.length == 1 : true))
-        FlxG.switchState(new ModState('CreditsRoll'));
+        if (!PlayState.chartingMode
+            && (PlayState.isStoryMode ? PlayState.storyPlaylist.length == 1 : true)) FlxG.switchState(new ModState('CreditsRoll'));
     });
     
     PlayState.storyPlaylist.shift();

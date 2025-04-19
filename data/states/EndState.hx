@@ -6,8 +6,6 @@ import lime.graphics.Image;
 var endingImage:FlxSprite;
 
 function create() {
-    importScript("data/scripts/redirectUtil");
-    
     trace("read");
     
     window.title = "the end";
@@ -19,8 +17,6 @@ function create() {
     FlxG.camera.bgColor = 0xff000000;
     
     if (FlxG.sound.music != null) FlxG.sound.music.stop();
-    
-    removeRedirectStates("StoryMenuState");
     
     endingImage = new FlxSprite(0, 0);
     endingImage.frames = Paths.getSparrowAtlas('endScreen');
