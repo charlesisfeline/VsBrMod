@@ -133,7 +133,7 @@ var creditYLimit:Float = 500;
 var curSelected:Int = 0;
 
 function update(elapsed:Float) {
-    if (controls.BACK || hasEnded()) performTransition(true);
+    if (controls.BACK || hasEnded()) exit();
     
     creditGroup.screenCenter(FlxAxes.X);
     blackBorder.screenCenter(FlxAxes.X);
