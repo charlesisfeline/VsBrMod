@@ -105,8 +105,6 @@ function new() {
     saveData.screenshotAmount ??= 0;
     
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
-    
-    FlxG.signals.postStateSwitch.add(onStateSwitchComplete);
 }
 
 function setWindowTitle() {
@@ -324,19 +322,10 @@ function showCaptureFeedback() {
     FlxG.sound.play(Paths.sound("screenshot"));
 }
 
-function onStateSwitchComplete():Void {
-    trace('removing screenshot preview sprite if any');
-    if (previewSprite != null) {
-        FlxG.stage.removeChild(previewSprite);
-        previewSprite = null;
-    }
-}
-
 static var PREVIEW_INITIAL_DELAY = 0.25;
 static var PREVIEW_FADE_IN_DURATION = 0.3;
 static var PREVIEW_FADE_OUT_DELAY = 1.25;
 static var PREVIEW_FADE_OUT_DURATION = 0.3;
-var previewSprite:Null<Sprite> = null;
 
 function showFancyPreview(bitmap:Bitmap):Void {
     FlxG.mouse.visible = true;
@@ -354,7 +343,7 @@ function showFancyPreview(bitmap:Bitmap):Void {
     preview.draw(bitmap.bitmapData, matrix);
     
     // used for movement + button stuff
-    previewSprite = new Sprite();
+    var previewSprite = new Sprite();
     
     // idk why this doesnt work...
     var onHover = (e:MouseEvent) -> if (!changingAlpha) e.target.alpha = 0.6;
@@ -391,7 +380,6 @@ function showFancyPreview(bitmap:Bitmap):Void {
                             previewSprite.removeEventListener(MouseEvent.MOUSE_OVER, onHover);
                             previewSprite.removeEventListener(MouseEvent.MOUSE_OUT, onHoverOut);
                             FlxG.stage.removeChild(previewSprite);
-                            previewSprite = null;
                         }
                     });
                 });
