@@ -126,5 +126,5 @@ function updateNote(event) {
 }
 
 function onSongEnd()
-    if (botplayHits > 0) combo = 0;
+    if (doBotplay) if (botplayHits > 0) combo = 0;
     

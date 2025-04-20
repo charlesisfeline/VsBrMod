@@ -3,8 +3,6 @@ function onStartSong() {
 }
 
 function _endSong() {
-    canPause = false;
-    
     inst.volume = 0;
     vocals.volume = 0;
     
