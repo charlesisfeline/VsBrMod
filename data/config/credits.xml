@@ -10,7 +10,7 @@
 	<credit name="Keith" icon="missing_icon" desc="Artist, Animator, Composer" />
 	<credit name="eevylution" icon="missing_icon" desc="Composer" />
 	<credit name="Fried Chicken" icon="missing_icon" desc="Composer" />
-	<credit name="KoiTheKoward" icon="koi" desc="Voice Actor" url="https://x.com/KoiTheKoward" />
+	<credit name="KoiTheKoward" icon="koi" desc="VA" url="https://x.com/KoiTheKoward" />
 	<credit name="EvilAlex5" icon="missing_icon" desc="Charter" url="https://www.youtube.com/@evilalex1593" />
 	<credit name="ShaggyNRogers" icon="missing_icon" desc="Charter" url="https://www.youtube.com/@ShaggyNRogers" />
 	<!-- V2 SIDE OF THE TEAM -->
@@ -22,6 +22,7 @@
 </menu>
 <menu name="Contributors" desc="You know who else-">
 	<credit name="Tice" icon="tice" desc="Creator of rb" url="https://www.youtube.com/@TiceTiceTice" />
+	<credit name="actionvr2" icon="missing_icon" desc="VA of actionvr2" url="https://www.youtube.com/@actionVR2" />
 	<credit name="Sebastain" icon="seb" desc="Made sprites for Mini Mike (circa March 2021)" url="https://www.youtube.com/@sebastianridings8536" />
 	<credit name="Towodile" desc="Depart song (lol)" icon="towo" url="https://www.youtube.com/@TowoMusic" />
 	<credit name="PaperKitty" icon="paperkitty" desc="nut shivering backbeat" url="https://www.youtube.com/channel/UC9ORKA6WXIaa6oxlRLBJzrg" />

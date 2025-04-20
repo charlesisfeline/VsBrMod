@@ -197,7 +197,11 @@
 		},
 		{
 			"header": "Voice Actors",
-			"body": [{ "line": "BreadBoyoo" }, { "line": "KoiTheKoward" }]
+			"body": [
+				{ "line": "BreadBoyoo" },
+				{ "line": "action VR2" },
+				{ "line": "KoiTheKoward" }
+			]
 		},
 		{
 			"header": "Cutscene Animation",
