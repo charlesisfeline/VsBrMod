@@ -10,6 +10,7 @@ import hxvlc.flixel.FlxVideo;
 
 public var botplayTxt:FlxText;
 public var nukeVid:FlxVideo;
+var botplayHits:Int = 0;
 
 function postCreate() {
     botplayTxt = new FlxText(400, 537, FlxG.width - 800, "BOTPLAY", 50);
@@ -25,11 +26,15 @@ function postCreate() {
     if (PlayState.SONG.meta.name == "feeling b"
         || PlayState.SONG.meta.name == "suns"
         || PlayState.SONG.meta.name == "depart"
-        || PlayState.SONG.meta.name == "drunken"
         || PlayState.SONG.meta.name == "overcooked"
         || PlayState.SONG.meta.name == "toast") defaultDisplayCombo = FlxG.save.data.comboDisplay;
     else
         defaultDisplayCombo = false;
+        
+    strumLines.forEach((strum) -> {
+        if (strum.cpu) return;
+        strum.onNoteUpdate.add(updateNote);
+    });
 }
 
 function update(elapsed:Float) {
@@ -46,6 +51,28 @@ function postUpdate(elapsed:Float) {
     if (FlxG.save.data.hitWin != null) Options.hitWindow = FlxG.save.data.hitWin;
     
     if (FlxG.save.data.practice) canDie = canDadDie = false;
+}
+
+function onNoteHit(event) {
+    if (PlayState.SONG.meta.name == "depart"
+        || PlayState.SONG.meta.name == "henry cat"
+        || PlayState.SONG.meta.name == "dealer"
+        || PlayState.SONG.meta.name == "suns") {
+        for (char in playerStrums.characters) {
+            if (doBotplay && event.character == char) {
+                if (!event.note.isSustainNote) {
+                    event.countAsCombo = true;
+                    event.ratingScale = 0;
+                    event.countScore = true;
+                    event.score = 300;
+                    accuracyPressedNotes--;
+                    displayCombo(event);
+                    botplayHits++;
+                }
+                playerStrums.addHealth(0.023);
+            }
+        }
+    }
 }
 
 function dealerMechanic() {
@@ -69,6 +96,9 @@ function dealerMechanic() {
     #end
 }
 
+function onInputUpdate(event)
+    if (doBotplay) event.cancel();
+    
 static var doBotplay:Bool = false;
 
 function updateBotplay(elapsed:Float) {
@@ -84,3 +114,17 @@ function updateBotplay(elapsed:Float) {
     for (txt in [scoreTxt, missesTxt, accuracyTxt])
         txt.visible = !doBotplay;
 }
+
+function updateNote(event) {
+    if (!doBotplay) return;
+    
+    var daNote:Note = event.note;
+    
+    if (!daNote.avoid
+        && !daNote.wasGoodHit
+        && daNote.strumTime < Conductor.songPosition) PlayState.instance.goodNoteHit(daNote.strumLine, daNote);
+}
+
+function onSongEnd()
+    if (botplayHits > 0) combo = 0;
+    
