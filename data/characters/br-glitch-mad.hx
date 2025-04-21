@@ -1,0 +1,20 @@
+import flixel.addons.effects.FlxTrail;
+
+var self = this;
+var trail:FlxTrail;
+
+function postCreate() {
+    if (Options.week6PixelPerfect) this.pixelPerfectRender = this.pixelPerfectPosition = true;
+    
+    trail = new FlxTrail(self, null, 4, 24, 0.3, 0.069);
+}
+
+var toAdd:Bool = true; // Using this just to make sure
+
+function update(elpased) {
+    if (toAdd) {
+        toAdd = false;
+        PlayState.instance.insert(PlayState.instance.members.indexOf(self), trail);
+        disableScript();
+    }
+}

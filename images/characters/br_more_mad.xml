@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="br_more_mad.png" width="6297" height="1210">
+	<SubTexture name="br idle dance0000" x="3537" y="8" width="543" height="597" frameX="-91" frameY="-113" frameWidth="876" frameHeight="716"/>
+	<SubTexture name="br idle dance0001" x="4088" y="8" width="543" height="592" frameX="-85" frameY="-118" frameWidth="876" frameHeight="716"/>
+	<SubTexture name="br idle dance0002" x="5744" y="8" width="545" height="563" frameX="-97" frameY="-147" frameWidth="876" frameHeight="716"/>
+	<SubTexture name="br idle dance0003" x="5192" y="8" width="544" height="582" frameX="-98" frameY="-128" frameWidth="876" frameHeight="716"/>
+	<SubTexture name="br idle dance0004" x="4639" y="8" width="545" height="585" frameX="-99" frameY="-125" frameWidth="876" frameHeight="716"/>
+	<SubTexture name="br sing down0000" x="1637" y="8" width="722" height="539" frameX="-0" frameY="-169" frameWidth="876" frameHeight="716"/>
+	<SubTexture name="br sing down0001" x="824" y="615" width="663" height="545" frameX="-28" frameY="-163" frameWidth="876" frameHeight="716"/>
+	<SubTexture name="br sing left0000" x="1637" y="555" width="670" height="599" frameX="-12" frameY="-110" frameWidth="876" frameHeight="716"/>
+	<SubTexture name="br sing left0001" x="8" y="618" width="657" height="584" frameX="-4" frameY="-125" frameWidth="876" frameHeight="716"/>
+	<SubTexture name="br sing right0000" x="8" y="8" width="808" height="602" frameX="-67" frameY="-108" frameWidth="876" frameHeight="716"/>
+	<SubTexture name="br sing right0001" x="824" y="8" width="805" height="599" frameX="-71" frameY="-111" frameWidth="876" frameHeight="716"/>
+	<SubTexture name="br sing up0000" x="2367" y="8" width="577" height="716" frameX="-124" frameY="-0" frameWidth="876" frameHeight="716"/>
+	<SubTexture name="br sing up0001" x="2952" y="8" width="577" height="656" frameX="-100" frameY="-60" frameWidth="876" frameHeight="716"/>
+</TextureAtlas>
