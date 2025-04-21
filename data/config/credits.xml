@@ -22,8 +22,8 @@
 </menu>
 <menu name="Contributors" desc="You know who else-">
 	<credit name="Tice" icon="tice" desc="Creator of rb" url="https://www.youtube.com/@TiceTiceTice" />
-	<credit name="thetoastedguy" icon="missing_icon" desc="VA of Toasted" url="https://x.com/toastedbb" />
-	<credit name="actionvr2" icon="missing_icon" desc="VA of actionvr2" url="https://www.youtube.com/@actionVR2" />
+	<credit name="thetoastedguy" icon="toasted" desc="VA of Toasted" url="https://x.com/toastedbb" />
+	<credit name="actionvr2" icon="action" desc="VA of actionvr2" url="https://www.youtube.com/@actionVR2" />
 	<credit name="Sebastain" icon="seb" desc="Made sprites for Mini Mike (circa March 2021)" url="https://www.youtube.com/@sebastianridings8536" />
 	<credit name="Towodile" desc="Depart song (lol)" icon="towo" url="https://www.youtube.com/@TowoMusic" />
 	<credit name="PaperKitty" icon="paperkitty" desc="nut shivering backbeat" url="https://www.youtube.com/channel/UC9ORKA6WXIaa6oxlRLBJzrg" />

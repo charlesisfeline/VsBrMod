@@ -1,9 +1,9 @@
 <!DOCTYPE codename-engine-stage>
 <stage folder="stages/sketch/" zoom="1.01">
-	<sprite x="56.2" scrolly="1.1" sprite="paper" y="-26.4" scale="1.75" name="back" scrollx="1.35"/>
-	<sprite x="166" sprite="grounder" y="-72" scale="2" name="floor" scrollx="1.01"/>
+	<sprite x="-69" y="-46" sprite="doodleYard" scale="1.75" scrollx="1.03" name="back"/>
 	<gf x="338" y="119"/>
-	<dad x="84" y="90"/>
-	<bf x="652" y="125"/>
+	<dad x="59" y="130.25"/>
+	<bf x="649" y="110.25"/>
+	<sprite scrolly="1.1" x="-98" y="-443" sprite="bush" scale="2" scrollx="1.25" name="bush"/>
 	<combo x="572.5" y="408.5"/>
 </stage>
