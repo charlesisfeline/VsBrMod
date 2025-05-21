@@ -1,4 +1,0 @@
-function postCreate()
-{
-    defaultDisplayRating = false;
-}

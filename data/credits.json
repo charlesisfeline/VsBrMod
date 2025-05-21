@@ -160,7 +160,7 @@
 		},
 		{
 			"header": "Direction",
-			"body": [{ "line": "charlesisfeline" }, { "line": "BreadBoyoo" }]
+			"body": [{ "line": "BreadBoyoo" }, { "line": "charlesisfeline" }]
 		},
 		{
 			"header": "Music Production",
@@ -175,8 +175,8 @@
 		{
 			"header": "Artists and Animation",
 			"body": [
-				{ "line": "charlesisfeline" },
 				{ "line": "BreadBoyoo" },
+				{ "line": "charlesisfeline" },
 				{ "line": "ArloAreebs" },
 				{ "line": "CosmosProductions" },
 				{ "line": "Keith" },

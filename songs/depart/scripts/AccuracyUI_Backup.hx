@@ -73,8 +73,8 @@ function update(elapsed:Float)
 
 function postUpdate(elapsed)
 {
-    iconP1.scale.set(lerp(iconP1.scale.x, 1, 0.33), lerp(iconP1.scale.y, 1, 0.33));
-    iconP2.scale.set(lerp(iconP2.scale.x, 1, 0.33), lerp(iconP2.scale.y, 1, 0.33));
+	for (icon in iconArray)
+		icon.scale.set(erp(icon.scale.x, 1, 0.33), lerp(icon.scale.y, 1, 0.33));
 
     if (!player.cpu) boyfriend.holdTime = FlxG.random.int(1, 4);
     else boyfriend.holdTime = 4;

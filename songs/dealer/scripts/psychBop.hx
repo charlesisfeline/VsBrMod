@@ -14,10 +14,9 @@ function setIconSize(icon:FlxSprite, sizePoint:FlxPoint, width:Float, height:Flo
     icon.offset.y = (downscroll) ? (icon.frameHeight - icon.height) : 0;
 }
 
-function postCreate() {
+function postCreate()
     doIconBop = false;
-}
-
+    
 function postUpdate(e) {
     var iconSpeed:Float = e * 60 * 0.15;
     setIconSize(iconP2, iconSizeP2, FlxMath.lerp(iconSizeP2.x, 150, iconSpeed), FlxMath.lerp(iconSizeP2.y, 150, iconSpeed));
@@ -30,6 +29,6 @@ function beatHit(beat:Int) {
 }
 
 function destroy() {
-    iconSizeP2 = FlxDestroyUtil.put(iconSizeP2);
-    iconSizeP1 = FlxDestroyUtil.put(iconSizeP1);
+    for (iconSize in [iconSizeP1, iconSizeP2])
+        iconSize = FlxDestroyUtil.put(iconSize);
 }

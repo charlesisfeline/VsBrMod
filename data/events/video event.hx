@@ -1,14 +1,13 @@
 import hxvlc.flixel.FlxVideoSprite;
 
-public var video: FlxVideoSprite;
+public var video:FlxVideoSprite;
 var vidList:Map<String, FlxVideoSprite> = [];
 var autoPause = true;
 
-function postCreate(){
+function postCreate() {
     var events = PlayState.SONG.events;
-
-    for (i in events)
-    {
+    
+    for (i in events) {
         if (i.name == "video event") {
             var vidName = i.params[0];
             var video = new FlxVideoSprite(0, 0);
@@ -19,15 +18,16 @@ function postCreate(){
         }
     }
 }
-//create the video
-function makeVid(x, y, vidName, noAudio){
+
+// create the video
+function makeVid(x, y, vidName, noAudio) {
     var video = new FlxVideoSprite(x, y);
     video.load(Assets.getPath(Paths.video(vidName)), [(noAudio ? ':no-audio' : ':audio')]);
     vidList.set(vidName, video);
     return video;
 }
 
-//the event, thanks to furo for the help for audio and fullscreen
+// the event, thanks to furo for the help for audio and fullscreen
 
 function onEvent(eventEvent) {
     if (eventEvent.event.name == "video event") {
@@ -43,62 +43,54 @@ function onEvent(eventEvent) {
         var index = params[8];
         var audio = params[9];
         var fullscreen = params[10];
-
         
         video = vidList.get(vidName);
         if (video == null) {
             video = makeVid(x, y, vidName, !audio);
         }
-
+        
         video.scale.set(scale, scale);
         video.visible = true;
         video.play();
         
-
-        video.bitmap.onFormatSetup.add(function():Void
-        {
-            if (video.bitmap != null && video.bitmap.bitmapData != null)
-            {
-                if (fullscreen)
-                {
+        video.bitmap.onFormatSetup.add(function():Void {
+            if (video.bitmap != null && video.bitmap.bitmapData != null) {
+                if (fullscreen) {
                     var scale:Float = Math.min(FlxG.width / video.bitmap.bitmapData.width, FlxG.height / video.bitmap.bitmapData.height);
                     video.setGraphicSize(video.bitmap.bitmapData.width * scale, video.bitmap.bitmapData.height * scale);
                     video.updateHitbox();
                 }
                 video.updateHitbox();
-                if (middle)
-                {
+                if (middle) {
                     video.screenCenter();
                 }
             }
-        }); 
-
+        });
+        
         switch (cam) {
             case "camGame":
-                if (index == "" || stage.stageSprites[index] == null)
-                    if (gf != null)
-                        insert(members.indexOf(gf), video);
-                    else
+                if (index == "" || stage.stageSprites[index] == null) if (gf != null) insert(members.indexOf(gf), video);
+                else
                     insert(members.indexOf(dad), video);
                 else
                     insert(members.indexOf(stage.stageSprites[index]), video);
-
+                    
             case "camHUD/hideHUD":
-                for (hud in [iconP1, iconP2, healthBarBG, healthBar]){
+                for (hud in [iconArray, healthBarBG, healthBar]) {
                     hud.alpha = 0;
                 }
                 insert(members.indexOf(boyfriend), video);
                 video.cameras = [camHUD];
-
+                
             case "camHUD/showHUD":
                 insert(members.indexOf(boyfriend), video);
                 
                 video.cameras = [camHUD];
         }
-
+        
         updateOppStrumVisibility(oppStrum ? 0 : 1);
         updatePlayerStrumVisibility(playerStrum ? 0 : 1);
-
+        
         video.bitmap.onEndReached.add(() -> {
             video.destroy();
             updateHUDVisibility(1);
@@ -108,25 +100,25 @@ function onEvent(eventEvent) {
     }
 }
 
-//alpha shit
+// alpha shit
 
 function updateHUDVisibility(alpha:Float) {
-    for (hud in [iconP1, iconP2, healthBarBG, healthBar]){
+    for (hud in [iconArray, healthBarBG, healthBar]) {
         hud.alpha = alpha;
     }
 }
 
 function updateOppStrumVisibility(alpha:Float) {
     for (daStrum in cpuStrums.members) {
-            FlxTween.tween(daStrum, {alpha: alpha}, 0.2);
+        FlxTween.tween(daStrum, {alpha: alpha}, 0.2);
     }
     for (daNote in cpuStrums.notes.members) {
-            FlxTween.tween(daNote, {alpha: alpha}, 0.2);
+        FlxTween.tween(daNote, {alpha: alpha}, 0.2);
     }
 }
 
 function updatePlayerStrumVisibility(alpha:Float) {
-    for(daStrum in playerStrums.members) {
+    for (daStrum in playerStrums.members) {
         FlxTween.tween(daStrum, {alpha: alpha}, 0.2);
     }
     for (daNote in playerStrums.notes.members) {
@@ -134,13 +126,14 @@ function updatePlayerStrumVisibility(alpha:Float) {
     }
 }
 
-//video pause
+// video pause
 
 function onFocus() {
     if (video != null) {
         if (PlayState.instance.paused) {
             video.pause();
-        } else {
+        }
+        else {
             video.resume();
         }
     }
