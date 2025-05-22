@@ -31,9 +31,7 @@ function update(elapsed) {
                 inst.pitch = FlxG.save.data.playbackRate;
                 vocals.pitch = FlxG.save.data.playbackRate;
                 playbackRateTxt.alpha = 1;
-                new FlxTimer().start(2.5, (tmr:FlxTimer) -> {
-                    FlxTween.tween(playbackRateTxt, {alpha: 0}, 1);
-                });
+                new FlxTimer().start(2.5, (tmr:FlxTimer) -> FlxTween.tween(playbackRateTxt, {alpha: 0}, 1));
             }
         }
         
@@ -43,9 +41,7 @@ function update(elapsed) {
                 inst.pitch = FlxG.save.data.playbackRate;
                 vocals.pitch = FlxG.save.data.playbackRate;
                 playbackRateTxt.alpha = 1;
-                new FlxTimer().start(2.5, (tmr:FlxTimer) -> {
-                    FlxTween.tween(playbackRateTxt, {alpha: 0}, 1);
-                });
+                new FlxTimer().start(2.5, (tmr:FlxTimer) -> FlxTween.tween(playbackRateTxt, {alpha: 0}, 1));
             }
         }
         
@@ -54,9 +50,7 @@ function update(elapsed) {
             inst.pitch = FlxG.save.data.playbackRate;
             vocals.pitch = FlxG.save.data.playbackRate;
             playbackRateTxt.alpha = 1;
-            new FlxTimer().start(2.5, (tmr:FlxTimer) -> {
-                FlxTween.tween(playbackRateTxt, {alpha: 0}, 1);
-            });
+            new FlxTimer().start(2.5, (tmr:FlxTimer) -> FlxTween.tween(playbackRateTxt, {alpha: 0}, 1));
         }
     }
 }

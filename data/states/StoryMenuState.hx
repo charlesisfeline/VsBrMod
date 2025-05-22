@@ -21,7 +21,7 @@ var blurShader:CustomShader = new CustomShader("engine/editorBlur");
 var spamEgTimes:Int = 0;
 
 function postCreate() {
-    persistentUpdate = true;
+    persistentUpdate = false;
     persistentDraw = true;
     
     DiscordUtil.changePresence("in story mode", null);
@@ -96,6 +96,8 @@ function postCreate() {
     weekTitle.visible = false;
     
     FlxG.mouse.visible = true;
+    
+    openSubState(new ModSubState("StoryMenuHint"));
 }
 
 function onChangeWeek(event) {

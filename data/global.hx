@@ -101,6 +101,7 @@ function new() {
     saveData.fullscreen ??= false;
     saveData.hitsoundStyle ??= "none";
     saveData.freeplayUnlocked ??= false;
+    saveData.firstTime ??= true;
     saveData.devMode ??= true; // TODO: disable this for release build
     saveData.screenshotAmount ??= 0;
     
