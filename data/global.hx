@@ -1,5 +1,7 @@
 import Type;
 
+import funkin.backend.scripting.MultiThreadedScript;
+import funkin.backend.scripting.GlobalScript;
 import funkin.backend.system.framerate.Framerate;
 import funkin.backend.utils.NativeAPI;
 import funkin.backend.utils.WindowUtils;
@@ -86,6 +88,18 @@ trace("oh cool reloaded global wowzers!1!! . " + Math.random());
 function new() {
     if (FlxG.camera != null) FlxG.camera.bgColor = 0xFF000000;
     
+    var globalScripts = Paths.getFolderContent('data/scripts/global').filter((i:String) -> return StringTools.endsWith(i, '.hx'));
+    
+    for (script in globalScripts) {
+        var daScript = new MultiThreadedScript(Paths.script('data/scripts/global/' + script));
+        daScript.call('create');
+        GlobalScript.scripts.add(daScript.script);
+        daScript.call('postCreate');
+    }
+    
+    for (folder in Paths.getFolderDirectories('data/scripts/global/', true))
+        readSubFolder(folder);
+        
     // shortcut to FlxG.save.data (for shortening code)
     var saveData = FlxG.save.data;
     
@@ -108,13 +122,27 @@ function new() {
     window.setIcon(Image.fromBytes(Assets.getBytes(Paths.image('ui/windowicons/default16'))));
 }
 
+function readSubFolder(folder) {
+    var globalScripts = Paths.getFolderContent(folder).filter((i:String) -> return StringTools.endsWith(i, '.hx'));
+    
+    for (script in globalScripts) {
+        var daScript = new MultiThreadedScript(Paths.script(folder + '/' + script));
+        daScript.call('create');
+        GlobalScript.scripts.add(daScript.script);
+        daScript.call('postCreate');
+    }
+    
+    for (daFolder in Paths.getFolderDirectories(folder + "/", true))
+        readSubFolder(daFolder);
+}
+
 function setWindowTitle() {
-    if (FlxG.random.bool(10)) {
+    if (FlxG.random.bool(12)) {
         brWindowShit = FlxG.random.getObject(randQuotes);
         window.title = brWindowShit;
     }
     else
-        window.title = "vs br";
+        window.title = "vs br retoasted";
 }
 
 function update(elapsed:Float) {
